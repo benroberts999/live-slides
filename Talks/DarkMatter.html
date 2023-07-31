@@ -25,7 +25,7 @@
               <h1 class="fragment fade-out" data-fragment-index="0">Enlightening
                 the search for Dark Matter
               </h1>
-              <h1 class="fragment current-visible" data-fragment-index="0">En<i>lightening</i>
+              <h1 class="fragment current-visible" data-fragment-index="0">En<i>light</i>ening
                 the search for Dark Matter
               </h1>
             </div>
@@ -93,21 +93,24 @@
             <br>
 
             <div style="text-align: center; float: left; width: 70%">
-              <div class="fragment" style="text-align: left;" data-markdown>
+              <div class="fragment" data-fragment-index="0"
+                style="text-align: left;" data-markdown>
 
                 <h2>Why is there so much more matter than anti-matter?</h2>
                 <h3>&ensp;• CP-violation in the Standard Model is too small</h3>
               </div>
 
               <br>
-              <div class="fragment" style="text-align: left;" data-markdown>
+              <div class="fragment" data-fragment-index="1"
+                style="text-align: left;" data-markdown>
 
                 <h2>Quantum theory for gravitation?</h2>
 
               </div>
 
               <br>
-              <div class="fragment" style="text-align: left;" data-markdown>
+              <div class="fragment" data-fragment-index="2"
+                style="text-align: left;" data-markdown>
 
                 <h2>No explanation for dark energy</h2>
                 <h3>&ensp;• Explain accelerated expansion of universe
@@ -118,7 +121,8 @@
               </div>
 
               <br>
-              <div class="fragment" style="text-align: left;" data-markdown>
+              <div class="fragment" data-fragment-index="3"
+                style="text-align: left;" data-markdown>
 
                 <h2>No explanation for dark matter...</h2>
 
@@ -128,7 +132,7 @@
 
             <div style="text-align: left; float: right; width: 30%">
               <br><br><br><br><br><br>
-              <img
+              <img class="fragment" data-fragment-index="2"
                 src="img/dm-pie.jpg" width="95%">
             </div>
 
@@ -167,19 +171,11 @@
                 <br>
                 <img src="img/vera-rubin.jpg" width="60%"><br>
                 <font size="3">
-                  AIP Emilio Segrè Visual Archives, Rubin Collection
+                  [AIP Emilio Segrè Visual Archives, Rubin Collection]
                 </font>
 
               </div>
             </div>
-
-            <!-- ### • Rotation Curves
-            ### • Galaxy Clusters
-            ### • Gravitational Lensing
-            ### • Cosmic Microwave Background
-            ### • Large Scale structure
-            ### • BAO: Baryon Acoustic Oscillations
-            ### • more -->
 
           </textarea>
         </section>
@@ -199,14 +195,12 @@
             # Galactic Rotation Curves
 
             ## _all_ galaxies: stars move faster (left) than predicted (right)
-            <!-- <video data-autoplay loop width="80%" type="video/webm"
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Comparison_of_rotating_disc_galaxies_in_the_distant_Universe_and_the_present_day.webm"></video> -->
 
             <video width="80%" controls playsinline autoplay muted loop>
               <source
                 src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Comparison_of_rotating_disc_galaxies_in_the_distant_Universe_and_the_present_day.webm"
                 type="video/webm"></video><br>
-            <font size="3">Credit: ESO/L. Calçada [Creative Commons]</font>
+            <font size="3">[ESO/L. Calçada, Creative Commons]</font>
           </textarea>
         </section>
 
@@ -216,18 +210,12 @@
           <textarea data-template>
             # Galactic Rotation Curves
 
-            <!-- <img
-              src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png"
-              width="80%">
-
-            <font size="3"> Credit: Mario De Leo [Wikimedia Commons]</font> -->
-
             <div style="text-align: center; float: left; width: 70%">
               <br><br>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png"
-                width="95%">
-              <font size="3"> Credit: Mario De Leo [Wikimedia Commons]</font>
+                width="95%"><br>
+              <font size="3">[Mario De Leo, Wikimedia Commons]</font>
             </div>
 
             <div style="text-align: left; float: right; width: 30%">
@@ -238,12 +226,13 @@
               <br>
               <p data-markdown>• 80 - 95% of mass is "missing"</p>
               <br>
-              <p data-markdown>• Implies dark matter</p><br>
-              \[a = \frac{G \, [M + {\color{orange}\delta M(r)}]}{r^2} \]
+              <p data-markdown>• Implies <font color="orange">dark matter</font></p><br>
+              \[a = \frac{G \, [M(r) + {\color{orange}\delta M(r)}]}{r^2} \]
               <br>
-              <p data-markdown class="fragment fade-in">• ... or modified
-                gravity<br><br>
-                \[a = \frac{[G + {\color{green}\delta G(r)}] \, M}{r^2} \]
+              <p data-markdown class="fragment fade-in">• ... or <font
+                  color="green">modified
+                  gravity</font><br><br>
+                \[a = \frac{[G + {\color{green}\delta G(M,r)}] \, M(r)}{r^2} \]
               </p>
               <br>
             </div>
@@ -256,24 +245,66 @@
           <textarea data-template>
             # Bullet Cluster
 
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Bullet_cluster.jpg"
-              width="80%">
+            <div style="text-align: left; float: left; width: 65%">
+              <br>
+              <!-- <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Bullet_cluster.jpg"
+                width="90%"><br>
+              <font size="3">Chandra X-ray Observatory [NASA]</font> -->
+
+              <div class="r-stack">
+                <div class="fragment fade-out" data-fragment-index="0">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Bullet_cluster.jpg"
+                    width="100%"><br>
+                  <font size="3">Chandra X-ray Observatory [NASA]</font>
+                </div>
+
+                <div class="fragment fade-in" data-fragment-index="0">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a8/1e0657_scale.jpg"
+                    width="90%">
+                  <font size="3">NASA/CXC/M. Weiss - Chandra X-Ray Observatory</font>
+                </div>
+              </div>
+
+            </div>
+
+            <div style="text-align: left; float: right; width: 35%">
+              <br>
+              <h3>• Colliding galaxy clusters ~ 4 Gyr</h3>
+              <br>
+              <h3>• X-ray emission image:<br> distribution of gas (baryons)</h3>
+              <br>
+              <br>
+              <div class="fragment fade-in" data-fragment-index="0">
+                <h3>• Composite image: X-ray + lensing</h3>
+                <br>
+                <h3>• Pink = gas (X-ray)</h3>
+                <h3>• blue = mass (gravitational lensing)</h3>
+                <br>
+                <h3 class="fragment fade-in" data-fragment-index="1">
+                  • Frictionless dark matter: <br>
+                  passes straight through
+                </h3>
+              </div>
+            </div>
 
           </textarea>
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
             # Bullet Cluster
 
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/a/a8/1e0657_scale.jpg"
               width="80%">
+            <font size="3">NASA/CXC/M. Weiss - Chandra X-Ray Observatory</font>
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <!-- <section data-markdown data-background-image="img/CMB.png"> -->
@@ -281,7 +312,16 @@
           <textarea data-template>
             # Cosmic Microwave Background
 
+            (After removal of doppler dipole)
+
             <img src="img/CMB.png" width="80%">
+
+            <br>
+
+            <h3 class="fragment fade-in">
+              • Temperature anisotropies (scale + distribution) <br>
+              very sensitive to distribution of regular and dark matter
+            </h3>
 
           </textarea>
         </section>
@@ -322,6 +362,7 @@
               <img class="fragment current-visible" data-fragment-index="0"
                 src="img/DM_masses3.png" width="80%">
             </div>
+            <font size="3">US "Cosmic Visions" report [arXiv:1707.04591]</font>
 
             <br>
             <br>
@@ -356,7 +397,7 @@
               <img src="img/Feynman.png" width="95%">
               <br><br>
               <h3> • Early universe: hot and dense</h3>
-              <h3> DM Begins in thermal equilibrium</h3>
+              <h3> DM + SM in thermal equilibrium</h3>
               <br>
               <h3 class="fragment fade-in" data-fragment-index="0">
                 • Universe cools: <br>
@@ -402,24 +443,38 @@
           <textarea data-template>
             # WIMP Searches: XENON
 
-            <div style="text-align: center; float: left; width: 50%">
-              <img src="img/xenon.png" width="55%">
+            <div style="text-align: left; float: left; width: 60%">
+              <div class="r-stack">
+                <div class="fragment fade-out" data-fragment-index="1">
+                  <br><br><br>
+                  <img src="img/Feynman.png" width="65%">
+                  <br><br>
+                  <h3 class="fragment highlight-red" data-fragment-index="0">•
+                    Direct detection
+                    (scattering)</h3>
+                  <h3>• Indirect detection (annihilation)</h3>
+                  <h3>• Collider searches (production)</h3>
+                </div>
+                <div>
+                  <div class="fragment fade-in" data-fragment-index="1">
+                    <br>
+                    <h3>Excluded cross-section for WIMPs:</h3>
+                    <img
+                      src="img/WIMP-constraints.png" width="100%">
+                  </div>
+                  <h3 class="fragment fade-in" data-fragment-index="2">
+                    &emsp;• Mass below nuclear mass: energy threshold
+                  </h3>
+                  <h3 class="fragment fade-in" data-fragment-index="2">
+                    &emsp;• High mass: fewer particles
+                  </h3>
+                </div>
+              </div>
             </div>
 
-            <div style="text-align: left; float: right; width: 50%">
-              <br>
-              <img src="img/Feynman.png" width="40%">
-              <br>
-              <h2>...</h2>
+            <div style="text-align: center; float: right; width: 40%">
+              <img src="img/xenon.png" width="65%">
             </div>
-
-          </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
-          <textarea data-template>
-            # WIMP Constraints
 
           </textarea>
         </section>
@@ -428,7 +483,7 @@
         <section data-markdown data-background-color="black">
           <textarea data-template>
             # Atomic Physics:
-            ## En*lightening* the search for Dark Matter
+            ## En*lighten*ing the search for Dark Matter
 
           </textarea>
         </section>
@@ -454,6 +509,8 @@
           <textarea data-template>
             # Light and Ultralight Dark Matter
 
+            ## Quantum sensors
+
           </textarea>
         </section>
 
@@ -464,7 +521,8 @@
 
             <br>
 
-            ### Lock frequency of oscillator (e.g., laser) to atomic transition
+            ### Lock frequency of oscillator (e.g., laser) to atomic
+            transition
 
             <br>
             <br>
@@ -493,12 +551,12 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
             # Scattering in atomic clocks
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
@@ -541,8 +599,15 @@
           <textarea data-template>
             # European Fibre-linked network
 
-            <video width="50%" data-autoplay muted loop>
-              <source src="img/GPSDM.mp4"></video>
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Constant background
+
+            <img src="img/Galactic_centre_pillars.jpg" width="95%">
 
           </textarea>
         </section>
