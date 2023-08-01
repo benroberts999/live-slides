@@ -1,45 +1,76 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html class="sl-root decks export offline loaded">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Talks</title>
 
-		<title>slides</title>
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
-	<body>
+	<body class="reveal-viewport theme-font-helvetica theme-color-black-blue">
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown data-separator="^\n---\n$"
-					data-separator-vertical="^\n--\n$">
-					<script type="text/template">
-             * [PHYS4070 - Lecture 01](phys4070/L01-intro.html)
-             * [Dark Matter](Talks/DarkMatter.html)
-          </script>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Index of slides
+
+						* [PHYS4070 - Lecture 01](phys4070/L01-intro.html)
+						* [Dark Matter](Talks/DarkMatter.html)
+
+					</textarea>
 				</section>
+
+				<!-- =============================================================== -->
 			</div>
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+			var SLConfig = {};
+			// Use local fonts
+			SLConfig.fonts_url = '../lib/fonts/';
+		</script>
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+		<script src="plugin/math/math.js"></script>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1920,
+				height: 1080,
+				margin: 0.06,
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: true,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "none",
+				backgroundTransition: "none",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
 			});
 		</script>
 	</body>
