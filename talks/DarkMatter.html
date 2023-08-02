@@ -346,33 +346,75 @@
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
           <textarea data-template>
+            # Dark Matter: What we know
+
+            <div style="text-align: left; float: left; width: 50%">
+              <br><br>
+              <h2>Very strong evidence:</h2>
+              <br>
+              <h3>• Rotation curves, gravitational lensing, CMB </h3>
+              <br>
+              <h3>• Also: large scale structure, BAO etc. </h3>
+              <br>
+              <h3>• It's not strange for particles to not interact with
+                light (e.g., neutrinos)</h3>
+              <br>
+              <br>
+              <h3 class="fragment">• ΛCDM model works extremely well
+                <br>&emsp; • Ωc =
+                0.2589(57) [Planck] </h3>
+              <h3 class="fragment">• (Just need to work out the Λ and CDM parts)</h3>
+            </div>
+
+            <div style="text-align: center; float: right; width: 50%">
+              <br><br><br><br>
+              <img
+                src="img/dm-pie.jpg"
+                width="55%"><br>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
             # Dark Matter: What we don't know
 
             <br>
-
-            ## ... everything else
+            <div class="fragment" data-fragment-index="0">
+              <h2> ... everything else</h2>
+            </div>
 
             <br>
 
             <!-- <img src="img/DM_masses2.png" width="80%"> -->
 
             <div class="r-stack">
-              <img class="fragment fade-out" data-fragment-index="0"
+              <img class="fragment" data-fragment-index="1"
                 src="img/DM_masses2.png" width="80%">
-              <img class="fragment current-visible" data-fragment-index="0"
+              <img class="fragment" data-fragment-index="3"
                 src="img/DM_masses3.png" width="80%">
             </div>
-            <font size="3">US "Cosmic Visions" report [arXiv:1707.04591]</font>
+            <div class="fragment" data-fragment-index="1">
+              <font size="3">US "Cosmic Visions" report [arXiv:1707.04591]</font>
+            </div>
 
             <br>
             <br>
 
-            ### • Possible mass range: 90 orders of magnitude!
-            ### • Fundamental particle: 50 orders (de Broglie to Planck)
+            <div class="fragment" data-fragment-index="1">
+              <h3>• Possible mass range: 90 orders of magnitude!</h3>
+            </div>
+            <div class="fragment" data-fragment-index="2">
+              <h3>• Fundamental particle: 50 orders (de Broglie to Planck)</h3>
+            </div>
 
             <br>
 
-            ### • Vast majority of focus on WIMPs, but field is very wide
+            <div class="fragment">
+              <h3> • Vast majority of focus on WIMPs, but field is very wide</h3>
+            </div>
 
           </textarea>
         </section>
@@ -565,11 +607,11 @@
 
             <div class="r-stretch"></div>
 
-            * Ashlee R. Caddell, BMR,
+            * Ashlee R. Caddell, **BMR**,
             [arXiv:2305.05125](http://arxiv.org/abs/2305.05125)
-            * BMR, V. V. Flambaum, [Phys. Rev. D **100** 063017
+            * **BMR**, V. V. Flambaum, [Phys. Rev. D **100** 063017
             (2019)](https://link.aps.org/doi/10.1103/PhysRevD.100.063017)
-            * BMR, Flambaum, Gribakin, [Phys. Rev. Lett **116** 023201
+            * **BMR**, Flambaum, Gribakin, [Phys. Rev. Lett **116** 023201
             (2016)](http://link.aps.org/doi/10.1103/PhysRevLett.116.023201)
 
           </textarea>
@@ -589,7 +631,7 @@
 
               <div style="text-align: center; float: right; width: 40%">
                 <br>
-                <h2>Can you test it?</h2>
+                <h2 class="fragment fade-in">Can you test it?</h2>
                 <div class="fragment fade-in">
                   <h3>Yes! Electron-impact ionisation</h3>
                   <img src="img/e-impact.png" width="95%">
@@ -643,7 +685,8 @@
             <div style="text-align: left; float: right; width: 70%">
               <div class="fragment fade-in">
                 <h3>
-                  1. No interaction: oscillation: $\phi = \phi_0 \cos(m_\phi t)$
+                  1. No interaction: oscillation: $\phi = \phi_0 \cos(m_\phi
+                  t)$
                 </h3>
                 \[\phi_0^2\propto \rho_{\rm DM}\]
               </div>
@@ -656,6 +699,10 @@
                 3. Also: constant build-up (local over-densities)
               </h3>
             </div>
+
+            <h2 class="fragment fade-in">
+              Classical field: quantum sensors (clocks)
+            </h2>
 
           </textarea>
         </section>
@@ -670,7 +717,8 @@
             ### Clock: frequency reference
             <div class="fragment fade-in">
               <h3>
-                Best atomic clocks approach accuracy: $\delta f/f \sim 10^{-20}$
+                Best atomic clocks approach accuracy: $\delta f/f \sim
+                10^{-20}$
               </h3>
             </div>
 
@@ -693,7 +741,7 @@
               <font size="3"> Wcislo, Science 2016</font>
               <br>
               <h3>
-                Lock frequency of oscillator to atomic transition
+                Compare frequency of oscillator to atomic transition
               </h3>
             </div>
 
@@ -701,6 +749,10 @@
               style="text-align: center; float: right; width: 32%">
               <img src="img/Al+Choi2010.png" width="95%">
               <font size="3"> Choi, Phys. Rev. Lett. 2018</font>
+              <br>
+              <h3>
+                Lock on: Adjust local oscillator to maximum transition rate
+              </h3>
             </div>
 
           </textarea>
@@ -828,7 +880,8 @@
                   <h3>• Modifies length + refractive index</h3>
                   <h3>• 10-100 kHz range ($m=10^{-10}$ eV)</h3>
                   <h3>• Led by Etienne Savalle (SYRTE Paris)</h3>
-                  Savalle, Hees, Frank, Cantin, Pottie, BMR, Cros, McAllister,
+                  Savalle, Hees, Frank, Cantin, Pottie, <b>BMR</b>, Cros,
+                  McAllister,
                   Wolf, <br>
                   <a
                     href="https://link.aps.org/doi/10.1103/PhysRevLett.126.051301">
@@ -846,10 +899,30 @@
           <textarea data-template>
             # Transient Signals
 
-            <img src="img/td.png" width="40%">
+            <br><br><br>
 
-            Derevianko + Pospelov, [Nature Physics
-            (2014)](http://www.nature.com/doifinder/10.1038/nphys3137)
+            <div style="text-align: left; float: left; width: 50%">
+              <img src="img/td.png" width="80%">
+
+              Derevianko + Pospelov, [Nature Physics
+              (2014)](http://www.nature.com/doifinder/10.1038/nphys3137)
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <h3>• Scalar DM with small self-interaction:</h3>
+              <br>
+              <h3>• May form "clumps": topological defects, Q-balls</h3>
+              <br>
+              <h3> &emsp; • Topological defects: size $d\sim 1/m_\phi$</h3>
+              <br>
+              <h3> &emsp; • $m=10^{-10}$ eV $\implies$ $d\simeq 1$ km</h3>
+              <br>
+              <h3>• Wait until one passes through Earth</h3>
+              <br>
+              <h3>• How to distinguish from noise?</h3>
+              <br>
+              <h3> &emsp; • Correlated signal across global network</h3>
+            </div>
 
           </textarea>
         </section>
@@ -859,11 +932,51 @@
           <textarea data-template>
             # GPS.DM
 
-            <img src="img/GPSDM-logo.png" width="10%">
+            <div style="text-align: left; float: left; width: 35%">
+              <br>
+              <!-- <img src="img/GPSDM-logo.png" width="50%"> -->
+              <!-- <br><br><br> -->
+              <h3>• 30 Cs, Rb atomic clocks</h3>
+              <br>
+              <h3>• Over 20 years of high-quality data</h3>
+              <br>
+              <h3>• Publicly available (JPL)</h3>
+              <br>
+              <h3>• 50,000 km Dark Matter observatory</h3>
+              <br>
+              <!-- <img div class="fragment fade-in" src="img/gps-data.png"
+                width="95%"> -->
+              <div class="fragment fade-in">
+                <video width="75%" data-autoplay muted>
+                  <source src="img/GPSDM.mp4"></video><br>
+                <font size="3">[Video: Conner Dailey (honors student)]</font>
+              </div>
+            </div>
 
-            <!-- loop -->
-            <video width="30%" data-autoplay muted>
-              <source src="img/GPSDM.mp4"></video>
+            <div style="text-align: center; float: right; width: 65%">
+              <!-- <div class="fragment fade-in">
+                <video width="40%" data-autoplay muted>
+                  <source src="img/GPSDM.mp4"></video><br>
+                <font size="3">[Video: Conner Dailey (honors student)]</font>
+              </div> -->
+              <img div class="fragment fade-in" src="img/gps-data.png"
+                width="45%">
+              <br>
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <img src="img/GPSDM-results.png" width="98%">
+                <b>BMR</b>, Blewitt, Dailey, Murphy, Pospelov, Rollings,
+                Sherman,
+                Williams, Derevianko, <br>
+                <a
+                  href="http://www.nature.com/articles/s41467-017-01440-4">
+                  Nature Comms.
+                  (2017)</a>
+
+              </div>
+
+            </div>
 
           </textarea>
         </section>
@@ -873,9 +986,31 @@
           <textarea data-template>
             # European Fibre-linked network
 
-            <img src="img/FibreLinkDiagram.png" width="40%">
             <br>
-            <img src="img/SYRTE-results.png" width="80%">
+            <div style="text-align: center; float: left; width: 50%">
+              <img src="img/FibreLinkDiagram.png" width="70%">
+              <br>
+            </div>
+            <div style="text-align: left; float: right; width: 50%">
+              <h3>• Laboratory optical clocks</h3>
+              <br>
+              <h3>• Orders-of-magnitude higher precision</h3>
+              <br>
+              <h3>• Orders-of-magnitude less data</h3>
+              <h3> &emsp; • (hours, not years)</h3>
+            </div>
+
+            <div class="fragment fade-in">
+
+              <br>
+
+              <img src="img/SYRTE-results.png"
+                width="80%"><br>
+              <b>BMR</b>, et al.,
+              <a
+                href="https://iopscience.iop.org/article/10.1088/1367-2630/abaace">
+                N. J. Phys. (2020)</a>
+            </div>
 
           </textarea>
         </section>
@@ -885,7 +1020,62 @@
           <textarea data-template>
             # Constant background
 
-            <img src="img/Galactic_centre_pillars.jpg" width="95%">
+            <img src="img/Galactic_centre_pillars.jpg" width="95%"><br>
+            <font size="3">[ESA / C. Carreau]</font>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Super-massive black hole at the Galactic Centre
+
+            <br><br><br>
+
+            <div style="text-align: left; float: left; width: 50%">
+              <h3>• with UCLA Galactic Centre Group</h3>
+              <h4> &emsp; • Observations led by Tuan Do</h4>
+              <h4> &emsp; • Andrea Ghez: Awarded 2020 Nobel
+                prize for discovery of black hole</h4>
+              <br>
+              <h3>• Keck telescope in Hawaii</h3>
+              <br>
+              <h3>• Motion of ∼1000 stars tracked</h3>
+              <h4> &emsp; • Precise spectroscopy for many stars</h4>
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <h3>• High gravitational potential</h3>
+                <h3>• Possibly large concentration of dark
+                  matter </h3>
+                <h3>• (also other "exotic" physics)</h3>
+              </div>
+            </div>
+
+            <div style="text-align: center; float: right; width: 50%">
+              <img src="img/keck-ao.jpg" width="95%">
+              <br>
+              <img class="fragment fade-in" src="img/equation.png" width="95%">
+              <br>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # GR
+
+            <img src="img/spectra.png" width="60%">
+
+            <img class="fragment fade-in" src="img/equation.png" width="60%">
+
+            <img class="fragment fade-in" src="img/beta.png" width="60%">
+
+            * Hees, Do, **BMR**, Ghez et al., [Phys. Rev. Lett. **124** 081101
+            (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101)
 
           </textarea>
         </section>
