@@ -631,15 +631,20 @@
             <br><br>
 
             <div style="text-align: left; float: left; width: 40%">
-              <img src="img/Feynman.png" width="90%">
+              <img class="fragment" src="img/Feynman.png" width="90%">
             </div>
             <div style="text-align: left; float: right; width: 55%">
-              <h3> • Not guaranteed, but reasonable</h3>
-              <h3> • Early universe: protons/neutrons/electrons produced</h3>
-              <h3> • Presumably, dark matter produced too</h3>
+              <div class="fragment">
+                <h3> • Not guaranteed, but reasonable</h3>
+                <h3> • Early universe: protons/neutrons/electrons produced</h3>
+                <h3> • Presumably, dark matter produced too</h3>
+              </div>
               <br>
-              <h3> • Gives simple mechanics for DM production</h3>
-              <h3> • Also: mechanism for DM detection</h3>
+              <br>
+              <div class="fragment">
+                <h3> • Gives simple mechanics for DM production</h3>
+                <h3> • Also: mechanism for DM detection</h3>
+              </div>
             </div>
 
           </textarea>
@@ -648,7 +653,14 @@
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
           <textarea data-template>
-            # WIMP miracle
+            # Dark Matter production: WIMP miracle
+
+            <br>
+            <div class="fragment" data-fragment-index="0">
+              $$\huge
+              E = mc^2
+              $$
+            </div>
 
             <!-- <div class="r-stack">
               <img class="fragment fade-out" data-fragment-index="0"
@@ -662,18 +674,19 @@
             </div> -->
 
             <div style="text-align: left; float: left; width: 30%">
-              <br><br>
-              <img src="img/Feynman.png" width="95%">
-              <br><br>
-              <h3> • Early universe: hot and dense</h3>
-              <h3> DM + SM in thermal equilibrium</h3>
               <br>
-              <h3 class="fragment fade-in" data-fragment-index="0">
-                • Universe cools: <br>
-                Boltzmann suppression
+              <img class="fragment" data-fragment-index="1"
+                src="img/Feynman.png" width="95%">
+              <br><br>
+              <div class="fragment" data-fragment-index="1">
+                <h3> • Early universe: hot and dense</h3>
+                <br>
+              </div>
+              <h3 class="fragment fade-in" data-fragment-index="2">
+                • Universe cools: Not enough energy to produce DM
               </h3>
               <br>
-              <h3 class="fragment fade-in" data-fragment-index="1">
+              <h3 class="fragment fade-in" data-fragment-index="3">
                 • Universe expands: <br>
                 Shuts off annihilation
               </h3>
@@ -685,23 +698,26 @@
 
             <div style="text-align: center; float: right; width: 65%">
               <div class="r-stack">
-                <img class="fragment fade-in" data-fragment-index="0"
-                  src="img/YDM/Yeq.png" width="90%">
-                <img class="fragment fade-in" data-fragment-index="1"
-                  src="img/YDM/YDM1.png" width="90%">
                 <img class="fragment fade-in" data-fragment-index="2"
+                  src="img/YDM/Yeq.png" width="90%">
+                <img class="fragment fade-in" data-fragment-index="3"
+                  src="img/YDM/YDM1.png" width="90%">
+                <img class="fragment fade-in" data-fragment-index="4"
                   src="img/YDM/YDM2.png" width="90%">
               </div>
-              <h3 class="fragment fade-in" data-fragment-index="3">
+              <h3 class="fragment fade-in" data-fragment-index="5">
+                • Weak interaction: predicts this exactly! <br>
+              </h3>
+              <!-- <h3 class="fragment fade-in" data-fragment-index="5">
                 • Weak interaction ($G_F \simeq 10^{-5}\,{\rm
                 GeV}^{-2}$): new physics scale<br>
                 • $m_{\rm weak} \simeq 100\,{\rm GeV}$ <br>
               </h3>
-              <h3 class="fragment fade-in" data-fragment-index="4">
+              <h3 class="fragment fade-in" data-fragment-index="5">
                 • $\langle\sigma v\rangle_{\rm weak} \simeq
                 3\times10^{-26}\,{\rm
                 cm}^3/{\rm s}$ !!!
-              </h3>
+              </h3> -->
             </div>
 
           </textarea>
@@ -819,7 +835,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
             # Light "WIMPs": electron ionisation
 
@@ -851,10 +867,10 @@
             (2016)](http://link.aps.org/doi/10.1103/PhysRevLett.116.023201)
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
             # Light and Ultralight Dark Matter
 
@@ -894,7 +910,7 @@
             </h2>
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
@@ -903,18 +919,18 @@
 
             <br>
 
-            ### Clock: frequency reference
-            <div class="fragment fade-in">
+            ### Clock: frequency reference + count oscillations
+            <div class="fragment fade-in" data-fragment-index="3">
               <h3>
                 Best atomic clocks approach accuracy: $\delta f/f \sim
-                10^{-20}$
+                10^{-19}$
               </h3>
             </div>
 
             <br>
             <br>
 
-            <div class="fragment fade-in"
+            <div class="fragment fade-in" data-fragment-index="0"
               style="text-align: center; float: left; width: 32%">
               <img src="img/Bohr.png" width="70%"><br>
               <font size="3"> JabberWok [Wikimedia Commons]</font>
@@ -924,23 +940,24 @@
               </h3>
             </div>
 
-            <div class="fragment fade-in"
+            <div class="fragment fade-in" data-fragment-index="1"
               style="text-align: center; float: left; width: 32%">
               <img src="img/Wcislo2016.png" width="95%">
               <font size="3"> Wcislo, Science 2016</font>
               <br>
               <h3>
-                Compare frequency of oscillator to atomic transition
+                Laser: oscillations of light<br>
+                Compare frequency to atomic transition
               </h3>
             </div>
 
-            <div class="fragment fade-in"
+            <div class="fragment fade-in" data-fragment-index="2"
               style="text-align: center; float: right; width: 32%">
               <img src="img/Al+Choi2010.png" width="95%">
               <font size="3"> Choi, Phys. Rev. Lett. 2018</font>
               <br>
               <h3>
-                Lock on: Adjust local oscillator to maximum transition rate
+                Lock on: Adjust laser to maximise transition rate
               </h3>
             </div>
 
@@ -962,26 +979,36 @@
 
             <div style="text-align: left; float: right; width: 50%">
               <br>
-              <div>
+              <div class="fragment">
+                <h3> &ensp;• DM with very low mass </h3>
+                <h3> &ensp;• Very high number density to compensate </h3>
+                <h3> &ensp;• Behaves like classical field: wave-like </h3>
+              </div>
+              <div class="fragment">
+                <br>
+                <br>
+                <h3> &ensp;• Assume: weak interaction with atoms </h3>
                 <h3>
-                  &ensp;• DM scalar field has small interaction with matter
+                  &ensp;• Affect atomic energy levels and frequencies
                 </h3>
+              </div>
+              <div class="fragment">
+                <br>
+                <br>
+                <h3> &ensp;• Dark matter causes "wobbles" in frequency </h3>
                 <h3>
-                  &ensp;• Shift atomic energy levels and frequencies
+                  &ensp;• Monitor clocks for these wobbles
                 </h3>
               </div>
               <br>
-              <div class="fragment fade-in">
+              <!-- <div class="fragment fade-in">
                 <h3>Observable shift:</h3>
-                <!-- \[\huge
-                \phi_{\rm DM} = \phi_0 \cos({m_\phi t})
-                \] -->
                 <br>
                 \[\huge
                 \frac{\delta f}{f} = \kappa \, \phi_{\rm DM}(\vec{r},t)
                 \]
-              </div>
-              <br>
+              </div> -->
+              <!-- <br>
               <div class="fragment fade-in">
                 <h4>
                   &ensp;• $\kappa$ - model dependent parameter
@@ -989,14 +1016,11 @@
                 <h4>
                   &ensp;• Calculated: high-precision atomic theory
                 </h4>
-              </div>
+              </div> -->
 
-              <br>
+              <!-- <br>
               <div class="fragment fade-in">
                 <h3>Example: variation of constants</h3>
-                <!-- \[\huge
-                \phi_{\rm DM} = \phi_0 \cos({m_\phi t})
-                \] -->
                 <br>
                 \[\huge
                 \mathcal{L} = \phi F_{\mu\nu}F^{\mu\nu}
@@ -1006,7 +1030,7 @@
                 \kappa = \frac{{\rm d} f}{{\rm d}
                 \alpha}\frac{\alpha_0}{f_0}
                 \]
-              </div>
+              </div> -->
 
             </div>
 
@@ -1110,14 +1134,12 @@
         </section> -->
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
             # GPS.DM
 
             <div style="text-align: left; float: left; width: 35%">
               <br>
-              <!-- <img src="img/GPSDM-logo.png" width="50%"> -->
-              <!-- <br><br><br> -->
               <h3>• 30 Cs, Rb atomic clocks</h3>
               <br>
               <h3>• Over 20 years of high-quality data</h3>
@@ -1126,8 +1148,6 @@
               <br>
               <h3>• 50,000 km Dark Matter observatory</h3>
               <br>
-              <!-- <img div class="fragment fade-in" src="img/gps-data.png"
-                width="95%"> -->
               <div class="fragment fade-in">
                 <video width="75%" data-autoplay muted>
                   <source src="img/GPSDM.mp4"></video><br>
@@ -1136,11 +1156,6 @@
             </div>
 
             <div style="text-align: center; float: right; width: 65%">
-              <!-- <div class="fragment fade-in">
-                <video width="40%" data-autoplay muted>
-                  <source src="img/GPSDM.mp4"></video><br>
-                <font size="3">[Video: Conner Dailey (honors student)]</font>
-              </div> -->
               <img div class="fragment fade-in" src="img/gps-data.png"
                 width="45%">
               <br>
@@ -1161,7 +1176,7 @@
             </div>
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <!-- <section data-markdown data-background-color="black">
@@ -1198,7 +1213,7 @@
         </section> -->
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
             # Constant background
 
@@ -1206,10 +1221,10 @@
             <font size="3">[ESA / C. Carreau]</font>
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
             # Super-massive black hole at the Galactic Centre
 
@@ -1244,7 +1259,7 @@
             </div>
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <!-- <section data-markdown data-background-color="black">
@@ -1269,6 +1284,49 @@
           <textarea data-template>
             # Conclusion
 
+            <div style="text-align: left; float: left; width: 65%">
+              <br>
+              <h2>Standard Model + General Relativity</h2>
+              <h3> &emsp; • Extremely successful, but incomplete</h3>
+              <h3> &emsp; • Our job to search for what's beyond</h3>
+
+              <br>
+              <h2>Dark Matter</h2>
+              <h3> &emsp; • Overwhelming evidence: completely in the dark</h3>
+              <h3> &emsp; • Promising probe for physics beyond Standard Model</h3>
+
+              <br>
+              <h2>WIMPs</h2>
+              <h3> &emsp; • Seemingly great candidate...but no evidence</h3>
+              <h3> &emsp; • Look for lighter DM candidates: quantum sensors</h3>
+
+              <br>
+              <br>
+              <img src="img/QDM-RoadTrip.png" width="25%">&emsp;&emsp;
+              <img src="img/uq-logo.svg" width="32%"> &emsp;&emsp;&emsp;
+              <img src="img/natsciweek.png" width="18%">
+            </div>
+
+            <div style="text-align: left; float: right; width: 35%">
+
+              <br><br><br><br><br><br>
+              <img src="img/laser-JILA.jpg" width="99%"><br>
+              <font size="3">[JILA]</font>
+
+              <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+              <!-- <br><br><br> -->
+              <br><br><br><br><br>
+              <h4> Benjamin M. Roberts (<a href="https://broberts.io">www.broberts.io</a>)</h4>
+
+              <h4> <i>Brisbane, QLD, 21 August 2023</i></h4>
+            </div>
+
+            <!-- <div class="r-stretch"></div>
+
+            <br>
+
+            <img src="img/QDM-RoadTrip.png" width="20%">
+            <img src="img/uq-logo.svg" width="25%"> -->
           </textarea>
         </section>
 
