@@ -698,6 +698,11 @@
               Classical field: quantum sensors (clocks)
             </h2>
 
+          <br><br>
+            * Review: Hui _et al._, [PhysRevD.95.043541 (2017)](http://arxiv.org/abs/1610.08297)
+            * Review: Antypas _et al._, Snowmass 2021 [arXiv:2203.14915](https://arxiv.org/abs/2203.14915)
+
+
           </textarea>
         </section>
 
@@ -828,10 +833,40 @@
 
           <br>
 
+          <div>
+          \[\large
+            \omega^{A} = \underbrace{F_A(\alpha)}_{\text{Transition-specific}} 
+            \times  \underbrace{m_e c^2\alpha^2}_{\text{Units}} 
+          \]
+          </div>
+
           <div style="text-align: left; float: left; width: 50%">
             <br> <br>
             <img src="img/AlphaSensitivity.png" width="90%"><br>
             <font size="3">[M. Murphy 2012]</font>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br><br>
+            <img src="img/Bohr.png" width="30%"><br>
+            <font size="3">[JabberWok/Wikipedia]</font>
+            <br><br><br>
+            \[
+            \frac{\Delta\omega}{\omega} = K\frac{\Delta\alpha}{\alpha}
+            \qquad\qquad\qquad
+            \left(
+                {\color{red}K \equiv \frac{\partial \omega}{\partial \alpha}\frac{\alpha_0}{\omega}}
+            \right)
+            \]
+
+            <br>
+
+            * In general, $K$ calculated from atomic theory
+            * Difference transitions: different sensitivity
+
+            <br>
+
+            * Dzuba, Flambaum, Webb [Phys Rev Lett 82, 888 (1999)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.888)
           </div>
         </textarea>
         </section>
@@ -841,13 +876,83 @@
           <textarea data-template>
           # Issue + Resolution
 
+          ### Example: H-like
+
           <br>
 
           <div style="text-align: left; float: left; width: 50%">
-            <br> <br>
-            <img src="img/AlphaSensitivity.png" width="90%"><br>
-            <font size="3">[M. Murphy 2012]</font>
+            \[
+              \omega_{\rm SI} = \frac{m_e c^2Z^2{\color{red}\alpha^2}}{2}
+              \left(\frac{1}{n^2}-\frac{1}{n'^2}\right)F(Z\alpha)
+            \]
+            <br>
+            \[
+              K = {\color{red}2} + K_{\rm rel}
+            \]
           </div>
+
+          <div style="text-align: left; float: right; width: 50%" class="fragment">
+            \[
+                \omega_{\rm atomic} = \frac{Z^2}{2}
+                \left(\frac{1}{n^2}-\frac{1}{n'^2}\right)F(Z\alpha)
+            \]
+            <br>
+            \[
+              K = K_{\rm rel}
+            \]
+          </div>
+
+          
+
+          <div class="fragment">
+          
+            <br><br>
+        
+          * $K$ _and_ $\alpha$ both dimensionless, issue remains
+          * $K$ only defined up to additive constant 
+          * (constants only defined up to multiplicative constant)
+
+          </div>
+
+
+          <br><br>
+
+          <div class="fragment">
+
+            ### Resolution: ratios
+
+            <br><br>
+        
+            <div style="text-align: left; float: left; width: 50%">
+
+            $$
+            \frac{\delta\left(\omega_A/\omega_B\right)}{\left(\omega_A/\omega_B\right)}
+            = 
+            K_A \frac{\delta\alpha}{\alpha}
+            -K_B \frac{\delta\alpha}{\alpha}
+            =
+            (K_A  -K_B )\frac{\delta\alpha}{\alpha}
+            $$
+
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+             
+                &ensp;•  Unit ambiguity cancels in ratios
+                &ensp;•  Must have two lines at each spacetime location
+            
+            </div>
+
+          </div>
+
+          <div style="text-align: center; float: right; width: 100%">
+
+            <br><br> <br><br>
+
+          * Nice review: Kozlov, Budker [Ann. Phys. 1800254 (2018)](https://onlinelibrary.wiley.com/doi/10.1002/andp.201800254)
+
+          </div>
+
         </textarea>
         </section>
 
@@ -1024,42 +1129,50 @@
           * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
 
           <br>
+          <br>
+          <br>
 
-          <h3>
-            Typical _local_ experiment:
-          </h3>
-          <br>
-         <div>
-          \[\large
-            \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 \, \Delta d_{\rm eff} \cos(\omega t)
-          \]
+          <div style="text-align: left; float: left; width: 50%">
+
+            ### Typical local experiment:
+
+            <br><br>
+
+            $$\large
+              \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 \\, \Delta d_{\rm eff} \cos(\omega t)
+            $$
+
+            <br>
+            $$
+              d_{\rm eff} = \sum_X K_X d_X
+            $$
+
+            <br><br>
+
+            <img src="img/Local.png" width="80%"><br>
           </div>
-          <br>
-          <br>
-          <br>
-          <h3>
-            Separated (identical) sensors:
-          </h3>
-          <br>
-          <div>
-          \[\large
+          
+          <div style="text-align: left; float: right; width: 50%" class="fragment fade-in">
+
+            ### Separated (identical) sensors:
+
+            <br>
+
+            <div>
+            \[\large
             \begin{align*}
               \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} &= \phi_0 \, d_{\rm eff} \left(\cos(\omega t) -\cos(\omega t-\delta)\right) \\
                 & \approx \phi_0 d_{\rm eff} \sin(\omega t) \delta \\
-                \delta &= \omega\Delta t - k_z D
+                \delta &= \omega\Delta t - k_z D \\
+                ~ \\
+                \delta &\approx \frac{\omega L n}{c}
             \end{align*}
-          \]
-          <br>
-          \[
-            \large
-            \delta \approx 
-          \]
+            \]
+            </div>
+
+            <img src="img/Separated.png" width="80%"><br>
           </div>
 
-          <div style="text-align: left; float: left; width: 50%">
-            <br> <br>
-            OK
-          </div>
         </textarea>
         </section>
 
@@ -1086,8 +1199,12 @@
           <br>
           <br>
 
+          <div class="fragment">
+
           ## Detriments
             * Phase difference $\delta \ll 1$: suppression
+
+          </div>
         </textarea>
         </section>
 
