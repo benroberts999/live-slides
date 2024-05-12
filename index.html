@@ -1,79 +1,86 @@
 <!DOCTYPE html>
 <html class="sl-root decks export offline loaded">
-	<head>
-		<title>Talks</title>
 
-		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+<head>
+	<title>Talks</title>
 
-	</head>
-	<body class="reveal-viewport theme-font-helvetica theme-color-black-blue">
-		<div class="reveal">
-			<div class="slides">
+	<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
 
-				<section data-markdown>
-					<textarea data-template>
-						## Index of slides
+</head>
 
-						* [PHYS4070 - Lecture 01](phys4070/L01-intro.html)
-						* [Dark Matter - UQ Colloquium](DarkMatter/2308-UQ-Colloquium-DM.html)
-						* [Dark Matter - QDM Road Trip](DarkMatter/2308-QDM-RoadTrip.html)
-						* [Dark Matter - QSNET Seminar](DarkMatter/2402-QSNET-Seminar.html)
+<body class="reveal-viewport theme-font-helvetica theme-color-black-blue">
+	<div class="reveal">
+		<div class="slides">
 
-					</textarea>
-				</section>
+			<section data-markdown>
+				<textarea data-template>
+					## All slides/talks:
 
-				<!-- =============================================================== -->
-			</div>
+					* [broberts.io/slides/](https://broberts.io/slides/)
+
+					## Index of slides
+
+					* [PHYS4070 - Lecture 01](phys4070/L01-intro.html)
+					* [Dark Matter - UQ Colloquium](DarkMatter/2308-UQ-Colloquium-DM.html)
+					* [Dark Matter - QDM Road Trip](DarkMatter/2308-QDM-RoadTrip.html)
+					* [Dark Matter - QSNET Seminar](DarkMatter/2402-QSNET-Seminar.html)
+
+				</textarea>
+			</section>
+
+			<!-- =============================================================== -->
 		</div>
+	</div>
 
-		<!-- =============================================================== -->
-		<!-- =============================================================== -->
-		<!-- =============================================================== -->
-		<script>
-			var SLConfig = {};
-			// Use local fonts
-			SLConfig.fonts_url = '../lib/fonts/';
-		</script>
-		<script src="lib/reveal.js"></script>
-		<script src="lib/reveal-plugins.js"></script>
-		<script src="lib/offline.js"></script>
-		<script src="plugin/math/math.js"></script>
+	<!-- =============================================================== -->
+	<!-- =============================================================== -->
+	<!-- =============================================================== -->
+	<script>
+		var SLConfig = {};
+		// Use local fonts
+		SLConfig.fonts_url = '../lib/fonts/';
+	</script>
+	<script src="lib/reveal.js"></script>
+	<script src="lib/reveal-plugins.js"></script>
+	<script src="lib/offline.js"></script>
+	<script src="plugin/math/math.js"></script>
 
-		<!-- Initialize the presentation -->
-		<script>
-			Reveal.initialize({
-				width: 1920,
-				height: 1080,
-				margin: 0.06,
+	<!-- Initialize the presentation -->
+	<script>
+		Reveal.initialize({
+			width: 1920,
+			height: 1080,
+			margin: 0.06,
 
-				hash: true,
-				controls: true,
-				progress: true,
-				mouseWheel: false,
-				showNotes: false,
-				slideNumber: true,
-				fragmentInURL: true,
+			hash: true,
+			controls: true,
+			progress: true,
+			mouseWheel: false,
+			showNotes: false,
+			slideNumber: true,
+			fragmentInURL: true,
 
-				autoSlide: 0,
-				autoSlideStoppable: true,
+			autoSlide: 0,
+			autoSlideStoppable: true,
 
-				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+			autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
 
-				center: true,
-				shuffle: false,
-				loop: false,
-				rtl: false,
-				navigationMode: "default",
+			center: true,
+			shuffle: false,
+			loop: false,
+			rtl: false,
+			navigationMode: "default",
 
-				transition: "none",
-				backgroundTransition: "none",
+			transition: "none",
+			backgroundTransition: "none",
 
-				highlight: {
-					escapeHTML: false
-				},
+			highlight: {
+				escapeHTML: false
+			},
 
-				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
-			});
-		</script>
-	</body>
+			plugins: [RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX]
+		});
+	</script>
+</body>
+
 </html>
