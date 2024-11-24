@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html class="sl-root decks export offline loaded">
+
+  <head>
+    <title>Dark Matter</title>
+
+    <link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
+
+  </head>
+
+  <body class="reveal-viewport theme-font-helvetica theme-color-black-blue">
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+
+            <h1>
+              Search for scalar dark matter and variation of fundamental constants with spatially separated sensors
+            </h1>
+
+
+
+            <br>
+
+            <h3>
+              <it>APS April Meeting 2024</it>
+            </h3>
+
+            <br>
+
+            <h4>
+
+              * Melina Filzinger, Ashlee Caddell, Dhruv Jani, Martin Steinel, 
+              Leo Giani, Nils Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
+              * Savalle _et al._, [Phys. Rev. Lett. **126**, 051301 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.051301) [[arXiv:2006.07055](http://arxiv.org/abs/2006.07055)]
+              * BMR _et al._, [New J. Phys. **22**, 093010 (2020)](https://iopscience.iop.org/article/10.1088/1367-2630/abaace) [[arXiv:1907.02661](http://arxiv.org/abs/1907.02661)]
+              * BMR, Blewitt, Dailey, Murphy, Pospelov, Rollings, Sherman, Williams, Derevianko, [Nature Comms. **8**, 1195 (2017)](https://www.nature.com/articles/s41467-017-01440-4)
+
+            </h4>
+
+            <div class="r-stretch"></div>
+
+            ### Benjamin M. Roberts
+
+            <br>
+
+            School of Mathematics and Physics,
+            University of Queensland, Australia
+
+            <br><br>
+
+            * Slides [broberts.io/talks](https://broberts.io/talks)
+
+            <br>
+            <br>
+
+            <img src="img/uq-logo.svg" width="25%"> 
+            <!-- <img src="img/ARC.png" width="30%">  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  -->
+            <!-- Supported by Autralian Research Council &nbsp; -->
+            &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; Supported by: ARC and 
+            &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;
+            <img src="img/BQI.png" width="20%">
+            <!-- <img src="https://www.bqx.com.au/wp-content/uploads/2022/10/BXI_Logo-768x233.png" width="30%"> -->
+            <br><br>
+
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Unexplained mysteries
+
+            <br>
+
+            <div style="text-align: center; float: left; width: 70%">
+              <div 
+                style="text-align: left;" data-markdown>
+
+                <h2>Why is there so much more matter than anti-matter?</h2>
+                <h3>&ensp;• CP-violation in the Standard Model is too small</h3>
+              </div>
+
+              <br>
+              <div 
+                style="text-align: left;" data-markdown>
+
+                <h2>Quantum theory for gravitation?</h2>
+
+              </div>
+
+              <br>
+              <div 
+                style="text-align: left;" data-markdown>
+
+                <h2>No explanation for dark energy</h2>
+                <h3>&ensp;• Explain accelerated expansion of universe
+                  • Cosmologists: Why is Λ so large?
+                  • Particle theorists: Why is Λ so small?
+                </h3>
+
+              </div>
+
+              <br>
+              <div 
+                style="text-align: left;" data-markdown>
+
+                <h2>No explanation for dark matter...</h2>
+
+              </div>
+
+            </div>
+
+            <div style="text-align: left; float: right; width: 30%">
+              <br><br><br><br><br><br>
+              <img
+                src="img/dm-pie.jpg" width="95%">
+            </div>
+
+          </textarea>
+        </section> -->
+
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Dark Matter: What we know
+
+            <br>
+            <h3> There's lots of it</h3>
+
+            <h3> It gravitationally clusters in halos around galaxies</h3>
+            <h4> (really, galaxies gravitationally cluster around DM)</h4>
+
+            <div style="text-align: left; float: left; width: 50%"
+              >
+              <br><br>
+              <h2>Very strong evidence:</h2>
+              <br>
+              <h3>• Rotation curves, gravitational lensing, CMB </h3>
+              <br>
+              <h3>• Also: large scale structure, BAO etc. </h3>
+              <br>
+              <h3>• It's not strange for particles to not interact with
+                light (e.g., neutrinos)</h3>
+              <br>
+              <br>
+              <h3 >• ΛCDM model works extremely well
+                <br>&emsp; • Ωc =
+                0.2589(57) [Planck] </h3>
+              <!-- <h3 class="fragment">• (Just need to work out the Λ and CDM parts)</h3> -->
+            </div>
+
+            <div style="text-align: center; float: right; width: 50%">
+              <br><br><br><br>
+              <img
+                src="img/dm-pie.jpg"
+                width="55%"><br>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Dark Matter: What we don't know
+
+            <br>
+            <div class="fragment" data-fragment-index="0">
+              <h2> ... everything else</h2>
+            </div>
+
+            <br>
+
+            <div class="r-stack">
+              <img class="fragment" data-fragment-index="1"
+                src="img/DM_masses2.png" width="80%">
+              <img class="fragment" data-fragment-index="3"
+                src="img/DM_masses3.png" width="80%">
+            </div>
+            <div class="fragment" data-fragment-index="1">
+              <font size="3">US "Cosmic Visions" report [arXiv:1707.04591]</font>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="fragment" data-fragment-index="1">
+              <h3>• Possible mass range: 90 orders of magnitude!</h3>
+            </div>
+            <div class="fragment" data-fragment-index="2">
+              <h3>• Fundamental particle: 50 orders (de Broglie to Planck)</h3>
+            </div>
+
+            <br>
+
+            <div class="fragment">
+              <h3> • Vast majority of focus on WIMPs, but field is very wide</h3>
+            </div>
+
+          </textarea>
+        </section>
+
+      
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # WIMP Searches: XENON
+
+            <div style="text-align: left; float: left; width: 60%">
+              <div class="r-stack">
+                <div class="fragment fade-out" data-fragment-index="1">
+                  <br><br><br>
+                  <img src="img/Feynman.png" width="65%">
+                  <br><br>
+                  <h3 class="fragment highlight-red" data-fragment-index="0">•
+                    Direct detection
+                    (scattering)</h3>
+                  <h3>• Indirect detection (annihilation)</h3>
+                  <h3>• Collider searches (production)</h3>
+                </div>
+                <div>
+                  <div class="fragment fade-in" data-fragment-index="1">
+                    <br>
+                    <h3>Excluded cross-section for WIMPs:</h3>
+                    <img
+                      src="img/WIMP-constraints.png" width="90%"><br>
+                      <font size="3">[GAMBIT]</font>
+                  </div>
+                  <h3 class="fragment fade-in" data-fragment-index="2">
+                    &emsp;• Mass below nuclear mass: energy threshold
+                  </h3>
+                  <h3 class="fragment fade-in" data-fragment-index="2">
+                    &emsp;• High mass: fewer particles
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; float: right; width: 40%">
+              <img src="img/xenon.png" width="65%">
+            </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # En*light*ening the search for Dark Matter?
+            ## Atomic Physics!
+
+            <br>
+
+            <div style="text-align: center; float: left; width: 60%">
+              <div class="fragment" data-fragment-index="0"
+                style="text-align: left;" data-markdown>
+
+                <h2> Mass drops below nuclear mass:</h2>
+                <h3>&emsp;• No nuclear recoils
+                  &ensp;• Instead: electron recoils + ionisation</h3>
+              </div>
+              <br>
+
+              <div class="fragment" data-fragment-index="1"
+                style="text-align: left;" data-markdown>
+
+                <h2> Mass drops below electron mass:</h2>
+                <h3>&emsp;• No electron recoils
+                  &ensp;• Instead: absorption (dark photoelectric effect)</h3>
+              </div>
+              <br>
+
+              <div class="fragment" data-fragment-index="2"
+                style="text-align: left;" data-markdown>
+
+                <h2> Mass drops below eV:</h2>
+                <h3>&emsp;• Classical DM field
+                  &ensp;• Quantum sensing (atomic clocks)</h3>
+              </div>
+              <br>
+
+            </div>
+
+            <div style="text-align: center; float: right; width: 40%">
+              <br>
+              <img class="fragment" data-fragment-index="0"
+                src="img/atom.png" width="40%">
+              <br><br>
+              <div class="r-stack">
+                <div class="fragment" data-fragment-index="2">
+                  <img
+                    src="img/laser-JILA.jpg" width="90%"><br>
+                  <font size="3">[JILA]</font>
+                </div>
+                <!-- <div class="fragment" data-fragment-index="3">
+                  <img
+                    src="img/Ye_UCBolder-SrLattice.jpg" width="80%"><br>
+                  <font size="3">[Ye/UCBolder]</font>
+                </div> -->
+              </div>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Light and Ultralight Dark Matter
+
+            <br><br>
+
+            $$ \Huge
+            \rho_{\rm DM}\simeq 0.3 ~ \frac{\rm GeV}{{\rm cm}^3}
+            $$
+
+            <br>
+
+            ## Mass decreases $\implies$ number density increases:
+            ## Classical boson field (e.g., axions, scalars)
+
+            <br>
+
+            <div style="text-align: left; float: right; width: 70%">
+              <div>
+                <h3>
+                  1. No interaction: oscillation: $\phi = \phi_0 \cos(m_\phi
+                  t)$
+                </h3>
+                \[\phi_0^2\propto \rho_{\rm DM}\]
+              </div>
+
+              <h3>
+                2. Interactions: clumps
+              </h3>
+              <br>
+              <h3>
+                3. Also: constant build-up (local over-densities)
+              </h3>
+              <br><br>
+            </div>
+
+            <!-- <h2 class="fragment fade-in">
+              Classical field: quantum sensors (clocks)
+            </h2> -->
+
+          <br><br><br><br>
+
+            * Review: Hui _et al._, [PhysRevD.95.043541 (2017)](http://arxiv.org/abs/1610.08297)
+            * Review: Antypas _et al._, Snowmass 2021 [arXiv:2203.14915](https://arxiv.org/abs/2203.14915)
+
+
+          </textarea>
+        </section>
+
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Atomic Clocks 101:
+
+            <br>
+
+            ### Clock: frequency reference
+            <div class="fragment fade-in">
+              <h3>
+                Best atomic clocks approach accuracy: $\delta f/f \sim
+                10^{-20}$
+              </h3>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="fragment fade-in"
+              style="text-align: center; float: left; width: 32%">
+              <img src="img/Bohr.png" width="70%"><br>
+              <font size="3"> JabberWok [Wikimedia Commons]</font>
+              <br>
+              <h3>
+                Atomic transition: "perfect*" frequency reference
+              </h3>
+            </div>
+
+            <div class="fragment fade-in"
+              style="text-align: center; float: left; width: 32%">
+              <img src="img/Wcislo2016.png" width="95%">
+              <font size="3"> Wcislo, Science 2016</font>
+              <br>
+              <h3>
+                Compare frequency of oscillator to atomic transition
+              </h3>
+            </div>
+
+            <div class="fragment fade-in"
+              style="text-align: center; float: right; width: 32%">
+              <img src="img/Al+Choi2010.png" width="95%">
+              <font size="3"> Choi, Phys. Rev. Lett. 2018</font>
+              <br>
+              <h3>
+                Lock on: Adjust local oscillator to maximum transition rate
+              </h3>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # "Listen" for DM field using atomic clocks
+
+            <br>
+
+            <div style="text-align: left; float: left; width: 50%">
+              <br> <br>
+              <img src="img/NHanacek_NIST.png" width="90%"><br>
+              <font size="3">[N Hanacek/NIST]</font>
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <br>
+              <div>
+                <h3>
+                  &ensp;• DM scalar field has small interaction with matter
+                </h3>
+                <h3>
+                  &ensp;• Shift atomic energy levels and frequencies
+                </h3>
+              </div>
+              <br>
+              <div class="fragment fade-in">
+                <h3>Observable shift:</h3>
+                <br>
+                \[\huge
+                \frac{\delta f}{f} = \kappa \, \phi_{\rm DM}(\vec{r},t)
+                \]
+              </div>
+              <br>
+              <div class="fragment fade-in">
+                <h4>
+                  &ensp;• $\kappa$ - model + system dependent parameter
+                </h4>
+              </div>
+
+              <br>
+              <br>
+              <div class="fragment fade-in">
+
+              <h3>
+                Not just atomic clocks; not just dark matter
+              </h3>
+
+              * Safronova _et al._, [RevModPhys.90.025008 (2018)](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.90.025008)
+              
+            </div>
+            </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Variation of fundamental constants
+
+          <br>
+
+          <div>
+          \[\large
+            \omega^{A} = \underbrace{F_A(\alpha)}_{\text{Transition-specific}} 
+            \times  \underbrace{m_e c^2\alpha^2}_{\text{Units}} 
+          \]
+          </div>
+
+          <div class="fragment" style="text-align: center; float: left; width: 50%">
+            <br><br>
+            * Linear scalar coulpling:
+            <br><br>
+            \[\large
+            \mathcal{L}_{\rm int.} = \phi \left[ {d_e \, F_{\mu\nu}F^{\mu\nu}} + {d_{m_f} \, \bar\psi\psi}  + {d_g \, G^a_{\mu\nu}G^{a\mu\nu}}\right]
+            \]
+            <!-- <img src="img/Bohr.png" width="25%"><br>
+            <font size="3">[JabberWok/Wikipedia]</font> -->
+            <br><br>
+            \[
+            \frac{\Delta\omega}{\omega} = K\frac{\Delta\alpha}{\alpha}
+            \qquad\qquad\qquad
+            \left(
+                {\color{red}K \equiv \frac{\partial \omega}{\partial \alpha}\frac{\alpha_0}{\omega}}
+            \right)
+            \]
+
+            <br>
+
+            * In general, $K$ calculated from atomic theory
+            * Different transitions: different sensitivity
+
+            <br>
+
+            * Dzuba, Flambaum, Webb [Phys Rev Lett 82, 888 (1999)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.82.888)
+          </div>
+
+          <div class="fragment" style="text-align: left; float: right; width: 50%">
+            <br> <br>
+            <img src="img/AlphaSensitivity.png" width="85%"><br>
+            <font size="3">[M. Murphy 2012]</font>
+          </div>
+
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # $d_{m_e}$ alone?
+
+
+
+          * Usually, appears in ratios from $m_e/m_p$
+          * True in general for any 'dimensionful' constant
+          * Potential issue: universal couplings
+
+          <br>
+          <br>
+
+          $$\large
+              \delta(m_e/m_p) ~ \propto ~ (d_{m_e} - d_g)
+          $$
+
+          <br>
+          <br>
+
+          <div class="fragment">
+
+          ## Fast oscillations:
+
+          * Damped vs. undamped oscillator
+
+          <img src="img/Geraci.png" width="20%"><br>
+          <font size="3">[Geraci (2019)]</font>
+
+          <br>
+
+          * Free vs. fixed optical cavity -- Geraci _et al._,  [Phys.Rev.Lett.123.031304 (2019)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.031304)
+          * Atom vs (damped) solid -- Antypas _et al._, [Phys.Rev.Lett.123.141102 (2019)](https://doi.org/10.1103/PhysRevLett.123.141102)
+          * Time-delay interferometry -- Savalle _et al._, [Phys.Rev.Lett.126.051301 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.051301)
+          * Overview: Antypas _et al._, [Ann. Phys. 532 (2020)](https://onlinelibrary.wiley.com/doi/10.1002/andp.201900566)
+
+          </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Transient Signals
+
+            <br><br><br>
+
+            <div style="text-align: left; float: left; width: 50%">
+              <img src="img/td.png" width="80%">
+
+              Derevianko + Pospelov, [Nature Physics
+              (2014)](http://www.nature.com/doifinder/10.1038/nphys3137)
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <h3>• Scalar DM with small self-interaction:</h3>
+              <br>
+              <h3>• May form "clumps": topological defects, Q-balls</h3>
+              <br>
+              <h3> &emsp; • Topological defects: size $d\sim 1/m_\phi$</h3>
+              <br>
+              <h3> &emsp; • $m=10^{-10}$ eV $\implies$ $d\simeq 1$ km</h3>
+              <br>
+              <h3>• Wait until one passes through Earth</h3>
+              <br>
+              <h3>• How to distinguish from noise?</h3>
+              <br>
+              <h3> &emsp; • Correlated signal across global network</h3>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # GPS.DM
+
+            <div style="text-align: left; float: left; width: 35%">
+              <br>
+              <h3>• 30 Cs, Rb atomic clocks</h3>
+              <br>
+              <h3>• Over 20 years of high-quality data</h3>
+              <br>
+              <h3>• Publicly available (JPL)</h3>
+              <br>
+              <h3>• 50,000 km Dark Matter observatory</h3>
+              <br>
+              <div>
+                <video width="75%" data-autoplay muted>
+                  <source src="img/GPSDM.mp4"></video><br>
+                <font size="3">[Video: Conner Dailey]</font>
+              </div>
+            </div>
+
+            <div style="text-align: center; float: right; width: 65%">
+              <img div src="img/gps-data.png"
+                width="45%">
+              <br>
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <img src="img/GPSDM-results.png" width="98%">
+                <b>BMR</b>, Blewitt, Dailey, Murphy, Pospelov, Rollings,
+                Sherman,
+                Williams, Derevianko, <br>
+                <a
+                  href="http://www.nature.com/articles/s41467-017-01440-4">
+                  Nature Comms.
+                  (2017)</a>
+
+              </div>
+
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # European Fibre-linked network
+
+            <br>
+            <div style="text-align: center; float: left; width: 50%">
+              <img src="img/FibreLinkDiagram.png" width="70%">
+              <br>
+            </div>
+            <div style="text-align: left; float: right; width: 50%">
+              <h3>• Laboratory optical clocks</h3>
+              <br>
+              <h3>• Orders-of-magnitude higher precision</h3>
+              <br>
+              <h3>• Orders-of-magnitude less data</h3>
+              <h3> &emsp; • (hours, not decades)</h3>
+            </div>
+
+            <div class="fragment fade-in">
+
+              <br>
+
+              <img src="img/SYRTE-results.png"
+                width="80%"><br>
+              <b>BMR</b>, et al.,
+              <a
+                href="https://iopscience.iop.org/article/10.1088/1367-2630/abaace">
+                N. J. Phys. (2020)</a>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Space-time separated sensors
+
+          * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
+
+          <br>
+          <br>
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+
+            ### Typical local experiment:
+
+            <br><br>
+
+            $$\large
+              \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 \\, \Delta d_{\rm eff} \cos(\omega t)
+            $$
+
+            <br>
+            $$
+              d_{\rm eff} = \sum_X K_X d_X
+            $$
+
+            * Fermion couplings ($d_{m_e}$) cancel
+
+            <br><br>
+
+            <img src="img/Local.png" width="80%"><br>
+          </div>
+          
+          <div style="text-align: left; float: right; width: 50%" class="fragment fade-in">
+
+            ### Separated (identical) sensors:
+
+            <br>
+
+            <div>
+            \[\large
+            \begin{align*}
+              \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} &= \phi_0 \, d_{\rm eff} \left(\cos(\omega t) -\cos(\omega t-\delta)\right) \\
+                & \approx \phi_0 d_{\rm eff} \sin(\omega t) \delta \\
+                \delta &= \omega\Delta t - k_z D \\
+                \delta &\approx \frac{\omega L n}{c} - \frac{\omega L v}{c^2}
+            \end{align*}
+            \]
+            </div>
+
+            * Fermion couplings ($d_{m_e}$) survive, but $\delta$ is small
+
+            <img src="img/Separated.png" width="80%"><br>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Space-time separated sensors: pros/cons 
+
+          <br>
+          $$\large
+          \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 d_{\rm eff} \sin(\omega t) \frac{\omega L n}{c} \\
+          $$
+          <br>
+
+          ## Benefits
+           * Can use identical sensors
+           * Access Fermion couplings with _optical/optical_ comparisons
+           
+           <br>
+
+           <div class="fragment">
+           
+            * Signal scales with $L$
+              * Enhance with large distances
+              * Also: positive detection descrimination with a network!
+           
+            </div>
+
+            <br>
+           
+            <div class="fragment">
+
+            * Signal flat vs. $M_{\rm DM}$   
+             * $\phi\propto 1/m$, $\omega\propto m$           
+          </div>
+
+          <br>
+          <br>
+
+          <div class="fragment">
+
+          ## Detriments
+            * Phase difference $\delta \ll 1$: suppression
+
+          </div>
+        </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Space-time separated sensors: initial results
+
+          * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
+          <br>
+
+          <div style="text-align: center; float: left; width: 50%">
+            <br> <br>
+            <img src="img/Schioppo.png" width="75%"><br>
+            <font size="3">[Schioppo et al.]</font>
+          </div>
+
+          <div style="text-align: left; float: right; width: 50%">
+            <br> <br>
+
+            * Existing data: [Schioppo _et al._, Nat.Comms 13 (2022)](https://www.nature.com/articles/s41467-021-27884-3)
+            * Comparison of ultra-stable cavity lasers
+            * 2220 km: PTB to NPL via SYRTE
+            * $\Delta t \simeq 0.01\\,{\rm s}$
+
+            <br>
+
+            * Publicly available data
+
+            <br> <br>
+
+            <img src="img/Schioppo-data.png" width="75%"><br>
+            <font size="3">[Schioppo et al. (2022)]</font>
+
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Space-time separated sensors: initial results
+
+          * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
+          <br>
+
+          <div style="text-align: center; float: left; width: 50%">
+            <br>
+            <img src="img/dme-amplitude-b.png" width="90%"><br>
+            <font size="4"><a href="http://arxiv.org/abs/2312.13723">[arXiv:2312.13723]</a></font>
+          </div>
+
+          <div style="text-align: left; float: right; width: 50%">
+
+            <br> <br>
+
+            * Search for oscillations in data<br>
+            * Method exactly the same as previous local comparison search<br>
+            * Analysis done by Melina Filzinger (PTB)<br>
+            * Good for oscillations up to $\sim$ 1 Hz<br>
+            * Lasers loose accuracy for longer time-scales<br>
+
+            <br>
+
+            * First low-mass constraints on $d_{m_e}$ alone
+
+            <!-- <img src="img/Schioppo-AVAR.png" width="50%"><br>
+            <font size="3">[Schioppo et al. (2022)]</font> -->
+
+            
+          <br><br>
+
+          ### Outlook
+
+          * Hope to gain significant improvement using optical clock network
+
+          * Linear distance scaling: future space-based clocks
+
+          * Linear distance scaling: method for positive signal discrimination
+
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- ===============================================================
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Space-time separated sensors: constraints on $d_{m_e}$
+
+          * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
+
+          <br>
+
+          <br> <br>
+
+          <div style="text-align: center; float: left; width: 50%">
+            <img src="img/dme-limits-b.png" width="90%"><br>
+            <font size="4"><a href="http://arxiv.org/abs/2312.13723">[arXiv:2312.13723]</a></font>
+          </div>
+
+          <div style="text-align: left; float: right; width: 50%">
+            <br> <br>
+
+            * First low-mass constraints on $d_{m_e}$ alone
+            * All others are |$d_{m_e} - d_g$| ($m_e/m_p$)
+
+            * Unique $L$ scaling
+
+            * Unique $m_\phi$ scaling
+
+          <br><br>
+
+            ### Outlook
+
+            * Hope to gain significant improvement using optical clock network
+
+            * Linear distance scaling: future space-based clocks
+
+            * Linear distance scaling: method for positive signal discrimination
+          </div>
+
+
+
+        </textarea>
+        </section> -->
+
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Extra
+        </textarea>
+        </section>
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+          # Scalar-SM?
+
+
+          * Overview: Hees _et al._, [PhysRevD.98.064051 (2018)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.98.064051)
+          <br>
+
+          <div> 
+
+          </div>
+
+            <div class="r-stack">
+                \[\huge
+                \mathcal{L}_{\rm int.} = \phi \left[ {d_e \, F_{\mu\nu}F^{\mu\nu}} + {d_{m_f} \, \bar\psi\psi}  + {d_g \, G^a_{\mu\nu}G^{a\mu\nu}}\right]
+                \]
+              <div class="fragment fade-in-then-out" data-fragment-index="1">
+                \[\huge
+                \mathcal{L}_{\rm int.} = \phi \left[ {\color{yellow}d_e \, F_{\mu\nu}F^{\mu\nu}} + {d_{m_f} \, \bar\psi\psi}  + {d_g \, G^a_{\mu\nu}G^{a\mu\nu}}\right]
+                \]
+              </div>
+              <div class="fragment fade-in-then-out" data-fragment-index="2">
+                \[\huge
+                \mathcal{L}_{\rm int.} = \phi \left[ {\color{yellow}d_e \, F_{\mu\nu}F^{\mu\nu}} + {\color{orange}d_{m_f} \, \bar\psi\psi}  + {d_g \, G^a_{\mu\nu}G^{a\mu\nu}}\right]
+                \]
+              </div>
+              <div class="fragment fade-in" data-fragment-index="3">
+                \[\huge
+                \mathcal{L}_{\rm int.} = \phi \left[ {\color{yellow}d_e \, F_{\mu\nu}F^{\mu\nu}} + {\color{orange}d_{m_f} \, \bar\psi\psi}  + {\color{red}d_g \, G^a_{\mu\nu}G^{a\mu\nu}}\right]
+                \]
+              </div>
+            </div>
+
+
+          
+          <br><br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <div class="fragment fade-in" data-fragment-index="1">
+              \[\large
+                {\color{yellow}\alpha \to \alpha(1 + d_e \phi(r,t))}
+              \]
+              <h3>
+                &ensp;• nb: $d_e = d_\gamma = d_\alpha = 1/\Lambda_\gamma$
+              </h3>
+            </div>
+            <br>
+            <div class="fragment fade-in" data-fragment-index="2">
+              \[\large
+                {\color{orange}m_e \to m_e(1 + d_{m_e} \phi(r,t))}
+              \]
+              <h3>
+                &ensp;• electron and quark masses
+              </h3>
+            </div>
+            <br>
+            <div class="fragment fade-in" data-fragment-index="3">
+              \[\large
+                {\color{red}m_p \to m_p(1 + d_{g} \phi(r,t))}
+              \]
+              <h3>
+                &ensp;• Proton mass: binding energy: QCD scale $\Lambda_{\rm QCD}$<br>
+                &ensp;• Nuclear moments + radius: depend on $\Lambda_{\rm QCD}$, $m_q$
+              </h3>
+            </div>
+          </div>
+
+          <div style="text-align: left; float: right; width: 50%">
+            <br>
+
+
+            <div class="fragment fade-in" data-fragment-index="4">
+              <h3>
+                &ensp;• Optical clock
+              </h3>
+              \[
+              \begin{align*}\large
+               \omega &\propto R_y \, F_{\rm rel}(Z\alpha) \sim \alpha^{(2+K_{\rm rel})}m_e \\
+                \frac{\delta\omega}{\omega} &= (2+K_{\rm rel}){\color{yellow}d_e} +{\color{orange}d_{m_e}}
+              \end{align*}
+              \]
+            </div>
+            <br>
+            <div class="fragment fade-in" data-fragment-index="5">
+              <h3>
+                &ensp;• Microwave (hyperfine) clock
+              </h3>
+              \[
+              \begin{align*}\large
+                \omega &\propto R_y \, [\alpha^2 F_{\rm rel}(Z\alpha)] \, (\mu \, m_e/m_p) \\
+                \frac{\delta\omega}{\omega} &= (4+K_{\rm rel}'){\color{yellow}d_e} + {\color{orange}d_{m_e}} + ({\color{orange}d_{m_e}} - {\color{red}d_g}) + \kappa\,  ({\color{orange}d_{m_q}} - {\color{red}d_g})
+              \end{align*}
+              \]
+            </div>
+            <br>
+            <div class="fragment fade-in" data-fragment-index="6">
+              <h3>
+                &ensp;• Cavity-stabilised laser
+              </h3>
+              \[
+              \begin{align*}\large
+                \omega &\propto 1/a_0 \\
+                \frac{\delta\omega}{\omega} &= {\color{yellow}d_e} + {\color{orange}d_{m_e}}
+              \end{align*}
+              \]
+            </div>
+            </div>
+
+        </textarea>
+        </section>
+        
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Conclusion
+
+            ### Melina Filzinger, Ashlee Caddell, Dhruv Jani, Martin Steinel, 
+            ### Leo Giani, Nils Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
+
+            <br> <br>
+
+            * First direct constraints on $d_{m_e}$ at low mass/frequency
+
+            * Hope to gain significant improvement using optical clock network
+
+            * Linear distance scaling: future space-based clocks
+
+            * Linear distance scaling: method for positive signal discrimination
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Oscillating signals
+
+            <div style="text-align: left; float: left; width: 50%">
+              <br>
+              <h3>Case: oscillating field:</h3>
+              \[\huge
+              \phi_{\rm DM} = \phi_0 \cos({m_\phi t})
+              \]
+              <br>
+              \[\huge
+              \frac{\delta f}{f} = \kappa \phi_0 \cos({m_\phi t})
+              \]
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <h3>• Constraints from clock-clock comparisons</h3>
+                <br>
+                <h3>• ~ $10^{-2}$ Hz (optical clocks)</h3>
+                <h4>
+                  &emsp; • e.g., Wcislo et al
+                  <a
+                    href="https://advances.sciencemag.org/content/4/12/eaau4869">
+                    Science Advances <b>4</b>, 4869 (2018)</a>
+                </h4>
+                <br>
+                <h3>• ~ $10^{-6}-10^{-2}$ Hz (microwave clocks)</h3>
+                <h3>• $\implies m = 10^{-21}-10^{-18}$ eV</h3>
+                <h4>
+                  &emsp; • e.g., Hees et al
+                  <a
+                    href="http://link.aps.org/doi/10.1103/PhysRevLett.117.061301">
+                    Phys. Rev. Lett. <b>117</b>, 061301 (2016)</a>
+                </h4>
+              </div>
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <br> <br>
+              <div class="fragment fade-in">
+                <h3>The DAMNED experiment:</h3>
+                <img src="img/damned.png" width="90%"><br>
+                <p>(DArk Matter search using Non-Equal Delay lines)</p><br>
+                <div class="fragment fade-in">
+                  <h3>• Modifies length + refractive index</h3>
+                  <h3>• 10-100 kHz range ($m=10^{-10}$ eV)</h3>
+                  <h3>• Led by Etienne Savalle (SYRTE Paris)</h3>
+                  Savalle, Hees, Frank, Cantin, Pottie, <b>BMR</b>, Cros,
+                  McAllister,
+                  Wolf, <br>
+                  <a
+                    href="https://link.aps.org/doi/10.1103/PhysRevLett.126.051301">
+                    Phys. Rev. Lett. <b>126</b>, 051301
+                    (2021)</a>
+                </div>
+              </div>
+            </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Transient Signals
+
+            <br><br><br>
+
+            <div style="text-align: left; float: left; width: 50%">
+              <img src="img/td.png" width="80%">
+
+              Derevianko + Pospelov, [Nature Physics
+              (2014)](http://www.nature.com/doifinder/10.1038/nphys3137)
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <h3>• Scalar DM with small self-interaction:</h3>
+              <br>
+              <h3>• May form "clumps": topological defects, Q-balls</h3>
+              <br>
+              <h3> &emsp; • Topological defects: size $d\sim 1/m_\phi$</h3>
+              <br>
+              <h3> &emsp; • $m=10^{-10}$ eV $\implies$ $d\simeq 1$ km</h3>
+              <br>
+              <h3>• Wait until one passes through Earth</h3>
+              <br>
+              <h3>• How to distinguish from noise?</h3>
+              <br>
+              <h3> &emsp; • Correlated signal across global network</h3>
+            </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # GPS.DM
+
+            <div style="text-align: left; float: left; width: 35%">
+              <br>
+              <h3>• 30 Cs, Rb atomic clocks</h3>
+              <br>
+              <h3>• Over 20 years of high-quality data</h3>
+              <br>
+              <h3>• Publicly available (JPL)</h3>
+              <br>
+              <h3>• 50,000 km Dark Matter observatory</h3>
+              <br>
+              <div class="fragment fade-in">
+                <video width="75%" data-autoplay muted>
+                  <source src="img/GPSDM.mp4"></video><br>
+                <font size="3">[Video: Conner Dailey (honors student)]</font>
+              </div>
+            </div>
+
+            <div style="text-align: center; float: right; width: 65%">
+              <img div class="fragment fade-in" src="img/gps-data.png"
+                width="45%">
+              <br>
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <img src="img/GPSDM-results.png" width="98%">
+                <b>BMR</b>, Blewitt, Dailey, Murphy, Pospelov, Rollings,
+                Sherman,
+                Williams, Derevianko, <br>
+                <a
+                  href="http://www.nature.com/articles/s41467-017-01440-4">
+                  Nature Comms.
+                  (2017)</a>
+
+              </div>
+
+            </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # European Fibre-linked network
+
+            <br>
+            <div style="text-align: center; float: left; width: 50%">
+              <img src="img/FibreLinkDiagram.png" width="70%">
+              <br>
+            </div>
+            <div style="text-align: left; float: right; width: 50%">
+              <h3>• Laboratory optical clocks</h3>
+              <br>
+              <h3>• Orders-of-magnitude higher precision</h3>
+              <br>
+              <h3>• Orders-of-magnitude less data</h3>
+              <h3> &emsp; • (hours, not years)</h3>
+            </div>
+
+            <div class="fragment fade-in">
+
+              <br>
+
+              <img src="img/SYRTE-results.png"
+                width="80%"><br>
+              <b>BMR</b>, et al.,
+              <a
+                href="https://iopscience.iop.org/article/10.1088/1367-2630/abaace">
+                N. J. Phys. (2020)</a>
+            </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Constant background
+
+            <img src="img/Galactic_centre_pillars.jpg" width="95%"><br>
+            <font size="3">[ESA / C. Carreau]</font>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Super-massive black hole at the Galactic Centre
+
+            <br><br><br>
+
+            <div style="text-align: left; float: left; width: 50%">
+              <h3>• with UCLA Galactic Centre Group</h3>
+              <h4> &emsp; • Observations led by Tuan Do</h4>
+              <h4> &emsp; • Andrea Ghez: Awarded 2020 Nobel
+                prize for discovery of black hole</h4>
+              <br>
+              <h3>• Keck telescope in Hawaii</h3>
+              <br>
+              <h3>• Motion of ~1000 stars tracked</h3>
+              <h4> &emsp; • Precise spectroscopy for many stars</h4>
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <h3>• High gravitational potential</h3>
+                <h3>• Possibly large concentration of dark
+                  matter </h3>
+                <h3>• (also other "exotic" physics)</h3>
+              </div>
+            </div>
+
+            <div style="text-align: center; float: right; width: 50%">
+              <img src="img/keck-ao.jpg" width="95%">
+              <br>
+              <img class="fragment fade-in" src="img/equation.png" width="95%">
+              <br>
+            </div>
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # GR
+
+            <img src="img/spectra.png" width="60%">
+
+            <img class="fragment fade-in" src="img/equation.png" width="60%">
+
+            <img class="fragment fade-in" src="img/beta.png" width="60%">
+
+            * Hees, Do, **BMR**, Ghez et al., [Phys. Rev. Lett. **124** 081101
+            (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101)
+
+          </textarea>
+        </section> -->
+
+        <!-- =============================================================== -->
+        <!-- <section>
+          <h2>The Lorenz Equations</h2>
+          \[\begin{aligned}
+          \dot{x} &amp; = \sigma(y-x) \\
+          \dot{y} &amp; = \rho x - y - xz \\
+          \dot{z} &amp; = -\beta z + xy
+          \end{aligned} \]
+        </section> -->
+
+        <!-- =============================================================== -->
+      </div>
+    </div>
+
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+    <script>
+    var SLConfig = {};
+    // Use local fonts
+    SLConfig.fonts_url = '../lib/fonts/';
+  </script>
+    <script src="../lib/reveal.js"></script>
+    <script src="../lib/reveal-plugins.js"></script>
+    <script src="../lib/offline.js"></script>
+    <script src="../plugin/math/math.js"></script>
+
+    <!-- Initialize the presentation -->
+    <script>
+    Reveal.initialize({
+      width: 1920,
+      height: 1080,
+      margin: 0.06,
+
+      hash: true,
+      controls: true,
+      progress: true,
+      mouseWheel: false,
+      showNotes: false,
+      slideNumber: true,
+      fragmentInURL: true,
+
+      autoSlide: 0,
+      autoSlideStoppable: true,
+
+      autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+      center: true,
+      shuffle: false,
+      loop: false,
+      rtl: false,
+      navigationMode: "default",
+
+      transition: "none",
+      backgroundTransition: "none",
+
+      highlight: {
+        escapeHTML: false
+      },
+
+      plugins: [RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX]
+    });
+  </script>
+  </body>
+
+</html>
