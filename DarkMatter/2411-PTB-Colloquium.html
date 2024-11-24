@@ -263,14 +263,14 @@
                   <font size="3">Hubble Space Telescope [NASA: Magellan/U.Arizona/D.Clowe et al.]</font>
                 </div>
                 <div class="fragment fade-in-then-out" data-fragment-index="1">
-                  <img src="./img/bullet-lense.png" width="100%"><br>
+                  <img src="./img/bullet-lense.png" width="110%"><br>
                   <font size="3">Hubble Space Telescope [NASA: Magellan/U.Arizona/D.Clowe et al.]</font>
                 </div>
                 <div class="fragment fade-in-then-out" data-fragment-index="2">
                   <!-- <img
                     src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Bullet_cluster.jpg"
                     width="100%"><br> -->
-                    <img src="./img/bullet-xray.png" width="100%"><br>
+                    <img src="./img/bullet-xray.png" width="110%"><br>
                   <font size="3">Chandra X-ray Observatory [NASA]</font>
                 </div>
                 <div class="fragment fade-in" data-fragment-index="3">
@@ -1079,15 +1079,17 @@
                 <br>
                 <h3>• Optical-Microwave: $d_{m_e}-d_{m_p}$ ($\delta(m_e/m_p)$)</h3>
                 <br>
+              </div>
+              <div class="fragment fade-in">
                 <h3>• Dimensionful couplings always cancel in these ratios</h3>
               </div>
             </div>
 
-            <div style="text-align: left; float: right; width: 50%">
+            <div style="text-align: center; float: right; width: 50%">
               <br> <br>
-              <div class="fragment fade-in">
+              <div class="fragment fade-in" data-fragment-index="3">
                 <h3>Typical: Compare two local clocks, different $\kappa$</h3>
-                <img src="img/ScalarPhoton.png" width="90%"><br>
+                <img src="img/scalarphoton2.png" width="100%"><br>
                 <p>[O'Hare - GitHub/AxionLimits]</p><br>
               </div>
             </div>
@@ -1181,9 +1183,11 @@
                       & \approx \phi_0 d_{\rm eff} \sin(\omega t) \delta \\
                       \delta &= \omega\Delta t - k_z D \\
                       ~ \\
-                      \delta &\approx \frac{\omega L n}{c}
+                      \delta &\approx \frac{\omega L n}{c} - \frac{\omega L v}{c^2}
                   \end{align*}
                   \]
+
+                  * Spatial and temporal component (depends on experiment)
                   </div>
       
                   <img src="img/Separated.png" width="80%"><br>
@@ -1211,16 +1215,14 @@
 
           * Existing data: [Schioppo _et al._, Nat.Comms 13 (2022)](https://www.nature.com/articles/s41467-021-27884-3)
           * Comparison of ultra-stable cavity lasers
-          * 2220 km: PTB to NPL via SYRTE
-          * $\Delta t \simeq 0.01\\,{\rm s}$
+          * 750 km apart (2220 km Fibre cable: PTB to NPL via SYRTE)
+          <!-- * $\Delta t \simeq 0.01\\,{\rm s}$ -->
+          * Sensitive to _spatial_ phase shift
 
           <br>
-          Also:
-          * Data from GPS satellites:
-
-          <br>
-
-          * Publicly available data
+          
+          * Also: Data from GPS satellites (Rb clocks)
+          * Clocks less accurate, but setup sensitive to _temporal_ term
 
           <br> <br>
 
@@ -1242,7 +1244,11 @@
 
         <div style="text-align: center; float: left; width: 50%">
           <br>
-          <img src="img/dme-amplitude-b.png" width="90%"><br>
+          <!-- <img src="img/dme-amplitude-b.png" width="90%"><br> -->
+          <div class="r-stack">
+          <img class="fragment fade-out" src="img/deff.png" width="90%"><br>
+          <img src="img/dme2.png" width="90%"><br>
+          </div>
           <font size="4"><a href="http://arxiv.org/abs/2312.13723">[arXiv:2312.13723]</a></font>
         </div>
 
@@ -1250,20 +1256,26 @@
 
           <br> <br>
 
-          * Search for oscillations in data<br><br>
-          * Method exactly the same as previous local comparison search<br><br>
-          * Analysis done by Melina Filzinger (PTB)<br><br>
-          * Good for oscillations up to $\sim$ 1 Hz<br><br>
+          * Search for oscillations in data<br>
+          * Analysis done by Melina Filzinger (PTB)<br>
+          * Good for oscillations up to $\sim$ 1 Hz<br>
 
           <br><br>
 
-          * First Constraints on $d_{m_e}$ along at low-frequency<br><br>
-          * Sensitivity to _spatial_ fluctions of DM, daily oscillation<br><br>
+          * First Constraints on $d_{m_e}$ along at low-frequency<br>
+          * Sensitivity to _spatial_ fluctions of DM, daily oscillation<br>
+
+          <img src="img/dailymod.png" width="90%"><br>
 
           <!-- <img src="img/Schioppo-AVAR.png" width="50%"><br>
           <font size="3">[Schioppo et al. (2022)]</font> -->
+          <!-- <img src="img/dme2.png" width="90%"><br> -->
+
+          
 
         </div>
+
+        <!-- <img src="img/deff.png" width="90%"><br> -->
 
       </textarea>
         </section>
@@ -1405,6 +1417,7 @@
             <h4> &emsp; • Observations led by Tuan Do</h4>
             <h4> &emsp; • Andrea Ghez: 2020 Nobel
               prize for discovery of black hole</h4>
+            <h4> &emsp; • Analysis led by Aurelien Hees</h4>
             <br>
             <h3>• Keck telescope in Hawaii</h3>
             <br>
@@ -1441,11 +1454,21 @@
           <br>
           <br>
 
-          <img class="fragment fade-in" src="img/equation.png" width="55%">
+          <div class="fragment fade-in">
+            <img src="img/equation.png" width="55%">
+            <br>
 
-          <img class="fragment fade-in" src="img/beta.png" width="55%">
+            $$\huge
+            \Delta \alpha / \alpha \lesssim 10^{-5}
+            $$
 
-          * Hees, Do, **BMR**, Ghez et al., [Phys. Rev. Lett. **124** 081101
+          </div>
+          <br>
+
+          <img class="fragment fade-in" src="img/beta.png" width="35%">
+          <br>
+
+          * Hees, Do, **BMR**, Ghez _et al._, [Phys. Rev. Lett. **124** 081101
           (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101)
 
           </textarea>
@@ -1459,38 +1482,42 @@
           <div>
           <div style="text-align: left; float: left; width: 50%">
             
+            <div>
+
             ### Standard Model + General Relativity
 
             * Extremely successful, but incomplete
   
+            
             <br>
-
-
+            <br>
 
             ### Dark Matter: Strong evidence, no detection
   
             * Low-energy, high-precision atomic physics
+            * Allows search for very low-mass dark matter
   
-              <br>
-              <br>
+          </div>  
+            <br>
+
+            ### PTB Colloquium, Braunschweig, November 2024
+
+            <br>
   
-              #### PTB Colloquium, Braunschweig, November 2024
-
-              <br>
+            ### Benjamin M. Roberts
     
-              ### Benjamin M. Roberts
-      
-              _School of Mathematics and Physics,_
+            _School of Mathematics and Physics,_
 
-              _University of Queensland, Australia_
-    
-              <br><br>
-    
-              * Slides [broberts.io/talks](https://broberts.io/talks)
+            _University of Queensland, Australia_
+  
+            <br>
+  
+            * Slides [broberts.io/talks](https://broberts.io/talks)
 
-              <br><br>
-              <img src="img/uq-logo.svg" width="50%">
+            <br><br>
+            <img src="img/uq-logo.svg" width="222%">
           </div>
+          
           <div style="text-align: left; float: right; width: 50%">
 
             <br>
@@ -1509,11 +1536,11 @@
             * Hees, Do, BMR, Ghez _et al._, [Phys. Rev. Lett. **124** 081101
             (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101)
             <br>
-            * Filzinger _et al._, [arXiv:2312.13723](http://arxiv.org/abs/2312.13723)
+            * Filzinger, Caddell _et al._, [arXiv:2312.13723](http://arxiv.org/abs/2312.13723)
 
             <br><br>
             <br><br>
-            Supported by: ARC and &nbsp; <img src="img/BQI.png" width="40%">
+            Supported by: ARC and &nbsp; &nbsp; &nbsp; <img src="img/BQI.png" width="55%">
           </div>
 
         </div>
@@ -1535,11 +1562,11 @@
 
         <!-- =============================================================== -->
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <!-- <section data-markdown data-background-color="black">
           <textarea data-template>
           # Extra
         </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
 
