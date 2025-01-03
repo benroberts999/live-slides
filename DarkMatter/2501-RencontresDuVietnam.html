@@ -303,8 +303,8 @@
               <div>
                 <div class="fragment fade-in" data-fragment-index="1">
                   <br>
-                  <h3>Excluded cross-section for WIMPs:</h3>
-                  <img src="img/WIMP-constraints.png" width="90%">
+                  <img src="img/WIMP-nucleon.png" width="80%"><br>
+                  <font size="4">[Ciaran O'Hare]</font>
                 </div>
                 <br>
                 <h3 class="fragment fade-in" data-fragment-index="2">
@@ -366,7 +366,7 @@
 
           <div style="text-align: center; float: right; width: 40%">
             <br>
-            <img class="fragment" data-fragment-index="0" src="img/atom.png" width="40%">
+            <img class="fragment" data-fragment-index="0" src="img/atom.png" width="30%">
             <br><br>
             <div class="r-stack">
               <div class="fragment" data-fragment-index="2">
@@ -374,7 +374,7 @@
                 <font size="3">[JILA]</font>
               </div>
               <div class="fragment" data-fragment-index="3">
-                <img src="img/Ye_UCBolder-SrLattice.jpg" width="80%"><br>
+                <img src="img/Ye_UCBolder-SrLattice.jpg" width="85%"><br>
                 <font size="3">[Ye/UCBolder]</font>
               </div>
             </div>
@@ -391,7 +391,7 @@
           <br><br>
 
           $$ \Huge
-          {\rho_{\rm DM}\simeq 0.3 ~ \frac{\rm GeV}{{\rm cm}^3}}
+          {\rho_{\rm DM}\simeq 0.4 ~ \frac{\rm GeV}{{\rm cm}^3}}
           $$
 
           <br>
@@ -417,11 +417,13 @@
             <h3 class="fragment fade-in">
               3. Also: constant build-up (local over-densities)
             </h3>
-          </div>
+   
+            <br>
+            <h2 class="fragment fade-in">
+              $\implies$ Classical field: quantum sensors (clocks) $\phantom{\implies}$
+            </h2>
 
-          <h2 class="fragment fade-in">
-            Classical field: quantum sensors (clocks)
-          </h2>
+        </div>
 
         </textarea>
         </section>
@@ -493,6 +495,7 @@
           <br>
 
           ### Frequency reference: atomic transition
+          ### Local oscillator: EM field (laser, microwave)
 
           <br>
           <br>
@@ -534,61 +537,31 @@
 
           # Moore's law for atomic clocks
 
-          <div class="r-stack">
-            <div class="fragment fade-out" data-fragment-index="0">
-              <img src="img/MooreClock2020-MW.png" width="100%">
+          <div style="text-align: center; float: left; width: 65%">
+            <br>
+            <div class="r-stack">
+              <div class="fragment fade-out" data-fragment-index="0">
+                <img src="img/MooreClock2020-MW.png" width="100%">
+              </div>
+              <div class="fragment fade-in" data-fragment-index="0">
+                <img src="img/MooreClock2020.png" width="100%"><br>
+              </div>
             </div>
+            <br>
+            <font size="4"> [Pacome Delva <i>et al.</i>, Chronometric Geodesy: Methods and Applications (2019)]
+            </font>
+          </div>
 
+          <div style="text-align: center; float: right; width: 35%">
+            <br><br>
+            <!-- <font color="magenta"> * Microwave (hyperfine) clocks: $\nu\sim$ MHz -- GHz</font> -->
+            <br><br><br>
             <div class="fragment fade-in" data-fragment-index="0">
-              <img src="img/MooreClock2020.png" width="100%">
+              <img src="img/Stability.png" width="100%"><br>
+              <font size="3"> [M. Safronova]</font>
             </div>
           </div>
 
-          <!-- <img src="img/MooreClock2020.png" width="55%"> -->
-          <font size="4"> [Pacome Delva <i>et al.</i>, Chronometric Geodesy: Methods and Applications (2019)]
-          </font>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <section data-markdown data-background-color="black"
-          data-transition="fade-in fade-out">
-          <textarea data-template>
-
-          # Optical atomic clocks
-
-          <br><br>
-
-          <div class="fragment fade-in" style="text-align: left; float: left; width: 55%">
-            <img src="img/Stability.png" width="95%"><br>
-            <font size="3"> [M. Safronova]</font>
-            <br>
-            <br>
-            <br>
-
-            * Requires ultra-stable laser ("see" narrow line)
-            * Frequency comb ("listen" to high frequency)
-
-          </div>
-
-          <div class="fragment fade-in" style="text-align: center; float: right; width: 45%">
-            <img src="img/basicclock2.png" width="95%">
-            <font size="3">[Centre for Quantum Technologies | U. Singapore]</font>
-            <br>
-            <br>
-            <br>
-            <img src="img/Diddams-Comb.png" width="95%">
-            <font size="3">[Diddams <i>et al.</i>, Science <b>369</b>, 3676 (2020)]</font>
-          </div>
-
-
-          <div class="fragment fade-in">
-            <br>
-
-            * Accurate to parts in $10^{18}$
-            * better than 1 s over lifetime of the universe!
-          </div>
 
         </textarea>
         </section>
@@ -792,48 +765,6 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- <section data-markdown data-background-color="black">
-          <textarea data-template>
-          # $d_{m_e}$ alone?
-
-
-
-          * Usually, appears in ratios from $m_e/m_p$
-          * True in general for any 'dimensionful' constant
-          * Potential issue: universal couplings
-
-          <br>
-          <br>
-
-          $$\large
-              \delta(m_e/m_p) ~ \propto ~ (d_{m_e} - d_g)
-          $$
-
-          <br>
-          <br>
-
-          <div class="fragment">
-
-          ## Fast oscillations:
-
-          * Damped vs. undamped oscillator
-
-          <img src="img/Geraci.png" width="20%"><br>
-          <font size="3">[Geraci (2019)]</font>
-
-          <br>
-
-          * Free vs. fixed optical cavity -- Geraci _et al._,  [Phys.Rev.Lett.123.031304 (2019)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.031304)
-          * Atom vs (damped) solid -- Antypas _et al._, [Phys.Rev.Lett.123.141102 (2019)](https://doi.org/10.1103/PhysRevLett.123.141102)
-          * Time-delay interferometry -- Savalle _et al._, [Phys.Rev.Lett.126.051301 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.051301)
-          * Overview: Antypas _et al._, [Ann. Phys. 532 (2020)](https://onlinelibrary.wiley.com/doi/10.1002/andp.201900566)
-
-          </div>
-
-          </textarea>
-        </section> -->
-
-        <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
           <textarea data-template>
           # Space-time separated sensors
@@ -899,45 +830,6 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- <section data-markdown data-background-color="black">
-          <textarea data-template>
-        # Space-time separated sensors: initial results
-
-        * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
-        <br>
-
-        <div style="text-align: center; float: left; width: 50%">
-          <br> <br>
-          <img src="img/Schioppo.png" width="75%"><br>
-          <font size="3">[Schioppo et al.]</font>
-        </div>
-
-        <div style="text-align: left; float: right; width: 50%">
-          <br> <br>
-
-          * Existing data: [Schioppo _et al._, Nat.Comms 13 (2022)](https://www.nature.com/articles/s41467-021-27884-3)
-          * Comparison of ultra-stable cavity lasers
-          * 750 km apart (2220 km Fibre cable: PTB to NPL via SYRTE)
-          * Sensitive to _spatial_ phase shift
-
-          <br>
-          
-          <div class="fragment fade-in">
-          * Also: Data from GPS satellites (Rb clocks)
-          * Clocks less accurate, but setup sensitive to _temporal_ term
-          </div>
-
-          <br> <br>
-
-          <img src="img/Schioppo-data.png" width="75%"><br>
-          <font size="3">[Schioppo et al. (2022)]</font>
-
-        </div>
-
-      </textarea>
-        </section> -->
-
-        <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
           <textarea data-template>
           # Space-time separated sensors: initial results
@@ -989,34 +881,34 @@
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
           <textarea data-template>
-          # Transient Signals
+            # Transient Signals
 
-          <br><br><br>
+            <br><br><br>
 
-          <div style="text-align: left; float: left; width: 50%">
-            <img src="img/td.png" width="80%">
+            <div style="text-align: left; float: left; width: 50%">
+              <img src="img/td.png" width="80%">
 
-            Derevianko + Pospelov, [Nature Physics
-            (2014)](http://www.nature.com/doifinder/10.1038/nphys3137)
-          </div>
+              Derevianko + Pospelov, [Nature Physics
+              (2014)](http://www.nature.com/doifinder/10.1038/nphys3137)
+            </div>
 
-          <div style="text-align: left; float: right; width: 50%">
-            <h3>• Scalar DM with small self-interaction:</h3>
-            <br>
-            <h3>• May form "clumps": topological defects, Q-balls</h3>
-            <br>
-            <h3> &emsp; • Topological defects: size $d\sim 1/m_\phi$</h3>
-            <br>
-            <h3> &emsp; • $m=10^{-10}$ eV $\implies$ $d\simeq 1$ km</h3>
-            <br>
-            <h3>• Wait until one passes through Earth</h3>
-            <br>
-            <h3>• How to distinguish from noise?</h3>
-            <br>
-            <h3> &emsp; • Correlated signal across global network</h3>
-          </div>
+            <div style="text-align: left; float: right; width: 50%">
+              <h3>• Scalar DM with small self-interaction:</h3>
+              <br>
+              <h3>• May form "clumps": topological defects, Q-balls</h3>
+              <br>
+              <h3> &emsp; • Topological defects: size $d\sim 1/m_\phi$</h3>
+              <br>
+              <h3> &emsp; • $m=10^{-10}$ eV $\implies$ $d\simeq 1$ km</h3>
+              <br>
+              <h3>• Wait until one passes through Earth</h3>
+              <br>
+              <h3 class = "fragment">• How to distinguish from noise?</h3>
+              <br>
+              <h3 class = "fragment"> &emsp; • Correlated signal across global network</h3>
+            </div>
 
-        </textarea>
+          </textarea>
         </section>
 
         <!-- =============================================================== -->
@@ -1191,85 +1083,71 @@
           # Conclusion
 
           <div>
-            <div style="text-align: left; float: left; width: 50%">
+          <div style="text-align: left; float: left; width: 50%">
+            
+            <div>
 
-              <div>
+            ### Dark matter with atomic phenomena:
 
-                ### Standard Model + General Relativity
+            * Electron scattering, absorptionf, fifth-force searches
+            * Fundamental symmetry violations (EDM, PNC)
 
-                * Extremely successful, but incomplete
+            
+            <br>
+            <br>
+
+            ### Ultralight dark matter
+
+            * Scalar coupling DM-SM: shift in atomic levels
+            * Monitor frequencies with atomic clocks
+  
+          </div>  
+            <br>
+
+            ### Rencontres du Vietnam, ICISE, 2025
+
+            <br>
+  
+            ### Benjamin M. Roberts
+    
+            _School of Mathematics and Physics,_
+
+            _University of Queensland, Australia_
+  
+            <br>
+  
+            * Slides [broberts.io/slides](https://broberts.io/slides/)
+
+            <br><br>
+            <img src="img/uq-logo.svg" width="200%">
+          </div>
+          
+          <div style="text-align: left; float: right; width: 50%">
+
+            <br>
+            <br>
+            <br>
 
 
-                <br>
-                <br>
+            * Caddell, Flambaum, BMR, [Phys. Rev. D **108**, 083030 (2023)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083030)
+            <br>
+            * Savalle _et al._, [Phys. Rev. Lett. **126**, 051301 (2021)](https://link.aps.org/doi/10.1103/PhysRevLett.126.051301)
+            <br>
+            * BMR _et al._, [Nature Comms. **8**, 1195 (2017)](http://www.nature.com/articles/s41467-017-01440-4)
+            <br>
+            * BMR _et al._, [N. J. Phys. **22**, 093010 (2020)](https://iopscience.iop.org/article/10.1088/1367-2630/abaace)
+            <br>
+            * Hees, Do, BMR, Ghez _et al._, [Phys. Rev. Lett. **124** 081101 (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101)
+            <br>
+            * Filzinger, Caddell _et al._, Phys. Rev. Lett. (in press), [arXiv:2312.13723](http://arxiv.org/abs/2312.13723)
 
-                ### Dark Matter: Strong evidence, no detection
-
-                * Low-energy, high-precision atomic physics
-                * Allows search for very low-mass dark matter
-
-              </div>
-              <br>
-
-              ### PTB Colloquium, Braunschweig, November 2024
-
-              <br>
-
-              ### Benjamin M. Roberts
-
-              _School of Mathematics and Physics,_
-
-              _University of Queensland, Australia_
-
-              <br>
-
-              * Slides [broberts.io/talks](https://broberts.io/talks)
-
-              <br><br>
-              <img src="img/uq-logo.svg" width="222%">
-            </div>
-
-            <div style="text-align: left; float: right; width: 50%">
-
-              <br>
-              <br>
-              <br>
-
-
-              * Caddell, Flambaum, BMR, [Phys. Rev. D **108**, 083030
-              (2023)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083030)
-              <br>
-              * Savalle _et al._, [Phys. Rev. Lett. **126**, 051301
-              (2021)](https://link.aps.org/doi/10.1103/PhysRevLett.126.051301)
-              <br>
-              * BMR _et al._, [Nature Comms. **8**, 1195 (2017)](http://www.nature.com/articles/s41467-017-01440-4)
-              <br>
-              * BMR _et al._, [N. J. Phys. **22**, 093010
-              (2020)](https://iopscience.iop.org/article/10.1088/1367-2630/abaace)
-              <br>
-              * Hees, Do, BMR, Ghez _et al._, [Phys. Rev. Lett. **124** 081101
-              (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101)
-              <br>
-              * Filzinger, Caddell _et al._, [arXiv:2312.13723](http://arxiv.org/abs/2312.13723)
-
-              <br><br>
-              <br><br>
-              Supported by: ARC and &nbsp; &nbsp; &nbsp; <img src="img/BQI.png" width="55%">
-            </div>
-
+            <br><br>
+            <br><br>
+            Supported by: ARC and &nbsp; &nbsp; &nbsp; <img src="img/BQI.png" width="55%">
           </div>
 
+        </div>
 
-
-
-          <!-- <div>
-              <br>
-              <img src="img/uq-logo.svg" width="25%">
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Supported by: ARC and
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              <img src="img/BQI.png" width="20%">
-              <br><br>
-            </div> -->
 
         </textarea>
         </section>
@@ -1279,7 +1157,9 @@
         <section data-markdown data-background-color="black"
           data-visibility="uncounted">
           <textarea data-template>
-          # Extra
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <h1>Extra</h1>
         </textarea>
         </section>
 
@@ -1352,6 +1232,78 @@
           * A. R. Caddell, **BMR**,
           [Phys. Rev. D **108**, 083030 (2023)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083030) --
           _Led by PhD student: Ashlee Caddell_
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black"
+          data-visibility="uncounted">
+          <textarea data-template>
+          # Cs fountain clock (microwave/hyperfine)
+
+          <div style="text-align: center; float: left; width: 50%">
+            <img src="img/NIST_F1.jpg" width="38%">&emsp;
+            <img src="img/Cs-F1-NIST.png" width="53%"><br>
+            <font size="3">[NIST | Cs F1 clock]</font>
+          </div>
+
+
+          <div class="fragment fade-in" style="text-align: center; float: right; width: 50%">
+            <img src="img/Cs.png" width="75%"><br>
+            <img src="img/SI.png" width="20%">
+
+            * 1967: $^{133}$Cs hyperfine transition defines $s$
+
+            * $f_0 \equiv 9\ 192\ 631\ 770$ Hz
+
+            * Microwave frequency
+
+            <br>
+
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black"
+          data-visibility="uncounted">
+          <textarea data-template>
+
+          # Optical atomic clocks
+
+          <br><br>
+
+          <div class="fragment fade-in" style="text-align: left; float: left; width: 55%">
+            <img src="img/Stability.png" width="95%"><br>
+            <font size="3"> [M. Safronova]</font>
+            <br>
+            <br>
+            <br>
+
+            * Requires ultra-stable laser ("see" narrow line)
+            * Frequency comb ("listen" to high frequency)
+
+          </div>
+
+          <div class="fragment fade-in" style="text-align: center; float: right; width: 45%">
+            <img src="img/basicclock2.png" width="95%">
+            <font size="3">[Centre for Quantum Technologies | U. Singapore]</font>
+            <br>
+            <br>
+            <br>
+            <img src="img/Diddams-Comb.png" width="95%">
+            <font size="3">[Diddams <i>et al.</i>, Science <b>369</b>, 3676 (2020)]</font>
+          </div>
+
+
+          <div class="fragment fade-in">
+            <br>
+
+            * Accurate to parts in $10^{18}$
+            * better than 1 s over lifetime of the universe!
+          </div>
 
         </textarea>
         </section>
@@ -1477,36 +1429,8 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
-          <textarea data-template>
-          # Cs fountain clock
-
-          <div style="text-align: center; float: left; width: 50%">
-            <img src="img/NIST_F1.jpg" width="38%">&emsp;
-            <img src="img/Cs-F1-NIST.png" width="53%"><br>
-            <font size="3">[NIST | Cs F1 clock]</font>
-          </div>
-
-
-          <div class="fragment fade-in" style="text-align: center; float: right; width: 50%">
-            <img src="img/Cs.png" width="75%"><br>
-            <img src="img/SI.png" width="20%">
-
-            * 1967: $^{133}$Cs hyperfine transition defines $s$
-
-            * $f_0 \equiv 9\ 192\ 631\ 770$ Hz
-
-            * Microwave frequency
-
-            <br>
-
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
+        <section data-markdown data-background-color="black"
+          data-visibility="uncounted">
           <textarea data-template>
           # WIMP miracle
 
