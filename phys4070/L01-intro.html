@@ -1,1359 +1,504 @@
 <!DOCTYPE html>
 <html class="sl-root decks export offline loaded">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,
-      maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>phys4070-L01-intro</title>
+    <title>PHYS4070-L01</title>
 
-    <link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+    <link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
 
-    <!-- User CSS -->
-    <style id="user-css-output" type="text/css">
-			.reveal .monospace-font h1,
-.reveal .monospace-font h2,
-.reveal .monospace-font h3 {
-  font-family: monospace;
-}
-
-		</style>
   </head>
   <body class="reveal-viewport theme-font-helvetica theme-color-black-blue">
     <div class="reveal">
       <div class="slides">
-        <section data-background-transition="fade"
-          data-id="4c6edc03cbfced3d361705cd1b6d634a">
 
-          <div class="sl-block" data-block-type="text" data-name="text-3f4511"
-            data-block-id="e3bde3b83bbff8696480a146bbc442d3" style="height:
-            auto; width: 749px; left: 265.5px; top: 72px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 10;">
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
 
-              <section data-markdown>
-                <textarea data-template>
-                  ## Computational Physics II
-                  phys4070/7270
+            # PHYS4070:
+            ## Computational Physics II
 
-                  <br>
+            <br>
 
-                  L01: Introduction to Computational Physics II
+            ### L01: Introduction to Computational Physics II
 
-                  [_Slides:
-                  broberts.io/live-slides/phys4070/L01-intro_](https://www.broberts.io/live-slides/phys4070/L01-intro)
-                  <br><br>
+            [_Slides: broberts.io/live-slides/phys4070/L01-intro_](https://www.broberts.io/live-slides/phys4070/L01-intro)
 
-                  Ben Roberts
-                  * <span style="font-size:18pt;">Atomic structure theory,
-                    particle astrophysics</span>
-                  * <span style="font-size:18pt;">b.roberts@uq.edu.au, Room
-                    6-427</span>
+            <br><br>
 
-                  <br><br>
+            ### Ben Roberts
+            * Atomic structure theory,
+              particle astrophysics
+            * b.roberts@uq.edu.au, Room
+              6-427
 
-                  <span style="font-size:16pt;">
-                    University of Queensland, Semester 1 2024
-
-                    Wednesday, 21/02/2024
-                  </span>
-                </textarea>
-              </section>
-
-              <!-- <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
-  <script type="text/template">
-     ## Computational Physics II
-     phys4070/7270
-
-     <br>
-
-     L01: Introduction to Computational Physics II
-
-     [_Slides: broberts.io/live-slides/phys4070/L01-intro_](https://www.broberts.io/live-slides/phys4070/L01-intro)
-     * [PHYS4070 - Lecture 01](phys4070/phys4070-L01.html)
-
-     <br><br>
+            <br><br>
 
 
-     Ben Roberts
-      * <span style="font-size:18pt;">Atomic structure theory, particle astrophysics</span>
-      * <span style="font-size:18pt;">b.roberts@uq.edu.au, Room 6-427</span>
+            University of Queensland, Semester 1 2025
+
+            Tuesday, 25/02/2025
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Why computational physics
+            
+            * Many (most) problems in physics cannot be solved exactly, even in theory
+            * Many problems are simply too big/complex to solve without computers
+            * New experiments: ridiculous amounts of data
+               * e.g., LHC: ~ 1 PB ~ 1000 TB per second! (beam on)
+               * e.g., LIGO: ~ 10 TB per day (always)
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Course overview
+            
+            ## Lecture: 1hr
+              * Cover physics, mathematical concepts required for projects
+            
+            <br><br>
+
+            ## Computer labs: 2 x 2hr
+              * Worksheets - designed to introduce you to:
+                * computational methods required
+                * specific C++ tools we'll use
+              * Not directly assessed
+                * But: highly geared towards projects
+
+            <br><br>
+
+            ## Assessment: 4 large projects
+              * 10%, 20%, 35% 35%
+              * Marked on: code, profesional report, and code quality
+              * These are not easy, and will require significant amount of work
+              * Keep in mind: there's no exam and no other assesment
 
 
-      <br><br>
+          </textarea>
+        </section>
 
-      <span style="font-family:Papyrus; font-size:16pt;">
-      University of Queensland, Semester 1 2022
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Topics
+            
+            ## Basic ODEs
+              * Model simple n-body problem using Runge-Kutta methods
+            
+            <br><br>
 
-      Monday, 21/02/2022
-      </span>
+            ## Monte-Carlo, statistical mechanics
+              * Model phase transitions and the Ising model using Monte-Carlo techniques
+              * Introduce basic parallelisation using openMP
 
-  </script>
-</section> -->
-              <!-- <p><span style="font-size:2.0em">Computational Physics II</span></p>
+            <br><br>
 
-<p>phys4070/7270</p>
-</div></div>
-<div class="sl-block" data-block-type="text" data-name="text-d69a58" data-block-id="f92e32a62a086b90ed5f2d87a054a69a" style="height: auto; width: 600px; left: 340px; top: 576px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
-<p>Ben Roberts<br>
-b.roberts@uq.edu.au<br>
-Room 6-427</p>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 340px; top: 360px;" data-block-id="491f5a8447a12871d8237ed49c2f01ec" data-name="text-bd9092"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-<p>Introductory lecture</p>
-<p>Slides available: https://www.broberts.io/live-slides/phys4070/phys4070-L01</p>
-<p>Monday, 21/2/2022</p> -->
+            ## Atomic physics: hydrogen to many-electron
+              * Hartree-Fock model, iterative methods, perturbation theory
+              * Solve ODE, eigenvalue problems, numerical integration
 
-            </div></div></section>
+              <br><br>
 
-        <section data-id="a4be9d883492e1b4c6a7b29a171f3a61"><div
-            class="sl-block" data-block-type="text" style="width: 928px; left:
-            166px; top: 67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="63608fea7ce4b15116f158074c3a9246">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Teaching staff</h2>
-              </div></div>
+            ## Many-body quantum, PDEs, exact diagonalisation
+              * Model dynamics of Bose-Einstein condensates using Runge-Kutta methods
+              * Explore properties of a quantum many-body system (the transverse-field Ising model)
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+              # Quick note on plagiarism
+
+              <br><br>
+
+              <!-- ## ok -->
+                * Comparing/discussing answers is encouraged
+                * solving problems with others and working in groups is good     
+                * However, copy and paste from others OR the internet is not.
+                
+                <br>
+
+              ## Stackoverflow, internet sources
+                * Copying small code snippets, e.g., for syntax is fine. 
+                * Copying large chunks of someone else's solution is not. 
+                * If you copy and paste and then cosmetically change the code this is also plagiarism.
+                * Use your judgement
+
+                <br>
+
+              ## Provided examples
+                * You may use any of examples we explicitly give you in the labs etc.
+                * Plus many examples: [github.com/benroberts999/cpp-cheatsheet](https://www.github.com/benroberts999/cpp-cheatsheet)
+
+                <br>
+            
+              ## AI
+                * Great for debugging small code snippets, not great at solving large problems
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+              # Language: C++
+
+              <br>
+
+              <div style="text-align: left; float: left; width: 65%">
+
+                <br>
+
+                <h3> &emsp; • What's current experience?</h3>
+                <h3> &emsp; • Anything required will be covered in labs/provided</h3>
+
+                <br>
+
+                <h2>"Modern" C++</h2>
+                <h3> &emsp; • Means at least c++11</h3>
+                <h3> &emsp; • You can use up to c++17 on smp-teachning</h3>
+                <h3> &emsp; &emsp; • Most differences are minor</h3>
+                <h3> &emsp; &emsp; • Some very helpful features that make things easier</h3>
+
+                <br>
+
+                <h2>smp-teaching</h2>
+                <h3> &emsp; • get it set up in first lab</h3>
+                <h3> &emsp; • Or, use your own device</h3>
+
+              </div>
+              <div style="text-align: center; float: right; width: 30%">
+                <br>
+                <img src="img/c++.png" style="width: 90%">
+              </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section>
+
+          <section data-markdown>
+            <textarea data-template>
+            # Info/resources
+          </textarea>
+          </section>
+
+          <br><br><br>
+          <br><br><br>
+
+          <div
+            style="display: flex; justify-content: space-between; align-items: flex-start;">
+
+            <!-- Column 1 -->
+            <section data-markdown style="width: 48%;">
+              <textarea data-template>
+                ## cpp "cheet-sheet": 
+                * [github.com/benroberts999/cpp-cheatsheet](https://www.github.com/benroberts999/cpp-cheatsheet)
+                * A list of simple and advanced examples: free to use.
+                
+                <br><br><br><br><br><br>
+  
+                ## Online tutorials:
+                
+                * Highly reccomend: [hackingcpp.com](https://hackingcpp.com/)
+                * [hackingcpp.com/cpp/beginners_guide](https://hackingcpp.com/cpp/beginners_guide.html)
+                
+              </textarea>
+            </section>
+
+            <!-- Column 2 -->
+            <section data-markdown style="width: 48%;">
+              <textarea data-template>
+                ## Technical Documentation:
+              
+                1. [cppreference.com/](https://en.cppreference.com/w/)
+                  * Very thorough, often not beginner friendly
+                
+                2. [cplusplus.com/](https://cplusplus.com/)
+                  * also great, beginner friendly, many examples
+
+                <br><br><br>
+
+                ## Book:
+                * Book: Dmitrović, S.F (2020). Modern C++ for Absolute Beginners
+              </textarea>
+            </section>
+
           </div>
+        </section>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="5ee38c73a1a7c89d5df6592e66bd50f1">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="d0d85555a77acfd6be63ceb25a9f44d6">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="image" data-name="image-c95b91"
-            data-block-id="7469dd614823834ecebf787f35acbfda"
-            style="height: 158.6px; left: 240px; top: 215.8px; min-width:
-            1px; min-height: 1px;"><div class="sl-block-content" style="z-index:
-              13;"><img style data-natural-width="180"
-                data-natural-height="260" data-lazy-loaded
-                data-src="img/angela.png"></div></div>
-          <div class="sl-block" data-block-type="image" data-name="image-da1650"
-            data-block-id="57319161702ec2d60eb797839e8d5ab8"
-            style="height: 158.6px; left: 560px; top: 215.8px; min-width: 1px;
-            min-height: 1px;"><div class="sl-block-content" style="z-index:
-              14;"><img style data-natural-width="360"
-                data-natural-height="512" data-lazy-loaded
-                data-src="img/emma.jpg"></div></div>
-          <div class="sl-block" data-block-type="image" data-name="image-1ab9be"
-            data-block-id="171a06299692577e2a2b79007e50a53d" style="width:
-            158.8px; height: 158.8px; left: 880px; top: 215.8px; min-width: 1px;
-            min-height: 1px;"><div class="sl-block-content" style="z-index:
-              15;"><img style data-natural-width="512"
-                data-natural-height="512" data-lazy-loaded
-                data-src="img/andrew.png"></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-cfc0ae"
-            data-block-id="f9bef1ccca447d8a3427aebdcc8ebe0e" style="height:
-            auto; width: 229px; left: 240px; top: 418.5px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 16; text-align:
-              left;">
-              <p><span style="font-size:0.7em">Dr. Angela White<br>
-                  Lecturer</span></p>
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
 
-              <p><span style="font-size:0.7em">Physics Annexe - 6-427</span></p>
-              <p><span style="font-size:0.7em">a.white5@uq.edu.au</span></p>
-            </div></div>
-          <div class="sl-block" data-block-type="text" style="height: auto;
-            width: 273px; left: 560px; top: 418.5px;"
-            data-block-id="d6f3f0bdd014747d0571f5158eb59fa9"
-            data-name="text-ba1a52"><div class="sl-block-content"
-              data-placeholder-tag="p" data-placeholder-text="Text"
-              style="z-index: 17; text-align: left;">
-              <p><span style="font-size:0.7em">Dr. Emma Laird<br>
-                  Lecturer</span></p>
+            # CompilerExplorer:
+            This example: [godbolt.org/z/6nzE34fKP](https://godbolt.org/z/6nzE34fKP)
 
-              <p><span style="font-size:0.7em">Physics Annexe - 6-418</span></p>
-              <p><span style="font-size:0.7em">e.laird@uq.edu.au</span></p>
-            </div></div>
-          <div class="sl-block" data-block-type="text" style="height: auto;
-            width: 273px; left: 880px; top: 418.5px;"
-            data-block-id="024ed70a39998d32d0fdba7a564bf499"
-            data-name="text-92999e"><div class="sl-block-content"
-              data-placeholder-tag="p" data-placeholder-text="Text"
-              style="z-index: 18; text-align: left;">
-              <p><span style="font-size:0.7em">Dr. Andrew Groszek<br>
-                  Lecturer</span></p>
-
-              <p><span style="font-size:0.7em">Physics Annexe - 6-418</span></p>
-              <p><span style="font-size:0.7em">a.groszek@uq.edu.au</span></p>
-            </div></div></section><section
-          data-id="1b722e3176d1dbb78f5109c90b9c30cb"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-origin-id="41a1618c6901e5bea58c7c1fe0e601d9"
-            data-block-id="6892a1913be749606e5bf8dcae2012b4">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Why computational physics?</h2>
-              </div></div>
-          </div>
-
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-origin-id="f1db934c54465f2c05a9b18f37ae2907"
-            data-block-id="3cacd6fd03d82add2c04c6c070a79cda">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-origin-id="b50441d6a2f67116230530c47095b3ba"
-            data-block-id="3b430f9b24519689a04b372275391c24">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-388662"
-            data-block-id="55b1bfa9c420cf2c0436cb45a0ee4263" style="height:
-            auto; width: 788px; left: 160px; top: 216px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <ul>
-                <li>Many (most) problems in physics cannot be solved exactly,
-                  even in theory<br>
-                </li>
-                <li>Many problems are simply too big/complex to solve without
-                  computers<br>
-                </li>
-                <li>New experiments: ridiculous amounts of data
-                  <ul>
-                    <li>e.g., LHC: ~ 1 PB ~ 1000 TB per second! (beam on)</li>
-                    <li>e.g., LIGO: ~ 10 TB per day (always)</li>
-                  </ul>
-                </li>
-              </ul>
-            </div></div></section><section
-          data-id="518e469afbe2a15af9aaa4f3e7c3301e"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="d14f283bc9708d15441db969018d6d0b">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>phys4070/7270: Course overview</h2>
-              </div></div>
-          </div>
-
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="a47d9e8bf4126174e81784a84db2598a">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="8836e359a9e31b2d78a30c044571645a">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-0abaf0"
-            data-block-id="dc1be69663063b5dd3e05d55bec39373" style="height:
-            auto; width: 1079px; left: 80px; top: 161px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <p style="text-align:left"><strong>Lecture, 1hr</strong></p>
-
-              <ul>
-                <li>Cover physics and mathematical concepts required for
-                  projects </li>
-              </ul>
-
-              <p style="text-align:left"> </p>
-
-              <p style="text-align:left"><strong>Computer labs,
-                  2x2hr</strong></p>
-              <ul>
-                <li>Cover necessary coding and computational techniques for
-                  projects</li>
-                <li>Worksheet tasks</li>
-                <li>Lecturer and tutor on hand, help with physics, <span
-                    style="color:rgb(255, 255, 255); text-align:left">coding</span>,
-                  etc.</li>
-              </ul>
-
-              <p style="text-align:left"> </p>
-
-              <p style="text-align:left"><strong>Assessment</strong></p>
-
-              <ul>
-                <li>3 major projects (equally weighted); no exam </li>
-                <li>Coding task and profesional report </li>
-                <li>Marked on: working code+answers, report, and code
-                  quality</li>
-              </ul>
-            </div></div></section><section
-          data-id="3b1a14302301357d03ac089fcc4885f3">
-
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="3a61954d37f4259a270c968e1a9d57d0">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 11; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="271f980c80366b6ce3a6b4f4cb27232b">
-            <div class="sl-block-style" style="z-index: 10; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-0abaf0"
-            style="height: auto; width: 1079px; left: 80px; top: 53.5px;"
-            data-block-id="1cabaf806c221852af39fd23199396f9"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 12;">
-              <p style="text-align:left"><span
-                  style="font-size:0.9em"><strong>Solve
-                    ODEs, PDEs</strong></span></p>
-
-              <ul>
-                <li><span style="font-size:0.9em">Solve differential equation
-                    using various methods</span></li>
-                <li><span style="font-size:0.9em">Model dynamics of
-                    Bose-Einstein condensates using Runge-Kutta methods
-                  </span></li>
-              </ul>
-
-              <p style="text-align:left"> </p>
-
-              <p style="text-align:left"><span
-                  style="font-size:0.9em"><strong>Atomic
-                    Physics: hydrogen and many-electron
-                    atoms</strong></span></p>
-              <ul>
-                <li><span style="font-size:0.9em">Hartree-Fock model, iterative
-                    methods, perturbation theory</span></li>
-                <li><span style="font-size:0.9em">Solve ODE, eigenvalue
-                    problems, numerical integration </span></li>
-              </ul>
-
-              <p style="text-align:left"> </p>
-
-              <p style="text-align:left"><span
-                  style="font-size:0.9em"><strong>Monte-Carlo</strong></span></p>
-              <ul>
-                <li><span style="font-size:0.9em">Model phase transitions and
-                    the Ising model using Monte-Carlo techniques </span></li>
-              </ul>
-
-              <p style="text-align:left"> </p>
-
-              <p style="text-align:left"><span
-                  style="font-size:0.9em"><strong>Many-body
-                    quantum, exact diagonalisation</strong></span></p>
-
-              <ul>
-                <li style="text-align:left"><span
-                    style="font-size:0.9em">Explore
-                    properties of a quantum many-body system (the
-                    transverse-field Ising model) </span></li>
-              </ul>
-            </div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-ed3342"
-            data-block-id="4806b319348b86f89fbf14fdbb7333c6" style="height:
-            auto; width: 600px; left: 319.5px; top: 681px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13; color: rgb(159,
-              197, 232);">
-              <p><em>See full schedule on blackboard</em></p>
-            </div></div></section><section
-          data-id="3a31189b20ae15deb78f6b10d1e06396"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="d93893c2c73c8a6e13d8ab88bbda07d9">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Note on plagiarism:</h2>
-              </div></div>
-          </div>
-
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="f528a9ed81bb3b26db7d8dc6e66264b3">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="01c3c36ddd466138a5b9fa00764a64a1">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-
-          <div class="sl-block" data-block-type="text" data-name="text-ae3661"
-            data-block-id="787161ee64a4d0b3745951fafe79b664" style="height:
-            auto; width: 794.301px; left: 180px; top: 175.928px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <p style="text-align:left">Comparing/discussing answers is
-                encouraged,</p>
-
-              <p style="text-align:left">solving problems with others and
-                working in groups is good (especially for programming
-                problems).</p>
-              <p style="text-align:left"> </p>
-
-              <p style="text-align:left">However, copy and paste from others OR
-                the internet is not. If you copy and paste and then cosmetically
-                change the code this is also plagiarism.</p>
-
-              <p style="text-align:left"> </p>
-
-              <p style="text-align:left">You may use examples we explicitly give
-                you in the labs</p>
-            </div></div></section><section
-          data-id="0e5f52718ef1bc4cb1fd0ec661dd7bf3"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="e0587c43be417c7b53469ec35c97c56c">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Language: C++</h2>
-              </div></div>
-          </div>
-
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="f4d35bcd507866219e6ef6465116ca3d">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="3c3271ae38eed7d93a58a3d30ac1fd19">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-e8a6ad"
-            data-block-id="0f25595b9f5a279fd67d5f80395779dd" style="height:
-            auto; width: 668px; left: 160px; top: 360px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;"
-              data-has-custom-html dir="ui">
-              <ul>
-                <li>"Modern C++", at least C++11</li>
-                <li>We'll use C++17 in this course
-                  <ul>
-                    <li>At first, most differences are minor</li>
-                    <li>Modern features make C++ much nicer/friendlier</li>
-                  </ul>
-                </li>
-              </ul>
-            </div></div>
-          <div class="sl-block" data-block-type="image" data-name="image-5f9d8e"
-            data-block-id="ba972c7e70074e414b26e585642f88fe" style="width:
-            229.8px; height: 229.8px; left: 960px; top: 67.5px; min-width: 1px;
-            min-height: 1px;"><div class="sl-block-content" style="z-index:
-              14;"><img style data-natural-width="630"
-                data-natural-height="630" data-lazy-loaded
-                data-src="img/c++.png"></div></div>
-          <div class="sl-block" data-block-type="text" style="width: 1040px;
-            left: 160px; top: 568px; height: auto;"
-            data-block-id="d1ada79836a556ff05d609ae7dccdbf3"
-            data-name="text-2c15d1">
-            <div class="sl-block-style" style="z-index: 15; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 15;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <p><strong>smp-teaching server</strong></p>
-
-                <ul>
-                  <li>Get set up during first lab - feel free to get a
-                    head-start (see guide on blackboard)</li>
-                </ul>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" style="height: auto;
-            width: 668px; left: 95.2329px; top: 182.4px;"
-            data-block-id="b47da9a1e14de8006fd13f24a9ead24e"
-            data-name="text-e6ec71"><div class="sl-block-content"
-              data-placeholder-tag="p" data-placeholder-text="Text"
-              style="z-index: 16;" data-has-custom-html dir="ui">
-              <ul>
-                <li>Who did 3rd year course?</li>
-                <li>Experience with C/C++/other?</li>
-              </ul>
-            </div></div></section><section
-          data-id="2733dd780506a194b74502105aa6dd48"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="0356340b75ad489b15cd3e9da0e51755">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Info/resources:</h2>
-              </div></div>
-          </div>
-
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="3f878c71942d53bf26931ce3177c42bb">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="d936e0dfc8ad582f3840fe1c55692f43">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-99d15f"
-            data-block-id="5a72e17663b2908f16f1a675e0e8eb91" style="height:
-            auto; width: 800px; left: 160px; top: 156.353px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <p style="text-align:left">Everything needed will be covered in
-                lectures/tutorials</p>
-            </div></div>
-          <div class="sl-block" data-block-type="text" style="width: 1040px;
-            left: 160px; top: 248.052px; height: auto;" data-name="text-2c15d1"
-            data-block-id="6f22c4e81f09f5fa58ea9a849550d4a6">
-            <div class="sl-block-style" style="z-index: 14; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 14;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <p><strong>quickstart guide: </strong><span
-                    style="color:rgb(255, 255, 255)">On blackboard. Get you
-                    compiling and running.</span></p>
-                <p><strong>cpp "cheet-sheet": </strong><span
-                    style="color:rgb(255, 255, 255)"><a
-                      href="https://www.github.com/benroberts999/cpp-cheatsheet"
-                      target="_blank">github.com/benroberts999/cpp-cheatsheet</a></span></p>
-                <ul>
-                  <li>A list of simple and advanced examples: free to use. </li>
-                </ul>
-              </div></div>
-          </div>
-          <br>
-          <div class="sl-block" data-block-type="text" style="width: 1040px;
-            left: 160px; top: 371.879px; height: auto;"
-            data-block-id="b838ff0c012185b7b6fc06ef16b448f0"
-            data-name="text-f569f3">
-            <div class="sl-block-style" style="z-index: 15; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 15;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <p><strong>Online tutorials: </strong></p>
-
-                <ul>
-                  <li>Highly reccomend: <a href="https://hackingcpp.com"
-                      target="_blank">hackingcpp.com</a></li>
-                  <li><a href="https://hackingcpp.com/cpp/beginners_guide.html"
-                      target="_blank">hackingcpp.com/cpp/beginners_guide</a></li>
-                </ul>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" style="width: 1040px;
-            left: 160px; top: 510.57px; height: auto;"
-            data-block-id="d1bdd38643e8b2d7b33240dbc92f0aa4"
-            data-name="text-301493">
-            <div class="sl-block-style" style="z-index: 16; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 16;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <p><span style="color:rgb(255, 255, 255)"><strong>Book</strong>:
-                    Dmitrović, S.F (2020). Modern C++ for Absolute
-                    Beginners</span></p>
-                <p> </p>
-
-                <p><strong>Technical Documentation:</strong></p>
-
-                <p>1. <a href="https://cppreference.com/"
-                    target="_blank">cppreference.com/</a>
-                  - Very thorough, often not beginner friendly</p>
-
-                <p>2. <a href="https://www.cplusplus.com/"
-                    target="_blank">cplusplus.com/</a>
-                  - also great, beginner friendly, many examples</p>
-              </div></div>
-          </div></section><section data-id="fabc933b222f50f3368ea16f2d65dc6c">
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="1bc8e7e0f5574d817bf49329c7220a62">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 11; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="a66abd8ad0b201a7e0dec821b1400e1e">
-            <div class="sl-block-style" style="z-index: 10; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="iframe"
-            data-name="iframe-8c1768"
-            data-block-id="07b3aa1da78e23aba55568aa4db2b8ce" style="width:
-            1175px; height: 594px; left: 52.5px; top: 108px;"><div
-              class="sl-block-content" style="z-index: 12; border-width: 1px;
-              border-style: solid; transition-duration: 0.6s;"
-              data-animation-type="fade-in"><iframe allowfullscreen
+          <div style="text-align: left; float: center; width: 75%">
+            <div class="sl-block" data-block-type="iframe"
+            style="width: 100%; height: 80%">
+            <div class="sl-block-content" style="border-width: 1px;">
+            <iframe allowfullscreen
                 allow="fullscreen" sandbox="allow-forms allow-scripts
                 allow-popups allow-same-origin allow-pointer-lock
                 allow-presentation" data-preload="true" data-lazy-loaded
-                data-src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:'%23include+%3Ciostream%3E%0A%0Aint+main()+%7B+%0A++std::cout+%3C%3C+%22Hello+phys4070+class!!%5Cn%22%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:51.984564498346195,l:'4',m:100,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:gsnapshot,compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+(trunk)+(C%2B%2B,+Editor+%231)',t:'0')),header:(),k:48.015435501653805,l:'4',m:100,n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4"></iframe></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-7ca1ff"
-            data-block-id="d98712f0337ea9ba81084d48e8c0225b" style="height:
-            auto; width: 1091.59px; left: 120px; top: 59.5px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <p>Compiler Explorer: <a href="https://godbolt.org/"
-                  target="_blank">godbolt.org</a> ; this example: <a
-                  href="https://godbolt.org/z/6nzE34fKP"
-                  target="_blank">godbolt.org/z/6nzE34fKP</a></p>
-            </div></div></section><section
-          data-id="f96ace8f0917025f158929837bab3ca4"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="4e3ca7de5abe29b4f39cf7f715bb0562">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Why C++?</h2>
+                data-src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:24,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:'%23include+%3Ciostream%3E%0A%0Aint+main()+%7B+%0A++std::cout+%3C%3C+%22Hello+phys4070+class!!%5Cn%22%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:51.984564498346195,l:'4',m:100,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:gsnapshot,compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:24,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+(trunk)+(C%2B%2B,+Editor+%231)',t:'0')),header:(),k:48.015435501653805,l:'4',m:100,n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4"></iframe>
               </div></div>
-          </div>
+            </div>
+              
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="c840aa72e54ad3e1ac4d1686492e37d4">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="6dbef35deb3a1a9157c91f3b49f27a19">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-e8a6ad"
-            style="height: auto; width: 668px; left: 160px; top: 217.3px;"
-            data-block-id="a1f970bd7833f137114d5afb14d2f386"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;"
-              data-has-custom-html dir="ui">
-              <h2 style="text-align: left;">1. Why use C++?</h2>
+          </textarea>
+        </section>
 
-              <p> </p>
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Why C++?
 
-              <h2 style="margin-bottom: 0px; font-style: normal;
-                font-variant-ligatures: normal; font-variant-caps: normal;
-                color: rgb(255, 255, 255); text-align: left;">2. Why learn
-                C++?</h2>
-              <p> </p>
 
-              <h2 style="margin-bottom: 0px; font-style: normal;
-                font-variant-ligatures: normal; font-variant-caps: normal;
-                color: rgb(255, 255, 255); text-align: left;">3.
-                Drawbacks/downside</h2>
+            <br>
 
-              <p> </p>
-            </div></div>
-          <div class="sl-block" data-block-type="image" data-name="image-5f9d8e"
-            style="width: 229.8px; height: 229.8px; left: 1005.1px; top: 37px;
-            min-width: 1px; min-height: 1px;"
-            data-block-id="0702e6f349df2651831caa2354712d31"><div
-              class="sl-block-content" style="z-index: 14;"><img style
-                data-natural-width="630" data-natural-height="630"
-                data-lazy-loaded
-                data-src="img/c++.png"></div></div></section><section
-          data-id="528a62d90658232fe414ca25082b12ea"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="22fa66b9155104f0bbd59ebe18397cde">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>1. Why use C++?</h2>
-              </div></div>
-          </div>
+            <div style="text-align: left; float: left; width: 65%">
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="2e6e26d964a36abda34228c1da63936d">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="db347271bb491fcdf3fc858fd6d97924">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
 
-          <div class="sl-block" data-block-type="image" data-name="image-5f9d8e"
-            style="width: 229.8px; height: 229.8px; left: 1005.1px; top: 37px;
-            min-width: 1px; min-height: 1px;"
-            data-block-id="6df7cde2e89a0d1e109a19b9a40c2b10"><div
-              class="sl-block-content" style="z-index: 13;"><img style
-                data-natural-width="630" data-natural-height="630"
-                data-lazy-loaded data-src="img/c++.png"></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-044a52"
-            data-block-id="f1b741690d85d54b1862ea662cfa59b6" style="height:
-            auto; width: 1181px; left: 0px; top: 174.42px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 14;">
-              <ul>
-                <li>Fast/powerful, Predictable resource control</li>
-                <ul>
-                  <li>"direct" map to hardware: CPU, memory</li>
-                </ul>
-                <li>Back-compatible with C - every* C program is a valid C++
-                  program</li>
-                <li>Has a well-defined standard + standard library
-                  (&lt;algorithm&gt;, &lt;numeric&gt; etc.)</li>
-                <li>Multi-paradigm (generic, functional, object-<span
-                    style="color:rgb(255, 255, 255); text-align:left">oriented</span>,
-                  data-o, etc.)</li>
-                <li>Object-oriented: encapsulation</li>
-                <li>High <em>and</em> low level language
-                  <ul>
-                    <li>Propaganda: <em>"High level language that leaves no room
-                        for a lower-level one"</em>
-                    </li>
-                    <li>
-                      <span
-                        style="color:rgb(255, 255, 255); text-align:left">Propaganda:
-                      </span><em>"Zero-cost abstraction"</em>
-                    </li>
-                    <li>Write nice high-level OO code, same(/better) performance
-                      as C or Fortran</li>
-                  </ul>
-                </li>
-                <li>​Directly interface with other languages (C, Fortran etc.) -
-                  LAPACK</li>
-                <li>Widely used: many experts, lots of existing
-                  programs/libraries etc.</li>
-              </ul>
-            </div></div></section><section
-          data-id="d3ed47077662d75d7628aeb69c1263b6"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="5eea07d481fef2932bf1b67e69444f06">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>2. Why <em>learn</em> C++?</h2>
-              </div></div>
-          </div>
+              <h2> &emsp; • Why <i>use</i> C++?</h1>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="7046b56da9f42cd52aa30f8281a3bfd1">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="06e78e31f47883f934eb28f7ba52741e">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
+                <br>
 
-          <div class="sl-block" data-block-type="image" data-name="image-5f9d8e"
-            style="width: 229.8px; height: 229.8px; left: 1005.1px; top: 37px;
-            min-width: 1px; min-height: 1px;"
-            data-block-id="89ad6dd2e80d8794f081a4ee4d52e9d2"><div
-              class="sl-block-content" style="z-index: 13;"><img style
-                data-natural-width="630" data-natural-height="630"
-                data-lazy-loaded data-src="img/c++.png"></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-2ade92"
-            data-block-id="e048aeac06a399c4a7be1e236901a577" style="height:
-            auto; width: 804.879px; left: 94.4442px; top: 216px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 14;">
-              <ul>
-                <li>Learning lower-level language gives understanding of many
-                  concepts (e.g., memory management)<br>
-                </li>
-                <li>A good understanding of C++ will make learning other
-                  languages easier, and give you a deeper understanding of
-                  computer science<br>
-                </li>
-                <li> => Help you write better code<br>
-                </li>
-                <li>Widely used and <strong>highly valued</strong> in computer
-                  science and industry</li>
-              </ul>
-            </div></div></section><section
-          data-id="72a8166d93a76b23947b7dcbe45c8d2a"><div class="sl-block"
-            data-block-type="text" style="width: 928px; left: 166px; top:
-            67.5px; height: auto;" data-name="text-c29943"
-            data-block-id="58644f8e8dc4db646de84112e5d2c3e4">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>3. Down sides?</h2>
-              </div></div>
-          </div>
+              <h2> &emsp; • Why <i>learn</i> C++?</h1>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="aab03ffade21f6c81525bc22e5f58454">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="44a3a1a2e942ad33798b80de3c44ce40">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
+                <br>
 
-          <div class="sl-block" data-block-type="image" data-name="image-5f9d8e"
-            style="width: 229.8px; height: 229.8px; left: 1005.1px; top: 37px;
-            min-width: 1px; min-height: 1px;"
-            data-block-id="3f1f4d488d02cd58070de3ece64005ae"><div
-              class="sl-block-content" style="z-index: 13;"><img style
-                data-natural-width="630" data-natural-height="630"
-                data-lazy-loaded data-src="img/c++.png"></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-8e75bd"
-            data-block-id="d24f7201597b6cbebea9669afec99b80" style="height:
-            auto; width: 1172px; left: 54px; top: 246.705px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 14;">
-              <ul>
-                <li><span style="font-size:1.0em">Huge language, many
-                    features</span></li>
-                <li>
-                  <span style="font-size:1.0em">Many old, obsolete features (for
-                    back-compatibility)</span>
-                  <ul>
-                    <li>
-                      <span style="font-size:1.0em">Can make it hard to
-                        learn</span><br>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span style="font-size:1.0em">Often, lots of bad/out-dated
-                    "advice" online</span><br>
-                </li>
-                <li>
-                  <span style="font-size:1.0em">Very powerful; can be easy to
-                    "shoot yourself in the foot"</span>
-                  <ul>
-                    <li>
-                      <span style="font-size:1.0em">​It will happily let you do
-                        almost anything.. including very bad ideas</span><br>
-                    </li>
-                  </ul>
-                </li>
-                <li><span style="font-size:1.0em">Often quite 'verbose' -
-                    sometimes requires more code/typing than other
-                    languages</span></li>
-              </ul>
-            </div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-e86e2f"
-            data-block-id="6a0985a247d53a76acc1f727b85b9aae" style="height:
-            auto; width: 600px; left: 80px; top: 143.4px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 15;">
-              <p style="text-align: left;"><em>Many of the positives can also be
-                  negatives:</em></p>
-            </div></div></section><section
-          data-background-image="img/background.png"
-          data-background-opacity="0.2" data-background-transition="fade"
-          data-id="8adf2d77e74b3154307870ac43ab9849"><div class="sl-block"
-            data-block-type="text" style="width: 837px; left: 61.5px; top:
-            192px; height: auto;"
-            data-block-id="cc1c1461beb040ec7af57fae9e76b704"><div
-              class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg); filter: drop-shadow(rgba(28, 235, 123, 0.7) 0px 0px
-              6px);"><div class="sl-block-content monospace-font"
-                data-placeholder-tag="h1" style="z-index: 10; color: rgb(28,
-                235, 123); font-size: 150%; line-height: 1.04;" dir="ui"
-                data-has-line-height data-placeholder-text="Text">
-                <h1>part II</h1>
-              </div></div></div>
+              <h2> &emsp; • Why <i>not</i> C++ (drawbacks/downsides)?</h1>
 
-          <div class="sl-block" data-block-type="text" style="width: 837px;
-            left: 61.5px; top: 399px; height: auto;" data-name="text-d18e72"
-            data-block-id="3f950e39f7ebfb2704c62ddc74c919ae"><div
-              class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgba(28, 235, 123, 0.7) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="p"
-                style="z-index: 11; text-align: center; color: rgb(28, 235,
-                123); font-size: 110%;" data-placeholder-text="Text">
-                <p>Writing good code</p>
-              </div></div></div>
+            </div>
+            <div style="text-align: center; float: right; width: 20%">
+              <br>
+              <img src="img/c++.png" style="width: 70%">
+            </div>
 
-        </section><section data-id="5fbebbed718d0a2674e847df4e638973"
-          data-auto-animate><div class="sl-block" data-block-type="text"
-            style="width: 928px; left: 80px; top: 50.5119px; height: auto;"
-            data-name="text-c29943"
-            data-block-id="18e3ea9958420149824b5489eb931deb">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Writing good code</h2>
-              </div></div>
-          </div>
+          </textarea>
+        </section>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="0cb8f84ae470c950da3db4684fd03e7a">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="7a9f95aa6a66d857e85b3469cf9c72e6">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-06b2a5"
-            style="height: auto; width: 600px; left: 130.271px; top: 128.074px;"
-            data-block-id="9523a1de6404b6eaf14e689e13f48f24"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <h3 style="text-align:left">Goal:</h3>
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Why _use_ C++?
 
-              <ul>
-                <li>Clear, easily understandable code</li>
-                <li>Easy to maintain, use, debug
-                  <ul>
-                    <li><em>And mark!</em></li>
-                  </ul>
-                </li>
-              </ul>
-            </div></div></section><section
-          data-id="3b3b782bc82aa288452d09d892b9669b" data-auto-animate><div
-            class="sl-block" data-block-type="text" style="width: 928px; left:
-            80px; top: 50.5119px; height: auto;" data-name="text-c29943"
-            data-block-id="8626882298c619fa287ead35eb096ed5">
-            <div class="sl-block-style" style="z-index: 10; transform:
-              rotate(0deg);"><div class="sl-block-content"
-                data-placeholder-tag="h2" style="text-align: left; z-index: 10;
-                color: rgb(255, 255, 255); line-height: 1.17; font-size: 90%;"
-                dir="ui" data-has-line-height data-placeholder-text="Text">
-                <h2>Writing good code</h2>
-              </div></div>
-          </div>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="f4cc0011aec19f0ca249e269ddc0493f">
-            <div class="sl-block-style" style="z-index: 12; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 12; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="f04f8ef356f2fb390fe7c25e92841967">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-06b2a5"
-            style="height: auto; width: 600px; left: 130.271px; top: 128.074px;"
-            data-block-id="6d7127436dad00767615f9105ba94ef1"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <h3 style="text-align:left">Goal:</h3>
+            <br>
 
-              <ul>
-                <li>Clear, easily understandable code</li>
-                <li>Easy to maintain, use, debug
-                  <ul>
-                    <li><em>And mark!</em></li>
-                  </ul>
-                </li>
-              </ul>
-            </div></div>
-          <div class="sl-block" data-block-type="text" style="height: auto;
-            width: 1061.18px; left: 130.271px; top: 341.877px;"
-            data-name="text-3d6d93"
-            data-block-id="b34bd86425e651fe008cc59127be509f"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 14;">
-              <h3 style="text-align:left">Tools:</h3>
+            <div style="text-align: left; float: left; width: 80%">
 
-              <ul>
-                <li>Naming of variables/functions</li>
-                <li>Logic and structure of program/functions</li>
-                <li>Encapsulation (Wrapping code into functions, classes)</li>
-                <li>Following "best principles", "good practices"
-                  <ul>
-                    <li>Learn from decades of past mistakes; takes
-                      time/experience</li>
-                  </ul>
-                </li>
-                <li>Good commenting practices</li>
-                <li>Enable warnings!: -Wall (also: -Wextra -Wpedantic
-                  -Wconversion)</li>
-              </ul>
-            </div></div></section><section
-          data-id="a67a04f7aca003b68d922a540917ddb5" data-auto-animate>
+              <h3> &emsp; • Fast/powerful language with predictable resource control</h3>
+              <h3> &emsp; &emsp; • "direct"* map to hardware</h3>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="d89e472ade3cce7c3a99f11e87363f68">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 11; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="df4819a942a5ca23f177e25a478fc59b">
-            <div class="sl-block-style" style="z-index: 10; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="code" style="width: 600.868px;
-            height: auto; left: 80px; top: 72px;"
-            data-block-id="20b5ec41daf13b9ce2e50efb30098f2f"
-            data-name="code-3b6058"><div class="sl-block-style" style="z-index:
-              12; opacity: 0.98;"><div class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 12;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">double f(double x, double y) {
-  double a, b, c;
-  a = (4.0 / 3) * M_PI * x * x * x;
-  b = (4.0 / 3) * M_PI * x * y * y;
-  c = a - b;
-  if (c &gt; 0.0) {
-    return c;
-  } else {
-    return -c;
-  }
-}</code></pre></div></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-554c27"
-            data-block-id="78cc440837fd7daac0dac626097c154a" style="height:
-            auto; width: 1032.13px; left: 80px; top: 360px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <p style="text-align:left"><strong>Bad:</strong></p>
+              <br>
 
-              <ul>
-                <li>Uninitialised variables
-                  <ul>
-                    <li>Hard to debug, hard to follow, easy to make
-                      mistakes</li>
-                  </ul>
-                </li>
-                <li>Code transcription; copy/paste errors
-                  <ul>
-                    <li>Extra work, hard to maintain, 2x probability of
-                      error</li>
-                  </ul>
-                </li>
-                <li>Unclear naming
-                  <ul>
-                    <li>Confusing, hard to understand</li>
-                  </ul>
-                </li>
-              </ul>
-            </div></div></section><section
-          data-id="f6441c6e0ed16194b258ae3cb4da5714" data-auto-animate>
+              <h3> &emsp; • Back-compatible with C and older C++ versions</h3>
+              <h3> &emsp; &emsp; • Every* valid C program is a valid C++ program</h3>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="b62d21833b560e04c6a2ec2c287872db">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 11; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="39f5369a1654872d71f538b3618ac35c">
-            <div class="sl-block-style" style="z-index: 10; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="code" style="width: 692.179px;
-            height: auto; left: 80px; top: 72px;" data-name="code-3824aa"
-            data-block-id="66cea4ac6972c69047dc430f4c4d1036"><div
-              class="sl-block-style" style="z-index: 12; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 12;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">double sphere_volume(double radius) {
+              <br>
+              
+              <h3> &emsp; • Has a well-defined standard + large standard library </h3>
+              <h3> &emsp; &emsp; • (algorithm, numeric etc.)</h3>
+
+              <br>
+              
+              <h3> &emsp; • Multi-paradigm (generic, functional, object-oriented, data-o, etc.) </h3>
+              <h3> &emsp; &emsp; • High-level language with low-level control</h3>
+              <h4> &emsp; &emsp; &emsp; • Propaganda: <i>"High level language that leaves no room for a lower-level one"</i></h4>
+              <h4> &emsp; &emsp; &emsp; • Propaganda: <i>"Zero-cost abstraction"</i></h4>
+              <h3> &emsp; &emsp; • Write nice high-level OO code, same(/better) performance as C or Fortran</h3>
+
+              <br>
+              
+              <h3> &emsp; • Directly interface with other languages (C, Fortran etc.) - LAPACK </h3>
+              <h3> &emsp; • Widely used: many experts, lots of existing programs/libraries etc.</h3>
+
+            </div>
+            <div style="text-align: center; float: right; width: 20%">
+              <br>
+              <img src="img/c++.png" style="width: 70%">
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Why _learn_ C++?
+
+
+            <br>
+
+            <div style="text-align: left; float: left; width: 80%">
+
+              <h3> &emsp; • Learning lower-level language gives understanding of many concepts</h3>
+              <h3> &emsp; &emsp; • e.g., memory management</h3>
+
+
+              <br>
+
+              <h3> &emsp; • A good understanding of C++ will make learning other languages easier</h3>
+              <h3> &emsp; • Give you a deeper understanding of computer science</h3>
+              <h3> &emsp; &emsp; • Help you write better code, regardless of language</h3>
+
+              <br>
+              
+              <h3> &emsp; • Widely used and <b>highly valued</b> in computer science and industry</h3>
+
+
+            </div>
+            <div style="text-align: center; float: right; width: 20%">
+              <br>
+              <img src="img/c++.png" style="width: 70%">
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Downsides?
+
+            ### Many of the above also come with drawbacks..
+
+
+            <br>
+
+            <div style="text-align: left; float: left; width: 80%">
+
+              <h3> &emsp; • <b>HUGE</b> language, with many features</h3>
+              <h3> &emsp; &emsp; • Can be confusing/overwhelming</h3>
+              <h3> &emsp; &emsp; • 95% of features are rarely used</h3>
+
+
+              <br>
+
+              <h3> &emsp; • Many old, obsolete features (for back-compatiblity)</h3>
+              <h3> &emsp; &emsp; • Can make it difficult to learn, especially from old sources</h3>
+              <!-- <h3> &emsp; • Often old/bad/outdated "advice" on the internet</h3> -->
+
+              <br>
+
+              <h3> &emsp; • Very powerful: can be easy to shoot yourself in the foot</h3>
+              <h3> &emsp; &emsp; • It will happily let you do almost anything.. including very bad ideas</h3>
+
+              <br>
+
+              <h3> &emsp; • Quite verobse</h3>
+              <h3> &emsp; &emsp; • Often requires more code/typing than other languages</h3>
+              <h3> &emsp; &emsp; • This becomes less of an issue with time and for large projects</h3>
+
+              <br>
+
+              <h3> &emsp; • Designed for large-scale projects</h3>
+              <h3> &emsp; &emsp; • Can seem overly-combersome for small projects</h3>
+
+            </div>
+            <div style="text-align: center; float: right; width: 20%">
+              <br>
+              <img src="img/c++.png" style="width: 70%">
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+            <br><br><br><br><br><br><br><br>
+
+            # Part II: Writing good code
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+            # Example: good/bad?
+
+            <br>
+            <br>
+
+            <div style="text-align: left; float: left; width: 40%">
+            <div class="sl-block" data-block-type="code" style="width: 40%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers=""
+                >double f(double x, double y) {
+                  double a, b, c;
+                  a = (4.0 / 3) * M_PI * x * x * x;
+                  b = (4.0 / 3) * M_PI * x * y * y;
+                  c = a - b;
+                  if (c > 0.0) {
+                    return c;
+                  } else {
+                    return -c;
+                  }
+                }
+                </code></pre></div></div></div>
+            </div>
+
+            <div style="text-align: left; float: right; width: 55%">
+              <div class="fragment">
+                <h2>Bad!</h2>
+              </div>
+              <br>
+              <div class="fragment">
+                <h3>&emsp; • Uninitialised variables</h3>
+                <h3>&emsp; &emsp; • Hard to follow/debug: common source of error!</h3>
+              </div>
+              <br>
+              <div class="fragment">
+                <h3>&emsp; • Code transcription; copy/paste errors</h3>
+                <h3>&emsp; &emsp; • Extra work, hard to maintain, 2x probability of error</h3>
+              </div>
+              <br>
+              <div class="fragment">
+                <h3>&emsp; • Unclear naming</h3>
+                <h3>&emsp; &emsp; • Confusing, hard to understand</h3>
+              </div>
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+            # Example: good/bad?
+
+            <br>
+            <br>
+
+            <div style="text-align: left; float: left; width: 50%">
+            <div class="sl-block" data-block-type="code" style="width: 50%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers=""
+>double sphere_volume(double radius) {
   return (4.0 / 3) * M_PI * std::pow(radius, 3);
 }
 
@@ -1361,432 +506,374 @@ double volume_difference(double radius1, double radius2) {
   const double volume1 = sphere_volume(radius1);
   const double volume2 = sphere_volume(radius2);
   return std::abs(volume1 - volume2);
-}</code></pre></div></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-554c27"
-            style="height: auto; width: 815.536px; left: 80px; top: 360px;"
-            data-block-id="33fd0389d6f67b81596a4850d0ad1a14"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <p style="text-align:left"><strong>Good:</strong></p>
+}
+                </code></pre></div></div></div>
+            </div>
 
-              <ul>
-                <li>Variables defined where used</li>
-                <li>Makes use of functions</li>
-                <li>Clear naming</li>
-                <li>Examples available: <a
-                    href="https://godbolt.org/z/c6WY7rTf7"
-                    target="_blank">godbolt.org/z/c6WY7rTf7</a>
-                </li>
-              </ul>
-            </div></div></section><section data-auto-animate
-          data-id="b40e154eea3df74e5efe2e6ac9458fa5">
+            <div style="text-align: left; float: right; width: 45%">
+              <div class="fragment">
+                <h2>Good</h2>
+              <br>
+                <h3>&emsp; • Variables defined + initialised where used</h3>
+              <br>
+                <h3>&emsp; • Makes use of named functions</h3>
+              <br>
+                <h3>&emsp; • Clear variable naming</h3>
+              </div>
+            </div>
 
-          Game: Raise your hand when you know what this code does:
-          <div class="sl-block" data-block-type="code" style="width: 947px;
-            height: auto; left: 166.5px; top: 37.6057px;"
-            data-name="code-3b288a"
-            data-origin-id="50969e7ca052e8ef8326b5caba160a21"
-            data-block-id="0f2d3b0ba24c78847960caa4ef5434f2"><div
-              class="sl-block-style" style="z-index: 10; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 10;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">
-  double a[][3] = {1.0, 0.2, 0.1, 0.6, 3.0, -0.1, 0.2, 0.4, 6.1};
-  double b[] = {4.0, 5.3, 2.8};
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Game: Raise your hand when you know what this code does
 
 
-  double d = 0.0;
-  for (int i = 0; i &lt; 3; i++) {
-    d += (a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] -
-                     a[1][(i + 2) % 3] * a[2][(i + 1) % 3]));
+            <div class="sl-block" data-block-type="code" style="width: 80%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers="">​
+double a[][3] = {
+  {1.0, 0.2, 0.1},
+  {0.6, 3.0, -0.1},
+  {0.2, 0.4, 6.1}
+};
+double b[] = {4.0, 5.3, 2.8};
+​
+​
+double d = 0.0;
+for (int i = 0; i < 3; i++) {
+  d += a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] - a[1][(i + 2) % 3] * a[2][(i + 1) % 3]);
+}
+​
+​
+double ia[3][3];
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) 
+    - (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) / d;
   }
-
-
-  double ia[3][3];
-  for (int i = 0; i &lt; 3; i++) {
-    for (int j = 0; j &lt; 3; j++) {
-      ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) -
-                  (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) /
-                 d;
-    }
+}
+​
+​
+double x[3] = {0.0, 0.0, 0.0};
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    x[i] += ia[i][j] * b[j];
   }
+}
+</code></pre></div></div></div>
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Game: Raise your hand when you know what this code does
 
 
-  double x[3];
-  for (int i = 0; i &lt; 3; i++) {
-    x[i] = 0.0;
-    for (int j = 0; j &lt; 3; j++) {
-      x[i] += ia[i][j] * b[j];
-    }
-  }</code></pre></div></div></div>
-        </section><section data-auto-animate
-          data-id="316baf8ca2440988db62691c880feec4">
-
-          Game: Raise your hand when you know what this code does:
-          <div class="sl-block" data-block-type="code" style="width: 947px;
-            height: auto; left: 166.5px; top: 37.6057px;"
-            data-name="code-3b288a"
-            data-block-id="e97961226da39aa4d6aece48b334270b"><div
-              class="sl-block-style" style="z-index: 10; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 10;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">  // Initialise matrix A, and vector b
-  double a[][3] = {1.0, 0.2, 0.1, 0.6, 3.0, -0.1, 0.2, 0.4, 6.1};
-  double b[] = {4.0, 5.3, 2.8};
-
-
-  double d = 0.0;
-  for (int i = 0; i &lt; 3; i++) {
-    d += (a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] -
-                     a[1][(i + 2) % 3] * a[2][(i + 1) % 3]));
+            <div class="sl-block" data-block-type="code" style="width: 80%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers="">// Initialise matrix A, and vector b
+double a[][3] = {
+  {1.0, 0.2, 0.1},
+  {0.6, 3.0, -0.1},
+  {0.2, 0.4, 6.1}
+};
+double b[] = {4.0, 5.3, 2.8};
+​
+​
+double d = 0.0;
+for (int i = 0; i < 3; i++) {
+  d += a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] - a[1][(i + 2) % 3] * a[2][(i + 1) % 3]);
+}
+​
+​
+double ia[3][3];
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) 
+    - (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) / d;
   }
-
-
-  double ia[3][3];
-  for (int i = 0; i &lt; 3; i++) {
-    for (int j = 0; j &lt; 3; j++) {
-      ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) -
-                  (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) /
-                 d;
-    }
+}
+​
+​
+double x[3] = {0.0, 0.0, 0.0};
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    x[i] += ia[i][j] * b[j];
   }
+}
+</code></pre></div></div></div>
+          </textarea>
+        </section>
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Game: Raise your hand when you know what this code does
 
 
-  double x[3];
-  for (int i = 0; i &lt; 3; i++) {
-    x[i] = 0.0;
-    for (int j = 0; j &lt; 3; j++) {
-      x[i] += ia[i][j] * b[j];
-    }
-  }</code></pre></div></div></div>
-        </section><section data-auto-animate
-          data-id="55f9485cfdb831015afdae912d4cad48">
-
-          Game: Raise your hand when you know what this code does:
-          <div class="sl-block" data-block-type="code" style="width: 947px;
-            height: auto; left: 166.5px; top: 37.6057px;"
-            data-name="code-3b288a"
-            data-block-id="3e63a8a1c7d6aaaac0d634021aac1f8a"><div
-              class="sl-block-style" style="z-index: 10; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 10;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">  // Initialise matrix A, and vector b
-  double a[][3] = {1.0, 0.2, 0.1, 0.6, 3.0, -0.1, 0.2, 0.4, 6.1};
-  double b[] = {4.0, 5.3, 2.8};
-
-  // Calculate determinant of matrix A
-  double d = 0.0;
-  for (int i = 0; i &lt; 3; i++) {
-    d += (a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] -
-                     a[1][(i + 2) % 3] * a[2][(i + 1) % 3]));
+            <div class="sl-block" data-block-type="code" style="width: 80%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers="">// Initialise matrix A, and vector b
+double a[][3] = {
+  {1.0, 0.2, 0.1},
+  {0.6, 3.0, -0.1},
+  {0.2, 0.4, 6.1}
+};
+double b[] = {4.0, 5.3, 2.8};
+​
+// Calculate determinant of matrix A
+double d = 0.0;
+for (int i = 0; i < 3; i++) {
+  d += a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] - a[1][(i + 2) % 3] * a[2][(i + 1) % 3]);
+}
+​
+​
+double ia[3][3];
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) 
+    - (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) / d;
   }
-
-
-  double ia[3][3];
-  for (int i = 0; i &lt; 3; i++) {
-    for (int j = 0; j &lt; 3; j++) {
-      ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) -
-                  (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) /
-                 d;
-    }
+}
+​
+​
+double x[3] = {0.0, 0.0, 0.0};
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    x[i] += ia[i][j] * b[j];
   }
+}
+</code></pre></div></div></div>
+          </textarea>
+        </section>
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Game: Raise your hand when you know what this code does
 
 
-  double x[3];
-  for (int i = 0; i &lt; 3; i++) {
-    x[i] = 0.0;
-    for (int j = 0; j &lt; 3; j++) {
-      x[i] += ia[i][j] * b[j];
-    }
-  }</code></pre></div></div></div>
-        </section><section data-auto-animate
-          data-id="12b1ad139ae02f558f46036cda25cf3e">
-
-          Game: Raise your hand when you know what this code does:
-          <div class="sl-block" data-block-type="code" style="width: 947px;
-            height: auto; left: 166.5px; top: 37.6057px;"
-            data-name="code-3b288a"
-            data-block-id="29e2b65b297812da733ba581be5794cd"><div
-              class="sl-block-style" style="z-index: 10; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 10;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">  // Initialise matrix A, and vector b
-  double a[][3] = {1.0, 0.2, 0.1, 0.6, 3.0, -0.1, 0.2, 0.4, 6.1};
-  double b[] = {4.0, 5.3, 2.8};
-
-  // Calculate determinant of matrix A
-  double d = 0.0;
-  for (int i = 0; i &lt; 3; i++) {
-    d += (a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] -
-                     a[1][(i + 2) % 3] * a[2][(i + 1) % 3]));
+            <div class="sl-block" data-block-type="code" style="width: 80%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers="">// Initialise matrix A, and vector b
+double a[][3] = {
+  {1.0, 0.2, 0.1},
+  {0.6, 3.0, -0.1},
+  {0.2, 0.4, 6.1}
+};
+double b[] = {4.0, 5.3, 2.8};
+​
+// Calculate determinant of matrix A
+double d = 0.0;
+for (int i = 0; i < 3; i++) {
+  d += a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] - a[1][(i + 2) % 3] * a[2][(i + 1) % 3]);
+}
+​
+// Find inverse of matrix A
+double ia[3][3];
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) 
+    - (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) / d;
   }
-
-  // Find inverse of matrix A
-  double ia[3][3];
-  for (int i = 0; i &lt; 3; i++) {
-    for (int j = 0; j &lt; 3; j++) {
-      ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) -
-                  (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) /
-                 d;
-    }
+}
+​
+​
+double x[3] = {0.0, 0.0, 0.0};
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    x[i] += ia[i][j] * b[j];
   }
+}
+</code></pre></div></div></div>
+          </textarea>
+        </section>
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Game: Raise your hand when you know what this code does
 
 
-  double x[3];
-  for (int i = 0; i &lt; 3; i++) {
-    x[i] = 0.0;
-    for (int j = 0; j &lt; 3; j++) {
-      x[i] += ia[i][j] * b[j];
-    }
-  }</code></pre></div></div></div>
-        </section><section data-auto-animate
-          data-id="93e7b806ac00ed407fbd7f5cb39b847a">
-
-          Game: Raise your hand when you know what this code does:
-          <div class="sl-block" data-block-type="code" style="width: 947px;
-            height: auto; left: 166.5px; top: 37.6057px;"
-            data-name="code-3b288a"
-            data-block-id="02491ef0f15484565666a1d0bc5fa6f4"><div
-              class="sl-block-style" style="z-index: 10; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 10;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">  // Initialise matrix A, and vector b
-  double a[][3] = {1.0, 0.2, 0.1, 0.6, 3.0, -0.1, 0.2, 0.4, 6.1};
-  double b[] = {4.0, 5.3, 2.8};
-
-  // Calculate determinant of matrix A
-  double d = 0.0;
-  for (int i = 0; i &lt; 3; i++) {
-    d += (a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] -
-                     a[1][(i + 2) % 3] * a[2][(i + 1) % 3]));
+            <div class="sl-block" data-block-type="code" style="width: 80%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers="">// Initialise matrix A, and vector b
+double a[][3] = {
+  {1.0, 0.2, 0.1},
+  {0.6, 3.0, -0.1},
+  {0.2, 0.4, 6.1}
+};
+double b[] = {4.0, 5.3, 2.8};
+​
+// Calculate determinant of matrix A
+double d = 0.0;
+for (int i = 0; i < 3; i++) {
+  d += a[0][i] * (a[1][(i + 1) % 3] * a[2][(i + 2) % 3] - a[1][(i + 2) % 3] * a[2][(i + 1) % 3]);
+}
+​
+// Find inverse of matrix A
+double ia[3][3];
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) 
+    - (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) / d;
   }
-
-  // Find inverse of matrix A
-  double ia[3][3];
-  for (int i = 0; i &lt; 3; i++) {
-    for (int j = 0; j &lt; 3; j++) {
-      ia[i][j] = ((a[(j + 1) % 3][(i + 1) % 3] * a[(j + 2) % 3][(i + 2) % 3]) -
-                  (a[(j + 1) % 3][(i + 2) % 3] * a[(j + 2) % 3][(i + 1) % 3])) /
-                 d;
-    }
+}
+​
+// Solve matrix equation: Ax = b, via x = A^-1 * b
+double x[3] = {0.0, 0.0, 0.0};
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 3; j++) {
+    x[i] += ia[i][j] * b[j];
   }
+}
+</code></pre></div></div></div>
+          </textarea>
+        </section>
 
-  // Find vector x, by Ax=b =&gt; x = Inverse[A]*b
-  double x[3];
-  for (int i = 0; i &lt; 3; i++) {
-    x[i] = 0.0;
-    for (int j = 0; j &lt; 3; j++) {
-      x[i] += ia[i][j] * b[j];
-    }
-  }</code></pre></div></div></div>
-        </section><section data-auto-animate
-          data-id="e8950dd5f4fb91707addaedef1eb918e">
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            <br><br><br><br><br><br>
+            ## Did the comments help?
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="90522f88d2f0c527ba6328584b28656a">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 11; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="e46904df7a2117d58225dd74f6cce166">
-            <div class="sl-block-style" style="z-index: 10; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-3d73d9"
-            data-block-id="2e16b6fb42dbd3072d21aed7dcf8f806" style="height:
-            auto; width: 600px; left: 301.777px; top: 196.5px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 12;">
-              <p>Did the comments help?</p>
-            </div></div></section><section data-auto-animate
-          data-id="1d4ee1cc4121a3a9b0a7825c70e6775d">
+            <br><br>
 
-          What about now?
-          <div class="sl-block" data-block-type="code" style="width: 947px;
-            height: auto; left: 166.5px; top: 72px;" data-name="code-3b288a"
-            data-block-id="7abd8179263b67584f8853d87130a2a2"><div
-              class="sl-block-style" style="z-index: 10; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 10;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">
-  Matrix A({1.0, 0.2, 0.1,
-         0.6, 3.0, -0.1,
-         0.2, 0.4, 6.1});
+            ### Lesson: comment your code?
 
-  Vector b{4.0, 5.3, 2.8};
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## What about this time:
 
 
-  Matrix inverse_A = calculate_inverse(A);
+            <div class="sl-block" data-block-type="code" style="width: 80%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers="">​
+Matrix A{1.0, 0.2, 0.1,
+  0.6, 3.0, -0.1,
+  0.2, 0.4, 6.1};
+​
+Vector b{4.0, 5.3, 2.8};
+​
+​
+Matrix inverse_A = invert_matrix(A);
+​
+​
+Vector x = inverse_A * b;
+</code></pre></div></div></div>
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## What about this time:
 
 
-  Vector x = inverse_A * b;</code></pre></div></div></div>
-        </section><section data-auto-animate
-          data-id="782a22a961da9161e7141b525052f388">
+            <div class="sl-block" data-block-type="code" style="width: 80%; height: auto;">
+              <div class="sl-block-style">
+                <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
+                data-code-frame="none" data-code-autoheight="true">
+                <pre class="cpp" style="font-size: 24px; line-height: 32px;"><code style="padding: 20px;" data-line-numbers="">// initialise a matrix A, and vector b
+Matrix A{1.0, 0.2, 0.1,
+  0.6, 3.0, -0.1,
+  0.2, 0.4, 6.1};
+​
+Vector b{4.0, 5.3, 2.8};
+​
+// calculate the inverse of matrix A
+Matrix inverse_A = invert_matrix(A);
+​​
+// solve Ax = b, by x = A^-1 * b
+Vector x = inverse_A * b;
+</code></pre></div></div></div>
 
-          What about now?
-          <div class="sl-block" data-block-type="code" style="width: 947px;
-            height: auto; left: 166.5px; top: 72px;" data-name="code-3b288a"
-            data-block-id="ae13e037bbef3acf3a9b2d1b143a966e"><div
-              class="sl-block-style" style="z-index: 10; opacity: 0.98;"><div
-                class="sl-block-content notranslate"
-                data-highlight-theme="ir-black" style="z-index: 10;
-                border-style: solid; border-width: 1px;" data-code-frame="none"
-                data-code-autoheight="true"><pre class="cpp" style="font-size:
-                  18px; line-height: 22px;"><code style="padding: 15px;" data-line-numbers="">  // initialise a matrix A, and vector b
-  Matrix A({1.0, 0.2, 0.1,
-         0.6, 3.0, -0.1,
-         0.2, 0.4, 6.1});
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
-  Vector b{4.0, 5.3, 2.8};
+            <div class = "fragment">
+              <h2>Did the comments help this time?</h2>
+            </div>
 
-  // calculate the inverse of matrix A
-  Matrix inverse_A = calculate_inverse(A);
+            <br><br>
+            <div class = "fragment">
+              <h3>&emsp; • Encapsulation and well-named functions, variables:</h3>
+              <h3>&emsp; • <b>Way</b> more important than comments</h3>
+            </div>
 
-  // solve Ax = b, by x = A^-1 * b
-  Vector x = inverse_A * b;</code></pre></div></div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-3d73d9"
-            style="height: auto; width: 600px; left: 320px; top: 439.044px;"
-            data-block-id="171914401c4a0b6b06d84568b9c0fe21"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 11;">
-              <p>Did the comments help this time?</p>
-            </div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-7156a3"
-            data-block-id="57b4aa6d946c077c3cb9fc97e4137049" style="height:
-            auto; width: 838.895px; left: 220.553px; top: 535.863px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 12;">
-              <ul>
-                <li style="text-align:left">Good naming, encapsulation, and use
-                  of functions <em>way</em> more important than comments</li>
-                <li style="text-align:left">Comments necessary for
-                  hard-to-understand code
-                  <ul>
-                    <li style="text-align:left">Try to make the code
-                      understandable!</li>
-                  </ul>
-                </li>
-              </ul>
-            </div></div></section><section data-auto-animate
-          data-id="b226aad1128fa3605a680baba2a225fa">
+          </textarea>
+        </section>
 
-          <div class="sl-block" data-block-type="text" style="width: 160px;
-            left: 166px; top: 11px; height: auto;" data-name="text-3f789d"
-            data-block-id="783f9cc0762a42085f0f11189755e611">
-            <div class="sl-block-style" style="z-index: 11; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-placeholder-tag="pre"
-                style="z-index: 11; text-align: left; font-size: 44%; color:
-                rgb(159, 197, 232); padding: 5px; background-color: rgba(0, 0,
-                0, 0);" dir="ui" data-placeholder-text="Text">
-                <pre>// phys4070/7270</pre>
-              </div></div>
-          </div>
-          <div class="sl-block" data-block-type="line" data-name="line-49cd6b"
-            style="width: auto; height: auto; left: 326px; top: 24px;"
-            data-block-id="ef29fb580598bc03f4a45274a352ad0d">
-            <div class="sl-block-style" style="z-index: 10; filter:
-              drop-shadow(rgb(109, 158, 235) 0px 0px 5px);"><div
-                class="sl-block-content" data-line-x1="0" data-line-y1="0"
-                data-line-x2="787" data-line-y2="0.5" data-line-color="#9fc5e8"
-                data-line-start-type="none" data-line-end-type="none"
-                style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg"
-                  version="1.1" preserveaspectratio="xMidYMid" width="787"
-                  height="1" viewbox="0 0 787 1"><line stroke="rgba(0,0,0,0)"
-                    stroke-width="15" x1="0" y1="0" x2="787"
-                    y2="0.5"></line><line
-                    class="line-element" stroke="#9fc5e8" stroke-width="2"
-                    x1="0" y1="0" x2="787" y2="0.5"></line></svg></div></div>
-          </div>
-          <div class="sl-block" data-block-type="text" data-name="text-3d73d9"
-            style="height: auto; width: 960px; left: 80px; top: 70px;"
-            data-block-id="33b077165591fc456be15c1b0c6efe04"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 12;">
-              <h2 style="text-align:left">Other (beyond scope of course)</h2>
-            </div></div>
-          <div class="sl-block" data-block-type="text" data-name="text-eccab3"
-            data-block-id="29d6a87af32f576d24a0893db8801129" style="height:
-            auto; width: 860px; left: 80px; top: 181.5px;"><div
-              class="sl-block-content" data-placeholder-tag="p"
-              data-placeholder-text="Text" style="z-index: 13;">
-              <ul>
-                <li style="text-align:left">Unit tests
-                  <ul>
-                    <li style="text-align:left">Writing self-contained tests for
-                      code/functions/classes</li>
-                  </ul>
-                </li>
-                <li style="text-align:left">Version control
-                  <ul>
-                    <li style="text-align:left">git</li>
-                  </ul>
-                </li>
-                <li style="text-align:left">Code documentation</li>
-                <li style="text-align:left">Tools:
-                  <ul>
-                    <li style="text-align:left">linters/IDEs, analysis,
-                      debuggers</li>
-                    <li style="text-align:left">code auto formaters (clang
-                      format)</li>
-                  </ul>
-                </li>
-              </ul>
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Beyond the scope of this course, but important topics
 
-              <p style="text-align:left">Welcome to use any/all of these, not
-                required</p>
-            </div></div></section>
+            <br><br>
+
+            ### Unit tests
+              * Writing good scientific code means trustable code
+              * Code cannot be trusted unless it is well tested
+              * Unit tests: integral part of this
+            
+            <br><br>
+
+            ### Version control
+             * git / github: SMP workshop: week 4
+            
+             <br><br>
+
+            ### Code documentation
+             * Maintaining good code required maintaining good documentaion
+
+            <br><br>
+
+            ### Tools:
+             * linters/IDEs, analysis, debuggers
+             * code auto-formatting and style
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
       </div>
     </div>
 
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
     <script>
-			var SLConfig = {"deck": {"id":2341401,"slug":"code-5fc308","title":"phys4070-L01-intro","description":"","width":1280,"height":720,"margin":0.05,"visibility":"all","published_at":"2022-02-15T23:30:52.986Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/b8d132a219dd9da05f551a41deefdf2d/thumb.jpg?1644969778","view_count":0,"user":{"id":2082449,"username":"benroberts999","name":"Ben Roberts","description":"","thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GiAgoVpKE4CPns8FrfzVlRtSNrTUzf_tPnzzhR0vQ=s96-c","account_type":"lite","team_id":null,"settings":{"id":29876007,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"none","transition":"none","theme_id":null,"theme_font":"helvetica","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":27,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1644985618055,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
-
-
+			var SLConfig = {};
 			// Use local fonts
-			SLConfig.fonts_url = 'lib/fonts/';
+			SLConfig.fonts_url = '../lib/fonts/';
 		</script>
-    <script src="lib/reveal.js"></script>
-    <script src="lib/reveal-plugins.js"></script>
-    <script src="lib/offline.js"></script>
+    <script src="../lib/reveal.js"></script>
+    <script src="../lib/reveal-plugins.js"></script>
+    <script src="../lib/offline.js"></script>
+    <script src="../plugin/math/math.js"></script>
 
     <!-- Initialize the presentation -->
     <script>
 			Reveal.initialize({
-				width: 1280,
-				height: 720,
-				margin: 0.05,
-
+				width: 1920,
+				height: 1080,
+				margin: 0.06,
 
 				hash: true,
 				controls: true,
@@ -1801,7 +888,7 @@ double volume_difference(double radius1, double radius2) {
 
 				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
 
-				center: false,
+				center: true,
 				shuffle: false,
 				loop: false,
 				rtl: false,
@@ -1814,7 +901,7 @@ double volume_difference(double radius1, double radius2) {
 					escapeHTML: false
 				},
 
-				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
 			});
 		</script>
   </body>
