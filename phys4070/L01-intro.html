@@ -823,6 +823,60 @@ Vector x = inverse_A * b;
         <!-- =============================================================== -->
         <section data-markdown>
           <textarea data-template>
+            ## Key points/principles
+        
+            <div>
+            <div class="fragment">
+              <h3>Name things well</h3>
+              <ul>
+                <li>Code with empathy: someone else will have to understand what you’ve done</li>
+                <ul>
+                  <li>90% of the time, that person is future you (Except in this course... when it’s me)</li>
+                </ul>
+              </ul>
+            </div>
+        
+            <br><br>
+        
+            <div class="fragment">
+              <h3>Don't be surprising; Don't <em>lie</em> with your code</h3>
+              <ul>
+                <li>Principle of Least Astonishment: code should behave as <em>someone else</em> would expect</li>
+                <li>Names should reflect what code <em>actually</em> does!</li>
+                <ul>
+                  <li><em>"This function is called `invert_matrix()`, but it actually calculates the determinant"</em>. NO.</li>
+                </ul>
+              </ul>
+            </div>
+        
+            <br><br>
+        
+            <div class="fragment">
+              <h3>Prefer small, dedicated functions/classes to massive monoliths</h3>
+              <ul>
+                <li>Encapsulation: helps readability, debugging, maintainability</li>
+                <li>SRP (Single Responsibility Principle): each piece of code should do one thing and do it well</li>
+                <li>DRY (Don't repeat yourself): avoid code duplication</li>
+              </ul>
+            </div>
+        
+            <br><br>
+        
+            <div class="fragment">
+              <h3>Minimal Working Model</h3>
+              <ul>
+                <li>Ensure code always compiles: add one tiny thing at a time</li>
+                <li>Especially important for starting out</li>
+                <li>(Version control)</li>
+              </ul>
+            </div>
+          </div>
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
             ## Beyond the scope of this course, but important topics
 
             <br><br>
@@ -848,6 +902,100 @@ Vector x = inverse_A * b;
              * linters/IDEs, analysis, debuggers
              * code auto-formatting and style
 
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            <br><br><br><br><br><br>
+            # Part III: Crash course in C++
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+            ## Basics: functions, type, scope
+
+            <div style="text-align: left; float: center; width: 75%">
+              <div class="sl-block" data-block-type="iframe"
+              style="width: 100%; height: 80%">
+              <div class="sl-block-content" style="border-width: 1px;">
+              <iframe allowfullscreen
+                  allow="fullscreen" sandbox="allow-forms allow-scripts
+                  allow-popups allow-same-origin allow-pointer-lock
+                  allow-presentation" data-preload="true" data-lazy-loaded
+                  data-src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:24,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:2,endLineNumber:12,positionColumn:2,positionLineNumber:12,selectionStartColumn:2,selectionStartLineNumber:12,startColumn:2,startLineNumber:12),source:'%23include+%3Ciostream%3E%0A%0Adouble+my_function(double+x,+int+i)%3B%0A%0Aint+main()+%7B%0A++++std::cout+%3C%3C+%22Hellow+Wordl!!%5Cn%22%3B%0A%0A++++%7B%0A++++++++int+i+%3D+2%3B%0A++++%7D%0A++++//+std::cout+%3C%3C+i+%3C%3C+%22%5Cn%22%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.736314443460905,l:'4',m:100,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:gsnapshot,compilerName:'',compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:26,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',overrides:!(),runtimeTools:!(),source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+(trunk)+(C%2B%2B,+Editor+%231)',t:'0')),header:(),k:49.263685556539095,l:'4',m:100,n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4"></iframe>
+                </div></div>
+              </div>
+    
+            
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+            ## Functions: pass by value(copy), reference, const, pointer
+
+            <div style="text-align: left; float: center; width: 75%">
+              <div class="sl-block" data-block-type="iframe"
+              style="width: 100%; height: 80%">
+              <div class="sl-block-content" style="border-width: 1px;">
+              <iframe allowfullscreen
+                  allow="fullscreen" sandbox="allow-forms allow-scripts
+                  allow-popups allow-same-origin allow-pointer-lock
+                  allow-presentation" data-preload="true" data-lazy-loaded
+                  data-src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:24,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:2,endLineNumber:27,positionColumn:2,positionLineNumber:27,selectionStartColumn:2,selectionStartLineNumber:27,startColumn:2,startLineNumber:27),source:'%23include+%3Ciostream%3E%0A%0Adouble+function_val(double+x)+%7B%0A++++x+*%3D+5%3B%0A++++return+x%3B%0A%7D%0A%0Adouble+function_ref(double+%26x)+%7B%0A++++x+*%3D+5%3B%0A++++return+x%3B%0A%7D%0A%0Adouble+function_cref(const+double+%26x)+%7B%0A++++//+x+*%3D+5%3B%0A++++return+x%3B%0A%7D%0A%0Aint+main()+%7B%0A++++double+a+%3D+1.0%3B%0A%0A++++double+b+%3D+function_val(a)%3B%0A++++std::cout+%3C%3C+%22a+%3D+%22+%3C%3C+a+%3C%3C+%22,+b+%3D+%22+%3C%3C+b+%3C%3C+%22%5Cn%22%3B%0A%0A++++double+c+%3D+function_ref(a)%3B%0A++++//+function_ref(a)%3B%0A++++std::cout+%3C%3C+%22a+%3D+%22+%3C%3C+a+%3C%3C+%22,+c+%3D+%22+%3C%3C+c+%3C%3C+%22%5Cn%22%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.736314443460905,l:'4',m:100,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:gsnapshot,compilerName:'',compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:26,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',overrides:!(),runtimeTools:!(),source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+(trunk)+(C%2B%2B,+Editor+%231)',t:'0')),header:(),k:49.263685556539095,l:'4',m:100,n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4"></iframe>
+                </div></div>
+              </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+            ## Classes (objects), operator overloading
+
+            <div style="text-align: left; float: center; width: 75%">
+              <div class="sl-block" data-block-type="iframe"
+              style="width: 100%; height: 80%">
+              <div class="sl-block-content" style="border-width: 1px;">
+              <iframe allowfullscreen
+                  allow="fullscreen" sandbox="allow-forms allow-scripts
+                  allow-popups allow-same-origin allow-pointer-lock
+                  allow-presentation" data-preload="true" data-lazy-loaded
+                  data-src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:24,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:13,endLineNumber:11,positionColumn:13,positionLineNumber:11,selectionStartColumn:13,selectionStartLineNumber:11,startColumn:13,startLineNumber:11),source:'%23include+%3Ciostream%3E%0A%0Aclass+Complex+%7B%0A+++public:%0A++++double+real%3B%0A++++double+imag%3B%0A%7D%3B%0A%0AComplex+operator%2B(Complex+a,+Complex+b)%3B%0A%0Aint+main()+%7B%0A++++Complex+z1%7B1.0,+0.5%7D%3B%0A++++Complex+z2%3B%0A++++z2.real+%3D+1.0%3B%0A++++z2.imag+%3D+0.5%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.736314443460905,l:'4',m:100,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:gsnapshot,compilerName:'',compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:26,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',overrides:!(),runtimeTools:!(),source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+(trunk)+(C%2B%2B,+Editor+%231)',t:'0')),header:(),k:49.263685556539095,l:'4',m:100,n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4"></iframe>
+                </div></div>
+              </div>
+              
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+
+            ## Vector, array
+
+            <div style="text-align: left; float: center; width: 75%">
+              <div class="sl-block" data-block-type="iframe"
+              style="width: 100%; height: 80%">
+              <div class="sl-block-content" style="border-width: 1px;">
+              <iframe allowfullscreen
+                  allow="fullscreen" sandbox="allow-forms allow-scripts
+                  allow-popups allow-same-origin allow-pointer-lock
+                  allow-presentation" data-preload="true" data-lazy-loaded
+                  data-src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:24,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:50,endLineNumber:6,positionColumn:50,positionLineNumber:6,selectionStartColumn:50,selectionStartLineNumber:6,startColumn:50,startLineNumber:6),source:'%23include+%3Carray%3E%0A%23include+%3Ccmath%3E%0A%23include+%3Ciostream%3E%0A%23include+%3Cvector%3E%0A%0Adouble+my_function(const+std::vector%3Cdouble%3E+%26x,+const+std::vector%3Cdouble%3E+%26y)%3B%0A%0Aint+main()+%7B%0A++++std::vector%3Cint%3E+a%7B1,+2,+3,+4,+5%7D%3B%0A%0A++++std::vector%3Cdouble%3E+b%3B%0A++++for+(int+i+%3D+0%3B+i+%3C+10%3B+%2B%2Bi)+%7B%0A++++++++b.push_back(std::pow(2.0,+i))%3B%0A++++%7D%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.736314443460905,l:'4',m:100,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:gsnapshot,compilerName:'',compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:26,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',overrides:!(),runtimeTools:!(),source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+(trunk)+(C%2B%2B,+Editor+%231)',t:'0')),header:(),k:49.263685556539095,l:'4',m:100,n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4"></iframe>
+                </div></div>
+              </div>
+              
           </textarea>
         </section>
 
