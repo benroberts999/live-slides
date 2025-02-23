@@ -1020,7 +1020,7 @@ Vector x = inverse_A * b;
             <br>
             <div style="text-align: center; float: left; width: 40%">
               <br>
-              <img src="img/compile.png" style="width: 80%">
+              <img src="img/compile.png" style="width: 90%">
             </div>
 
             <div style="text-align: left; float: right; width: 60%">
@@ -1030,36 +1030,18 @@ Vector x = inverse_A * b;
               <h3> &emsp; • Must be exactly one `main()` function among them</h3>
               <h3> &emsp; • Object files (+libraries) are then <i>linked</i> to create executable</h3>
 
-              ```bash
-              g++ -std=c++17 -O3 -c main.cpp -o main.o
-              g++ -std=c++17 -O3 -c functions1.cpp -o functions1.o
-              g++ -std=c++17 -O3 -c functions2.cpp -o functions2.o
-              ```
-
-              ```bash
-              g++ main.o functions1.o functions2.o -llapack -lblas -o my_program
-              ```
-
-              ```bash
-              g++ -std=c++17 -O3 main.cpp functions1.cpp functions2.cpp -llapack -lblas -o my_program
-              ```
-
-              <br>
+              <br><br>
 
               <h2> Why? For large projects: </h2>
-              <h3> &emsp; • Changes to single compilation unit: only re-compile that one unit</h3>
+              <h3> &emsp; • Changes to single compilation unit: only re-compile that unit</h3>
               <h3> &emsp; • Allows linking to pre-compiled libraries</h3>
 
-              <br>
+              <br><br>
 
               <h2> Small projects: </h2>
               <h3> &emsp; • Generally: just do all steps in one go</h3>
 
             </div>
-
-            ```bash
-            g++ -std=c++17
-            ```
 
           </textarea>
         </section>
@@ -1094,6 +1076,7 @@ double my_function_1(double in_1, double in_2);
 ​
 double my_function_1(double in_1, double in_2) {
   //definition of my_function_1 .... 
+  // Which uses functions from LAPACK library
 }
 </code>
 </pre></div></div></div>
