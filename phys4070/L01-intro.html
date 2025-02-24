@@ -196,56 +196,63 @@
         </section>
 
         <!-- =============================================================== -->
-        <section>
+        <section data-markdown>
+          <textarea data-template>
 
-          <section data-markdown>
-            <textarea data-template>
-            # Info/resources
-          </textarea>
-          </section>
+              # Info/Resources
 
-          <br><br><br>
-          <br><br><br>
+              <br><br>
 
-          <div
-            style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <div style="text-align: left; float: left; width: 50%">
 
-            <!-- Column 1 -->
-            <section data-markdown style="width: 48%;">
-              <textarea data-template>
-                ## cpp "cheet-sheet": 
-                * [github.com/benroberts999/cpp-cheatsheet](https://www.github.com/benroberts999/cpp-cheatsheet)
-                * A list of simple and advanced examples: free to use.
+                <h2>cpp "cheat-sheet"</h2>
+                <ul>
+                  <li>
+                    <a href="https://www.github.com/benroberts999/cpp-cheatsheet" target="_blank">
+                      github.com/benroberts999/cpp-cheatsheet
+                    </a>
+                  </li>
+                  <li>A list of simple and advanced examples: free to use.</li>
+                </ul>
                 
                 <br><br><br><br><br><br>
-  
-                ## Online tutorials:
                 
-                * Highly reccomend: [hackingcpp.com](https://hackingcpp.com/)
-                * [hackingcpp.com/cpp/beginners_guide](https://hackingcpp.com/cpp/beginners_guide.html)
+                <h2>Online Tutorials</h2>
+                <ul>
+                  <li>
+                    Highly recommend:
+                    <a href="https://hackingcpp.com/" target="_blank">hackingcpp.com</a>
+                  </li>
+                  <li>
+                    <a href="https://hackingcpp.com/cpp/beginners_guide.html" target="_blank">
+                      hackingcpp.com/cpp/beginners_guide
+                    </a>
+                  </li>
+                </ul>
                 
-              </textarea>
-            </section>
 
-            <!-- Column 2 -->
-            <section data-markdown style="width: 48%;">
-              <textarea data-template>
-                ## Technical Documentation:
-              
-                1. [cppreference.com/](https://en.cppreference.com/w/)
-                  * Very thorough, often not beginner friendly
+              </div>
+              <div style="text-align: center; float: right; width: 50%">
+                <h2>Technical Documentation</h2>
+                <ol>
+                  <li>
+                    <a href="https://en.cppreference.com/w/" target="_blank">cppreference.com</a><br>
+                    <em>Very thorough, often not beginner-friendly</em>
+                  </li>
+                  <li>
+                    <a href="https://cplusplus.com/" target="_blank">cplusplus.com</a><br>
+                    <em>Also great, beginner-friendly, many examples</em>
+                  </li>
+                </ol>
                 
-                2. [cplusplus.com/](https://cplusplus.com/)
-                  * also great, beginner friendly, many examples
+                <br><br><br><br>
+                
+                <h2>Book</h2>
+                <p><strong>Book:</strong> Dmitrović, S.F (2020). <em>Modern C++ for Absolute Beginners</em></p>
+                
+              </div>
 
-                <br><br><br>
-
-                ## Book:
-                * Book: Dmitrović, S.F (2020). Modern C++ for Absolute Beginners
-              </textarea>
-            </section>
-
-          </div>
+          </textarea>
         </section>
 
         <!-- =============================================================== -->
@@ -1060,8 +1067,7 @@ Vector x = inverse_A * b;
                   <div class="sl-block-content notranslate" data-highlight-theme="ir-black" style="border-style: solid; border-width: 1px;" 
                   data-code-frame="none" data-code-autoheight="true">
                   <pre class="cpp" style="font-size: 20px; line-height: 28px;">
-<!-- <h3> main.cpp:</h3> -->
-<code style="padding: 20px;" data-line-numbers="">#include "functions1.hpp"
+<h3> main.cpp:</h3><code style="padding: 20px;" data-line-numbers="">#include "functions1.hpp"
 #include "functions2.hpp"
 #include 〈iostream〉
 ​
@@ -1079,6 +1085,7 @@ double my_function_1(double in_1, double in_2) {
   // Which uses functions from LAPACK library
 }
 </code>
+...etc. for functions2.cpp/hpp
 </pre></div></div></div>
             </div>
 
@@ -1116,7 +1123,6 @@ double my_function_1(double in_1, double in_2) {
 
           </textarea>
         </section>
-
 
         <!-- =============================================================== -->
         <section data-markdown>
@@ -1169,8 +1175,6 @@ double my_function_1(double in_1, double in_2) {
         <!-- =============================================================== -->
       </div>
     </div>
-
-
 
     <!-- =============================================================== -->
     <!-- =============================================================== -->
