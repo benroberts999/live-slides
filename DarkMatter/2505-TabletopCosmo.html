@@ -509,91 +509,7 @@
       </textarea>
         </section>
 
-        <!-- =============================================================== -->
-        <section data-markdown data-background-color="black">
-          <textarea data-template>
-        # Complication + Resolution
 
-        ### Example: H-like
-
-        <br>
-
-        <div style="text-align: left; float: left; width: 50%">
-          \[
-            \omega_{\rm SI} = \frac{m_e c^2Z^2{\color{red}\alpha^2}}{2}
-            \left(\frac{1}{n^2}-\frac{1}{n'^2}\right)F(Z\alpha)
-          \]
-          <br>
-          \[
-            K = {\color{red}2} + K_{\rm rel}
-          \]
-        </div>
-
-        <div style="text-align: left; float: right; width: 50%" class="fragment">
-          \[
-              \omega_{\rm atomic} = \frac{Z^2}{2}
-              \left(\frac{1}{n^2}-\frac{1}{n'^2}\right)F(Z\alpha)
-          \]
-          <br>
-          \[
-            K = K_{\rm rel}
-          \]
-        </div>
-
-        
-
-        <div class="fragment">
-        
-          <br><br>
-      
-        * $K$ _and_ $\alpha$ both dimensionless, issue remains
-        * $K$ only defined up to additive constant 
-        * (constants only defined up to multiplicative constant)
-
-        </div>
-
-
-        <br><br>
-
-        <div class="fragment">
-
-          ### Resolution: ratios
-
-          <br><br>
-      
-          <div style="text-align: left; float: left; width: 50%">
-
-          $$
-          \frac{\delta\left(\omega_A/\omega_B\right)}{\left(\omega_A/\omega_B\right)}
-          = 
-          K_A \frac{\delta\alpha}{\alpha}
-          -K_B \frac{\delta\alpha}{\alpha}
-          =
-          (K_A  -K_B )\frac{\delta\alpha}{\alpha}
-          $$
-
-          </div>
-
-          <div style="text-align: left; float: right; width: 50%">
-           
-              &ensp;•  Unit ambiguity cancels in ratios
-              &ensp;•  Must have two lines at each spacetime location
-          
-          </div>
-
-        </div>
-
-        <div style="text-align: center; float: right; width: 100%">
-
-          <br><br> <br><br>
-
-        * Nice review: Kozlov, Budker [Ann. Phys. 1800254 (2018)](https://onlinelibrary.wiley.com/doi/10.1002/andp.201800254)
-
-        </div>
-
-
-      </textarea>
-        </section>
 
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
@@ -823,6 +739,50 @@
             </textarea>
         </section>
 
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black">
+          <textarea data-template>
+            # Oscillating signals
+
+            <div style="text-align: left; float: left; width: 50%">
+              <br>
+              <h3>Case: oscillating field:</h3>
+              \[{\large
+              \phi_{\rm DM} = \phi_0 \cos({m_\phi t})}
+              \]
+              <br>
+              \[\large
+              \frac{\delta f}{f} = \kappa \phi_0 \cos({m_\phi t})
+              \]
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <h2>Constraints from clock-clock comparisons</h2><br>
+                <h3>• Different systems: probe different couplings</h3>
+                <br>
+                <h4>• Optical-Optical: $d_e$ ($\delta\alpha)$</h4>
+                <br>
+                <h4>• Optical-Microwave: $d_{m_e}-d_{m_p}$ ($\delta(m_e/m_p)$)</h4>
+                <br>
+              </div>
+              <div class="fragment fade-in">
+                <h3>• Dimensionful couplings always cancel in these ratios</h3>
+              </div>
+            </div>
+
+            <div style="text-align: center; float: right; width: 50%">
+              <br> <br>
+              <div class="fragment fade-in" data-fragment-index="3">
+                <h3>Typical: Compare two local clocks, different $\kappa$</h3>
+                <img src="img/scalarphoton2.png" width="100%"><br>
+                <p>[O'Hare - GitHub/AxionLimits]</p><br>
+              </div>
+            </div>
+
+          </textarea>
+        </section>
+
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
           <textarea data-template>
@@ -866,63 +826,7 @@
         </textarea>
         </section>
 
-        <!-- =============================================================== -->
-        <!-- <section> -->
-        <section data-markdown data-background-color="black">
-          <textarea data-template>
-          # Wait, variation of dimensionful constants?
 
-          <br>
-          <br>
-
-          * Almost always: appear as dimensionless ratios, so no issue
-          * However, in some cases, appear alone
-
-          <br>
-          <br>
-
-          $$\large
-          \frac{\delta\left(\omega_A/\omega_B\right)}{\left(\omega_A/\omega_B\right)}
-          = 
-          K_A \frac{\delta\alpha}{\alpha}(x_1)
-          -K_B \frac{\delta\alpha}{\alpha}(x_2)
-          ~{\color{red}\cancel{=
-          (K_A  -K_B )\frac{\delta\alpha}{\alpha}}}
-          $$
-
-          <br>
-
-          * Is this OK?
-
-          <br><br>
-
-          <div class="fragment">
-
-          * Yes, so long as specific interaction is considered
-            * Specific interaction Lagrangian removes ambiguity
-          
-          * Some care must be taken: correct $K$ factors
-            * Interpretation as variation in constant may be unit dependent
-            * Of course, physics/observables are not!
-
-            <br>
-
-          * Savalle, BMR, _et al._ [arXiv:1902.07192](https://arxiv.org/abs/1902.07192)
-          * Savalle _et al._, [Phys.Rev.Lett.126.051301 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.051301)
-          * Antypas _et al._, [Ann. Phys. 532 (2020)](https://onlinelibrary.wiley.com/doi/10.1002/andp.201900566)
-
-        </div>
-
-          </textarea>
-        </section>
-
-        <!-- <section data-markdown data-background-color="black">
-          <textarea data-template>
-            ## Aside: Technical example
-          </textarea>
-        </section> -->
-
-        <!-- </section> -->
 
         <!-- =============================================================== -->
         <section data-markdown data-background-color="black">
@@ -1125,6 +1029,149 @@
 
           </textarea>
         </section>
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black" data-visibility="uncounted">
+          <textarea data-template>
+            # Extra
+           </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-background-color="black" data-visibility="uncounted">
+          <textarea data-template>
+        # Complication + Resolution
+
+        ### Example: H-like
+
+        <br>
+
+        <div style="text-align: left; float: left; width: 50%">
+          \[
+            \omega_{\rm SI} = \frac{m_e c^2Z^2{\color{red}\alpha^2}}{2}
+            \left(\frac{1}{n^2}-\frac{1}{n'^2}\right)F(Z\alpha)
+          \]
+          <br>
+          \[
+            K = {\color{red}2} + K_{\rm rel}
+          \]
+        </div>
+
+        <div style="text-align: left; float: right; width: 50%" class="fragment">
+          \[
+              \omega_{\rm atomic} = \frac{Z^2}{2}
+              \left(\frac{1}{n^2}-\frac{1}{n'^2}\right)F(Z\alpha)
+          \]
+          <br>
+          \[
+            K = K_{\rm rel}
+          \]
+        </div>
+
+        
+
+        <div class="fragment">
+        
+          <br><br>
+      
+        * $K$ _and_ $\alpha$ both dimensionless, issue remains
+        * $K$ only defined up to additive constant 
+        * (constants only defined up to multiplicative constant)
+
+        </div>
+
+
+        <br><br>
+
+        <div class="fragment">
+
+          ### Resolution: ratios
+
+          <br><br>
+      
+          <div style="text-align: left; float: left; width: 50%">
+
+          $$
+          \frac{\delta\left(\omega_A/\omega_B\right)}{\left(\omega_A/\omega_B\right)}
+          = 
+          K_A \frac{\delta\alpha}{\alpha}
+          -K_B \frac{\delta\alpha}{\alpha}
+          =
+          (K_A  -K_B )\frac{\delta\alpha}{\alpha}
+          $$
+
+          </div>
+
+          <div style="text-align: left; float: right; width: 50%">
+           
+              &ensp;•  Unit ambiguity cancels in ratios
+              &ensp;•  Must have two lines at each spacetime location
+          
+          </div>
+
+        </div>
+
+        <div style="text-align: center; float: right; width: 100%">
+
+          <br><br> <br><br>
+
+        * Nice review: Kozlov, Budker [Ann. Phys. 1800254 (2018)](https://onlinelibrary.wiley.com/doi/10.1002/andp.201800254)
+
+        </div>
+
+
+      </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- <section> -->
+        <section data-markdown data-background-color="black" data-visibility="uncounted">
+          <textarea data-template>
+          # Wait, variation of dimensionful constants?
+
+          <br>
+          <br>
+
+          * Almost always: appear as dimensionless ratios, so no issue
+          * However, in some cases, appear alone
+
+          <br>
+          <br>
+
+          $$\large
+          \frac{\delta\left(\omega_A/\omega_B\right)}{\left(\omega_A/\omega_B\right)}
+          = 
+          K_A \frac{\delta\alpha}{\alpha}(x_1)
+          -K_B \frac{\delta\alpha}{\alpha}(x_2)
+          ~{\color{red}\cancel{=
+          (K_A  -K_B )\frac{\delta\alpha}{\alpha}}}
+          $$
+
+          <br>
+
+          * Is this OK?
+
+          <br><br>
+
+          <div class="fragment">
+
+          * Yes, so long as specific interaction is considered
+            * Specific interaction Lagrangian removes ambiguity
+          
+          * Some care must be taken: correct $K$ factors
+            * Interpretation as variation in constant may be unit dependent
+            * Of course, physics/observables are not!
+
+            <br>
+
+          * Savalle, BMR, _et al._ [arXiv:1902.07192](https://arxiv.org/abs/1902.07192)
+          * Savalle _et al._, [Phys.Rev.Lett.126.051301 (2021)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.051301)
+          * Antypas _et al._, [Ann. Phys. 532 (2020)](https://onlinelibrary.wiley.com/doi/10.1002/andp.201900566)
+
+        </div>
+
+          </textarea>
+        </section>
+
 
         <!-- =============================================================== -->
       </div>
