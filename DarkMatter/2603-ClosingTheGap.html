@@ -20,10 +20,10 @@
           bottom: 12px;
           left: 20px;
           font-size: 0.35em;
-          color: #aaa;
+          color: #727272;
           z-index: 500;
         ">
-          Ben Roberts (UQ) &mdash; 2026 &mdash; <a href="https://broberts.io/sides">broberts.io/sides</a>
+          Ben Roberts (UQ) &mdash; 2026 &mdash; <a href="https://broberts.io/slides">broberts.io/slides</a>
         </div>
       <div class="slides">
 
@@ -61,16 +61,16 @@
 
           <div class="r-stretch"></div>
 
-          ### Benjamin M. Roberts
+          ### <u>Benjamin M. Roberts</u>, Narise Williams, Ashlee Caddell
 
           <br>
 
           _School of Mathematics and Physics,
           University of Queensland, Australia_
 
-          <br>
+          <!-- <br> -->
 
-          * Slides [broberts.io/slides](https://broberts.io/slides/)
+          <!-- * Slides [broberts.io/slides](https://broberts.io/slides/) -->
 
           <br>
           <br>
@@ -456,13 +456,13 @@
 
             <br><br>
 
-            <div class="fragment" style="font-size: 1.35em">
+            <div class="fragment" data-fragment-index="1" style="font-size: 1.35em">
               $$ \begin{align*} 
                 \mathcal{M} &= 
                   -ig^e g^X
                   \left[{\color{skyblue}\bar\psi_f\Gamma_e^\mu\psi_i}\right]\,
                   {\color{orange} D_{\mu\nu}(q)}\,
-                  \left[{\color{orange}\bar X'(k')\Gamma_X^\nu (k)}\right] \\
+                  \left[{\color{orange}\bar X'(k')\Gamma_X^\nu (k)}\right] \\~\\
                 \mathcal{A} &= 
                   g^X
                   \left[{\color{skyblue}\bar\psi_f\Gamma_e^\mu\psi_i}\right]\,
@@ -470,9 +470,9 @@
               \end{align*} $$
               <br>
               </div>
-              <div class="fragment" style="font-size: 1.2em">
+              <div class="fragment" data-fragment-index="2" style="font-size: 1.0em">
               <br>
-              $$
+              $${\color{orange}
                 \Gamma^\mu = \begin{cases}
                 \gamma^\mu & \text{(V)}\\
                 \gamma^\mu\gamma^5 & \text {(A)}
@@ -482,9 +482,24 @@
                 = \begin{cases}
                 1 & \text{(S)}\\
                 i\gamma^5 & \text{(P)}\\
-                \end{cases},
+                \end{cases}}
               $$
             </div>
+            <div class="fragment" data-fragment-index="4" style="font-size: 1.0em">
+              <br>
+              $${\color{red}
+                \widetilde \gamma = \begin{cases}
+                1 & \text{(V)}\\
+                \gamma^5 & \text {(A)}
+                \end{cases}
+                \qquad
+                \widetilde \gamma 
+                = \begin{cases}
+                \gamma^0 & \text{(S)}\\
+                i\gamma^0\gamma^5 & \text{(P)}\\
+                \end{cases}}
+              $$
+          </div>
 
           </div>
 
@@ -493,14 +508,15 @@
 
             <br><br>
 
-            <div class="fragment" style="font-size: 1.5em">
+            <div class="fragment" data-fragment-index="3" style="font-size: 1.5em">
               $$
               {\color{orange} W_\mu} \, \langle {\color{skyblue}f} | 
               {\color{skyblue}\gamma^0\Gamma^\mu} {\color{orange}e^{i\mathbf{\vec q\cdot \vec r}}}| 
               {\color{skyblue}i} \rangle 
               $$
               <br>
-              </div><div class="fragment" style="font-size: 1.5em">
+              </div>
+              <div class="fragment" data-fragment-index="4" style="font-size: 1.5em">
               $$
               = {\color{orange} W_T} \, \langle {\color{skyblue}f} | 
               {\color{red}\tilde\gamma} {\color{orange}e^{i\mathbf{\vec q\cdot \vec r}}}| 
@@ -534,14 +550,14 @@
 
               <h2>Wigner-Eckart theorem</h2>
               <h3>&emsp;• Spherical tensor operators $T^k_\mu$</h3>
-              <h3>&emsp;• Reduced matrix element</h3>
+              <h3>&emsp;• <span style="color: magenta"><i>Reduced</i> matrix element</span></h3>
               <h3>&emsp;&emsp;&emsp;• Independent of projections $m$, $\mu$</h3>
 
-              <br>
+              <br><br>
 
               <div class="fragment" style="font-size: 1.2em">
               $$
-              \langle{bm_b}|{T^k_\mu}|{am_a}\rangle
+              {\color{skyblue}\langle{bm_b}|{T^k_\mu}|{am_a}\rangle}
               =
               {\footnotesize\begin{pmatrix}
                   j_b & k & j_a \\
@@ -551,15 +567,19 @@
               $$
               </div>
               <br>
-              <div class="fragment">
-              <h3>&emsp;• Simplifies complicated sums over m</h3>
               <br>
-              <div style="font-size: 1.0em">
+              <div class="fragment">
+              <h3>&emsp;• Simplifies complicated sums over $m$</h3>
+              <br>
+              <br> 
+              <div style="font-size: 1.2em">
               $$
-              \sum_{m_a m_b}\langle{bm_b}|{T^K_Q}|{am_a}\rangle
-              \langle{bm_b}|{S^{K'}_{Q'}}|{am_a}\rangle \qquad\qquad\qquad\\
-              \qquad\qquad\qquad=\frac{1}{2K+1}\langle{b}\|{T^K}\|{a}\rangle
-              \langle{b}\|{S^{K}}\|{a}\rangle \, \delta_{KK'}\delta_{QQ'}.
+              \sum_{m_a m_b} {\color{skyblue}\langle{bm_b}|{T^K_Q}|{am_a}\rangle
+              \langle{bm_b}|{S^{K'}_{Q'}}|{am_a}\rangle} \qquad\qquad\qquad\\
+              \qquad\qquad\qquad
+              =\frac{1}{2K+1}
+              {\color{magenta}\langle{b}\|{T^K}\|{a}\rangle
+              \langle{b}\|{S^{K}}\|{a}\rangle} \, \delta_{KK'}\delta_{QQ'}.
               $$
               </div>
               </div>
@@ -569,8 +589,8 @@
             <div class="fragment" style="text-align: left; float: right; width: 50%">
 
               <h2>Vector Spherical Expansion</h2>
-              <h3>&emsp;• $e^{iqr}$, $\vec{\alpha}\,e^{iqr}$: not spherical</h3>
-              <h3>&emsp;• $t^k$, $T_K$: are (multipole expansion)</h3>
+              <h3>&emsp;• $e^{iqr}$, $\vec{\alpha}\,e^{iqr}$: <i>not</i> spherical tensors</h3>
+              <h3>&emsp;• $t^k$, $T_K$: <i>are</i> (multipole expansion)</h3>
 
               <br>
 
@@ -623,21 +643,9 @@
 
             <br>
             <div style="text-align: left; float: left; width: 43%">
-              
-              <h2>Continuum Final State</h2>
-              <div class="fragment fade-in">
-              <h3>&emsp;• Energy-normalised</h3>
-              <h3>&emsp;• Extra $1/\sqrt{E}$ dimension in $\phi$</h3>
 
-              $$
-              \int \langle\varepsilon'|\varepsilon\rangle \ {\rm d}\varepsilon = 1
-              $$
-              </div>
-
-              <br>
-
-              <div class="fragment fade-in">
               <h2>Factors</h2>
+              <div class="fragment fade-in">
               <h3>&emsp;• 10 reduced matrix elements (each K)</h3>
               <div style="font-size: 1.5em">
               $$
@@ -652,8 +660,7 @@
               $$
               </div>
               
-              <br><br>
-
+              <br>
               <div class="fragment fade-in">
               $$\begin{align*}
               |M_{ba}|^2 
@@ -662,10 +669,23 @@
               2 \Re[T^*_{ba}\, S_{ba}].
               \end{align*}$$
               </div>
+              <br>
               <div class="fragment fade-in">
                 <h3>&emsp;• Spatial-temporal interference (longitudanal)</h3>
                 <h3>&emsp;• Vector-Axial interference (transverse)</h3>
               </div>
+              </div>
+
+              <br><br>
+
+              <div class="fragment fade-in">
+              <h2>Continuum Final State</h2>
+              <h3>&emsp;• Energy, <i>not</i> momentum, eigenstates</h3>
+              <h3>&emsp;• Energy-normalised: Extra $1/\sqrt{E}$ dimension</h3>
+
+              $$
+              \int \langle\varepsilon'|\varepsilon\rangle \ {\rm d}\varepsilon = 1
+              $$
               </div>
 
             </div>
@@ -723,9 +743,16 @@
                 src="img/K-approx2.png" width="70%">
               <br><br>
               <div class="fragment fade-in">
-                <h3>Simple approximation:</h3>
-                <h4>&emsp;&emsp;• Plane wave + $Z_{\rm eff}$ + non-relativistic</h4>
-                <h4>&emsp;&emsp;• $\sim4$ orders of magnitude too small at $\sim$1 MeV!</h4>
+                <div style="display: flex; align-items: flex-start;">
+                  <div style="flex: 1;">
+                    <h3>Simple approximation:</h3>
+                    <h4>&emsp;&emsp;• Plane wave + $Z_{\rm eff}$ + non-relativistic</h4>
+                    <h4>&emsp;&emsp;• $\sim4$ orders of magnitude off at $\sim$1 MeV!</h4>
+                  </div>
+                  <div style="flex: 1; text-align: center;" class="fragment fade-in">
+                    <img src="https://broberts.io/images/students/AshleeCaddell2.jpg" width="50%">
+                  </div>
+                </div>
               </div>
               <br>
             </div>
@@ -864,32 +891,62 @@
           <textarea data-template>
           # Orthogonality and low-q relativistic effects
 
-          ## Subtitle: another context
-
-          <br><br>
+          <br>
+          <h2>Small momentum transfer</h2>
+          <h3>&emsp;• $e^{iqr}\to 1$</h3>
+          <!-- <h3>&emsp;• For vector and scalar cases:</h3> -->
+          <br>
+          
+          <div class="fragment" style="font-size: 1.5em">
+          $$\begin{align*}
+          \langle f |{\color{red}t^K}| i \rangle
+          \overset{\rm low\ q}{\propto}
+          \langle f |{\color{red}1}| i \rangle
+          &= 
+          \int_0^{\infty} \left[ f_{w}(r) f_{v}(r) + g_{w}(r) g_{v}(r) \right]  {\rm d} r ~ {\color{red} = 0}
+          \\
+          \langle f |{\color{orange}t^K\gamma^0}| i \rangle
+          \overset{\rm low\ q}{\propto}
+          \langle f |{\color{orange}\gamma^0}| i \rangle
+          &= 
+          \int_0^{\infty} \left[ f_{w}(r) f_{v}(r) ~{\color{orange}-}~ g_{w}(r) g_{v}(r) \right]  {\rm d} r ~ {\color{orange}\sim \alpha^2}
+          \end{align*}$$
+          </div>
+          <br> 
+          <br>
 
           <div style="text-align: left; float: left; width: 55%">
 
-            <h2>Main Heading</h2>
-            <h3>&emsp;• First bullet point goes here</h3>
-            <h3>&emsp;• Second bullet point goes here</h3>
-            <h3>&emsp;• Third bullet point goes here</h3>
-
+            <div class="fragment">
+              <h2>Vector</h2>
+              <h3>• Goes to zero by orthogonality</h3>
+              <h3>• Numerically challenging, well known</h3>
+            </div>
+            <br>
+            <div class="fragment">
+            <h3>• Common solution:</h3>
+            <div style="font-size: 1.5em">
+              $${\color{red}\langle f |t^K| i \rangle \to \langle f |t^K\!-\!1| i \rangle}$$
+            </div>
+            </div>
             <br><br>
 
-            <div class="fragment" style="font-size: 1.5em">
-              $$\sigma = \frac{{\color{cyan}g^4} \mu^2}{\pi (q^2 + {\color{orange}m_\phi^2})^2}$$
-            </div>
+
 
           </div>
 
           <div style="text-align: center; float: right; width: 43%">
-            <img src="img/uq-logo.svg" width="65%"><br>
-            <font size="3">[Stand-in figure]</font>
-            <br><br>
             <div class="fragment">
-              <h3>• Secondary point one</h3>
-              <h3>• Secondary point two</h3>
+              <h2>Scalar</h2>
+              <h3>• Relativistically suppressed</h3>
+            <br>
+            </div>
+            <div class="fragment" style="font-size: 1.5em">
+              $${\color{orange}\langle f |\gamma^0| i \rangle = -2\int_0^{\infty} g_{w}(r) g_{v}(r)\,{\rm d}r \sim \alpha^2}$$
+            </div>
+            <br>
+            <div class="fragment">
+            <h3>• Pseudoscalar/axial: even worse</h3>
             </div>
           </div>
 
@@ -922,18 +979,30 @@
             $$
             <br>
             </div>
-            <div style="text-align: left; width: 80%" class="fragment">
-              <h3>• Suppressed by $\color{orange}\alpha$ and $\color{coral}\alpha^3$, respectively</h3>
-              <h3>• In practice: large cancellation between order 1 terms!</h3>
+            <div class="fragment" style="display: flex; align-items: flex-start;">
+              <div style="text-align: left; width: 60%;">
+                <h3>• Suppressed by $\color{orange}\alpha$ and $\color{coral}\alpha^3$, respectively</h3>
+                <h3>• In practice: large cancellation between order 1 terms!</h3>
+                <h3>&emsp;&emsp;• Pseudoscalar ($\sim\gamma^0\gamma^5$) particularly dangerous</h3>
+                <h3>• Exact relations [<a href="https://arxiv.org/abs/1404.2723">1</a>]: replace, or use as check</h3>
+              </div>
+              <div class="fragment" style="font-size: 1.3em" style="flex: 1; text-align: center;">
+              <br> 
+                $$\begin{align*}
+                 {\color{orange}\langle{w}|{\gamma^5}|{v}\rangle}
+                &~{\color{orange}= \frac{i\alpha\,\omega_{wv}\langle{w}|{{\hat \sigma}\!\cdot\!\vec{r}}|{v}\rangle}{1+\alpha^2\kappa_w\omega_{wv}}}
+                \\~\\
+                {\color{coral}\langle{w}|{i\gamma^0\gamma^5}|{v}\rangle }
+                &~{\color{coral}= \frac{-\alpha^3\,\omega_{wv}^2\langle{w}|{{\hat \sigma}\!\cdot\!\vec{r}}|{v}\rangle}{2(1+\alpha^2\kappa_w\omega_{wv})}}
+                \end{align*}$$
+              </div>
             </div>
-            <br>
-            <br>
             <br>
             
            
           </div>
 
-           * BMR, Stadnik, Dzuba, Flambaum, Leefer, Budker, PRL **113**, 081601 (2014), [[1404.2723](www.arxiv.org/abs/1404.2723)]
+           * [1] BMR, Stadnik, Dzuba, Flambaum, Leefer, Budker, [PRL **113**, 081601](https://link.aps.org/doi/10.1103/PhysRevLett.113.081601) (2014), [[arXiv:1404.2723](https://arxiv.org/abs/1404.2723)]
 
           </textarea>
         </section>
@@ -947,12 +1016,12 @@
           <br>
 
           <div style="text-align: center; float: center; width: 95%">
-            <img src="img/Low-qr-modified.png" width="85%"><br>
+            <img class="fragment" src="img/Low-qr-modified.png" width="85%"><br>
           </div>
 
           <br>
 
-          <div style="text-align: left; float: center; width: 65%">
+          <div class="fragment" style="text-align: left; float: center; width: 65%">
           <h3>&emsp;• Dashed line: Low $q$ expansion (all smallness made explicit)</h3>
           <h3>&emsp;• Solid line:  Full form factor</h3> 
           </div>
@@ -961,8 +1030,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown
-          data-visibility="uncounted">
+        <section data-markdown>
           <textarea data-template>
           # Calculations difficult
 
@@ -998,6 +1066,44 @@
         </section>
 
         <!-- =============================================================== -->
+        <!-- TEMPLATE SLIDE 4: stacked layout, equation prominent -->
+        <section data-markdown>
+          <textarea data-template>
+          ## Vector form-factors for Xe
+
+          <br>
+          <div style="text-align: center; float: left; width: 70%">
+            <img class="fragment fade-in" src="img/FormFactors-Eq-modified.png" width="95%">
+          </div>
+          <div style="text-align: left; float: right; width: 28%">
+            <br><br>
+
+            <div class="fragment fade-in">
+            <h3>Outer shell:</h3>
+            <h4>&emsp; •  $E \sim R_y \sim 10\ {\rm eV}$</h4>
+            <h4>&emsp; •  $q \sim a_0^{-1} \sim 4\ {\rm keV}$</h4>
+            </div>
+
+            <br><br>
+            <div class="fragment fade-in">
+            <h3>Inner shell:</h3>
+            <h4>&emsp; •  $E \sim Z^2 R_y \sim 30\ {\rm keV}$</h4>
+            <h4>&emsp; •  $q \sim Z a_0^{-1} \sim 200\ {\rm keV}$</h4> 
+            </div>
+
+            <br>
+            
+            <div class="fragment fade-in">
+            <h4>PhD student: Narise Williams</h4>
+              <img src="https://broberts.io/images/students/Narise-20251113-IMG_6699.jpg" width="60%">
+            </div>
+
+          </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
         <section data-markdown>
           <textarea data-template>
           # Conclusion
@@ -1010,15 +1116,18 @@
 
             * Electron scattering, absorption, fifth-force searches
             * Fundamental symmetry violations (EDM, PNC)
+            * Ultralight DM: atomic clocks, quantum sensors
 
             
             <br>
             <br>
 
-            ### Ultralight dark matter
+            ### Atomic Ionisation Formfactors
 
-            * Scalar coupling DM-SM: shift in atomic levels
-            * Monitor frequencies with atomic clocks
+            * Relativistic effects important
+            * Atomic structure important
+            * [ampsci.dev](https://ampsci.dev)
+              * Full code + form factors coming soon
 
             <br>
 
@@ -1030,9 +1139,8 @@
     
             _University of Queensland, Australia_
   
-            <br>
-  
-            * Slides [broberts.io/slides](https://broberts.io/slides/)
+            <!-- <br> -->
+            <!-- * Slides [broberts.io/slides](https://broberts.io/slides/) -->
 
             <br><br>
 
@@ -1045,17 +1153,15 @@
             <br>
             <br>
 
-            * Caddell, Flambaum, BMR, [Phys. Rev. D **108**, 083030 (2023)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083030)
+            * Caddell, Flambaum, BMR, [Phys. Rev. D **108**, 083030 (2023)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083030), [[arXiv:2305.05125]](http://arxiv.org/abs/2305.05125)
             <br>
-            * Savalle _et al._, [Phys. Rev. Lett. **126**, 051301 (2021)](https://link.aps.org/doi/10.1103/PhysRevLett.126.051301)
+            * BMR, Flambaum [Phys. Rev. D **100**, 063017 (2019)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.063017), [[arXiv:1904.07127]](http://arxiv.org/abs/1904.07127)
             <br>
-            * BMR _et al._, [Nature Comms. **8**, 1195 (2017)](http://www.nature.com/articles/s41467-017-01440-4)
+            * BMR, Flambaum, Grabakin [Phys. Rev. Lett. **116**, 023201 (2016)](doi.org/10.1103/PhysRevLett.116.023201), [[arXiv:1509.09044]](http://arxiv.org/abs/1509.09044)
             <br>
-            * BMR _et al._, [N. J. Phys. **22**, 093010 (2020)](https://iopscience.iop.org/article/10.1088/1367-2630/abaace)
+            * Hees, Do, BMR, Ghez _et al._, [Phys. Rev. Lett. **124**, 081101 (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101), [[arXiv:2002.11567]](http://arxiv.org/abs/2002.11567)
             <br>
-            * Hees, Do, BMR, Ghez _et al._, [Phys. Rev. Lett. **124**, 081101 (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101)
-            <br>
-            * Filzinger, Caddell _et al._, [Phys. Rev. Lett. (in press), arXiv:2312.13723](http://arxiv.org/abs/2312.13723)
+            * Filzinger, Caddell _et al._, [Phys. Rev. Lett. **134**, 031001 (2025)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.031001), [[arXiv:2312.13723]](http://arxiv.org/abs/2312.13723)
 
             <br><br>
             <div style="text-align: center"><img src="img/BQI.png" width="45%"></div>
@@ -1079,7 +1185,7 @@
             <br><br><br><br><br>
             <br><br><br><br><br>
             <h1>Extra</h1>
-        </textarea>
+          </textarea>
         </section>
         <!-- =============================================================== -->
         <!-- =============================================================== -->
@@ -1090,8 +1196,7 @@
 <!-- ======================================================================= -->
 
       <!-- =============================================================== -->
-      <section data-markdown data-background-color="black" 
-        data-visibility="uncounted">
+      <section data-markdown data-visibility="uncounted">
         <textarea data-template>
           # Ultralight Dark Matter
 
@@ -1529,7 +1634,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown>
+        <section data-markdown data-visibility="uncounted">
           <textarea data-template>
           # Super-massive black hole at the Galactic Centre
 
