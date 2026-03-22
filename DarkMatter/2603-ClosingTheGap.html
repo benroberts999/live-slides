@@ -439,7 +439,6 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- TEMPLATE SLIDE 1: text left, figure+caption right -->
         <section data-markdown>
           <textarea data-template>
           # Atomic Ionisation: Scattering and Absorption
@@ -539,7 +538,65 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- TEMPLATE SLIDE 2: equation below bullets, figure top-right with text below -->
+        <section data-markdown>
+          <textarea data-template>
+          # Atomic Ionisation: Examples
+
+          <br>
+
+          _General framework applies to:_
+
+          <br>
+
+          <div style="text-align: left; width: 80%; margin: auto">
+            <h3 class="fragment">1. &nbsp; <b>Non-relativistic scattering (WIMP)</b> &emsp; — &emsp; $\chi + A \to \chi + A^+ + e^-$</h3>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+            $$
+            {\color{orange}W^\mu = (F_\chi(q), \ \mathcal{O(v/c)})}
+            $$
+            </div>
+            <br>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+              $$\begin{align*}
+              \frac{\langle {\rm d}\sigma \ v \rangle}{dE}
+              &=
+              \frac{\overline{\sigma}_e\, c}{2 m_e c^2} 
+              \int dv \,{\color{green}\frac{f_\chi(v)}{v/c}}
+              \int_{q_-}^{q_+} a_0^2 \, q \, dq \, {\color{orange}\left|F_\chi(q)\right|^2} \, {\color{skyblue}K(E,q)}\\
+              {\color{skyblue}K(E,q)} &~ {\color{skyblue} =  E_H \ \sum_{\kappa_f\kappa_i n_i}\sum_{k}(2k+1)
+              \left|\langle \varepsilon_f \| t^{k} \| n \rangle\right|^2}
+              \end{align*}$$
+            </div>
+            <br>
+            <h3 class="fragment">2. &nbsp; <b>Photo-absorption</b> &emsp; — &emsp; $\gamma + A \to A^+ + e^-$</h3>
+            <br>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+            $$
+            {\color{orange}W^\mu = (0, \ \mathbf{\vec \epsilon})}
+            $$
+            </div>
+            <br>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+              $$\begin{align*}
+              \sigma_\gamma
+              &=  \frac{2\pi^2 a_0^2  }{\alpha } \frac{E_H  }{\hbar \omega } \
+              {\color{skyblue}K(\omega, q=\omega)}\\
+              {\color{skyblue} K(\omega)} & ~{\color{skyblue}  =
+               E_H \ \sum_{k}(2k+1)  \sum_{\sigma=0,1}
+              \left|\langle \varepsilon_f \| T_{k}^{(\sigma)} \| n \rangle\right|^2}
+              \end{align*}$$
+            </div>
+            <!-- <br>
+            <h3 class="fragment">3. &nbsp; <b>Neutrino scattering</b> &emsp; — &emsp; $\nu + e^- \to \nu + e^-$</h3> -->
+          </div>
+
+
+
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
         <section data-markdown>
           <textarea data-template>
             # Atomic Matrix elements
