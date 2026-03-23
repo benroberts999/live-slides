@@ -3,6 +3,7 @@
 
   <head>
     <title>Fill the Gap</title>
+    <script>const PRINT_MODE = false;</script>
 
     <link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
 
@@ -396,7 +397,6 @@
           # En*light*ening the search for Dark Matter?
           ## Atomic Physics!
 
-          <br>
 
           <div style="text-align: center; float: left; width: 60%">
             <div class="fragment" data-fragment-index="0" style="text-align: left;" data-markdown>
@@ -422,15 +422,14 @@
               <h3>&emsp;• Classical DM field
                 &ensp;• Quantum sensing (atomic clocks)</h3>
             </div>
-            <br>
 
           </div>
 
           <div style="text-align: center; float: right; width: 40%">
             <br>
             <div class="fragment" data-fragment-index="0">
-            <img  src="img/WIMP-nucleon.png" width="80%"><br>
-                <div style="text-align: center"><font size="5">
+            <img  src="img/WIMP-nucleon.png" width="75%"><br>
+                <div style="text-align: center"><font size="4">
                   [O'Hare - GitHub/DirectDetectionPlots]
                 </font>
                 </div>
@@ -438,7 +437,7 @@
             <br>
             <div class="r-stack">
               <div class="fragment" data-fragment-index="2">
-                <img src="img/laser-JILA.jpg" width="80%"><br>
+                <img src="img/laser-JILA.jpg" width="75%"><br>
                 <font size="3">[JILA]</font>
               </div>
             </div>
@@ -1300,7 +1299,7 @@
 
         <!-- =============================================================== -->
         <!-- TEMPLATE SLIDE 4: stacked layout, equation prominent -->
-        <section data-markdown>
+        <!-- <section data-markdown>
           <textarea data-template>
           ## Axial-vector form-factors for Xe
 
@@ -1309,12 +1308,10 @@
             <img class="fragment fade-in" src="img/axial-formfactors.png" width="95%">
           </div>
           <div style="text-align: left; float: right; width: 28%">
-
-
           </div>
 
           </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <section data-markdown>
@@ -2097,6 +2094,22 @@
       },
 
       plugins: [RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX]
+    });
+  </script>
+    <script>
+    if (PRINT_MODE) window.addEventListener('load', () => {
+      document.querySelectorAll('.fragment').forEach(el => el.classList.remove('fragment'));
+      const footer = document.querySelector('.reveal > div[style*="position: absolute"]');
+      if (footer) {
+        document.querySelectorAll('.slides section').forEach(slide => {
+          const clone = footer.cloneNode(true);
+          clone.style.position = 'absolute';
+          clone.style.bottom = "-40px";
+          clone.style.fontSize = '0.85em';
+          slide.appendChild(clone);
+        });
+        footer.remove();
+      }
     });
   </script>
   </body>
