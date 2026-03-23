@@ -616,6 +616,9 @@
               </div>
               <div class="fragment">
               <br>
+              <h3>&emsp;• Spherical Harmonics/Bessel: ${\color{skyblue}T_K\propto Y_K(\hat r) j_K(qr)}$</h3>
+              </div>
+              <div class="fragment">
               <h3>&emsp;• "Electric" ($\sigma=1$), "magnetic" ($\sigma=0$)</h3>
               <h3>&emsp;• "Longitudanal" ($\sigma=-1$)</h3> 
               <br>
@@ -625,8 +628,8 @@
               $$
               \begin{equation*}
               \begin{split}
-                  \hat{\mathbf{q}}\cdot\mathbf{\vec{Y}}^{(1)}_{KQ} &= \hat{\mathbf{q}}\cdot\vec{Y}^{(0)}_{KQ}  = 0\\
-                  \hat{\mathbf{q}}\times\vec{Y}^{(-1)}_{KQ}  &= 0.
+                  \hat{\mathbf{q}}\cdot{\color{orange}\mathbf{\vec{Y}}^{(1)}_{KQ}} &= \hat{\mathbf{q}}\cdot{\color{orange}\vec{Y}^{(0)}_{KQ}}  = 0\\
+                  \hat{\mathbf{q}}\times{\color{orange}\vec{Y}^{(-1)}_{KQ}}  &= 0.
               \end{split}
               \end{equation*}
               $$
@@ -766,6 +769,7 @@
           </textarea>
         </section>
 
+        <!-- =============================================================== -->
         <section data-markdown data-visibility="uncounted">
           <textarea data-template>
             <br><br><br><br><br>
@@ -885,77 +889,185 @@
         <!-- =============================================================== -->
         <section data-markdown>
           <textarea data-template>
-          # Exponential Suppression: and lack thereof
+          # Exponential Suppression and lack thereof
 
-          ## Subtitle: yet another framing
+
+          <br>
+          <div style="overflow: hidden">
+          <div style="text-align: left; float: left; width: 50%">
+            <h3>Typical scale</h3>
+            <h4>&emsp;• $\Delta E \sim {\rm keV}$</h4>
+            <h4>&emsp;• $q\sim {\rm MeV}$</h4>
+            <h4>&emsp;• Atomic scale: $a_0^{-1} \sim 4\,{\rm keV}$</h4>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%; font-size: 1.5em">
+          $$
+            K = \left|\langle {\rm Xe} | e^{-i\mathbf{\vec{q}}\cdot\mathbf{\vec{r}}} | {\rm Xe}^{+}+e^-\rangle\right|^2
+          $$
+          <br>
+          $$
+            q_{\rm min} = m_\chi v - \sqrt{m_\chi^2 v^2 - 2m_\chi E}
+          $$
+          </div>
+          </div>
 
           <br><br>
 
-          <div style="text-align: center; float: left; width: 50%">
-            <img src="img/uq-logo.svg" width="70%"><br>
-            <font size="3">[Stand-in figure]</font>
-          </div>
-
-          <div style="text-align: left; float: right; width: 48%">
-
-            <h2>Main Heading</h2>
-            <h3>&emsp;• First bullet point goes here</h3>
-            <h3>&emsp;• Second bullet point goes here</h3>
-            <h3>&emsp;• Third bullet point goes here</h3>
-
-            <br><br>
-
-            <div class="fragment" style="font-size: 1.5em">
-              $$\Gamma = \frac{1}{\tau} = \frac{\omega^3 {\color{cyan}|d_{if}|^2}}{3\epsilon_0 \hbar c^3}$$
-            </div>
+          <div style="overflow: hidden">
+          <div class="fragment" style="text-align: left; float: left; width: 48%">
+            <h2>Simple Estimate</h2>
+            <h3>&emsp;• $r\sim q^{-1}\sim 10^{-3}a_B$ — close to nucleus</h3>
+            <h3>&emsp;• $s$-states ($l=0$): non-zero $\psi(0)$</h3>
+            <h3>&emsp;• Oscillator-like: $\psi\sim A e^{-\beta r^2}$</h3>
 
             <br>
 
-            <div class="fragment">
-              <h3>Secondary observation here</h3>
+            <div style="font-size: 1.2em">
+            $${\color{red}\langle f | e^{-i\mathbf{\vec{q}}\cdot\mathbf{\vec{r}}} | i \rangle \propto e^{-q^2/8\beta}}$$
+            </div>
+          </div>
+
+          <div class="fragment" style="text-align: left; float: right; width: 50%">
+            <h2>Non-relativistic Coulomb</h2>
+
+            <div style="font-size: 1.05em">
+            $$\psi\sim A r^l \left[1-\frac{Z}{l+1}r+\cdots\right]$$
             </div>
 
+            <h3>&emsp;• Cusp — strongest for $l=0$</h3>
+            <h3>&emsp;• Lowest-order: $\sim\int r^{l+l'+2}j_L(qr)\,dr = 0$</h3>
+            <div class="fragment">
+            <h3>&emsp;• Next term: $\propto Z\,q^{-(l+l'+4)}$</h3>
+            <h3>&emsp;• ${\color{green}d\sigma\sim q^{-8}}$ &nbsp;—&nbsp; $s$-waves dominate</h3>
+            </div>
+          </div>
+          </div>
+
+          <div style="clear: both; text-align: center" class="fragment">
+            <br>
+            <h4>Eighth power is still eighth power ... but better than exponential</h4>
+            <br>
+            <div style="font-size: 0.85em; text-align: left; padding-left: 2em">
+              &bull; BMR, Flambaum, and Gribakin, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.023201">Phys. Rev. Lett. 116, 023201</a> (2016), <a href="http://arxiv.org/abs/1509.09044">[arXiv:1509.09044]</a>
+            </div>
           </div>
 
           </textarea>
         </section>
 
         <!-- =============================================================== -->
-        <!-- TEMPLATE SLIDE 4: stacked layout, equation prominent -->
         <section data-markdown>
           <textarea data-template>
-          # Relativistic electron effects
+          # Dirac Wavefunctions
 
-          ## Subtitle: key result or derivation
+          <div style="text-align: left; width: 90%; margin: auto">
+            <h2>Relativistic Case</h2>
 
-          <br><br>
+            <div style="font-size: 1.35em">
+            $$\psi\sim A r^{\gamma-1} \left[\gamma-\kappa+Br+\cdots\right] \qquad \gamma=\sqrt{\kappa^2-(Z\alpha)^2}\approx1-(Z\alpha)^2$$
+            </div>
+            <br>
 
-          <div style="text-align: left; float: left; width: 55%">
-
-            <h2>Main Heading</h2>
-            <h3>&emsp;• First bullet point goes here</h3>
-            <h3>&emsp;• Second bullet point goes here</h3>
-            <h3>&emsp;• Third bullet point goes here</h3>
-
+            <h3>&emsp;• $\kappa=-1$ for $s$-states, $\kappa=1$ for $p_{1/2}$</h3>
+            <div class = "fragment">
+            <h3>&emsp;• Lowest-order term: $\sim\int r^{\gamma+\gamma'}j_L(qr)\,dr$ — <b>non-zero!</b></h3>
+            </div>
+            <br>
+            <div class = "fragment" style="font-size: 1.85em">
+            $$
+              {\color{green} d\sigma\sim q^{-6+2(Z\alpha)^2} }
+            $$
+            </div>
+            <br>
+            
           </div>
 
-          <div style="text-align: center; float: right; width: 43%">
-            <img src="img/uq-logo.svg" width="65%"><br>
-            <font size="3">[Stand-in figure]</font>
+          <br>
+
+          <div class = "fragment" style="text-align: left; float: left; width: 40%">
+            <img src="img/rel-factor.png" width="95%"><br>
           </div>
 
-          <div style="clear: both; text-align: center; width: 100%" class="fragment">
+          <div class = "fragment" style="text-align: left; float: right; width: 60%">
+            <div style="font-size: 1.2em">
+            $$e^{-q^2} \to q^{-8} \to q^{-6} \to {\color{orange}q^{-6+2(Z\alpha)^2}} \approx q^{-5.7}$$
+            </div>
+            <h3>&emsp;• Can be significant enhancement</h3>
+            <h3>&emsp;• cf: Shao-Feng Ge's talk</h3>
+            <h3>&emsp;• $s,p_{1/2}$-waves: $d\sigma\sim q^{-6+2(Z\alpha)^2} \simeq q^{-5.7...}$ for Xe, I</h3>
             <br>
-            <div style="font-size: 1.5em">$$W_{fi} = \frac{2\pi}{\hbar} {\color{cyan}|\langle f | \hat{V} | i \rangle|^2} \, {\color{orange}\rho(E_f)}$$</div>
             <br>
-            <h3>Central equation — secondary text block explaining its terms</h3>
+            <div style="font-size: 0.85em; text-align: left; padding-left: 2em">
+              &bull; BMR, Flambaum, and Gribakin, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.023201">Phys. Rev. Lett. 116, 023201</a> (2016), <a href="http://arxiv.org/abs/1509.09044">[arXiv:1509.09044]</a>
+            </div>
           </div>
 
           </textarea>
         </section>
 
         <!-- =============================================================== -->
-        <!-- TEMPLATE SLIDE 2: equation below bullets, figure top-right with text below -->
+        <section data-markdown>
+          <textarea data-template>
+          # Sommerfeld Enhancement
+
+          For large $p$ ($|p|=\sqrt{2m_e\varepsilon}$), plane waves should be OK?
+
+          $$\langle\mathbf{\vec{r}}|\mathbf{\vec{p}}\rangle = e^{i\mathbf{\vec{p}}\cdot\mathbf{\vec{r}}/\hbar}$$
+
+          But high $q$ means low $r$ — close to nucleus. Continuum _energy_ eigenstates enhanced near origin:
+
+          <div style="font-size: 1.2em">
+          $${\color{red}\int_{\varepsilon-\delta\varepsilon}^{\varepsilon+\delta\varepsilon}\langle\varepsilon'jlm|\varepsilon jlm\rangle\,d\varepsilon' = 1}$$
+          </div>
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 57%">
+            <h2>Approximate Sommerfeld Enhancement</h2>
+            <div style="font-size: 1.05em">
+            $$\frac{K_{ns_{1/2}}}{K^{\rm pw}_{ns_{1/2}}}\Bigg|_{r\to0} \approx \frac{8\pi Z}{\left[1-e^{-2\pi Z/|p'|}\right]n^3|p'|}$$
+            </div>
+          </div>
+
+          <div style="text-align: left; float: right; width: 40%">
+            <br><br>
+            <h3>&emsp;• Orders of magnitude enhancement</h3>
+          </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+          # Low-$r$ Scaling
+
+          Same enhancement for bound states (not just continuum)
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 60%">
+            <h2>$Z_{\rm eff}$ approach</h2>
+            <h3>&emsp;• Common: H-like wavefunctions with $Z_{\rm eff} = n\sqrt{|E|/R_y}$</h3>
+            <h3>&emsp;• Works well at intermediate to large $r$</h3>
+            <h3>&emsp;• <b>Fails</b> at low $r$</h3>
+            <h3>&emsp;• H-like: $\psi(0)^2\sim Z_{\rm eff}^3$</h3>
+            <h3>&emsp;• True: $\psi_{\rm inner}(0)^2\sim Z^3$, $\psi_{\rm outer}(0)^2\sim Z^1$</h3>
+          </div>
+
+          <div style="text-align: center; float: right; width: 37%">
+            <br>
+            <img src="img/uq-logo.svg" width="90%"><br>
+            <font size="3">[Stand-in: $Z_{\rm eff}$ enhancement]</font>
+            <br><br>
+            <h3>• Orders of magnitude "enhancement"</h3>
+          </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
         <section data-markdown>
           <textarea data-template>
           # Orthogonality and low-q relativistic effects
@@ -1265,7 +1377,7 @@
         <!-- =============================================================== -->
         <section data-markdown data-visibility="uncounted">
           <textarea data-template>
-            # Explicit formulas
+            # Explicit formulas: Matrix elements
 
             <div style="font-size: 1.3em">
             $$
@@ -1282,6 +1394,142 @@
                 \left[K\tfrac{j_K(qr)}{qr}-j_{K+1}(qr)\right]\vec{\alpha}\!\cdot\!\vec{C}^{(-1)}_{KQ} .
             \end{align*}
             $$
+            </div>
+
+            <br>
+            <br>
+
+            <div style="font-size: 1.0em">
+            $$
+            \begin{align*}
+            \sum_{if}|W_\mu \mathcal{J}_{fi}|^2 = \Bigg[
+            &|{W_T}|^2\left(c_V^2|\Phi|^2 
+            + c_A^2|\Theta|^2 \right) 
+            + \frac{|\vec{W}_\perp|^2}{2}\sum_{\sigma=1,0}\left(
+            c_V^2|V^{(\sigma)}|^2 
+            + c_A^2|A^{(\sigma)}|^2\right) \\
+            \notag
+            &+ |\hat{\vec{q}}\!\cdot\!\vec{W}|^2\left(
+            c_V^2|V^{(-1)}|^2 
+            + c_A^2|A^{(-1)}|^2\right) \\
+            &
+            + 2\Re
+            [{W_T}^*\,\hat{\vec{q}}\sdot\vec{W}]
+            \left(c_V^2 X(q,\omega)
+            -c_A^2
+            Y(q,\omega)
+            \right)
+            +\Im\{
+            \hat{\vec{q}}\!\cdot\![\vec{W}\!\times\!\vec{W}^*]\}\,{c_V c_A}\,Z(q,\omega)
+            \Bigg].
+            \end{align*}
+            $$
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-visibility="uncounted">
+          <textarea data-template>
+            # Explicit formulas: Form Factors
+
+            <br>
+            <div style="font-size: 1.2em">
+            $$
+            \begin{align*}
+            \sum_{if}|{\color{orange}W_\mu}{\color{skyblue}\mathcal{J}^\mu_{fi}}|^2 = \Bigg[
+            &|{\color{orange}W_T}|^2\left(c_V^2|\Phi|^2 
+            + c_A^2|\Theta|^2 \right) 
+            + \frac{\color{orange}|\vec{W}_\perp|^2}{2}\sum_{\sigma=1,0}\left(
+            c_V^2|V^{(\sigma)}|^2 
+            + c_A^2|A^{(\sigma)}|^2\right) \\
+            \notag
+            &+ |{\color{orange}\hat{\vec{q}}\!\cdot\!\vec{W}}|^2\left(
+            c_V^2|V^{(-1)}|^2 
+            + c_A^2|A^{(-1)}|^2\right) \\
+            &
+            + 2\Re
+            [{\color{orange}{W_T}^*\,\hat{\vec{q}}\sdot\vec{W}}]
+            \left(c_V^2 X(q,\omega)
+            -c_A^2
+            Y(q,\omega)
+            \right)
+            +\Im\{ {\color{orange}
+            \hat{\vec{q}}\!\cdot\![\vec{W}\!\times\!\vec{W}^*]}\}\,{c_V c_A}\,Z(q,\omega)
+            \Bigg].
+            \end{align*}
+            $$
+            </div>
+            
+            <br>
+
+            <div style="text-align: left; float: left; width: 50%">
+            <h3>Vector</h3><br>
+            <div style="font-size: 1.1em">
+            $$\color{cornflowerblue}
+            \begin{align*}
+            |\Phi_K|^2 
+                &\equiv E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}|{\langle{\varepsilon_f\kappa_f}\|{t^K}\|{n_i\kappa_i}\rangle}|^2 \\
+            |{V}^{(\sigma)}|^2 
+                &\equiv E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}|{\langle{\varepsilon_f\kappa_f}\|{T^{(\sigma)}_{K}}\|{n_i\kappa_i}\rangle}|^2
+            \end{align*}
+            $$
+            </div>
+            <h3>Axial</h3><br>
+            <div style="font-size: 1.1em">
+            $$\color{turquoise}
+            \begin{align*}
+            |\Theta|^2 
+                &\equiv E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}|{\langle{\varepsilon_f\kappa_f}\|{t^K\gamma^5}\|{n_i\kappa_i}\rangle}|^2\\
+            |{A}^{(\sigma)}|^2 
+                &\equiv E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}|{\langle{\varepsilon_f\kappa_f}\|{T^{(\sigma)}_{K}\gamma^5}\|{n_i\kappa_i}\rangle}|^2,
+            \end{align*}
+            $$
+            </div>
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+            <h3>Scalar/Pseudoscalar</h3><br>
+            <div style="font-size: 1.1em">
+            $$\color{dodgerblue}
+            \begin{align*}
+                |S|^2
+                    &\equiv E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}|{\langle{\varepsilon_f\kappa_f}\|{t^K\gamma^0}\|{n_i\kappa_i}}\rangle|^2 \\
+                |P|^2 
+                    &\equiv E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}|{\langle{\varepsilon_f\kappa_f}\|{t^Ki \gamma^0\gamma^5}\|{n_i\kappa_i}}\rangle|^2 .
+            \end{align*}
+            $$
+            </div>
+            <h3>Interference</h3><br>
+            <div style="font-size: 1.1em">
+            $$\color{palevioletred}
+            \begin{align*}
+            Z
+            &\equiv E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}
+            \Im\Big\{
+            \langle{\varepsilon_f\kappa_f}\|{T^{(1)}_{K}\gamma^5}\|{n_i\kappa_i}\rangle
+            \langle{\varepsilon_f\kappa_f}\|{T^{(0)}_{K}}\|{n_i\kappa_i}\rangle
+            \notag\\[-0.85em]
+            &\qquad\qquad\qquad\qquad\qquad
+            -\langle{\varepsilon_f\kappa_f}\|{T^{(1)}_{K}}\|{n_i\kappa_i}\rangle
+            \langle{\varepsilon_f\kappa_f}\|{T^{(0)}_{K}\gamma^5}\|{n_i\kappa_i}\rangle
+            \Big\} \\
+            X &\equiv
+            E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}
+            \Im\left\{
+            \langle{\varepsilon_f\kappa_f}\|{t^{K}}\|{n_i\kappa_i}\rangle
+            \langle{\varepsilon_f\kappa_f}\|{T^{(-1)}_{K}}\|{n_i\kappa_i}\rangle
+            \right\}\\
+            Y &\equiv
+            E_H \sum_K(2K+1)\sum_{n_i \kappa_i}\sum_{\kappa_f}
+            \Im\left\{
+            \langle{\varepsilon_f\kappa_f}\|{t^{K}\gamma^5}\|{n_i\kappa_i}\rangle
+            \langle{\varepsilon_f\kappa_f}\|{T^{(-1)}_{K}\gamma^5}\|{n_i\kappa_i}\rangle
+            \right\}.
+            \end{align*}
+            $$
+            </div>
             </div>
 
           </textarea>
