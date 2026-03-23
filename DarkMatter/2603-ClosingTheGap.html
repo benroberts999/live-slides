@@ -260,7 +260,7 @@
             <br>
 
             <div class="fragment" data-fragment-index="2" style="text-align: left;" data-markdown>
-              <h2> Dark Matter:</h2>
+              <h2> Dark Matter + Neutrinos:</h2>
               <h3>&emsp;• Direct detection?</h3>
             </div>
             <br>
@@ -360,7 +360,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown>
+        <!-- <section data-markdown>
           <textarea data-template>
           # WIMP direct detection: XENON
 
@@ -387,7 +387,7 @@
           </div>
 
         </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <section data-markdown>
@@ -428,11 +428,17 @@
 
           <div style="text-align: center; float: right; width: 40%">
             <br>
-            <img class="fragment" data-fragment-index="0" src="img/atom.png" width="30%">
-            <br><br>
+            <div class="fragment" data-fragment-index="0">
+            <img  src="img/WIMP-nucleon.png" width="80%"><br>
+                <div style="text-align: center"><font size="5">
+                  [O'Hare - GitHub/DirectDetectionPlots]
+                </font>
+                </div>
+            </div>
+            <br>
             <div class="r-stack">
               <div class="fragment" data-fragment-index="2">
-                <img src="img/laser-JILA.jpg" width="90%"><br>
+                <img src="img/laser-JILA.jpg" width="80%"><br>
                 <font size="3">[JILA]</font>
               </div>
             </div>
@@ -972,57 +978,54 @@
           <textarea data-template>
           # Sommerfeld Enhancement
 
+          <div class="fragment fade-in">
+          <br>
+          <div style="overflow: hidden">
+          <div style="text-align: left; float: left; width: 50%">
+
           For large $p$ ($|p|=\sqrt{2m_e\varepsilon}$), plane waves should be OK?
 
           $$\langle\mathbf{\vec{r}}|\mathbf{\vec{p}}\rangle = e^{i\mathbf{\vec{p}}\cdot\mathbf{\vec{r}}/\hbar}$$
 
           But high $q$ means low $r$ — close to nucleus. Continuum _energy_ eigenstates enhanced near origin:
-
-          <div style="font-size: 1.2em">
+          <div style="font-size: 1.1em">
           $${\color{red}\int_{\varepsilon-\delta\varepsilon}^{\varepsilon+\delta\varepsilon}\langle\varepsilon'jlm|\varepsilon jlm\rangle\,d\varepsilon' = 1}$$
           </div>
+          </div>
+          <div class="fragment" style="text-align: left; float: right; width: 48%">
+          <br>
+          <div style="font-size: 1.0em">
+          $$\frac{K_{ns_{1/2}}}{K^{\rm pw}_{ns_{1/2}}}\Bigg|_{r\to0} \approx \frac{8\pi Z}{\left[1-e^{-2\pi Z/|p'|}\right]n^3|p'|}$$
+          </div>
+          <h3>&emsp;• Orders of magnitude enhancement</h3>
+          </div>
+          </div>
+          </div>
 
+          <div class="fragment fade-in">
+          <br>
+          <h2>Bound states: Low-$r$ Scaling</h2>
+
+          Similar enhancement for bound states
+          <br>
           <br>
 
-          <div style="text-align: left; float: left; width: 57%">
-            <h2>Approximate Sommerfeld Enhancement</h2>
-            <div style="font-size: 1.05em">
-            $$\frac{K_{ns_{1/2}}}{K^{\rm pw}_{ns_{1/2}}}\Bigg|_{r\to0} \approx \frac{8\pi Z}{\left[1-e^{-2\pi Z/|p'|}\right]n^3|p'|}$$
-            </div>
+          <div style="overflow: hidden">
+          <div class="fragment" style="text-align: left; float: left; width: 50%">
+          <h3>&emsp;• Common: H-like wavefunctions with $Z_{\rm eff}$</h3>
+          <div style="font-size: 1.25em">
+          $$Z_{\rm eff} = n\sqrt{|E|/R_y}$$
           </div>
-
-          <div style="text-align: left; float: right; width: 40%">
-            <br><br>
-            <h3>&emsp;• Orders of magnitude enhancement</h3>
-          </div>
-
-          </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <section data-markdown>
-          <textarea data-template>
-          # Low-$r$ Scaling
-
-          Same enhancement for bound states (not just continuum)
-
           <br>
-
-          <div style="text-align: left; float: left; width: 60%">
-            <h2>$Z_{\rm eff}$ approach</h2>
-            <h3>&emsp;• Common: H-like wavefunctions with $Z_{\rm eff} = n\sqrt{|E|/R_y}$</h3>
-            <h3>&emsp;• Works well at intermediate to large $r$</h3>
-            <h3>&emsp;• <b>Fails</b> at low $r$</h3>
-            <h3>&emsp;• H-like: $\psi(0)^2\sim Z_{\rm eff}^3$</h3>
-            <h3>&emsp;• True: $\psi_{\rm inner}(0)^2\sim Z^3$, $\psi_{\rm outer}(0)^2\sim Z^1$</h3>
+          <h3>&emsp;• Works well at intermediate to large $r$</h3>
+          <h3>&emsp;• <b>Fails</b> at low $r$</h3>
           </div>
-
-          <div style="text-align: center; float: right; width: 37%">
-            <br>
-            <img src="img/uq-logo.svg" width="90%"><br>
-            <font size="3">[Stand-in: $Z_{\rm eff}$ enhancement]</font>
-            <br><br>
-            <h3>• Orders of magnitude "enhancement"</h3>
+          <div class="fragment" style="text-align: left; float: right; width: 48%">
+          <h3>&emsp;• H-like: $\psi(0)^2\sim Z_{\rm eff}^3$</h3>
+          <h3>&emsp;• True: $\psi_{\rm inner}(0)^2\sim Z^3$, $\psi_{\rm outer}(0)^2\sim Z^1$</h3>
+          <h3>&emsp;• Orders of magnitude "enhancement"</h3>
+          </div>
+          </div>
           </div>
 
           </textarea>
@@ -1240,9 +1243,10 @@
                 <img src="img/e-impact.png" width="85%">
                 <h4>&emsp;• More complicated (not weak coupling!)</h4>
                 <h4>&emsp;• Better than dedicated calculations</h4>
-              </div>
-              * A. R. Caddell, **BMR**,
-          [Phys. Rev. D **108**, 083030 (2023)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083030)
+              <br>
+              &bull; Ashlee Caddell, <b>BMR</b>,
+          <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083030">Phys. Rev. D <b>108</b>, 083030 (2023)</a>
+            </div>
             </div>
           </div>
 
@@ -1258,7 +1262,6 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- TEMPLATE SLIDE 4: stacked layout, equation prominent -->
         <section data-markdown>
           <textarea data-template>
           ## Vector form-factors for Xe
@@ -1289,6 +1292,24 @@
             <h4>PhD student: Narise Williams</h4>
               <img src="https://broberts.io/images/students/Narise-20251113-IMG_6699.jpg" width="60%">
             </div>
+
+          </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- TEMPLATE SLIDE 4: stacked layout, equation prominent -->
+        <section data-markdown>
+          <textarea data-template>
+          ## Axial-vector form-factors for Xe
+
+          <br>
+          <div style="text-align: center; float: left; width: 70%">
+            <img class="fragment fade-in" src="img/axial-formfactors.png" width="95%">
+          </div>
+          <div style="text-align: left; float: right; width: 28%">
+
 
           </div>
 
