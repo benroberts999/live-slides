@@ -6,16 +6,16 @@
 
     <link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
 
-  <style>
-    .reveal, .reveal .slide-background { background-color: black; }
-  </style>
+    <style>
+      .reveal, .reveal .slide-background { background-color: black; }
+    </style>
 
   </head>
 
   <body class="reveal-viewport theme-font-helvetica theme-color-black-blue">
     <div class="reveal">
-        <!-- Footer -->
-        <div style="
+      <!-- Footer -->
+      <div style="
           position: absolute;
           bottom: 12px;
           left: 20px;
@@ -23,8 +23,9 @@
           color: #727272;
           z-index: 500;
         ">
-          Ben Roberts (UQ) &mdash; 2026 &mdash; <a href="https://broberts.io/slides">broberts.io/slides</a>
-        </div>
+        Ben Roberts (UQ) &mdash; 2026 &mdash; <a
+          href="https://broberts.io/slides">broberts.io/slides</a>
+      </div>
       <div class="slides">
 
         <!-- =============================================================== -->
@@ -108,7 +109,9 @@
             <div class="fragment">
               <h2>AMPSCI</h2>
               <h3>&emsp;• Open-source atomic structure code</h3>
-              <h3>&emsp;• One- and two-valence systems</h3>
+              <h3>&emsp;• All-order perturbation theory</h3>
+              <h3>&emsp;&emsp;&ensp;• One- and two-valence systems</h3>
+              <h3>&emsp;&emsp;&ensp;• Relativistic scattering</h3>
               <h3>&emsp;• <a href="https://ampsci.dev">ampsci.dev</a></h3>
             </div>
           </div>
@@ -443,7 +446,7 @@
           <textarea data-template>
           # Atomic Ionisation: Scattering and Absorption
 
-          ## Goal: _General ionisation form-factors_
+          ## Goal: _Universal relativistic ionisation form-factors_
 
           <br><br>
 
@@ -509,7 +512,10 @@
 
             <div class="fragment" data-fragment-index="3" style="font-size: 1.5em">
               $$
-              {\color{orange} W_\mu} \, \langle {\color{skyblue}f} | 
+              {\rm d}\sigma \propto |{\color{orange} W_\mu} {\color{skyblue} J^\mu}|^2
+              $$
+              <br>
+              $${\color{orange} W_\mu} \, \langle {\color{skyblue}f} | 
               {\color{skyblue}\gamma^0\Gamma^\mu} {\color{orange}e^{i\mathbf{\vec q\cdot \vec r}}}| 
               {\color{skyblue}i} \rangle 
               $$
@@ -533,65 +539,6 @@
               $$
             </div>
           </div>
-
-          </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <section data-markdown>
-          <textarea data-template>
-          # Atomic Ionisation: Examples
-
-          <br>
-
-          _General framework applies to:_
-
-          <br>
-
-          <div style="text-align: left; width: 80%; margin: auto">
-            <h3 class="fragment">1. &nbsp; <b>Non-relativistic scattering (WIMP)</b> &emsp; — &emsp; $\chi + A \to \chi + A^+ + e^-$</h3>
-            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
-            $$
-            {\color{orange}W^\mu = (F_\chi(q), \ \mathcal{O(v/c)})}
-            $$
-            </div>
-            <br>
-            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
-              $$\begin{align*}
-              \frac{\langle {\rm d}\sigma \ v \rangle}{dE}
-              &=
-              \frac{\overline{\sigma}_e\, c}{2 m_e c^2} 
-              \int dv \,{\color{green}\frac{f_\chi(v)}{v/c}}
-              \int_{q_-}^{q_+} a_0^2 \, q \, dq \, {\color{orange}\left|F_\chi(q)\right|^2} \, {\color{skyblue}K(E,q)}\\
-              {\color{skyblue}K(E,q)} &~ {\color{skyblue} =  E_H \ \sum_{\kappa_f\kappa_i n_i}\sum_{k}(2k+1)
-              \left|\langle \varepsilon_f \| t^{k} \| n \rangle\right|^2}
-              \end{align*}$$
-            </div>
-            <br>
-            <h3 class="fragment">2. &nbsp; <b>Photo-absorption</b> &emsp; — &emsp; $\gamma + A \to A^+ + e^-$</h3>
-            <br>
-            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
-            $$
-            {\color{orange}W^\mu = (0, \ \mathbf{\vec \epsilon})}
-            $$
-            </div>
-            <br>
-            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
-              $$\begin{align*}
-              \sigma_\gamma
-              &=  \frac{2\pi^2 a_0^2  }{\alpha } \frac{E_H  }{\hbar \omega } \
-              {\color{skyblue}K(\omega, q=\omega)}\\
-              {\color{skyblue} K(\omega)} & ~{\color{skyblue}  =
-               E_H \ \sum_{k}(2k+1)  \sum_{\sigma=0,1}
-              \left|\langle \varepsilon_f \| T_{k}^{(\sigma)} \| n \rangle\right|^2}
-              \end{align*}$$
-            </div>
-            <!-- <br>
-            <h3 class="fragment">3. &nbsp; <b>Neutrino scattering</b> &emsp; — &emsp; $\nu + e^- \to \nu + e^-$</h3> -->
-          </div>
-
-
-
 
           </textarea>
         </section>
@@ -762,7 +709,72 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- TEMPLATE SLIDE 4: stacked layout, equation prominent -->
+        <section data-markdown>
+          <textarea data-template>
+          # Atomic Ionisation: Examples
+
+          <br>
+
+          _General framework applies to:_
+
+          <br>
+
+          <div style="text-align: left; width: 80%; margin: auto">
+            <h3 class="fragment">1. &nbsp; <b>Non-relativistic scattering (WIMP)</b> &emsp; — &emsp; $\chi + A \to \chi + A^+ + e^-$</h3>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+            $$
+            {\color{orange}W^\mu = (F_\chi(q), \ \mathcal{O(v/c)})}
+            $$
+            </div>
+            <br>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+            $$
+              \begin{align*}
+              \frac{\langle {\rm d}\sigma \ v \rangle}{dE}
+              &=
+              \frac{ {\color{orange}\overline{\sigma}_e}, c}{2 m_e c^2}
+              \int dv \ {\color{green}\frac{f_\chi(v)}{v/c}}
+              \int_{q_-}^{q_+} a_0^2 \  q \  dq \  {\color{orange}\left|F_\chi(q)\right|^2} \ {\color{skyblue}K(E,q)}\\
+              {\color{skyblue}K(E,q)} & ~ {\color{skyblue} =  E_H \ \sum_{\kappa_f\kappa_i n_i}\sum_{k}(2k+1)
+              \left|\langle \varepsilon_f \| t^{k} \| n \rangle\right|^2}
+              \end{align*}
+            $$
+            </div>
+            <br>
+            <h3 class="fragment">2. &nbsp; <b>Photo-absorption</b> &emsp; — &emsp; $\gamma + A \to A^+ + e^-$</h3>
+            <br>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+            $$
+            {\color{orange}W^\mu = (0, \ \mathbf{\vec \epsilon})}
+            $$
+            </div>
+            <br>
+            <div class="fragment" style="font-size: 1.25em; padding-left: 2em;">
+              $$\begin{align*}
+              \sigma_\gamma
+              &=  \frac{2\pi^2 a_0^2  }{\alpha } \frac{E_H  }{\hbar \omega } \
+              {\color{skyblue}K(\omega, q=\omega)}\\
+              {\color{skyblue} K(\omega)} & ~{\color{skyblue}  =
+               E_H \ \sum_{k}(2k+1)  \sum_{\sigma=0,1}
+              \left|\langle \varepsilon_f \| T_{k}^{(\sigma)} \| n \rangle\right|^2}
+              \end{align*}$$
+            </div>
+            <br>
+            <h4 class="fragment">&emsp;• Orthogonality between transferse $\vec{\epsilon}$ and $\vec Y^{(-1)}$ removes $\sigma=-1$ longitudanal contribution</h4>
+          </div>
+
+          </textarea>
+        </section>
+
+        <section data-markdown data-visibility="uncounted">
+          <textarea data-template>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <h1>So</h1>
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
         <section data-markdown>
           <textarea data-template>
             # Atomic Physics
@@ -1047,10 +1059,10 @@
               <br> 
                 $$\begin{align*}
                  {\color{orange}\langle{w}|{\gamma^5}|{v}\rangle}
-                &~{\color{orange}= \frac{i\alpha\,\omega_{wv}\langle{w}|{{\hat \sigma}\!\cdot\!\vec{r}}|{v}\rangle}{1+\alpha^2\kappa_w\omega_{wv}}}
+                &~{\color{orange}= \frac{i\alpha\,\omega_{wv}\langle{w}|{ {\hat \sigma}\!\cdot\!\vec{r}}|{v}\rangle}{1+\alpha^2\kappa_w\omega_{wv}}}
                 \\~\\
                 {\color{coral}\langle{w}|{i\gamma^0\gamma^5}|{v}\rangle }
-                &~{\color{coral}= \frac{-\alpha^3\,\omega_{wv}^2\langle{w}|{{\hat \sigma}\!\cdot\!\vec{r}}|{v}\rangle}{2(1+\alpha^2\kappa_w\omega_{wv})}}
+                &~{\color{coral}= \frac{-\alpha^3\,\omega_{wv}^2\langle{w}|{ {\hat \sigma}\!\cdot\!\vec{r}}|{v}\rangle}{2(1+\alpha^2\kappa_w\omega_{wv})}}
                 \end{align*}$$
               </div>
             </div>
@@ -1228,12 +1240,10 @@
         </textarea>
         </section>
 
-
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
-
+        <!-- ======================================================================= -->
+        <!-- ======================================================================= -->
+        <!-- ======================================================================= -->
+        <!-- ======================================================================= -->
 
         <!-- =============================================================== -->
         <!-- =============================================================== -->
@@ -1247,19 +1257,44 @@
         <!-- =============================================================== -->
         <!-- =============================================================== -->
 
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
+        <!-- =============================================================== -->
+        <!-- =============================================================== -->
+        <!-- =============================================================== -->
+        <!-- =============================================================== -->
 
-      <!-- =============================================================== -->
-      <section data-markdown data-visibility="uncounted">
-        <textarea data-template>
+        <!-- =============================================================== -->
+        <section data-markdown data-visibility="uncounted">
+          <textarea data-template>
+            # Explicit formulas
+
+            <div style="font-size: 1.3em">
+            $$
+            \begin{align*}
+            T^{(+1)}_{KQ} 
+                &= \left[(K+1)\tfrac{j_{K}(qr)}{qr} - j_{K+1}(qr)\right]\vec{\alpha}\!\cdot\!\vec{C}^{(+1)}_{KQ}
+                +
+                \tfrac{j_{K}(qr)}{qr}\,\sqrt{K(K+1)}\,\vec{\alpha}\!\cdot\!\vec{C}^{(-1)}_{KQ} 
+                \\
+            T^{(0)}_{KQ} &= j_K(qr)\, \vec{\alpha}\!\cdot\!\vec{C}^{(0)}_{KQ} \\
+            T^{(-1)}_{KQ} 
+                &= -\tfrac{j_K(qr)}{qr}\,\sqrt{K(K+1)}\,\vec{\alpha}\!\cdot\!\vec{C}^{(+1)}_{KQ}
+                -
+                \left[K\tfrac{j_K(qr)}{qr}-j_{K+1}(qr)\right]\vec{\alpha}\!\cdot\!\vec{C}^{(-1)}_{KQ} .
+            \end{align*}
+            $$
+            </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown data-visibility="uncounted">
+          <textarea data-template>
           # Ultralight Dark Matter
 
           <br><br>
 
-          $$\rho_{\rm DM}\simeq 0.4 ~ \frac{\rm GeV}{{\rm cm}^3}$$
+          $$\rho_{\rm DM}\simeq 0.4 ~ \frac{\rm GeV}{ {\rm cm}^3}$$
 
           <br>
 
@@ -1292,7 +1327,7 @@
           </div>
 
         </textarea>
-      </section>
+        </section>
 
         <!-- =============================================================== -->
         <section data-markdown data-visibility="uncounted">
@@ -1338,7 +1373,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown data-visibility="uncounted" 
+        <section data-markdown data-visibility="uncounted"
           data-transition="fade-in fade-out">
           <textarea data-template>
 
@@ -1434,7 +1469,7 @@
               {\implies \alpha\to\alpha+\phi_{\rm DM}(\vec{r},t)}}
               \]
               $${\large
-              {\kappa = \frac{{\rm d} (f/f_0)}{{\rm d} (\alpha/\alpha_0)}}}
+              {\kappa = \frac{ {\rm d} (f/f_0)}{ {\rm d} (\alpha/\alpha_0)}}}
               $$
             </div>
             <br>
@@ -1486,7 +1521,7 @@
 
         <!-- =============================================================== -->
         <section data-markdown data-visibility="uncounted">
-        <textarea data-template>
+          <textarea data-template>
           # Space-time separated sensors
   
             * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, **Phys. Rev. Lett.** (in press), [arXiv:2312.13723](https://arxiv.org/abs/2312.13723)
@@ -1679,7 +1714,7 @@
 
         <!-- =============================================================== -->
         <section data-markdown data-visibility="uncounted"
-         data-transition="fade-in">
+          data-transition="fade-in">
           <textarea data-template>
           # Constant background:
           ### _extreme gravitational environment_
@@ -1766,9 +1801,6 @@
 
         </textarea>
         </section>
-
-
-
 
         <!-- =============================================================== -->
         <section data-markdown data-visibility="uncounted">
@@ -1939,17 +1971,16 @@
         </textarea>
         </section>
 
-
         <!-- =============================================================== -->
 
         <!-- =============================================================== -->
       </div>
     </div>
 
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
-<!-- ======================================================================= -->
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
     <script>
     var SLConfig = {};
     // Use local fonts
