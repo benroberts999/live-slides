@@ -498,7 +498,7 @@
             </div>
             <div class="fragment" data-fragment-index="4" style="font-size: 1.0em">
               <br>
-              $${\color{red}
+              $${\color{white}
                 \widetilde \gamma = \begin{cases}
                 1 & \text{(V)}\\
                 \gamma^5 & \text {(A)}
@@ -525,7 +525,7 @@
               $$
               <br>
               $${\color{orange} W_\mu} \, \langle {\color{skyblue}f} | 
-              {\color{skyblue}\gamma^0\Gamma^\mu} {\color{orange}e^{i\mathbf{\vec q\cdot \vec r}}}| 
+              {\color{skyblue}\gamma^0\Gamma^\mu} {\color{violet}e^{i\mathbf{\vec q\cdot \vec r}}}| 
               {\color{skyblue}i} \rangle 
               $$
               <br>
@@ -533,18 +533,18 @@
               <div class="fragment" data-fragment-index="4" style="font-size: 1.5em">
               $$
               = {\color{orange} W_T} \, \langle {\color{skyblue}f} | 
-              {\color{red}\tilde\gamma} {\color{orange}e^{i\mathbf{\vec q\cdot \vec r}}}| 
+              {\color{white}\tilde\gamma} {\color{violet}e^{i\mathbf{\vec q\cdot \vec r}}}| 
               {\color{skyblue}i} \rangle 
               -
               {\color{orange} \mathbf{\vec W}}\!\cdot\!\langle {\color{skyblue}f} | 
               {\color{skyblue}\mathbf{\vec \alpha}}
-              {\color{red}\tilde\gamma} {\color{orange}e^{i\mathbf{\vec q\cdot \vec r}}}| 
+              {\color{white}\tilde\gamma} {\color{violet}e^{i\mathbf{\vec q\cdot \vec r}}}| 
               {\color{skyblue}i} \rangle 
               $$
               <br>
               ${\color{skyblue}\mathbf{\vec \alpha}} = {\color{skyblue}\gamma^0\mathbf{\vec \gamma}}$
               $$
-              \text{e.g.,}~~{\color{red}\tilde\gamma} = g_V - g_A\gamma^5
+              \text{e.g.,}~~{\color{white}\tilde\gamma} = g_V - g_A\gamma^5
               $$
             </div>
           </div>
@@ -1067,13 +1067,66 @@
             </div>
           </div>
 
-          <div class="fragment" style="text-align: center; float: right; width: 45%">
+          <div class="fragment" style="text-align: left; float: right; width: 35%">
             <br>
-            <img src="img/ampsci.png" width="95%"><br>
-            <font size="3"><a href="https://github.com/benroberts999/ampsci">github.com/benroberts999/ampsci</a></font>
+            <img src="img/github.png" width="85%"><br>
+            <font size="6"><a href="https://github.com/benroberts999/ampsci">github.com/benroberts999/ampsci</a></font>
             <br><br>
             <h4>&emsp;• Existing code: temporal part</h4>
+            <h4>&emsp;• <a href="https://ampsci.dev">ampsci.dev</a></h4>
             <h4>&emsp;• Full form factors: coded, release soon</h4>
+            
+          </div>
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+          # Important Many-Body effects
+
+          <br>
+
+          <div class = "fragment" data-fragment-index="1" style="text-align: left; float: left; width: 52%">
+            <h2>Hole-Particle Interaction</h2>
+            <h4>&emsp;• Ionised electron "sees" $V^{N-1}$ potential</h4>
+            <h4>&emsp;• (Exact cancellation for bound states)</h4>
+            <br>
+            <div style="font-size: 1.25em">
+            $$
+              V = V^N_{\rm HF} - (1 - P_c) \, {\color{yellow}V_{\rm self}} \, (1 - P_c)
+            $$
+            <br>
+            $$
+              V^N_{\rm HF}|{\color{skyblue}\phi_a}\rangle = \sum_{\color{violet}c} \left[\langle {\color{violet}\phi_c}|Q_{12}|{\color{violet}\phi_c}\rangle|{\color{skyblue}\phi_a}\rangle - \langle {\color{violet}\phi_c}|Q_{12}|{\color{skyblue}\phi_a}\rangle|{\color{violet}\phi_c}\rangle\right]
+            $$
+            </div>
+            <br>
+            <h4>&emsp;• $\Large {V^N_{\rm HF}}$ -- Self-consistant Dirac-Hartree-Fock + exchange</h4>
+            <h4>&emsp;• $\Large {\color{yellow}V_{\rm self}}$ -- Contribution of ionised state to Hartree-Fock potential</h4>
+            <h4>&emsp;• $\Large P_c$ -- Core projection operator; ensures orthogonality, Hermicity</h4>
+            <br>
+            <div style="font-size: 1.25em">
+            $$
+              P_c = \sum_{\color{violet}c}  |{\color{violet}\phi_c}\rangle \langle {\color{violet}\phi_c}|
+            $$
+            </div>
+            </div>
+
+          <div style="text-align: left; float: right; width: 45%">
+            <div class="fragment" data-fragment-index="2">
+            <br>
+            <h2>Core Polarisation (RPA)</h2>
+            <h4>&emsp;• Second-order (Field+Coulomb)</h4>
+            <h4>&emsp;• Usually small correction</h4>
+            <h4>&emsp;• Mainly important at lower energy</h4>
+            <h4>&emsp;• Can allow energetically-forbidden states to participate</h4>
+            </div>
+            <br>
+            <br>
+            <img class="fragment" data-fragment-index="1" src="img/hf-2.png" width="85%"><br>
+            <img class="fragment" data-fragment-index="2" src="img/rpa-2.png" width="75%"><br>
           </div>
 
           </textarea>
