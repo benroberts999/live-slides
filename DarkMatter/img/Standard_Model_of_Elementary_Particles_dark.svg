@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1390 1330" font-family="Arial, sans-serif">
+  
+  <title>Standard Model of Elementary Particles</title>
+  
+  <desc>Basic tiles are 240x240px usually spaced 250px apart.</desc>
+  
+  <metadata>
+    <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:creator rdf:resource="https://commons.wikimedia.org/wiki/User:MissMJ"/>
+        <dc:publisher>Wikimedia Commons</dc:publisher>
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by/3.0/deed.en"/>
+        <cc:attributionURL rdf:resource="https://commons.wikimedia.org/w/index.php?title=File:Standard_Model_of_Elementary_Particles.svg"/>
+        <cc:attributionName rdf:resource="https://commons.wikimedia.org/wiki/User:MissMJ"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <style type="text/css" id="style9578">    
+	.head1 {text-anchor: middle; font-size: 64px; font-weight: bold; fill:#FFEEDD; }
+	.head2 {fill:#FFEEDD;}
+
+	.pmass {font-size:24px; fill:#FFFFFF; opacity:0.5; }
+	.pchar {font-size:24px; fill:#FFFFFF; opacity:0.5; }
+	.pspin {font-size:24px; fill:#FFFFFF; opacity:0.5; }
+
+	.psymr {font-size:64px; text-anchor:middle; }
+	.psymg {font-size:72px; text-anchor:middle; font-family:Times New Roman, serif;}
+	.sub {font-size:48px; baseline-shift:-8px;}
+
+	.pnamequ {font-size:42px; font-weight:bold; text-anchor:middle; fill:#CC99EE; }
+	.pnamel1 {font-size:42px; font-weight:bold; text-anchor:middle; fill:#88DD55; }
+	.pnamel2 {font-size:36px; font-weight:bold; text-anchor:middle; fill:#88DD55; }
+	.pnamegb {font-size:42px; font-weight:bold; text-anchor:middle; fill:#EE775E; }	
+	.pnamesb {font-size:42px; font-weight:bold; text-anchor:middle; fill:#EED455; }	
+	.pnametb {font-size:42px; font-weight:bold; text-anchor:middle; fill:#80B2E6; }	
+    
+	.st0 {opacity:0.08;fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;stroke-opacity:0.75;}
+	.st1 {opacity:0.25;fill:#111111;} /* ball background fill */
+	.st2 {opacity:0.25;fill:#FFFFFF;} /* 3 generation box fill */
+
+	.st3 {fill:url(#lgb_quark);} /* quark box */
+	.st9 {fill:url(#lgb_lepton);} /* lepton box */
+	.st15 {fill:url(#lgb_gauge);} /* gauge boson box */
+	.st19 {fill:url(#lgb_scalar);} /* scalar boson box */
+	.st21 {fill:url(#lgb_tensor);} /* tensor boson box */
+
+	.st20 {fill:url(#lgp_quark);} /* quark ball */
+	.st26 {fill:url(#lgp_lepton);} /* lepton ball */
+	.st32 {fill:url(#lgp_gauge);} /* gauge boson ball */
+	.st36 {fill:url(#lgp_scalar);} /* scalar boson ball */
+	.st37 {fill:url(#lgp_tensor);} /* tensor boson ball */
+
+	.st39 {opacity:0.65;} /* density for mass, charge, and spin */
+	.st41 {fill:#112233; font-size:40px; text-anchor:middle;} /* color for generation I II III */
+
+	.st42 {fill:#55CC22; font-size:54px; font-weight:bold;} /* color for leptons */
+	.st43 {fill:#CC99FF; font-size:54px; font-weight:bold;} /* color for quarks */
+	.st44 {fill:#FF6C6C; font-size:54px; font-weight:bold;} /* color for gauge bosons */
+	.st44b{fill:#FF6C6C; font-size:36px; font-weight:bold;} /* color for vector bosons */
+	.st45 {fill:#EEBB33; font-size:54px; font-weight:bold;} /* color for scalar bosons */
+	.st46 {fill:#77AADD; font-size:54px; font-weight:bold;} /* color for tensor bosons */
+	.st46b{fill:#77AADD; font-size:36px; font-weight:bold;} /* color for hypothetical bosons */
+  </style>
+    
+  <defs>
+  
+    <linearGradient id="lgb_quark" gradientUnits="userSpaceOnUse" x1="45" y1="-15" x2="200" y2="250">
+      <stop offset="0" stop-color="#EEBBFF"/>
+      <stop offset="1" stop-color="#AA77DD"/>
+    </linearGradient>
+
+    <linearGradient id="lgb_lepton" gradientUnits="userSpaceOnUse" x1="45" y1="-15" x2="200" y2="250">
+      <stop offset="0" stop-color="#AAEE77"/>
+      <stop offset="1" stop-color="#66CC33"/>
+    </linearGradient>
+
+    <linearGradient id="lgb_gauge" gradientUnits="userSpaceOnUse" x1="45" y1="-15" x2="200" y2="250">
+      <stop offset="0" stop-color="#FF9977"/>
+      <stop offset="1" stop-color="#DD5544"/>
+    </linearGradient>
+
+    <linearGradient id="lgb_scalar" gradientUnits="userSpaceOnUse" x1="45" y1="-15" x2="200" y2="250">
+      <stop offset="0" stop-color="#EEE677"/>
+      <stop offset="1" stop-color="#EEBB33"/>
+    </linearGradient>
+	
+    <linearGradient id="lgb_tensor" gradientUnits="userSpaceOnUse" x1="45" y1="-15" x2="200" y2="250">
+      <stop offset="0" stop-color="#99CCFF"/>
+      <stop offset="1" stop-color="#6699CC"/>
+    </linearGradient>
+
+
+    <linearGradient id="lgp_quark" gradientUnits="userSpaceOnUse" x1="120" y1="60" x2="165" y2="140">
+      <stop offset="0" stop-color="#EEBBFF"/>
+      <stop offset="1" stop-color="#AA77DD"/>
+    </linearGradient>
+
+    <linearGradient id="lgp_lepton" gradientUnits="userSpaceOnUse" x1="120" y1="60" x2="165" y2="140">
+      <stop offset="0" stop-color="#AAEE77"/>
+      <stop offset="1" stop-color="#66CC33"/>
+    </linearGradient>
+
+    <linearGradient id="lgp_gauge" gradientUnits="userSpaceOnUse" x1="120" y1="60" x2="165" y2="140">
+      <stop offset="0" stop-color="#FF9977"/>
+      <stop offset="1" stop-color="#DD5544"/>
+    </linearGradient>
+
+    <linearGradient id="lgp_scalar" gradientUnits="userSpaceOnUse" x1="120" y1="60" x2="165" y2="140">
+       <stop offset="0" stop-color="#EEE677"/>
+       <stop offset="1" stop-color="#EEBB33"/>
+    </linearGradient>
+	
+	<linearGradient id="lgp_tensor" gradientUnits="userSpaceOnUse" x1="120" y1="60" x2="165" y2="140">
+       <stop offset="0" stop-color="#99CCFF"/>
+       <stop offset="1" stop-color="#6699CC"/>
+    </linearGradient>
+    
+    <g id="box">
+      <rect x="6" y="6" width="230" height="230" fill="none" stroke-width="10" rx="25" ry="25"/>
+    </g>
+    
+    <g id="ball">
+      <circle cx="120" cy="100" r="50.4" class="st1"/>
+      <circle cx="120" cy="100" r="47.7" class="st1"/>
+      <circle cx="120" cy="100" r="45"/>
+    </g>
+      
+    <g id="tilequ">
+      <use xlink:href="#box" stroke="url(#lgb_quark)"/>
+      <use xlink:href="#ball" class="st20"/>
+    </g>
+    
+    <g id="tilele">
+      <use xlink:href="#box" stroke="url(#lgb_lepton)"/>
+      <use xlink:href="#ball" class="st26"/>
+    </g>
+    
+    <g id="tilegb">
+      <use xlink:href="#box" stroke="url(#lgb_gauge)"/>
+      <use xlink:href="#ball" class="st32"/>
+    </g>
+    
+    <g id="tilesb">
+      <use xlink:href="#box" stroke="url(#lgb_scalar)"/>
+      <use xlink:href="#ball" class="st36"/>
+    </g>
+
+    <g id="tiletb">
+      <use xlink:href="#box" stroke="url(#lgb_tensor)"/>
+      <use xlink:href="#ball" class="st37"/>
+    </g>
+	
+  </defs>
+  
+  <g>
+  <rect width="100%" height="100%" fill="#001122"/>
+  </g>
+
+  <svg:switch><svg:text class="head1" x="50%" y="95" id="trsvg115-ml" systemLanguage="ml"><svg:tspan id="trsvg1-ml">മൗലികകണങ്ങളുടെ പ്രാമാണിക മാതൃക</svg:tspan></svg:text><svg:text class="head1" x="50%" y="95" id="trsvg115"><tspan id="trsvg1">Standard Model of Elementary Particles</tspan></svg:text></svg:switch>
+  
+  <g transform="translate(-20 0)">
+    <title>Forces</title>
+    <path id="fstrong" class="st0" d="M240.8,322.6c-30.4,0-55,24.6-55,55v250c0,30.4,24.6,55,55,55h500c30.4,0,55-24.6,55-55  c0-107.7,87.3-195,195-195h10c30.4,0,55-24.6,55-55c0-30.4-24.6-55-55-55H240.8"/>
+    <path class="st0" d="M240.8,312.6c-35.9,0-65,29.1-65,65v510c0,35.9,29.1,65,65,65h500c35.9,0,65-29.1,65-65  c0-107.7,82.8-195,185-195h10c35.9,0,65-29.1,65-65c0-35.9-29.1-65-65-65h-10c-102.2,0-185-82.8-185-185c0-35.9-29.1-65-65-65H240.8  " id="felecmag"/>
+    <path class="st0" d="M240.8,302.6c-41.4,0-75,33.6-75,75v760c0,41.4,33.6,75,75,75h760c41.4,0,75-33.6,75-75v-250  c0-41.4-33.6-75-75-75h-10c-96.6,0-175-78.4-175-175v-260c0-41.4-33.6-75-75-75H240.8" id="fweak"/>
+  </g>
+  
+  <g>
+    <title>Fermions</title>
+    <rect class="st2" x="100" y="137.6" width="740" height="80" rx="30" ry="30"/>
+    <switch><text class="head2" x="470" y="166" font-size="30" font-weight="bold" text-anchor="middle" id="trsvg116-ml" systemLanguage="ml"><tspan id="trsvg2-ml">മൂന്നു തലമുറ ദ്രവ്യപദാർത്ഥങ്ങൾ</tspan><tspan x="470" dy="36px" id="trsvg3-ml">ഫെർമിയോണുകൾ</tspan></text><text class="head2" x="470" y="166" font-size="30" font-weight="bold" text-anchor="middle" id="trsvg116"><tspan id="trsvg2">three generations of matter</tspan><tspan x="470" dy="36px" id="trsvg3">(fermions)</tspan></text></switch>
+    <g class="st41" transform="translate(100 255)">
+      <switch><text class="head2" x="120" id="trsvg117-ml" systemLanguage="ml"><tspan id="trsvg4-ml">I</tspan></text><text class="head2" x="120" id="trsvg117"><tspan id="trsvg4">I</tspan></text></switch>
+      <switch><text class="head2" x="370" id="trsvg118-ml" systemLanguage="ml"><tspan id="trsvg5-ml">II</tspan></text><text class="head2" x="370" id="trsvg118"><tspan id="trsvg5">II</tspan></text></switch>
+      <switch><text class="head2" x="620" id="trsvg119-ml" systemLanguage="ml"><tspan id="trsvg6-ml">III</tspan></text><text class="head2" x="620" id="trsvg119"><tspan id="trsvg6">III</tspan></text></switch>
+    </g>
+  </g>
+  
+    <g>
+    <title>Bosons</title>
+    <rect class="st2" x="860" y="137.6" width="500" height="80" rx="30" ry="30"/>
+    <switch><text class="head2" x="1110" y="166" font-size="30" font-weight="bold" text-anchor="middle" id="trsvg120-ml" systemLanguage="ml"><tspan id="trsvg7-ml">ബലവാഹകർ</tspan><tspan x="1110" dy="36px" id="trsvg8-ml">ബോസോണുകൾ</tspan></text><text class="head2" x="1110" y="166" font-size="30" font-weight="bold" text-anchor="middle" id="trsvg120"><tspan id="trsvg7">interactions / force carriers</tspan><tspan x="1110" dy="36px" id="trsvg8">(bosons)</tspan></text></switch>
+  </g>
+  
+  <g transform="translate(85 20)" class="st39" font-size="24" text-anchor="end">
+    <title>mass, charge, spin</title>
+    <switch><text y="295" id="trsvg121-ml" systemLanguage="ml"><tspan id="trsvg9-ml">ദ്രവ്യമാനം</tspan></text><text y="295" id="trsvg121"><tspan id="trsvg9">mass</tspan></text></switch>
+    <switch><text y="335" id="trsvg122-ml" systemLanguage="ml"><tspan id="trsvg10-ml">ചാർജ്</tspan></text><text y="335" id="trsvg122"><tspan id="trsvg10">charge</tspan></text></switch>
+    <switch><text y="375" id="trsvg123-ml" systemLanguage="ml"><tspan id="trsvg11-ml">ചക്രണം</tspan></text><text y="375" id="trsvg123"><tspan id="trsvg11">spin</tspan></text></switch>
+  </g>     
+ 
+  <g>
+    <title>Quarks</title>
+    <switch><text class="st43" transform="translate(70 770) rotate(-90)" id="trsvg124-ml" systemLanguage="ml"><tspan id="trsvg12-ml">ക്വാർക്കുകൾ</tspan></text><text class="st43" transform="translate(70 770) rotate(-90)" id="trsvg124"><tspan id="trsvg12">QUARKS</tspan></text></switch>
+  
+    <g transform="translate(100 275)">
+      <title>up</title>
+      
+      <use xlink:href="#tilequ"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg125-ml" systemLanguage="ml"><tspan id="trsvg13-ml">u</tspan></text><text class="psymr" x="120" y="120" id="trsvg125"><tspan id="trsvg13">u</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg126-ml" systemLanguage="ml"><tspan id="trsvg14-ml">≃2.2 MeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg126"><tspan id="trsvg14">≃2.2 MeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg127-ml" systemLanguage="ml"><tspan id="trsvg15-ml">⅔</tspan></text><text class="pchar" x="015" y="080" id="trsvg127"><tspan id="trsvg15">⅔</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg128-ml" systemLanguage="ml"><tspan id="trsvg16-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg128"><tspan id="trsvg16">½</tspan></text></switch>
+      <switch><text class="pnamequ" x="120" y="200" id="trsvg129-ml" systemLanguage="ml"><tspan id="trsvg17-ml">അപ്പ്‌</tspan></text><text class="pnamequ" x="120" y="200" id="trsvg129"><tspan id="trsvg17">up</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(100 525)">
+      <title>down</title>
+      
+      <use xlink:href="#tilequ"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg130-ml" systemLanguage="ml"><tspan id="trsvg18-ml">d</tspan></text><text class="psymr" x="120" y="120" id="trsvg130"><tspan id="trsvg18">d</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg131-ml" systemLanguage="ml"><tspan id="trsvg19-ml">≃4.7 MeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg131"><tspan id="trsvg19">≃4.7 MeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg132-ml" systemLanguage="ml"><tspan id="trsvg20-ml">−⅓</tspan></text><text class="pchar" x="015" y="080" id="trsvg132"><tspan id="trsvg20">−⅓</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg133-ml" systemLanguage="ml"><tspan id="trsvg21-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg133"><tspan id="trsvg21">½</tspan></text></switch>
+      <switch><text class="pnamequ" x="120" y="200" id="trsvg134-ml" systemLanguage="ml"><tspan id="trsvg22-ml">ഡൗണ്‍</tspan></text><text class="pnamequ" x="120" y="200" id="trsvg134"><tspan id="trsvg22">down</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(350 275)">
+      <title>charm</title>
+      
+      <use xlink:href="#tilequ"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg135-ml" systemLanguage="ml"><tspan id="trsvg23-ml">c</tspan></text><text class="psymr" x="120" y="120" id="trsvg135"><tspan id="trsvg23">c</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg136-ml" systemLanguage="ml"><tspan id="trsvg24-ml">≃1.28 GeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg136"><tspan id="trsvg24">≃1.28 GeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg137-ml" systemLanguage="ml"><tspan id="trsvg25-ml">⅔</tspan></text><text class="pchar" x="015" y="080" id="trsvg137"><tspan id="trsvg25">⅔</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg138-ml" systemLanguage="ml"><tspan id="trsvg26-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg138"><tspan id="trsvg26">½</tspan></text></switch>
+      <switch><text class="pnamequ" x="120" y="200" id="trsvg139-ml" systemLanguage="ml"><tspan id="trsvg27-ml">ചാം</tspan></text><text class="pnamequ" x="120" y="200" id="trsvg139"><tspan id="trsvg27">charm</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(350 525)">
+      <title>strange</title>
+      
+      <use xlink:href="#tilequ"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg140-ml" systemLanguage="ml"><tspan id="trsvg28-ml">s</tspan></text><text class="psymr" x="120" y="120" id="trsvg140"><tspan id="trsvg28">s</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg141-ml" systemLanguage="ml"><tspan id="trsvg29-ml">≃96 MeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg141"><tspan id="trsvg29">≃96 MeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg142-ml" systemLanguage="ml"><tspan id="trsvg30-ml">−⅓</tspan></text><text class="pchar" x="015" y="080" id="trsvg142"><tspan id="trsvg30">−⅓</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg143-ml" systemLanguage="ml"><tspan id="trsvg31-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg143"><tspan id="trsvg31">½</tspan></text></switch>
+      <switch><text class="pnamequ" x="120" y="200" id="trsvg144-ml" systemLanguage="ml"><tspan id="trsvg32-ml">സ്‌ട്രേഞ്ച്‌</tspan></text><text class="pnamequ" x="120" y="200" id="trsvg144"><tspan id="trsvg32">strange</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(600 275)">
+      <title>top</title>
+      
+      <use xlink:href="#tilequ"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg145-ml" systemLanguage="ml"><tspan id="trsvg33-ml">t</tspan></text><text class="psymr" x="120" y="120" id="trsvg145"><tspan id="trsvg33">t</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg146-ml" systemLanguage="ml"><tspan id="trsvg34-ml">≃173.1 GeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg146"><tspan id="trsvg34">≃173.1 GeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg147-ml" systemLanguage="ml"><tspan id="trsvg35-ml">⅔</tspan></text><text class="pchar" x="015" y="080" id="trsvg147"><tspan id="trsvg35">⅔</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg148-ml" systemLanguage="ml"><tspan id="trsvg36-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg148"><tspan id="trsvg36">½</tspan></text></switch>
+      <switch><text class="pnamequ" x="120" y="200" id="trsvg149-ml" systemLanguage="ml"><tspan id="trsvg37-ml">ടോപ്പ്‌</tspan></text><text class="pnamequ" x="120" y="200" id="trsvg149"><tspan id="trsvg37">top</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(600 525)">
+      <title>bottom</title>
+      
+      <use xlink:href="#tilequ"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg150-ml" systemLanguage="ml"><tspan id="trsvg38-ml">b</tspan></text><text class="psymr" x="120" y="120" id="trsvg150"><tspan id="trsvg38">b</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg151-ml" systemLanguage="ml"><tspan id="trsvg39-ml">≃4.18 GeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg151"><tspan id="trsvg39">≃4.18 GeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg152-ml" systemLanguage="ml"><tspan id="trsvg40-ml">−⅓</tspan></text><text class="pchar" x="015" y="080" id="trsvg152"><tspan id="trsvg40">−⅓</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg153-ml" systemLanguage="ml"><tspan id="trsvg41-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg153"><tspan id="trsvg41">½</tspan></text></switch>
+      <switch><text class="pnamequ" x="120" y="200" id="trsvg154-ml" systemLanguage="ml"><tspan id="trsvg42-ml">ബോട്ടം</tspan></text><text class="pnamequ" x="120" y="200" id="trsvg154"><tspan id="trsvg42">bottom</tspan></text></switch>
+    </g>
+  </g>
+  
+  <g>
+    <title>Leptons</title>
+    <switch><text class="st42" transform="translate(70 1270) rotate(-90)" id="trsvg155-ml" systemLanguage="ml"><tspan id="trsvg43-ml">ലെപ്റ്റോണുകൾ</tspan></text><text class="st42" transform="translate(70 1270) rotate(-90)" id="trsvg155"><tspan id="trsvg43">LEPTONS</tspan></text></switch>
+  
+    <g transform="translate(100 790)">
+      <title>electron</title>
+      
+      <use xlink:href="#tilele"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg156-ml" systemLanguage="ml"><tspan id="trsvg44-ml">e</tspan></text><text class="psymr" x="120" y="120" id="trsvg156"><tspan id="trsvg44">e</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg157-ml" systemLanguage="ml"><tspan id="trsvg45-ml">≃0.511 MeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg157"><tspan id="trsvg45">≃0.511 MeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg158-ml" systemLanguage="ml"><tspan id="trsvg46-ml">−1</tspan></text><text class="pchar" x="015" y="080" id="trsvg158"><tspan id="trsvg46">−1</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg159-ml" systemLanguage="ml"><tspan id="trsvg47-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg159"><tspan id="trsvg47">½</tspan></text></switch>
+      <switch><text class="pnamel1" x="120" y="200" id="trsvg160-ml" systemLanguage="ml"><tspan id="trsvg48-ml">ഇലക്ട്രോൺ</tspan></text><text class="pnamel1" x="120" y="200" id="trsvg160"><tspan id="trsvg48">electron</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(100 1040)">
+      <title>electron neutrino</title>
+      
+      <use xlink:href="#tilele"/>
+      <switch><text class="psymg" x="120" y="110" id="trsvg161-ml" systemLanguage="ml"><tspan id="trsvg49-ml">v</tspan><tspan class="sub" id="trsvg50-ml">e</tspan></text><text class="psymg" x="120" y="110" id="trsvg161"><tspan id="trsvg49">ν</tspan><tspan class="sub" id="trsvg50">e</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg162-ml" systemLanguage="ml"><tspan id="trsvg51-ml">&lt;2.2 eV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg162"><tspan id="trsvg51">&lt;2.2 eV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg163"><tspan id="trsvg52">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg164-ml" systemLanguage="ml"><tspan id="trsvg53-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg164"><tspan id="trsvg53">½</tspan></text></switch>
+      <switch><text class="pnamel2" x="120" y="200" id="trsvg165-ml" systemLanguage="ml"><tspan dy="-20" id="trsvg54-ml">ഇലക്ട്രോൺ</tspan><tspan x="120" dy="040" id="trsvg55-ml">ന്യൂട്രിനോ</tspan></text><text class="pnamel2" x="120" y="200" id="trsvg165"><tspan dy="-20" id="trsvg54">electron</tspan><tspan x="120" dy="040" id="trsvg55">neutrino</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(350 790)">
+      <title>muon</title>
+      
+      <use xlink:href="#tilele"/>
+      <switch><text class="psymg" x="120" y="120" id="trsvg166-ml" systemLanguage="ml"><tspan id="trsvg56-ml">μ</tspan></text><text class="psymg" x="120" y="120" id="trsvg166"><tspan id="trsvg56">μ</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg167-ml" systemLanguage="ml"><tspan id="trsvg57-ml">≃105.66 MeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg167"><tspan id="trsvg57">≃105.66 MeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg168-ml" systemLanguage="ml"><tspan id="trsvg58-ml">−1</tspan></text><text class="pchar" x="015" y="080" id="trsvg168"><tspan id="trsvg58">−1</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg169-ml" systemLanguage="ml"><tspan id="trsvg59-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg169"><tspan id="trsvg59">½</tspan></text></switch>
+      <switch><text class="pnamel1" x="120" y="200" id="trsvg170-ml" systemLanguage="ml"><tspan id="trsvg60-ml">മ്യൂഓൺ</tspan></text><text class="pnamel1" x="120" y="200" id="trsvg170"><tspan id="trsvg60">muon</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(350 1040)">
+      <title>muon neutrino</title>
+      
+      <use xlink:href="#tilele"/>
+      <switch><text class="psymg" x="120" y="110" id="trsvg171-ml" systemLanguage="ml"><tspan id="trsvg61-ml">ν</tspan><tspan class="sub" id="trsvg62-ml">μ</tspan></text><text class="psymg" x="120" y="110" id="trsvg171"><tspan id="trsvg61">ν</tspan><tspan class="sub" id="trsvg62">μ</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg172-ml" systemLanguage="ml"><tspan id="trsvg63-ml">&lt;0.17 MeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg172"><tspan id="trsvg63">&lt;0.17 MeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg173"><tspan id="trsvg64">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg174-ml" systemLanguage="ml"><tspan id="trsvg65-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg174"><tspan id="trsvg65">½</tspan></text></switch>
+      <switch><text class="pnamel2" x="120" y="200" id="trsvg175-ml" systemLanguage="ml"><tspan dy="-20" id="trsvg66-ml">മ്യൂഓൺ</tspan><tspan x="120" dy="040" id="trsvg67-ml">ന്യൂട്രിനോ</tspan></text><text class="pnamel2" x="120" y="200" id="trsvg175"><tspan dy="-20" id="trsvg66">muon</tspan><tspan x="120" dy="040" id="trsvg67">neutrino</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(600 790)">
+      <title>tau</title>
+      
+      <use xlink:href="#tilele"/>
+      <switch><text class="psymg" x="120" y="120" id="trsvg176-ml" systemLanguage="ml"><tspan id="trsvg68-ml">τ</tspan></text><text class="psymg" x="120" y="120" id="trsvg176"><tspan id="trsvg68">τ</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg177-ml" systemLanguage="ml"><tspan id="trsvg69-ml">≃1.7768 GeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg177"><tspan id="trsvg69">≃1.7768 GeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg178-ml" systemLanguage="ml"><tspan id="trsvg70-ml">−1</tspan></text><text class="pchar" x="015" y="080" id="trsvg178"><tspan id="trsvg70">−1</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg179-ml" systemLanguage="ml"><tspan id="trsvg71-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg179"><tspan id="trsvg71">½</tspan></text></switch>
+      <switch><text class="pnamel1" x="120" y="200" id="trsvg180-ml" systemLanguage="ml"><tspan id="trsvg72-ml">റ്റൗ</tspan></text><text class="pnamel1" x="120" y="200" id="trsvg180"><tspan id="trsvg72">tau</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(600 1040)">
+      <title>tau neutrino</title>
+      
+      <use xlink:href="#tilele"/>
+      <switch><text class="psymg" x="120" y="110" id="trsvg181-ml" systemLanguage="ml"><tspan id="trsvg73-ml">ν</tspan><tspan class="sub" id="trsvg74-ml">τ</tspan></text><text class="psymg" x="120" y="110" id="trsvg181"><tspan id="trsvg73">ν</tspan><tspan class="sub" id="trsvg74">τ</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg182-ml" systemLanguage="ml"><tspan id="trsvg75-ml">&lt;18.2 MeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg182"><tspan id="trsvg75">&lt;18.2 MeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg183"><tspan id="trsvg76">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg184-ml" systemLanguage="ml"><tspan id="trsvg77-ml">½</tspan></text><text class="pspin" x="015" y="120" id="trsvg184"><tspan id="trsvg77">½</tspan></text></switch>
+      <switch><text class="pnamel2" x="120" y="200" id="trsvg185-ml" systemLanguage="ml"><tspan dy="-20" id="trsvg78-ml">റ്റൗ</tspan><tspan x="120" dy="040" id="trsvg79-ml">ന്യൂട്രിനോ</tspan></text><text class="pnamel2" x="120" y="200" id="trsvg185"><tspan dy="-20" id="trsvg78">tau</tspan><tspan x="120" dy="040" id="trsvg79">neutrino</tspan></text></switch>
+    </g>
+  </g>
+  
+  <g>
+    <title>Gauge Bosons</title>
+    <switch><text class="st44" transform="translate(1170 1270) rotate(-90)" id="trsvg186-ml" systemLanguage="ml"><tspan id="trsvg80-ml">ഗേജ് ബോസോണുകൾ</tspan></text><text class="st44" transform="translate(1170 1270) rotate(-90)" id="trsvg186"><tspan id="trsvg80">GAUGE BOSONS</tspan></text></switch>
+	<switch><text class="st44b" transform="translate(1210 1270) rotate(-90)" id="trsvg187-ml" systemLanguage="ml"><tspan id="trsvg81-ml">വെക്ടർ ബോസോണുകൾ</tspan></text><text class="st44b" transform="translate(1210 1270) rotate(-90)" id="trsvg187"><tspan id="trsvg81">VECTOR BOSONS</tspan></text></switch>
+  
+    <g transform="translate(860 275)">
+      <title>gluon</title>
+      
+      <use xlink:href="#tilegb"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg188-ml" systemLanguage="ml"><tspan id="trsvg82-ml">g</tspan></text><text class="psymr" x="120" y="120" id="trsvg188"><tspan id="trsvg82">g</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg189"><tspan id="trsvg83">0</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg190"><tspan id="trsvg84">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg191-ml" systemLanguage="ml"><tspan id="trsvg85-ml">1</tspan></text><text class="pspin" x="015" y="120" id="trsvg191"><tspan id="trsvg85">1</tspan></text></switch>
+      <switch><text class="pnamegb" x="120" y="200" id="trsvg192-ml" systemLanguage="ml"><tspan id="trsvg86-ml">ഗ്ലുവോൺ</tspan></text><text class="pnamegb" x="120" y="200" id="trsvg192"><tspan id="trsvg86">gluon</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(860 525)">
+      <title>photon</title>
+
+      <use xlink:href="#tilegb"/>
+      <switch><text class="psymg" x="120" y="120" id="trsvg193-ml" systemLanguage="ml"><tspan id="trsvg87-ml">γ</tspan></text><text class="psymg" x="120" y="120" id="trsvg193"><tspan id="trsvg87">γ</tspan></text></switch>
+
+      <switch><text class="pmass" x="015" y="040" id="trsvg194"><tspan id="trsvg88">0</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg195"><tspan id="trsvg89">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg196-ml" systemLanguage="ml"><tspan id="trsvg90-ml">1</tspan></text><text class="pspin" x="015" y="120" id="trsvg196"><tspan id="trsvg90">1</tspan></text></switch>
+      <switch><text class="pnamegb" x="120" y="200" id="trsvg197-ml" systemLanguage="ml"><tspan id="trsvg91-ml">ഫോട്ടോൺ</tspan></text><text class="pnamegb" x="120" y="200" id="trsvg197"><tspan id="trsvg91">photon</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(860 790)">
+      <title>Z boson</title>
+
+      <use xlink:href="#tilegb"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg198-ml" systemLanguage="ml"><tspan id="trsvg92-ml">Z</tspan></text><text class="psymr" x="120" y="120" id="trsvg198"><tspan id="trsvg92">Z</tspan></text></switch>
+
+      <switch><text class="pmass" x="015" y="040" id="trsvg199-ml" systemLanguage="ml"><tspan id="trsvg93-ml">≃91.19 GeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg199"><tspan id="trsvg93">≃91.19 GeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg200"><tspan id="trsvg94">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg201-ml" systemLanguage="ml"><tspan id="trsvg95-ml">1</tspan></text><text class="pspin" x="015" y="120" id="trsvg201"><tspan id="trsvg95">1</tspan></text></switch>
+      <switch><text class="pnamegb" x="120" y="200" id="trsvg202-ml" systemLanguage="ml"><tspan id="trsvg96-ml">Z ബോസോൺ</tspan></text><text class="pnamegb" x="120" y="200" id="trsvg202"><tspan id="trsvg96">Z boson</tspan></text></switch>
+    </g>
+    
+    <g transform="translate(860 1040)">
+      <title>W boson</title>
+ 
+      <use xlink:href="#tilegb"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg203-ml" systemLanguage="ml"><tspan id="trsvg97-ml">W</tspan></text><text class="psymr" x="120" y="120" id="trsvg203"><tspan id="trsvg97">W</tspan></text></switch>
+
+      <switch><text class="pmass" x="015" y="040" id="trsvg204-ml" systemLanguage="ml"><tspan id="trsvg98-ml">≃80.360 GeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg204"><tspan id="trsvg98">≃80.360 GeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg205-ml" systemLanguage="ml"><tspan id="trsvg99-ml">±1</tspan></text><text class="pchar" x="015" y="080" id="trsvg205"><tspan id="trsvg99">±1</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg206-ml" systemLanguage="ml"><tspan id="trsvg100-ml">1</tspan></text><text class="pspin" x="015" y="120" id="trsvg206"><tspan id="trsvg100">1</tspan></text></switch>
+      <switch><text class="pnamegb" x="120" y="200" id="trsvg207-ml" systemLanguage="ml"><tspan id="trsvg101-ml">W ബോസോൺ</tspan></text><text class="pnamegb" x="120" y="200" id="trsvg207"><tspan id="trsvg101">W boson</tspan></text></switch>
+    </g>
+  </g>
+  
+  <g>
+    <title>Scalar Bosons</title>
+    <switch><text class="st45" transform="translate(1350 530) rotate(-90)" text-anchor="end" id="trsvg208-ml" systemLanguage="ml"><tspan id="trsvg102-ml">സ്കേലാർ ബോസോണുകൾ</tspan></text><text class="st45" transform="translate(1350 530) rotate(-90)" text-anchor="end" id="trsvg208"><tspan id="trsvg102">SCALAR BOSONS</tspan></text></switch>
+
+    <g transform="translate(1120 275)">
+      <title>Higgs</title>
+      
+      <use xlink:href="#tilesb"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg209-ml" systemLanguage="ml"><tspan id="trsvg103-ml">H</tspan></text><text class="psymr" x="120" y="120" id="trsvg209"><tspan id="trsvg103">H</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg210-ml" systemLanguage="ml"><tspan id="trsvg104-ml">≃124.97 GeV/c²</tspan></text><text class="pmass" x="015" y="040" id="trsvg210"><tspan id="trsvg104">≃124.97 GeV/c²</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg211"><tspan id="trsvg105">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg212"><tspan id="trsvg106">0</tspan></text></switch>
+      <switch><text class="pnamesb" x="120" y="200" id="trsvg213-ml" systemLanguage="ml"><tspan id="trsvg107-ml">ഹിഗ്ഗ്സ്</tspan></text><text class="pnamesb" x="120" y="200" id="trsvg213"><tspan id="trsvg107">higgs</tspan></text></switch>
+    </g>
+  </g>
+  
+  <g style="display:none;">
+    <title>Tensor Bosons</title>
+    <switch><text class="st46" transform="translate(1610 530) rotate(-90)" text-anchor="end" id="trsvg214-ml" systemLanguage="ml"><tspan id="trsvg108-ml">ടെൻസർ ബോസോണുകൾ</tspan></text><text class="st46" transform="translate(1610 530) rotate(-90)" text-anchor="end" id="trsvg214"><tspan id="trsvg108">TENSOR BOSONS</tspan></text></switch>
+    <switch><text class="st46b" transform="translate(1555 530) rotate(-90)" text-anchor="end" id="trsvg215-ml" systemLanguage="ml"><tspan id="trsvg109-ml">സാങ്കൽപ്പികം</tspan></text><text class="st46b" transform="translate(1555 530) rotate(-90)" text-anchor="end" id="trsvg215"><tspan id="trsvg109">HYPOTHETICAL</tspan></text></switch>
+
+    <g transform="translate(1380 275)">
+      <title>Graviton</title>
+      
+      <use xlink:href="#tiletb"/>
+      <switch><text class="psymr" x="120" y="120" id="trsvg216-ml" systemLanguage="ml"><tspan id="trsvg110-ml">G</tspan></text><text class="psymr" x="120" y="120" id="trsvg216"><tspan id="trsvg110">G</tspan></text></switch>
+      
+      <switch><text class="pmass" x="015" y="040" id="trsvg217"><tspan id="trsvg111">0</tspan></text></switch>
+      <switch><text class="pchar" x="015" y="080" id="trsvg218"><tspan id="trsvg112">0</tspan></text></switch>
+      <switch><text class="pspin" x="015" y="120" id="trsvg219-ml" systemLanguage="ml"><tspan id="trsvg113-ml">2</tspan></text><text class="pspin" x="015" y="120" id="trsvg219"><tspan id="trsvg113">2</tspan></text></switch>
+      <switch><text class="pnametb" x="120" y="200" id="trsvg220-ml" systemLanguage="ml"><tspan id="trsvg114-ml">ഗ്രാവിറ്റോൺ</tspan></text><text class="pnametb" x="120" y="200" id="trsvg220"><tspan id="trsvg114">graviton</tspan></text></switch>
+    </g>
+  </g>
+
+</svg>
