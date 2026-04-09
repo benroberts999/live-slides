@@ -94,22 +94,21 @@
           <div style="text-align: left; float: left; width: 50%">
             <br>
             <br>
-            <div class="fragment">
+            <div>
               <h2>High-precision atomic theory</h2>
               <h3>&emsp;• Heavy atoms for precision physics</h3>
               <h3>&emsp;• Atomic parity violation</h3>
               <h3>&emsp;• Probing nuclear and fundamental physics</h3>
             </div>
             <br>
-            <div class="fragment">
+            <div>
               <h2>Low-mass dark matter</h2>
               <h3>&emsp;• Mass range: $\sim$10 GeV down to $10^{-23}$ eV</h3>
             </div>
             <br>
-            <div class="fragment">
+            <div>
               <h3>AMPSCI</h3>
               <h3>&emsp;• Open-source atomic structure code</h3>
-              <h3>&emsp;• All-order perturbation theory</h3>
               <h3>&emsp;&emsp;&ensp;• One- and two-valence systems</h3>
               <h3>&emsp;&emsp;&ensp;• Relativistic scattering</h3>
               <h3>&emsp;• <a href="https://ampsci.dev">ampsci.dev</a></h3>
@@ -124,9 +123,6 @@
             <br>
             <div class="r-stack" style="margin-top: auto; padding-top: 40px; width: 75%;">
               <img src="img/uq-logo.svg" width="90%">
-              <!-- <img src="img/Qweak1.png" width="90%" class="fragment">
-              <img src="img/Qweak2.png" width="90%" class="fragment">
-              <img src="img/Qweak3.png" width="90%" class="fragment"> -->
             </div>
           </div>
 
@@ -539,13 +535,17 @@
           <div style="float: left; text-align: left; width: 60%">
             <br>
             <div class="fragment fade-in">
-              <h3>• Constrain models for physics beyond GR</h3>
-              <h3>• First measurement near a black hole</h3>
-              <h3>• Dedicated measurements: large improvements expected</h3>
+              <h4>• Constrain models for physics beyond GR</h4>
+              <h4>• Less sensitive than other searches</h4>
+              <h4>• Position-dependent: First measurement near a black hole</h4>
+              <h4>• Future dedicated observations: large improvements expected</h4>
             </div>
             <br>
               <font size="6">Hees, Do, <b>BMR</b>, Ghez <i>et al.</i>,
               <a href="https://link.aps.org/doi/10.1103/PhysRevLett.124.081101">Phys. Rev. Lett. <b>124</b>, 081101 (2020)</a></font>
+              <br>
+              <font size="6">Benergut <i>et al.</i>,
+              <a href="10.1103/PhysRevLett.111.010801">Phys. Rev. Lett. <b>111</b> (2013)</a>; Ashby Nat. Phys <b>14</b> (2018)</font>
           </div>
           <div class="fragment" style="float: right; text-align: center; width: 40%">
             <img src="img/Compactness.png" width="75%">
@@ -1006,7 +1006,7 @@
               <div class="fragment fade-in">
                 <h3>&emsp;• Spatial-temporal interference (longitudanal)</h3>
                 <h3>&emsp;• Vector-Axial interference (transverse)</h3>
-                <h3>&emsp;• $\implies$ 13 ionisation factors (each K)</h3>
+                <h3>&emsp;• $\implies$ 13 ionisation factors</h3>
               </div>
               </div>
 
@@ -1027,7 +1027,7 @@
             <div style="text-align: left; float: right; width: 57%">
               <div class="fragment fade-in" style="font-size: 1.5em">
               $$
-                K^{\rm ion}(q,\omega) \equiv E_H \sum_{n_i \kappa_i}\sum_{\kappa_f}\left|{\langle{\varepsilon_f\kappa_f}\|{T^K}\|{n_i\kappa_i}\rangle}\right|^2,
+                K^{\rm ion}(q,\omega) \equiv E_H \sum_K\sum_{n_i \kappa_i}\sum_{\kappa_f}\left|{\langle{\varepsilon_f\kappa_f}\|{h^K}\|{n_i\kappa_i}\rangle}\right|^2,
               $$
               </div>
               <br>
@@ -1053,7 +1053,7 @@
             <h3 class="fragment">1. &nbsp; <b>Non-relativistic scattering (WIMP)</b> &emsp; — &emsp; $\chi + A \to \chi + A^+ + e^-$</h3>
             <div class="fragment" style="font-size: 1.15em; padding-left: 2em;">
             $$
-            {\color{orange}W^\mu = (F(q), \ \mathcal{O(v/c)})}
+            {\color{orange}W^\mu = F(q) + \mathcal{O(v/c)}}
             $$
             </div>
             <br>
@@ -1389,11 +1389,11 @@
             <br>
 
             <h3>&emsp;• $\kappa=-1$ for $s$-states, $\kappa=1$ for $p_{1/2}$</h3>
-            <div class = "fragment">
+            <div>
             <h3>&emsp;• Lowest-order term: $\sim\int r^{\gamma+\gamma'}j_L(qr)\,dr$ — <b>non-zero!</b></h3>
             </div>
             <br>
-            <div class = "fragment" style="font-size: 1.85em">
+            <div style="font-size: 1.85em">
             $$
               {\color{green} d\sigma\sim q^{-6+2(Z\alpha)^2} }
             $$
@@ -1404,11 +1404,12 @@
 
           <br>
 
-          <div class = "fragment" style="text-align: left; float: left; width: 40%">
+          <div class = "fragment">
+          <div style="text-align: left; float: left; width: 40%">
             <img src="img/rel-factor.png" width="95%"><br>
           </div>
 
-          <div class = "fragment" style="text-align: left; float: right; width: 60%">
+          <div  style="text-align: left; float: right; width: 60%">
             <div style="font-size: 1.2em">
             $$e^{-q^2} \to q^{-8} \to q^{-6} \to {\color{orange}q^{-6+2(Z\alpha)^2} } \approx q^{-5.7}$$
             </div>
@@ -1420,6 +1421,7 @@
             <div style="font-size: 0.85em; text-align: left; padding-left: 2em">
               &bull; BMR, Flambaum, and Gribakin, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.023201">Phys. Rev. Lett. 116, 023201</a> (2016), <a href="http://arxiv.org/abs/1509.09044">[arXiv:1509.09044]</a>
             </div>
+          </div>
           </div>
 
           </textarea>
@@ -1877,8 +1879,6 @@
             * BMR, Flambaum, Grabakin [Phys. Rev. Lett. **116**, 023201 (2016)](doi.org/10.1103/PhysRevLett.116.023201), [[1509.09044]](http://arxiv.org/abs/1509.09044)
             <br>
             * Hees, Do, BMR, Ghez _et al._, [Phys. Rev. Lett. **124**, 081101 (2020)](https://link.aps.org/doi/10.1103/PhysRevLett.124.081101), [[2002.11567]](http://arxiv.org/abs/2002.11567)
-            <br>
-            * Filzinger, Caddell _et al._, [Phys. Rev. Lett. **134**, 031001 (2025)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.031001), [[2312.13723]](http://arxiv.org/abs/2312.13723)
             <br>
             * Williams, Caddell, BMR (Coming soon)
 
