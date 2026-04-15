@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="sl-root decks export offline loaded">
 
   <head>
-    <title>Atomic Frontiers</title>
+    <title>Dark Matter and Clocks</title>
     <script>const PRINT_MODE = false;</script>
 
     <link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
@@ -10,6 +10,8 @@
     <style>
       .reveal, .reveal .slide-background { background-color: rgb(0, 0, 0); }
       .theme-color-black-blue .reveal { color: rgb(221, 231, 241); }
+      .theme-color-black-blue .reveal a { color: #69c0f3; }
+      /* .theme-color-black-blue .reveal a { color: #6ab0f5; } */
     </style>
 
   </head>
@@ -144,9 +146,9 @@
   
               </div>
   
-              <br>
+
               <div class="fragment" data-fragment-index="3" style="text-align: left;" data-markdown>
-                <h3> 95% of universe is "dark"; we can only use the 5% to learn about the rest! </h3>
+                <h3> <font color="orange">95% of universe is "dark"; we have to use the 5% to learn about the rest! </font></h3>
               </div>
   
             </div>
@@ -261,6 +263,7 @@
                 \[a = \frac{[G + {\color{green}\delta G(M,r)}] \, M(r)}{r^2} \]
               </p>
               <br>
+              <p data-markdown class="fragment fade-in">Evidence continues to build:</p>
             </div>
 
           </textarea>
@@ -387,7 +390,7 @@
                   <br>
                   
                   $$\large
-                  \Omega_{baryon} = 0.0486(10)
+                  \Omega_{\rm baryon} = 0.0486(10)
                   $$
 
                   <br>
@@ -435,13 +438,11 @@
               <br>
               <h3>• Also: large scale structure, BAO etc. </h3>
               <br>
-              <h3>• It's not strange for particles to not interact with
+              <br>
+              <div class="fragment">
+                <h3>• It's not strange for particles to not interact with
                 light (e.g., neutrinos)</h3>
-              <br>
-              <br>
-              <h3 class="fragment">• ΛCDM model works extremely well
-                <br>&emsp; • Ωc =
-                0.2589(57) [Planck] </h3>
+              </div>
             </div>
 
             <div style="text-align: center; float: right; width: 50%">
@@ -937,64 +938,45 @@
 
           # Moore's law for atomic clocks
 
-          <div class="r-stack">
-            <div class="fragment fade-out" data-fragment-index="0">
-              <img src="img/MooreClock2020-MW.png" width="100%">
+          <div style="text-align: center; float: left; width: 60%">
+            <br>
+            <div class="r-stack">
+              <div class="fragment fade-out" data-fragment-index="0">
+                <img src="img/MooreClock2020-MW.png" width="100%">
+              </div>
+              <div class="fragment fade-in" data-fragment-index="0">
+                <img src="img/MooreClock2020.png" width="100%"><br>
+              </div>
             </div>
+            <br>
+            <font size="4"> [Pacome Delva <i>et al.</i>, Chronometric Geodesy: Methods and Applications (2019)]
+            </font>
+          </div>
 
+          <div style="text-align: center; float: right; width: 40%">
+            <br>
+            <!-- <font color="magenta"> * Microwave (hyperfine) clocks: $\nu\sim$ MHz -- GHz</font> -->
+            <br>
             <div class="fragment fade-in" data-fragment-index="0">
-              <img src="img/MooreClock2020.png" width="100%">
+              <h3>Optical Atomic Clocks</h3>
+              <br>
+              <img src="img/Stability.png" width="100%"><br>
+              <font size="3"> [M. Safronova]</font>
+              <br><br>
+
+              <div class="fragment fade-in" data-fragment-index="1">
+              <h3>&ensp;• Accurate to parts in 10<sup>18</sup><br>
+              &ensp;• 1 s over lifetime of the universe!
+              </h3>
+              </div>
+
             </div>
           </div>
 
-          <!-- <img src="img/MooreClock2020.png" width="55%"> -->
-          <font size="4"> [Pacome Delva <i>et al.</i>, Chronometric Geodesy: Methods and Applications (2019)]
-          </font>
-
           </textarea>
         </section>
 
-        <!-- =============================================================== -->
-        <section data-markdown 
-          data-transition="fade-in fade-out">
-          <textarea data-template>
 
-          # Optical atomic clocks
-
-          <br><br>
-
-          <div class="fragment fade-in" style="text-align: left; float: left; width: 55%">
-            <img src="img/Stability.png" width="95%"><br>
-            <font size="3"> [M. Safronova]</font>
-            <br>
-            <br>
-            <br>
-
-            * Requires ultra-stable laser ("see" narrow line)
-            * Frequency comb ("listen" to high frequency)
-
-          </div>
-
-          <div class="fragment fade-in" style="text-align: center; float: right; width: 45%">
-            <img src="img/basicclock2.png" width="95%">
-            <font size="3">[Centre for Quantum Technologies | U. Singapore]</font>
-            <br>
-            <br>
-            <br>
-            <img src="img/Diddams-Comb.png" width="95%">
-            <font size="3">[Diddams <i>et al.</i>, Science <b>369</b>, 3676 (2020)]</font>
-          </div>
-          
-
-          <div class="fragment fade-in">
-            <br>
-
-            * Accurate to parts in $10^{18}$
-            * better than 1 s over lifetime of the universe!
-          </div>
-
-          </textarea>
-        </section>
 
         <!-- =============================================================== -->
         <section data-markdown>
@@ -1031,7 +1013,7 @@
           </div>
 
 
-          <div>
+          <div class="fragment fade-in">
           <br>
 
             * Gravitational red-shift is one of the biggest systematic which must accounted for in clock comparisons --
@@ -1158,164 +1140,6 @@
         </section>
 
 
-
-        <!-- =============================================================== -->
-        <section data-markdown>
-          <textarea data-template>
-            # Oscillating signals
-
-            <div style="text-align: left; float: left; width: 50%">
-              <br>
-              <h3>Case: oscillating field:</h3>
-              \[{\large
-              \phi_{\rm DM} = \phi_0 \cos({m_\phi t})}
-              \]
-              <br>
-              \[\large
-              \frac{\delta f}{f} = \kappa \phi_0 \cos({m_\phi t})
-              \]
-              <br>
-              <br>
-              <div class="fragment fade-in">
-                <h2>Constraints from clock-clock comparisons</h2><br>
-                <h3>• Different systems: probe different couplings</h3>
-                <br>
-                <h4>• Optical-Optical: $d_e$ ($\delta\alpha)$</h4>
-                <br>
-                <h4>• Optical-Microwave: $d_{m_e}-d_{m_p}$ ($\delta(m_e/m_p)$)</h4>
-                <br>
-              </div>
-              <div class="fragment fade-in">
-                <h3>• Dimensionful couplings always cancel in these ratios</h3>
-              </div>
-            </div>
-
-            <div style="text-align: center; float: right; width: 50%">
-              <br> <br>
-              <div class="fragment fade-in" data-fragment-index="3">
-                <h3>Typical: Compare two local clocks, different $\kappa$</h3>
-                <img src="img/scalarphoton2.png" width="100%"><br>
-                <p>[O'Hare - GitHub/AxionLimits]</p><br>
-              </div>
-            </div>
-
-          </textarea>
-        </section>
-
-
-
-
-       <!-- =============================================================== -->
-        <section data-markdown>
-          <textarea data-template>
-                # Space-time separated sensors
-      
-                * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [Phys. Rev. Lett. **134** 031001 (2025)](https://link.aps.org/doi/10.1103/PhysRevLett.134.031001)
-      
-                <br>
-                <br>
-                <br>
-      
-                <div style="text-align: left; float: left; width: 50%">
-      
-                  ### Typical local experiment:
-      
-                  <br>
-      
-                  $$\large
-                    \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 \\, ( d_{a} - d_b) \\, \cos(\omega t)
-                  $$
-      
-                  <br>
-
-                  <div class="fragment fade-in">
-                  
-                  * Non-zero effect from two _different_ transitions only
-                  * Certain couplings always cancel 
-                  * e.g., Universal couplings
-
-                  </div>
-
-                  <br><br>
-      
-                  <img src="img/Local.png" width="75%"><br>
-                </div>
-                
-                <div style="text-align: left; float: right; width: 50%" class="fragment fade-in">
-      
-                  ### Separated (identical) sensors:
-      
-                  <br>
-      
-                  <div>
-                  \[\large
-                    \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 \, d_{\rm eff} \left(\cos(\omega t) -\cos(\omega t-\delta)\right) \\
-                      \delta = \omega\Delta t - k_z D 
-                  \]
-                  </div>
-                  <br>
-                  <div class="fragment fade-in">
-                  
-                  * Now: _field_ is different between clocks
-                  * Spatial and temporal component (depends on experiment)
-                  * Allows access to unconstrained couplings
-  
-                  </div>
-      
-                  <img src="img/Separated.png" width="80%"><br>
-                </div>
-      
-              </textarea>
-        </section>        
-
-
-        <!-- =============================================================== -->
-        <section data-markdown>
-          <textarea data-template>
-        # Space-time separated sensors: initial results
-
-        * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [Phys. Rev. Lett. **134** 031001 (2025)](https://link.aps.org/doi/10.1103/PhysRevLett.134.031001)
-        <br>
-
-        <div style="text-align: center; float: left; width: 50%">
-          <br>
-          <!-- <img src="img/dme-amplitude-b.png" width="90%"><br> -->
-          <div class="r-stack">
-          <img class="fragment fade-out" data-fragment-index="1" src="img/deff.png" width="90%"><br> 
-          <img src="img/dme2.png" width="90%"><br>
-          </div>
-          <font size="4"><a href="http://arxiv.org/abs/2312.13723">[Phys.Rev.Lett. <b>134</b> 031001 (2025)]</a></font>
-        </div>
-
-        <div style="text-align: left; float: right; width: 50%">
-
-          * Existing data: [Schioppo _et al._, Nat.Comms 13 (2022)](https://www.nature.com/articles/s41467-021-27884-3)
-          * Comparison of ultra-stable cavity lasers
-          * 750 km apart (2220 km Fibre cable: PTB to NPL via SYRTE)
-          * Sensitive to _spatial_ phase shift
-
-          <br>
-          
-          * Also: Data from GPS satellites (Rb clocks)
-          * Clocks less accurate, but setup sensitive to _temporal_ term
-
-          <br>
-
-          * First Constraints on $d_{m_e}$ along at low-frequency<br>
-          * Sensitivity to _spatial_ fluctions of DM, daily oscillation<br>
-          
-          <br>
-          <div class="fragment fade-in" data-fragment-index="2">
-          <img src="img/dailymod.png" width="90%"><br>
-          </div>
-
-        </div>
-
-        <!-- <img src="img/deff.png" width="90%"><br> -->
-
-      </textarea>
-        </section>
-
         <!-- =============================================================== -->
         <section data-markdown>
           <textarea data-template>
@@ -1395,7 +1219,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <section data-markdown>
+        <!-- <section data-markdown>
           <textarea data-template>
             # European Fibre-linked network
 
@@ -1426,7 +1250,168 @@
             </div>
 
           </textarea>
+        </section> -->
+
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+            # Oscillating signals
+
+            <div style="text-align: left; float: left; width: 50%">
+              <br>
+              <h3>Case: oscillating field:</h3>
+              \[{\large
+              \phi_{\rm DM} = \phi_0 \cos({m_\phi t})}
+              \]
+              <br>
+              \[\large
+              \frac{\delta f}{f} = \kappa \phi_0 \cos({m_\phi t})
+              \]
+              <br>
+              <br>
+              <div class="fragment fade-in">
+                <h2>Constraints from clock-clock comparisons</h2><br>
+                <h3>• Require a <em>pair</em> of clocks</h3>
+                <div class="fragment fade-in">
+                <h3>• Different systems: probe different couplings</h3>
+                <h4> &emsp; • Optical-Optical: $d_e$ ($\delta\alpha)$</h4>
+                <h4> &emsp; • Optical-Microwave: $d_{m_e}-d_{m_p}$ ($\delta(m_e/m_p)$)</h4>
+                </div>
+                <br>
+              </div>
+              <div class="fragment fade-in">
+                <h3>• Dimensionful couplings always cancel in these ratios</h3>
+              </div>
+            </div>
+
+            <div style="text-align: center; float: right; width: 50%">
+              <br> <br>
+              <div class="fragment fade-in" data-fragment-index="3">
+                <h3>Typical: Compare two local clocks, different $\kappa$</h3>
+                <img src="img/scalarphoton2.png" width="100%"><br>
+                <p>[O'Hare - GitHub/AxionLimits]</p><br>
+              </div>
+            </div>
+
+          </textarea>
         </section>
+
+
+
+
+       <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+                # Space-time separated sensors
+      
+                * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [Phys. Rev. Lett. **134** 031001 (2025)](https://link.aps.org/doi/10.1103/PhysRevLett.134.031001)
+      
+                <br>
+                <br>
+                <br>
+      
+                <div style="text-align: left; float: left; width: 50%">
+      
+                  ### Typical local experiment:
+      
+                  <br>
+      
+                  $$\large
+                    \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 \\, ( d_{a} - d_b) \\, \cos(\omega t)
+                  $$
+      
+                  <br>
+
+                  <div class="fragment fade-in">
+                  
+                  * Non-zero effect from two _different_ transitions only
+                  * Certain couplings always cancel 
+                  * e.g., Universal couplings
+
+                  </div>
+
+                  <br>
+      
+                  <img src="img/Local.png" width="75%"><br>
+                </div>
+                
+                <div style="text-align: left; float: right; width: 50%" class="fragment fade-in">
+      
+                  ### Separated (identical) sensors:
+      
+                  <br>
+      
+                  <div>
+                  \[\large
+                    \frac{\delta(\nu_a/\nu_b)}{(\nu_a/\nu_b)} = \phi_0 \, d_{\rm eff} \left(\cos(\omega t) -\cos(\omega t-\delta)\right) \\
+                      \delta = \omega\Delta t - k_z D 
+                  \]
+                  </div>
+                  <br>
+                  <div class="fragment fade-in">
+                  
+                  * Now: _field_ is different between clocks
+                  * Spatial and temporal component (depends on experiment)
+                  * Allows access to unconstrained couplings
+  
+                  </div>
+      
+                  <img src="img/Separated.png" width="80%"><br>
+                </div>
+      
+              </textarea>
+        </section>        
+
+
+        <!-- =============================================================== -->
+        <section data-markdown>
+          <textarea data-template>
+        # Space-time separated sensors: initial results
+
+        * Filzinger, Caddell, Jani, Steinel, Giani, Huntemann, BMR, [Phys. Rev. Lett. **134** 031001 (2025)](https://link.aps.org/doi/10.1103/PhysRevLett.134.031001)
+        <br>
+
+        <div style="text-align: center; float: left; width: 50%">
+          <br>
+          <!-- <img src="img/dme-amplitude-b.png" width="90%"><br> -->
+          <div class="r-stack">
+          <img class="fragment fade-out" data-fragment-index="1" src="img/deff.png" width="90%"><br> 
+          <img src="img/dme2.png" width="90%"><br>
+          </div>
+          <font size="4"><a href="http://arxiv.org/abs/2312.13723">[Phys.Rev.Lett. <b>134</b> 031001 (2025)]</a></font>
+        </div>
+
+        <div style="text-align: left; float: right; width: 50%">
+
+          * Existing data: [Schioppo _et al._, Nat.Comms 13 (2022)](https://www.nature.com/articles/s41467-021-27884-3)
+          * Comparison of ultra-stable cavity lasers
+          * 750 km apart (2220 km Fibre cable: PTB to NPL via SYRTE)
+          * Sensitive to _spatial_ phase shift
+
+          <br>
+          
+          * Also: Data from GPS satellites (Rb clocks)
+          * Clocks less accurate, but setup sensitive to _temporal_ term
+
+          <br>
+
+          * First Constraints on $d_{m_e}$ alone at low-frequency<br>
+          * Sensitivity to _spatial_ fluctions of DM, daily oscillation<br>
+          
+          <br>
+          <div class="fragment fade-in" data-fragment-index="2">
+          <img src="img/dailymod.png" width="90%"><br>
+          </div>
+
+        </div>
+
+        <!-- <img src="img/deff.png" width="90%"><br> -->
+
+      </textarea>
+        </section>
+
+
 
         <!-- =============================================================== -->
         <section data-markdown>
@@ -1439,36 +1424,40 @@
               <font size="4">[P. Thirolf, LMU]</font>
               <br><br>
               <div style="text-align: left; padding-left: 5%">
-                <h2>Fundamental physics applications</h2>
-                <br>
-                <h3>• Probe variation of fundamental constants</h3>
-                <br>
-                <h3>• Highly sensitive <font color="orange">dark matter</font> detector</h3>
-                <br>
-                <h3>• Test of local Lorentz invariance and CPT</h3>
+
+              <div class="fragment" data-fragment-index="2">
+              <h2>Timekeeping</h2>
+              <br>
+              <h3>• No perturbation from external fields</h3>
+              <h3> &emsp; • Nucleus shielded from environment</h3>
+              </div>
               </div>
             </div>
 
             <div style="text-align: left; float: right; width: 48%">
-
-              <h2>Nuclear clock</h2>
               <br>
+              <div class="fragment" data-fragment-index="1">
               <h3>• Unique low-energy nuclear transition (~8 eV)</h3>
               <br>
               <h3>• First laser excitation of a nuclear transition (2024)</h3>
+              <h4> &emsp; • E. Peik (PTB), T. Schumm (Vienna) <a href="https://link.aps.org/doi/10.1103/PhysRevLett.132.182501">Phys. Rev. Lett. <b>132</b> 182501</a></h4>
               <br>
+              <div class="fragment" data-fragment-index="3">
               <h3>• Nuclear energy: balance of <font color="orange">QCD</font> vs. Coulomb</h3>
-              <h3> &emsp; • Sensitive to strong-force physics, not just EM</h3>
-              <h3> &emsp; • Inaccessible to atomic clocks</h3>
+              <h3> &emsp; • Nuclear scale $\sim$ MeV $\rightarrow$ eV</h3>
+              <h3> &emsp; • Fine tuning: high sensitivity</h3>
+              </div>
+              </div>
               <br><br>
 
-              <h2>Timekeeping</h2>
+              <div class="fragment" data-fragment-index="4">
+              <h2>Fundamental Physics</h2>
               <br>
-              <h3>• No perturbation from electron shell</h3>
-              <h3> &emsp; • Nucleus shielded from environment</h3>
-              <br>
-              <h3>• Potential for compact, robust clock</h3>
-              <h3> &emsp; • Solid-state: Th doped in crystal</h3>
+              <h3>• Probe variation of fundamental constants</h3>
+              <h4>  &emsp; • Flambaum, <a href="https://link.aps.org/doi/10.1103/PhysRevLett.97.092502">Phys. Rev. Lett. <b>97</b>, 092502 (2006)</a>
+              <h3>• Highly sensitive <font color="orange">dark matter</font> detector</h3>
+              <h3>• Test of local Lorentz invariance and CPT</h3>
+              </div>
 
             </div>
 
@@ -1673,6 +1662,49 @@
 
 
         </textarea>
+        </section>
+
+
+        <!-- =============================================================== -->
+        <section data-markdown 
+          data-transition="fade-in fade-out" data-visibility="uncounted">
+          <textarea data-template>
+
+          # Optical atomic clocks
+
+          <br><br>
+
+          <div class="fragment fade-in" style="text-align: left; float: left; width: 55%">
+            <img src="img/Stability.png" width="95%"><br>
+            <font size="3"> [M. Safronova]</font>
+            <br>
+            <br>
+            <br>
+
+            * Requires ultra-stable laser ("see" narrow line)
+            * Frequency comb ("listen" to high frequency)
+
+          </div>
+
+          <div class="fragment fade-in" style="text-align: center; float: right; width: 45%">
+            <img src="img/basicclock2.png" width="95%">
+            <font size="3">[Centre for Quantum Technologies | U. Singapore]</font>
+            <br>
+            <br>
+            <br>
+            <img src="img/Diddams-Comb.png" width="95%">
+            <font size="3">[Diddams <i>et al.</i>, Science <b>369</b>, 3676 (2020)]</font>
+          </div>
+          
+
+          <div class="fragment fade-in">
+            <br>
+
+            * Accurate to parts in $10^{18}$
+            * better than 1 s over lifetime of the universe!
+          </div>
+
+          </textarea>
         </section>
 
         <!-- =============================================================== -->
