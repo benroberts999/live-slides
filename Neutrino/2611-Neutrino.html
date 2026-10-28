@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html class="sl-root decks export offline loaded">
+
+  <head>
+    <title>Hunting Ghosts in the Ice</title>
+    <script>const PRINT_MODE = false;</script>
+
+    <link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
+
+    <style>
+      .reveal, .reveal .slide-background { background-color: black; }
+    </style>
+
+  </head>
+
+  <body class="reveal-viewport theme-font-helvetica theme-color-black-blue">
+    <div class="reveal">
+      <!-- Footer -->
+      <div style="
+          position: absolute;
+          bottom: 10px;
+          left: 20px;
+          font-size: 1.0vw;
+          color: #a0a0a0;
+          z-index: 500;
+        ">
+        Ben Roberts (UQ) &mdash; 2026 &mdash; <a
+          href="https://broberts.io/slides">broberts.io/slides</a>
+      </div>
+      <div class="slides">
+
+        <!-- Scaffold built from .claude/icecube-colloquium-outline.md -->
+        <!-- Each slide comment: [outline slide #] Title | aim | planned figure -->
+
+        <!-- ######################################################################## -->
+        <!-- ACT 1 — Hook, the Nobel, neutrino basics (outline slides 1–5, ~8 min)    -->
+        <!-- ######################################################################## -->
+
+        <!-- =============================================================== -->
+        <!-- [1] Title | Halzen + Nobel medal + Bert & Ernie (hook for the 2013 slide) side by side; no UQ/BQI/ARC logos (talk not supported by them) | Halzen photo: news.wisc.edu; Bert & Ernie: Sesame Street; medal not cited -->
+        <!-- TEMP background: delete the three data-background-* attributes to remove; opacity 0–1 -->
+        <section data-markdown
+          data-background-image="img/IceCube1.webp"
+          data-background-size="cover"
+          data-background-opacity="0.15">
+          <textarea data-template>
+
+          ## Hunting Ghosts in the Ice
+          ## _Neutrinos, IceCube, and the 2026 Nobel Prize_
+
+          <br>
+
+          <div style="display: flex; justify-content: center; align-items: center; gap: 60px">
+            <div style="width: 32%; text-align: center">
+              <img src="img/Halzen.jpg" style="width: 100%; margin: 0 auto 1px auto"><br>
+              <font size="3" color="#a0a0a0">[<a href="https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/">news.wisc.edu</a>]</font>
+              <h4 style="margin: 6px 0 0 0">Francis Halzen</h4>
+            </div>
+            <img src="img/nobel-medal.png" style="height: 240px; margin: 0; background: none; border: none">
+            <div style="width: 22%; text-align: center; position: relative; top: 47px">  <!-- top: shifts Bert & Ernie down; tune to align names -->
+              <img src="img/Bert_and_Ernie.jpeg" style="width: 100%; margin: 0 auto 1px auto"><br>
+              <font size="3" color="#a0a0a0">[Sesame Street]</font>
+              <h4 style="margin: 6px 0 0 0">Bert and Ernie</h4>
+            </div>
+          </div>
+
+          <br>
+          <br>
+          <br>
+
+          #### Benjamin M. Roberts
+
+          _School of Mathematics and Physics,
+          University of Queensland, Australia_
+
+          <br>
+
+          <div style="font-size: 0.8em">Physics Colloquium &mdash; 6 November 2026</div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [2] Pauli's "desperate remedy" | history hook: invented, not found | Fig: Pauli letter scan + five-prize timeline strip -->
+        <section data-markdown>
+          <textarea data-template>
+          # Pauli's "desperate remedy"
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [2a] History of neutrinos (our point of view) | theorised → named → detected → multiplied → astronomy; each year is a fragment, description as a dot point beneath -->
+        <!--      Nobel medal: img/nobel-medal.png (Wikimedia Commons, User:Gusme, CC BY-SA 3.0). 2002 appears twice (Davis + Koshiba shared it): six medals, five prizes -->
+        <!--      Images (right, r-stack): one at a time, synced to the points via data-fragment-index 1–8. An image stays up until the next one appears. -->
+        <!--      To add one for point n: add a fade-in wrapper at index n, and set the preceding image's fade-out index to n. -->
+        <!--      Unused ideas: Pauli's 1930 letter (1930), Davis's Homestake tank (1968), Super-K zenith plot (1998), IceCube event (2013) -->
+        <section data-markdown>
+          <textarea data-template>
+          # History of neutrinos
+          ## _(our point of view)_
+
+          <div style="text-align: center; float: right; width: 42%">
+            <br>
+            <br>
+            <div class="r-stack">
+              <!-- Telegram: from 1956 (point 3) until SN1987A (point 6) -->
+              <div class="fragment fade-out" data-fragment-index="6" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="3">
+                  <img src="img/telegram.jpg" width="95%" style="margin: 15px auto"><br>
+                  <font size="3" color="#a0a0a0">[Reines &amp; Cowan to Pauli, June 1956: CERN Pauli Archive]</font>
+                </div>
+              </div>
+              <!-- SN1987A, Kamiokande-II: from 1987 (point 6) to the end -->
+              <div class="fragment fade-in" data-fragment-index="6" style="width: 100%">
+                <img src="img/PhysRevLett.58.1490.png" width="95%" style="margin: 15px auto; background: white"><br>
+                <font size="3" color="#a0a0a0">[Hirata <i>et al.</i>, <a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.58.1490">Phys. Rev. Lett. <b>58</b>, 1490 (1987)</a>]</font>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: left; float: left; width: 56%; font-size: 0.75em">
+            <br>
+            <div class="fragment" data-fragment-index="1">
+              <h4 style="margin: 0"><span style="color: cyan">1930</span> &ensp; <b>Theorised</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• Pauli's "desperate remedy": an undetectable neutral particle saves energy conservation in $\beta$ decay</h4>
+            </div>
+            <div class="fragment" data-fragment-index="2">
+              <h4 style="margin: 0"><span style="color: cyan">1934</span> &ensp; <b>Named</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• Fermi's theory of $\beta$ decay; Bethe and Peierls: $\sigma \sim 10^{-44}$ cm$^2$, "no practically possible way of observing"</h4>
+            </div>
+            <div class="fragment" data-fragment-index="3">
+              <h4 style="margin: 0"><span style="color: cyan">1956</span> &ensp; <b>Detected</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1995</span></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• Reines and Cowan catch reactor $\bar\nu_e$ at Savannah River: $\bar\nu_e + p \to e^+ + n$</h4>
+            </div>
+            <div class="fragment" data-fragment-index="4">
+              <h4 style="margin: 0"><span style="color: cyan">1962</span> &ensp; <b>Multiplied</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1988</span></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• $\nu_\mu \neq \nu_e$ at Brookhaven; $\nu_\tau$ at Fermilab (DONUT) in 2000</h4>
+            </div>
+            <div class="fragment" data-fragment-index="5">
+              <h4 style="margin: 0"><span style="color: cyan">1968</span> &ensp; <b>From the Sun</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• Davis's Homestake tank finds $\tfrac13$ of the predicted $\nu_e$: the solar neutrino problem</h4>
+            </div>
+            <div class="fragment" data-fragment-index="6">
+              <h4 style="margin: 0"><span style="color: cyan">1987</span> &ensp; <b>From a supernova</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
+            </div>
+            <div class="fragment" data-fragment-index="7">
+              <h4 style="margin: 0"><span style="color: cyan">1998–2002</span> &ensp; <b>Oscillating, so massive</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2015</span></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• Super-K (atmospheric) and SNO (solar): flavours change in flight</h4>
+            </div>
+            <div class="fragment" data-fragment-index="8">
+              <h4 style="margin: 0"><span style="color: cyan">2013</span> &ensp; <b>From the cosmos</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2026</span></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• IceCube: TeV–PeV neutrinos from beyond the Galaxy</h4>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [2b] History of neutrinos (their point of view) | equilibrium → freeze-out → photon reheating → BBN → stars → supernovae → CνB today; each epoch is a fragment, description as a dot point beneath -->
+        <!--      Fig 1: cosmic-history timeline with "ν decouple, t = 1 s" marked beside "CMB, 380 kyr" (ESA/Planck or NASA/WMAP). Fig 2: the Sun imaged in neutrinos (Super-Kamiokande; APOD 5 Jun 1998, R. Svoboda and K. Gordan) -->
+        <!--      Alts: SN1987A remnant (HST); Bahcall solar-neutrino spectrum; Γ/H vs T sketch; T_ν vs T_γ through e+e- annihilation -->
+        <section data-markdown>
+          <textarea data-template>
+          # History of neutrinos
+          ## _(their point of view)_
+
+          <div style="text-align: left; float: left; width: 56%; font-size: 0.75em">
+            <br>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">$t < 1$ s</span> &ensp; <b>In equilibrium</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• $T > 1$ MeV: weak reactions ($\nu\bar\nu \leftrightarrow e^+e^-$, $\nu e \leftrightarrow \nu e$) keep neutrinos thermal with everything else</h4>
+            </div>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">$t \approx 1$ s</span> &ensp; <b>Freeze-out</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• $\Gamma \sim G_F^2 T^5$ falls below $H \sim T^2/M_{\rm Pl}$: neutrinos decouple and free-stream ever after</h4>
+            </div>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">$t \approx$ few s</span> &ensp; <b>Left out in the cold</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• $e^+e^-$ annihilation reheats the photons, not the neutrinos: $T_\nu = (4/11)^{1/3}\, T_\gamma$</h4>
+            </div>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">$t \approx 3$ min</span> &ensp; <b>Set the helium</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• The same weak reactions freeze $n/p \approx 1/7$ $\Rightarrow$ 25% $^4$He by mass (BBN)</h4>
+            </div>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">$\gtrsim 10^8$ yr</span> &ensp; <b>Stars</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• Two $\nu_e$ per $^4$He made; the Sun emits $2\times10^{38}$ $\nu$/s: 65 billion cross your thumbnail each second</h4>
+            </div>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">Core collapse</span> &ensp; <b>Supernovae</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• 99% of $3\times10^{53}$ erg leaves as $10^{58}$ neutrinos in $\sim$10 s, and they help drive the explosion</h4>
+            </div>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">Today</span> &ensp; <b>Cosmic neutrino background</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• $T_\nu \approx 1.95$ K, $\sim$340 cm$^{-3}$; never directly detected, but felt via $N_{\rm eff} \approx 3.04$ (CMB) and structure growth ($\sum m_\nu \lesssim 0.1$ eV)</h4>
+            </div>
+            <div class="fragment">
+              <h4 style="margin: 0"><span style="color: cyan">Also</span> &ensp; <b>Everything else</b></h4>
+              <h4 style="margin: 0 0 12px 0">&emsp;• Earth's radioactivity, reactors, cosmic-ray showers, cosmic accelerators (TeV–PeV), and the still-unseen EeV cosmogenic (GZK) flux</h4>
+            </div>
+            <h4 class="fragment" style="margin: 12px 0 0 0">&emsp;<b>The most abundant matter particle, and the oldest relic: nothing has touched one since the first second</b></h4>
+          </div>
+
+          <div style="text-align: center; float: right; width: 42%">
+            <br>
+            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
+              <div>Image 1 &mdash; Cosmic-history timeline, with "neutrinos decouple, $t = 1$ s" marked beside "CMB, $t = 380{,}000$ yr"<br>[ESA/Planck or NASA/WMAP "History of the Universe"]</div>
+            </div>
+            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
+              <div>Image 2 &mdash; The Sun, imaged in neutrinos (500 days of Super-Kamiokande data)<br>[APOD 5 June 1998, R. Svoboda and K. Gordan (LSU)]</div>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [3] What is a neutrino? | minimum particle physics for the talk | Fig: SM table, neutrino column highlighted -->
+        <section data-markdown>
+          <textarea data-template>
+          # What is a neutrino?
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [4] Why "ghost"? | detection problem → design principle; eqn 1 of 2: σ ∝ E | Fig: ν–N cross-section vs energy (GeV/TeV/PeV marked) -->
+        <section data-markdown>
+          <textarea data-template>
+          # Why "ghost"?
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment" style="font-size: 1.5em">
+              $$E = mc^2$$
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [5] The neutrino sky, 30 orders of magnitude | one plot of every source; point to high-energy end | Fig: grand unified neutrino spectrum (Vitagliano et al. 2020), IceCube band shaded -->
+        <section data-markdown>
+          <textarea data-template>
+          ## The neutrino sky, 30 orders of magnitude
+
+          <br>
+
+          <div style="text-align: center; float: center; width: 95%">
+            <img src="../DarkMatter/img/xe-photoel.png" width="55%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+          <br>
+
+          <div class="fragment" style="text-align: left; float: center; width: 65%">
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- ######################################################################## -->
+        <!-- ACT 2 — Why neutrinos matter; why ghosts are messengers (slides 6–9, ~8 min) -->
+        <!-- ######################################################################## -->
+
+        <!-- =============================================================== -->
+        <!-- Act 2 divider -->
+        <section data-markdown>
+          <textarea data-template>
+
+            <br><br><br><br><br><br><br><br>
+            # Why neutrinos matter
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [6] The mass puzzle (Nobel 2015) | the one BSM fact everyone can hold | Fig: Super-K zenith-angle deficit, or P(νμ→νμ) vs L/E -->
+        <section data-markdown>
+          <textarea data-template>
+          # The mass puzzle (Nobel 2015)
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [7] The open questions | where the big unsolved problems live | Fig: normal vs inverted mass-ordering ladders -->
+        <section data-markdown>
+          <textarea data-template>
+          # The open questions
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [8] Why ghosts make the best messengers | slide 4 turned inside out | Fig: Nobel "Messengers from space", or gamma-ray horizon vs energy -->
+        <section data-markdown>
+          <textarea data-template>
+          ## Why ghosts make the best messengers
+
+          <br>
+
+          <div style="text-align: center; float: center; width: 95%">
+            <img src="../DarkMatter/img/xe-photoel.png" width="55%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+          <br>
+
+          <div class="fragment" style="text-align: left; float: center; width: 65%">
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [9] The 100-year cosmic-ray question | why IceCube was built; Waxman–Bahcall sets the size | Fig: all-particle CR spectrum (knee, ankle, LHC); optional Hillas plot -->
+        <section data-markdown>
+          <textarea data-template>
+          # The 100-year cosmic-ray question
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- ######################################################################## -->
+        <!-- ACT 3 — IceCube: what it is and how it works (slides 10–13, ~9 min, most technical) -->
+        <!-- ######################################################################## -->
+
+        <!-- =============================================================== -->
+        <!-- Act 3 divider -->
+        <section data-markdown>
+          <textarea data-template>
+
+            <br><br><br><br><br><br><br><br>
+            # IceCube: what it is and how it works
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [10] From Markov's idea to a cubic kilometre | lineage; the bet that ice beats water | Fig: timeline/map of neutrino telescopes (DUMAND, Baikal, AMANDA, ANTARES, IceCube, KM3NeT); AMANDA deployment photo -->
+        <section data-markdown>
+          <textarea data-template>
+          ## From Markov's idea to a cubic kilometre
+
+          <br>
+
+          <div style="text-align: center; float: center; width: 95%">
+            <img src="../DarkMatter/img/xe-photoel.png" width="55%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+          <br>
+
+          <div class="fragment" style="text-align: left; float: center; width: 65%">
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [11] IceCube by the numbers | the scale, in one schematic | Fig: IceCube schematic with Eiffel Tower (IceCube/NSF); inset DOM going down a hole -->
+        <section data-markdown>
+          <textarea data-template>
+          # IceCube by the numbers
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [12] How it sees: Cherenkov light in the clearest ice on Earth | the one piece of detector physics + glaciology surprise; eqn 2 of 2: cos θ = 1/(nβ) | Fig L: Cherenkov cone over DOM photo; Fig R: absorption/scattering length vs depth with dust layer -->
+        <section data-markdown>
+          <textarea data-template>
+          # How it sees: Cherenkov light in the clearest ice on Earth
+
+          <div>
+            <div style="text-align: left; float: left; width: 50%">
+              <div class="fragment fade-in">
+                <br>
+                <h3>Left heading</h3>
+                <img src="../DarkMatter/img/xe-photoel.png" width="85%">
+                <h4>&emsp;• Dot point one</h4>
+                <h4>&emsp;• Dot point two</h4>
+              </div>
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <div class="fragment fade-in">
+                <br>
+                <h3>Right heading</h3>
+                <img src="../DarkMatter/img/xe-photoel.png" width="85%">
+                <h4>&emsp;• Dot point one</h4>
+                <h4>&emsp;• Dot point two</h4>
+              </div>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [13] Tracks, cascades, and beating the background | what an event looks like; proving it is not atmospheric | Fig: three event displays (track, cascade, double-bang); cartoon of Earth-filter vs starting-event veto -->
+        <section data-markdown>
+          <textarea data-template>
+          # Tracks, cascades, and beating the background
+
+          ### Subheading
+
+          <br>
+          <div>
+            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="95%"><br>
+              <font size="3">[Source]</font>
+              <h3>Caption one</h3>
+            </div>
+
+            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%; margin-left: 2%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="95%"><br>
+              <font size="3">[Source]</font>
+              <h3>Caption two</h3>
+            </div>
+
+            <div class="fragment fade-in" style="text-align: center; float: right; width: 32%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="95%"><br>
+              <font size="3">[Source]</font>
+              <h3>Caption three</h3>
+            </div>
+          </div>
+
+          <div class="fragment fade-in" style="text-align: left; float: left; width: 100%">
+            <br>
+            <h3>&emsp;• Summary dot point</h3>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- ######################################################################## -->
+        <!-- ACT 4 — What IceCube found, and why it matters (slides 14–17, ~9 min)   -->
+        <!-- ######################################################################## -->
+
+        <!-- =============================================================== -->
+        <!-- Act 4 divider -->
+        <section data-markdown>
+          <textarea data-template>
+
+            <br><br><br><br><br><br><br><br>
+            # What IceCube found
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [14] 2013: Bert, Ernie, and a new sky | the discovery the prize is for | Fig L: Bert & Ernie event displays; Fig R: 2013 HESE spectrum with atmospheric expectation shaded -->
+        <section data-markdown>
+          <textarea data-template>
+          # 2013: Bert, Ernie, and a new sky
+
+          <div>
+            <div style="text-align: left; float: left; width: 50%">
+              <div class="fragment fade-in">
+                <br>
+                <h3>Left heading</h3>
+                <img src="../DarkMatter/img/xe-photoel.png" width="85%">
+                <h4>&emsp;• Dot point one</h4>
+                <h4>&emsp;• Dot point two</h4>
+              </div>
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <div class="fragment fade-in">
+                <br>
+                <h3>Right heading</h3>
+                <img src="../DarkMatter/img/xe-photoel.png" width="85%">
+                <h4>&emsp;• Dot point one</h4>
+                <h4>&emsp;• Dot point two</h4>
+              </div>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [15] 2017: the first named source | multimessenger astronomy in one event | Fig: Fermi sky with IceCube-170922A error circle on TXS 0506+056; artist's blazar jet -->
+        <section data-markdown>
+          <textarea data-template>
+          # 2017: the first named source
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [16] Steady sources and the Milky Way in neutrinos | from one lucky event to a map; honest caveats | Fig: Milky Way neutrino vs optical composite (Science 2023); NGC 1068 sky map (Science 2022) -->
+        <section data-markdown>
+          <textarea data-template>
+          # Steady sources and the Milky Way in neutrinos
+
+          <div>
+            <div style="text-align: center; float: left; width: 50%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="50%"><br>
+              <h4>Caption one</h4>
+            </div>
+            <div style="text-align: center; float: right; width: 50%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="50%"><br>
+              <h4>Caption two</h4>
+            </div>
+          </div>
+
+          <div style="clear: both"></div>
+
+          <div class="fragment">
+            <div style="text-align: center; float: left; width: 50%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="50%"><br>
+              <h4>Caption three</h4>
+            </div>
+            <div style="text-align: center; float: right; width: 50%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="50%"><br>
+              <h4>Caption four</h4>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [17] Particle physics with an ice cube | electroweak tests; bridge to UQ dark-matter work | Fig L: ν–N cross-section with IceCube points + SM curve (Nature 2017); Fig R: Glashow event display -->
+        <section data-markdown>
+          <textarea data-template>
+          # Particle physics with an ice cube
+
+          <div>
+            <div style="text-align: left; float: left; width: 50%">
+              <div class="fragment fade-in">
+                <br>
+                <h3>Left heading</h3>
+                <img src="../DarkMatter/img/xe-photoel.png" width="85%">
+                <h4>&emsp;• Dot point one</h4>
+                <h4>&emsp;• Dot point two</h4>
+              </div>
+            </div>
+
+            <div style="text-align: left; float: right; width: 50%">
+              <div class="fragment fade-in">
+                <br>
+                <h3>Right heading</h3>
+                <img src="../DarkMatter/img/xe-photoel.png" width="85%">
+                <h4>&emsp;• Dot point one</h4>
+                <h4>&emsp;• Dot point two</h4>
+              </div>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- ######################################################################## -->
+        <!-- ACT 5 — The future, the person, the take-home (slides 18–20, ~6 min)    -->
+        <!-- ######################################################################## -->
+
+        <!-- =============================================================== -->
+        <!-- Act 5 divider -->
+        <section data-markdown>
+          <textarea data-template>
+
+            <br><br><br><br><br><br><br><br>
+            # The future, the person, the take-home
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [18] What comes next | inflection point; the players; the KM3NeT 220 PeV anomaly | Fig: Gen2 footprint over IceCube; world map of neutrino telescopes; KM3NeT event display -->
+        <section data-markdown>
+          <textarea data-template>
+          # What comes next
+
+          ### Subheading
+
+          <br>
+          <div>
+            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="95%"><br>
+              <font size="3">[Source]</font>
+              <h3>Caption one</h3>
+            </div>
+
+            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%; margin-left: 2%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="95%"><br>
+              <font size="3">[Source]</font>
+              <h3>Caption two</h3>
+            </div>
+
+            <div class="fragment fade-in" style="text-align: center; float: right; width: 32%">
+              <img src="../DarkMatter/img/xe-photoel.png" width="95%"><br>
+              <font size="3">[Source]</font>
+              <h3>Caption three</h3>
+            </div>
+          </div>
+
+          <div class="fragment fade-in" style="text-align: left; float: left; width: 100%">
+            <br>
+            <h3>&emsp;• Summary dot point</h3>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [19] Francis Halzen | a theorist who built the biggest experiment on Earth and never saw it | Fig: Halzen portrait (UW–Madison / Nobel Outreach) + Quarks and Leptons cover; optional collaboration photo -->
+        <section data-markdown>
+          <textarea data-template>
+          # Francis Halzen
+
+          <br>
+
+          <div style="text-align: left; float: left; width: 50%">
+            <br>
+            <h2>Heading</h2>
+            <h3>&emsp;• Dot point one</h3>
+            <h3>&emsp;• Dot point two</h3>
+            <h3>&emsp;• Dot point three</h3>
+            <br>
+            <div class="fragment">
+              <h2>Second heading</h2>
+              <h3>&emsp;• Dot point one</h3>
+              <h3>&emsp;• Dot point two</h3>
+            </div>
+          </div>
+
+          <div style="text-align: center; float: right; width: 50%">
+            <br>
+            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
+            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [20] Take-home | one slide to repeat at dinner | Fig: Milky Way in neutrinos or Nobel illustration (consider a full-bleed image slide before this one) -->
+        <section data-markdown>
+          <textarea data-template>
+          # Take-home
+
+          <div style="text-align: left; float: left; width: 40%">
+
+          <br>
+
+          ### Heading one
+
+          * Dot point one
+          * Dot point two
+
+          <br>
+
+          ### Heading two
+
+          * Dot point one
+          * Dot point two
+
+          <br>
+          <br>
+
+          #### Venue, 2026
+
+          <br>
+
+          #### Benjamin M. Roberts
+
+          _University of Queensland, Australia_
+
+          </div>
+
+          <div style="text-align: left; float: right; width: 60%">
+
+            <br>
+
+            * Authors, [Journal **Vol**, Page (Year)](https://doi.org/), [[arXiv]](http://arxiv.org/abs/)
+            <br>
+            * Authors, [Journal **Vol**, Page (Year)](https://doi.org/), [[arXiv]](http://arxiv.org/abs/)
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- ======================================================================= -->
+        <!-- ======================================================================= -->
+
+        <!-- =============================================================== -->
+        <section data-markdown data-visibility="uncounted">
+          <textarea data-template>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <h1>Extra</h1>
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+      </div>
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
+    <script>
+    var SLConfig = {};
+    // Use local fonts
+    SLConfig.fonts_url = '../lib/fonts/';
+  </script>
+    <script src="../lib/reveal.js"></script>
+    <script src="../lib/reveal-plugins.js"></script>
+    <script src="../lib/offline.js"></script>
+    <script src="../plugin/math/math.js"></script>
+
+    <!-- Initialize the presentation -->
+    <script>
+    Reveal.initialize({
+      width: 1920,
+      height: 1080,
+      margin: 0.06,
+
+      hash: true,
+      controls: true,
+      progress: true,
+      mouseWheel: false,
+      showNotes: false,
+      slideNumber: true,
+      fragmentInURL: true,
+
+      autoSlide: 0,
+      autoSlideStoppable: true,
+
+      autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+      center: true,
+      shuffle: false,
+      loop: false,
+      rtl: false,
+      navigationMode: "default",
+
+      transition: "none",
+      backgroundTransition: "none",
+
+      highlight: {
+        escapeHTML: false
+      },
+
+      plugins: [RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX]
+    });
+  </script>
+    <script>
+    if (PRINT_MODE) window.addEventListener('load', () => {
+      document.querySelectorAll('.fragment').forEach(el => el.classList.remove('fragment'));
+      const footer = document.querySelector('.reveal > div[style*="position: absolute"]');
+      if (footer) {
+        document.querySelectorAll('.slides section').forEach(slide => {
+          const clone = footer.cloneNode(true);
+          clone.style.position = 'absolute';
+          clone.style.bottom = "-40px";
+          clone.style.fontSize = '0.85em';
+          slide.appendChild(clone);
+        });
+        footer.remove();
+      }
+    });
+  </script>
+  </body>
+
+</html>
