@@ -1,0 +1,64 @@
+% Beta-minus decay: Fermi's contact interaction vs W-boson exchange.
+% Uses feynmp (MetaPost flavour of the feynmf bundle) via feynmp-auto.
+% Build (in this directory):
+%   pdflatex -shell-escape fermi-vs-W.tex && pdflatex -shell-escape fermi-vs-W.tex
+%   pdftocairo -svg fermi-vs-W.pdf fermi-vs-W.svg
+\documentclass[border=6pt]{standalone}
+\usepackage{feynmp-auto}
+\usepackage{xcolor}
+
+\newif\ifdark \darktrue          % \darkfalse = black on white
+\newcommand{\blobsize}{4mm}      % size of the four-point blob
+\newcommand{\figfont}{\LARGE}    % font size for labels and captions
+\newcommand{\arrowgap}{\quad}   % space either side of the middle arrow
+
+\ifdark \pagecolor{black} \fi
+\unitlength=1mm
+
+\begin{document}
+\ifdark \color{white} \fi
+\figfont
+\begin{fmffile}{fermiW}
+  \ifdark \fmfcmd{foreground := white; background := black;} \fi
+  \fmfset{thin}{0.8pt}
+  \fmfset{arrow_len}{3mm}
+  \fmfset{wiggly_len}{3mm}
+  \begin{tabular}{c@{}c@{}c}
+    % --- Fermi: four-point contact interaction ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){% margins (left,top)(right,bottom) leave room for labels
+    \begin{fmfgraph*}(36,30)
+      \fmfleft{n,p}
+      \fmfright{nub,e}
+      \fmf{fermion}{n,v}
+      \fmf{fermion}{v,p}
+      \fmf{fermion}{v,e}
+      \fmf{fermion}{nub,v}
+      \fmfv{decor.shape=circle,decor.filled=full,decor.size=\blobsize}{v}
+      \fmflabel{$n$}{n}
+      \fmflabel{$p$}{p}
+      \fmflabel{$e^-$}{e}
+      \fmflabel{$\bar\nu_e$}{nub}
+    \end{fmfgraph*}}}}$
+    &
+    $\arrowgap\longrightarrow\arrowgap$
+    &
+    % --- W-boson exchange ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){%
+    \begin{fmfgraph*}(50,30)
+      \fmfleft{n,p}
+      \fmfright{nub,e}
+      \fmf{fermion}{n,v1}
+      \fmf{fermion}{v1,p}
+      \fmf{boson,label=$W^-$,label.side=right}{v1,v2}
+      \fmf{fermion}{v2,e}
+      \fmf{fermion}{nub,v2}
+      \fmflabel{$n$}{n}
+      \fmflabel{$p$}{p}
+      \fmflabel{$e^-$}{e}
+      \fmflabel{$\bar\nu_e$}{nub}
+    \end{fmfgraph*}}}}$
+    \\[2mm]
+    Fermi's theory & & $W$-boson exchange
+  \end{tabular}
+\end{fmffile}
+\end{document}
