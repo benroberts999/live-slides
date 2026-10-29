@@ -6,9 +6,34 @@
     <script>const PRINT_MODE = false;</script>
 
     <link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
-
+    <!-- #2F90F8; -->
     <style>
+      /* slide background */
       .reveal, .reveal .slide-background { background-color: black; }
+      /* body text colour (headings inherit it) */
+      .theme-color-black-blue .reveal { color: #fff; }
+      /* link colour */
+      .theme-color-black-blue .reveal a { color: #91c6fe; }
+      /* link colour on mouse hover */
+      .theme-color-black-blue .reveal a:hover { color: #79b7fa; }
+      /* font and base size (em sizes scale with it; px sizes don't) */
+      .theme-font-helvetica .reveal { font-family: Helvetica, Arial, sans-serif; font-size: 30px; }
+      /* line spacing */
+      .theme-font-helvetica .reveal section { line-height: 1.3; }
+      /* h1 size */
+      .reveal h1 { font-size: 1.75em; }
+      /* h2 size */
+      .reveal h2 { font-size: 1.15em; }
+      /* h3 size */
+      .reveal h3 { font-size: 1.00em; }
+      /* h4 size */
+      .reveal h4 { font-size: 1.00em; }
+      /* navigation arrows colour */
+      .theme-color-black-blue .reveal .controls { color: #2F90F8; }
+      /* progress bar colour */
+      .theme-color-black-blue .reveal .progress { color: #2F90F8; }
+      /* citation / image-credit colour (all grey credits use class="credit") */
+      .reveal .credit { color: #a0a0a0; }
     </style>
 
   </head>
@@ -53,13 +78,13 @@
           <div style="display: flex; justify-content: center; align-items: center; gap: 60px">
             <div style="width: 32%; text-align: center">
               <img src="img/Halzen.jpg" style="width: 100%; margin: 0 auto 1px auto"><br>
-              <font size="3" color="#a0a0a0">[<a href="https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/">news.wisc.edu</a>]</font>
+              <font size="3" class="credit">[<a href="https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/">news.wisc.edu</a>]</font>
               <h4 style="margin: 6px 0 0 0">Francis Halzen</h4>
             </div>
             <img src="img/nobel-medal.png" style="height: 240px; margin: 0; background: none; border: none">
             <div style="width: 22%; text-align: center; position: relative; top: 47px">  <!-- top: shifts Bert & Ernie down; tune to align names -->
               <img src="img/Bert_and_Ernie.jpeg" style="width: 100%; margin: 0 auto 1px auto"><br>
-              <font size="3" color="#a0a0a0">[Sesame Street]</font>
+              <font size="3" class="credit">[Sesame Street]</font>
               <h4 style="margin: 6px 0 0 0">Bert and Ernie</h4>
             </div>
           </div>
@@ -114,7 +139,7 @@
         <!-- =============================================================== -->
         <!-- [2a] History of neutrinos (our point of view) | theorised → named → detected → multiplied → astronomy; each year is a fragment, description as a dot point beneath -->
         <!--      Nobel medal: img/nobel-medal.png (Wikimedia Commons, User:Gusme, CC BY-SA 3.0). 2002 appears twice (Davis + Koshiba shared it): six medals, five prizes -->
-        <!--      Images (right, r-stack): one at a time, synced to the points via data-fragment-index 1–8. An image stays up until the next one appears. -->
+        <!--      Images (right, r-stack): one at a time, synced to the points via data-fragment-index 1–11. An image stays up until the next one appears. -->
         <!--      To add one for point n: add a fade-in wrapper at index n, and set the preceding image's fade-out index to n. -->
         <!--      Unused ideas: Pauli's 1930 letter (1930), Davis's Homestake tank (1968), Super-K zenith plot (1998), IceCube event (2013) -->
         <section data-markdown>
@@ -134,14 +159,14 @@
                     <img src="img/Beta_spectrum_of_RaE_inverted.png" style="width: 90%; margin: 0px">
                     <img src="img/Beta-minus_Decay_wiki.png" style="position: absolute; top: 3%; right: 3%; width: 47%; margin: 0">
                   </div>
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" color="#a0a0a0">&emsp;[F Klemm + Inductiveload/ Wikimedia Commons] </font></div>
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">&emsp;[F Klemm + Inductiveload/ Wikimedia Commons] </font></div>
                 </div>
                 <div class="fragment fade-in" data-fragment-index="3">
                   <div style="display: flex; justify-content: center; gap: 40px">
                     <div>
                       <br>
                       <img src="img/Enrico_Fermi_1943-49_DeptEnergy.jpg" style="height: 300px; margin: 0px auto 0px auto">
-                      <div style="font-size: 16px; line-height: 1.2"><font size="3" color="#a0a0a0">[US Dept. of Energy]</font></div>
+                      <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[US Dept. of Energy]</font></div>
                     </div>
                     <!-- right column spans the Fermi photo: equation at its top, image at its bottom -->
                     <div style="height: 320px; margin-top: 15px; display: flex; flex-direction: column; justify-content: space-between; align-items: center">
@@ -152,44 +177,62 @@
                   </div>
                 </div>
               </div>
-              <!-- Telegram: 1956 (index 4) until parity (index 5) -->
-              <div class="fragment fade-out" data-fragment-index="5" style="width: 100%">
+              <!-- Cowan & Reines photo (index 4), telegram below one click later (index 5); both until parity (index 6) -->
+              <div class="fragment fade-out" data-fragment-index="6" style="width: 100%">
                 <div class="fragment fade-in" data-fragment-index="4">
-                  <img src="img/telegram.jpg" width="95%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" color="#a0a0a0">[Reines &amp; Cowan to Pauli, June 1956: CERN Pauli Archive]</font></div>
+                  <img src="img/CowenReines.jpg" width="40%" style="margin: 0px auto 1px auto">
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">Cowen & Reines Scintillator [Los Alamos Nat. Lab.]</font></div>
+                  <div class="fragment fade-in" data-fragment-index="5">
+                    <img src="img/telegram.jpg" width="85%" style="margin: 15px auto 1px auto">
+                    <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Reines &amp; Cowan to Pauli, June 1956: CERN Pauli Archive]</font></div>
+                  </div>
                 </div>
               </div>
               <!-- Parity violation, 1957 (index 5) until 1962 (index 6): Lee & Yang + Wu side by side above, NIST experiment concept below -->
-              <div class="fragment fade-out" data-fragment-index="6" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="5">
+              <div class="fragment fade-out" data-fragment-index="7" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="6">
                   <div style="display: flex; justify-content: center; gap: 20px">
                     <div style="width: 30%">
                       <img src="img/LeeYang.jpeg" style="width: 100%; margin: 0px auto 1px auto">
-                      <div style="font-size: 13px; line-height: 1.2"><font size="2" color="#a0a0a0">[U. Chicago]</font></div>
+                      <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[U. Chicago]</font></div>
                     </div>
                     <div style="width: 30%">
                       <img src="img/Chien-shiung_Wu.jpg" style="width: 100%; margin: 0px auto 1px auto">
-                      <div style="font-size: 13px; line-height: 1.2"><font size="2" color="#a0a0a0">[Columbia]</font></div>
+                      <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[Columbia]</font></div>
                     </div>
                   </div><br>
                   <img src="img/NISTWuExperimentConcept.jpg" width="35%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 13px; line-height: 1.2"><font size="2" color="#a0a0a0">[Smithsonian]</font></div>
+                  <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[Smithsonian]</font></div>
                 </div>
               </div>
               <!-- More flavours, 1962 (index 6) until Sun/SN1987A (index 7): Schwartz + spark chamber above, AGS below -->
-              <div class="fragment fade-out" data-fragment-index="7" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="6">
+              <div class="fragment fade-out" data-fragment-index="8" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="7">
                   <div style="width: 40%; margin: 0 auto">
                     <img src="img/MelvinSchwartz.webp" style="width: 100%; margin: 0px auto 1px auto">
-                    <div style="font-size: 16px; line-height: 1.15"><font size="3">Melvin Schwartz with the 10-ton spark chamber, showing a multiple exposure of cosmic-ray muon tracks.</font> <font size="1" color="#a0a0a0">[Brookhaven Nat. Lab.]</font></div>
+                    <div style="font-size: 16px; line-height: 1.15"><font size="3">Melvin Schwartz with the 10-ton spark chamber, showing a multiple exposure of cosmic-ray muon tracks.</font> <font size="1" class="credit">[Brookhaven Nat. Lab.]</font></div>
                   </div>
                   <img src="img/AGS.png" width="100%" style="margin: 15px auto 1px auto">
                 </div>
               </div>
-              <!-- SN1987A, Kamiokande-II: from 1987 (point 6) to the end -->
-              <div class="fragment fade-in" data-fragment-index="7" style="width: 100%">
-                <img src="img/PhysRevLett.58.1490.png" width="95%" style="margin: 15px auto 1px auto; background: white">
-                <div style="font-size: 16px; line-height: 1.2"><font size="3" color="#a0a0a0">[Hirata <i>et al.</i>, <a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.58.1490">Phys. Rev. Lett. <b>58</b>, 1490 (1987)</a>]</font></div>
+              <!-- Homestake, 1968 (index 8) until SN1987A (index 9): two images stacked -->
+              <div class="fragment fade-out" data-fragment-index="9" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="8">
+                  <img src="img/Homestake1.jpg" width="60%" style="margin: 15px auto 1px auto">
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Brookhaven Nat. Lab.]</font></div>
+                  <img src="img/Homestake2.jpg" width="60%" style="margin: 15px auto 1px auto">
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[US Dept. Energy]</font></div>
+                </div>
+              </div>
+              <!-- SN1987A: Hubble image above, Kamiokande-II + PRL plot below; from 1987 (index 9) to the end -->
+              <div class="fragment fade-in" data-fragment-index="9" style="width: 100%">
+                <img src="img/SN_1987A_Hubble.jpg" width="60%" style="margin: 15px auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hubble]</font></div>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
+                  <!-- <img src="img/KamiokandeII.png" width="35%" style="margin: 15px 0 1px 0"> -->
+                  <img src="img/PhysRevLett.58.1490.png" width="60%" style="margin: 15px 0 1px 0; background: white">
+                </div><br>
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hirata <i>et al.</i>, <a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.58.1490">Phys. Rev. Lett. <b>58</b>, 1490 (1987)</a>]</font></div>
               </div>
             </div>
           </div>
@@ -213,30 +256,30 @@
               <h4 style="margin: 0 0 10px 0">&emsp;• Reines and Cowan [<a href="https://www.science.org/doi/10.1126/science.124.3212.103">Science (1956)</a>]: reactor $\bar\nu_e$ at Savannah River: $\bar\nu_e + p \to e^+ + n$</h4>
             </div>
             <br>
-            <div class="fragment" data-fragment-index="5">
+            <div class="fragment" data-fragment-index="6">
               <h3 style="margin: 0"><span style="color: cyan">1957</span> &ensp; <b>Parity violation</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1957</span></h3>
               <h4 style="margin: 0 0 0px 0">&emsp;• Lee and Yang [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.104.254">Phys. Rev. <b>104</b>, 254 (1956)</a>], C. S. Wu: $^{60}$Co $\beta$ decay [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.105.1413">Phys. Rev. <b>105</b>, 1413 (1957)</a>]</h4>
             </div>
             <br>
-            <div class="fragment" data-fragment-index="6">
+            <div class="fragment" data-fragment-index="7">
               <h3 style="margin: 0"><span style="color: cyan">1962</span> &ensp; <b>Now in more flavours</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1988</span></h3>
               <h4 style="margin: 0 0 10px 0">&emsp;• $\nu_\mu \neq \nu_e$ at Brookhaven [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.9.36">Phys. Rev. Lett. <b>9</b>, 36 (1962)</a>]; doublet structure of leptons</h4>
               <!-- $\nu_\tau$ at Fermilab (DONUT) in 2000 -->
             </div>
             
             <br>
-            <div class="fragment" data-fragment-index="7">
+            <div class="fragment" data-fragment-index="8">
               <h3 style="margin: 0"><span style="color: cyan">1968, 1987</span> &ensp; <b>From the Sun and a supernova</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h3>
               <h4 style="margin: 0 0 0px 0">&emsp;• Davis's Homestake tank finds $\tfrac13$ of the predicted $\nu_e$: the solar neutrino problem</h4>
-              <h4 style="margin: 0 0 10px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
+              <h4 class="fragment" data-fragment-index="9" style="margin: 0 0 10px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
             </div>
             <br>
-            <div class="fragment" data-fragment-index="8">
+            <div class="fragment" data-fragment-index="10">
               <h3 style="margin: 0"><span style="color: cyan">1998–2002</span> &ensp; <b>Oscillating, so massive</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2015</span></h3>
               <h4 style="margin: 0 0 10px 0">&emsp;• Super-K (atmospheric) and SNO (solar): flavours change in flight</h4>
             </div>
             <br>
-            <div class="fragment" data-fragment-index="9">
+            <div class="fragment" data-fragment-index="11">
               <h3 style="margin: 0"><span style="color: cyan">2013</span> &ensp; <b>From the cosmos</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2026</span></h3>
               <h4 style="margin: 0 0 10px 0">&emsp;• IceCube: TeV–PeV neutrinos from beyond the Galaxy</h4>
             </div>
