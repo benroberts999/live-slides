@@ -34,6 +34,8 @@
       .theme-color-black-blue .reveal .progress { color: #2F90F8; }
       /* citation / image-credit colour (all grey credits use class="credit") */
       .reveal .credit { color: #a0a0a0; }
+      /* fragment fade time, also the cross-fade between stacked images (theme: 0.2s) */
+      .reveal .slides section .fragment { transition: all 0.7s ease; }
     </style>
 
   </head>
@@ -54,16 +56,10 @@
       </div>
       <div class="slides">
 
-        <!-- Scaffold built from .claude/icecube-colloquium-outline.md -->
-        <!-- Each slide comment: [outline slide #] Title | aim | planned figure -->
-
         <!-- ######################################################################## -->
-        <!-- ACT 1 — Hook, the Nobel, neutrino basics (outline slides 1–5, ~8 min)    -->
         <!-- ######################################################################## -->
 
         <!-- =============================================================== -->
-        <!-- [1] Title | Halzen + Nobel medal + Bert & Ernie (hook for the 2013 slide) side by side; no UQ/BQI/ARC logos (talk not supported by them) | Halzen photo: news.wisc.edu; Bert & Ernie: Sesame Street; medal not cited -->
-        <!-- TEMP background: delete the three data-background-* attributes to remove; opacity 0–1 -->
         <section data-markdown
           data-background-image="img/IceCube1.webp"
           data-background-size="cover"
@@ -141,7 +137,7 @@
         <!-- =============================================================== -->
         <!-- [2a] History of neutrinos (our point of view) | theorised → named → detected → multiplied → astronomy; each year is a fragment, description as a dot point beneath -->
         <!--      Nobel medal: img/nobel-medal.png (Wikimedia Commons, User:Gusme, CC BY-SA 3.0). 2002 appears twice (Davis + Koshiba shared it): six medals, five prizes -->
-        <!--      Images (right, r-stack): one at a time, synced to the points via data-fragment-index 1–11. An image stays up until the next one appears. -->
+        <!--      Images (right, r-stack): one at a time, synced to the points via data-fragment-index 1–12. An image stays up until the next one appears. -->
         <!--      To add one for point n: add a fade-in wrapper at index n, and set the preceding image's fade-out index to n. -->
         <!--      Unused ideas: Pauli's 1930 letter (1930), Davis's Homestake tank (1968), Super-K zenith plot (1998), IceCube event (2013) -->
         <section data-markdown>
@@ -226,15 +222,38 @@
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[US Dept. Energy]</font></div>
                 </div>
               </div>
-              <!-- SN1987A: Hubble image above, Kamiokande-II + PRL plot below; from 1987 (index 9) to the end -->
-              <div class="fragment fade-in" data-fragment-index="9" style="width: 100%">
-                <img src="img/SN_1987A_Hubble.jpg" width="60%" style="margin: 15px auto 1px auto">
-                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hubble]</font></div>
-                <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
-                  <!-- <img src="img/KamiokandeII.png" width="35%" style="margin: 15px 0 1px 0"> -->
-                  <img src="img/PhysRevLett.58.1490.png" width="60%" style="margin: 15px 0 1px 0; background: white">
-                </div><br>
-                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hirata <i>et al.</i>, <a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.58.1490">Phys. Rev. Lett. <b>58</b>, 1490 (1987)</a>]</font></div>
+              <!-- SN1987A: Hubble image above, Kamiokande-II + PRL plot below; 1987 (index 9) until Super-K (index 10) -->
+              <div class="fragment fade-out" data-fragment-index="10" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="9">
+                  <img src="img/SN_1987A_Hubble.jpg" width="60%" style="margin: 15px auto 1px auto">
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hubble]</font></div>
+                  <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
+                    <!-- <img src="img/KamiokandeII.png" width="35%" style="margin: 15px 0 1px 0"> -->
+                    <img src="img/PhysRevLett.58.1490.png" width="60%" style="margin: 15px 0 1px 0; background: white">
+                  </div><br>
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hirata <i>et al.</i>, <a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.58.1490">Phys. Rev. Lett. <b>58</b>, 1490 (1987)</a>]</font></div>
+                </div>
+              </div>
+              <!-- Super-Kamiokande: 1998 (index 10) until IceCube (index 11) -->
+              <div class="fragment fade-out" data-fragment-index="11" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="10">
+                  <img src="img/SuperKamiokande-1.webp" width="80%" style="margin: 15px auto 1px auto">
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Super-Kamiokande]</font></div>
+                </div>
+              </div>
+              <!-- IceCube lab in the ice: 2013 (index 11), replaced by the aurora shot one click later (index 12) -->
+              <div class="fragment fade-out" data-fragment-index="12" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="11">
+                  <img src="img/ice-cube.jpeg" width="60%" style="margin: 15px auto 1px auto">
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[@icecube, Instagram]</font></div>
+                </div>
+              </div>
+              <!-- IceCube Lab under the aurora, detector diagram below: from index 12 to the end -->
+              <div class="fragment fade-in" data-fragment-index="12" style="width: 100%">
+                <img src="img/ICL-auroras.jpg" width="95%" style="margin: 15px auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ilya Bodo / IceCube/NSF]</font></div><br>
+                <img src="img/IceCubeDetector.jpg" width="50%" style="margin: 15px auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[icecube.wisc.edu]</font></div>
               </div>
             </div>
           </div>
@@ -272,7 +291,7 @@
             <br>
             <div class="fragment" data-fragment-index="8">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1968, 1987</span> &ensp; <b>From the Sun and a supernova</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h3>
-              <h4 style="margin: 0 0 0px 0">&emsp;• Davis's Homestake tank finds $\tfrac13$ of the predicted $\nu_e$: the solar neutrino problem</h4>
+              <h4 style="margin: 0 0 0px 0">&emsp;• Davis's Homestake tank ($\nu_e + {}^{37}{\rm Cl} \to {}^{37}{\rm Ar} + e^-$): finds $\tfrac13$ of the predicted $\nu_e$ $\implies$ solar neutrino problem</h4>
               <h4 class="fragment" data-fragment-index="9" style="margin: 0 0 10px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
             </div>
             <br>
