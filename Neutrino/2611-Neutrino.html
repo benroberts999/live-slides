@@ -83,12 +83,7 @@
               <font size="3" class="credit">[<a href="https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/">news.wisc.edu</a>]</font>
               <h4 style="margin: 6px 0 0 0">Francis Halzen</h4>
             </div>
-            <!-- Neutrino Nobels: 1988 (ν_μ), 1995 (Reines), 2002 (Davis, Koshiba), 2015 (Kajita, McDonald), 2026 → 5th; 6th if 1957 parity (Lee, Yang) counts, as the history slide's medals do. Solo: Charpak 1992 was the last unshared physics prize before 2026 (34 years) -->
-            <div style="text-align: center">
-              <img src="img/nobel-medal.png" style="height: 240px; margin: 0; background: none; border: none">
-              <h4 style="margin: 14px 0 0 0">5th Nobel for neutrinos</h4>
-              <h4 style="margin: 6px 0 0 0">First solo physics prize since 1992</h4>
-            </div>
+            <img src="img/nobel-medal.png" style="height: 240px; margin: 0; background: none; border: none">
             <div style="width: 22%; text-align: center; position: relative; top: 47px">  <!-- top: shifts Bert & Ernie down; tune to align names -->
               <img src="img/Bert_and_Ernie.jpeg" style="width: 100%; margin: 0 auto 1px auto"><br>
               <font size="3" class="credit">[Sesame Street]</font>
@@ -116,36 +111,41 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [1a] Overview (added 31 Oct) | the talk in two parts: (1) Halzen: who, what; (2) IceCube: what, how, why | Fig 1: img/Halzen_Nobel.jpeg (official Nobel portrait); Fig 2: img/IceCubeDetector.jpg (also on 10) -->
+        <!-- [1a] Overview (added 31 Oct; no slide title) | the talk in two parts: (1) Halzen: who, what; (2) IceCube: what, how, why | Fig 1: img/Halzen_Nobel.jpeg (official Nobel portrait); Fig 2: img/IceCubeDetector.jpg (also on 10) -->
         <!--      Say aloud: Halzen is a QCD/collider theorist at Wisconsin–Madison (since 1972); 1988 idea with John Learned to use the Antarctic ice; AMANDA, then PI of IceCube. IceCube: 1 km³ of ice, 1.45–2.45 km deep; a neutrino hitting the ice makes a muon or a shower, whose Cherenkov light the sensors see; neutrinos point straight back to their source -->
         <section data-markdown>
           <textarea data-template>
-          # A theorist and an ice cube
-
           <div style="display: flex; justify-content: space-between; gap: 70px; text-align: left">
             <div style="width: 46%">
               <div style="text-align: center">
                 <h3 style="margin: 10px 0 12px 0; font-size: 1.8em"><b>Francis Halzen</b></h3>
-                <img src="img/Halzen_Nobel.jpeg" style="height: 481px; margin: 0 auto 1px auto">
-                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ill. Niklas Elmehed &copy; Nobel Prize Outreach]</font></div>
+                <img src="img/Halzen_Nobel.jpeg" style="height: 600px; margin: 0 auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Niklas Elmehed, Nobel Prize Outreach]</font></div>
               </div>
               <div style="font-size: 1.5em; margin-top: 24px">
                 <h4 style="margin: 0 0 14px 0">&emsp;• A particle theorist</h4>
-                <h4 style="margin: 0">&emsp;• Bet on the ice, then led IceCube</h4>
+                <h4 style="margin: 0 0 14px 0">&emsp;• Bet on the ice, then led IceCube</h4>
+                <!-- Neutrino Nobels: 1988 (ν_μ), 1995 (Reines), 2002 (Davis, Koshiba), 2015 (Kajita, McDonald), 2026 → 5th; 6th if 1957 parity (Lee, Yang) counts, as the history slide's medals do. Solo: Charpak 1992 was the last unshared physics prize before 2026 (34 years) -->
+                <h4 style="margin: 0 0 14px 0">&emsp;• 5th Nobel for neutrinos</h4>
+                <h4 style="margin: 0">&emsp;• First solo physics prize since 1992</h4>
               </div>
             </div>
             <div class="fragment" style="width: 46%">
               <div style="text-align: center">
                 <h3 style="margin: 10px 0 12px 0; font-size: 1.8em"><b>IceCube</b></h3>
-                <img src="img/IceCubeDetector.jpg" style="height: 481px; margin: 0 auto 1px auto">
+                <img src="img/IceCubeDetector.jpg" style="height: 600px; margin: 0 auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube/NSF]</font></div>
               </div>
               <div style="font-size: 1.5em; margin-top: 24px">
-                <h4 style="margin: 0 0 14px 0">&emsp;• A km$^3$ of Antarctic ice</h4>
-                <h4 style="margin: 0 0 14px 0">&emsp;• 5,160 sensors catch the light</h4>
+                <h4 style="margin: 0 0 14px 0">&emsp;• A km$^3$ of Antarctic ice+ 5,160 sensors</h4>
                 <h4 style="margin: 0">&emsp;• Where do cosmic rays come from?</h4>
               </div>
             </div>
+          </div>
+
+          <!-- Halzen quote, also on 22; wording unverified: "I always thought it was a bad idea to have a theorist trying to lead an experiment" (AIP piece / Nobel interview, check) -->
+          <div class="fragment" style="margin-top: 8px; text-align: center">
+            <h4 style="margin: 0"><i>"... a bad idea to have a theorist trying to lead an experiment"</i> &ensp;&mdash; Halzen</h4>
           </div>
 
         </textarea>
@@ -158,7 +158,7 @@
         <!--     Numbers: σ_CC ≈ 0.7e-38 cm² (E/GeV) for ν (Formaggio & Zeller); G_F² m_N E/π ≈ 1.6e-38 cm² at 1 GeV. 1 TeV in 1 km ice: nσL ≈ 5.5e23 × 7e-36 × 1e5 ≈ 4e-7. Solar ν (~MeV) on electrons in lead: λ ~ tens of light-years -->
         <!--      Dropped for size (say aloud): on the rare occasion it hits something; linear to ~10 TeV, then slower; by ~100 TeV even the Earth starts to stop them; a huge, cheap, transparent target, darkness and patience ⇒ a cubic kilometre of Antarctic ice -->
         <!--      Dropped in the merge (say aloud): W/Z, charged vs neutral current; SM has only left-handed ν; σ ~ G_F² m_N E/π ≈ 1e-38 cm² (E/GeV), linear to ~10 TeV; at 1 TeV < 1 in 10⁶ stop in 1 km of ice; the recipe: huge, cheap, clear, dark target -->
-        <section data-markdown>
+        <!-- <section data-markdown>
           <textarea data-template>
           # What is a neutrino?
 
@@ -185,11 +185,11 @@
           </div>
 
         </textarea>
-        </section>
+        </section> -->
 
         <!-- =============================================================== -->
         <!-- [3] History of neutrinos (our point of view) | fold version (31 Oct): text 1.125em, headings 1.33em, each year's details fold away (class "fragment fade-out fold-away", CSS in head); the 0.75em original is in 2611-Neutrino_prev.html | theorised → named → detected → multiplied → astronomy; each year is a fragment, description as a dot point beneath -->
-        <!--      Nobel medal: img/nobel-medal.png (Wikimedia Commons, User:Gusme, CC BY-SA 3.0). 2002 appears twice (Davis + Koshiba shared it): six medals, five prizes -->
+        <!--      Nobel medal: img/nobel-medal.png (Wikimedia Commons, User:Gusme, CC BY-SA 3.0). seven medals (1995, 1957, 1988, 1979, 2002, 2015, 2026); 1957 (parity) and 1979 (electroweak) are not neutrino prizes as such -->
         <!--      Images (right, r-stack): one at a time, synced to the points via data-fragment-index 1–12. An image stays up until the next one appears. -->
         <!--      To add one for point n: add a fade-in wrapper at index n, and set the preceding image's fade-out index to n. -->
         <!--      Unused ideas: Pauli's 1930 letter (1930), Davis's Homestake tank (1968), Super-K zenith plot (1998), IceCube event (2013) -->
@@ -239,7 +239,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Parity violation, 1957 (index 5) until 1962 (index 6): Lee & Yang + Wu side by side above, NIST experiment concept below -->
+              <!-- Parity violation, 1957 (index 6) until 1962 (index 7): Lee & Yang + Wu side by side above, NIST experiment concept below -->
               <div class="fragment fade-out" data-fragment-index="7" style="width: 100%">
                 <div class="fragment fade-in" data-fragment-index="6">
                   <div style="display: flex; justify-content: center; gap: 20px">
@@ -256,7 +256,7 @@
                   <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[Smithsonian]</font></div>
                 </div>
               </div>
-              <!-- More flavours, 1962 (index 6) until Sun/SN1987A (index 7): Schwartz + spark chamber above, AGS below -->
+              <!-- More flavours, 1962 (index 7) until electroweak (index 8): Schwartz + spark chamber above, AGS below -->
               <div class="fragment fade-out" data-fragment-index="8" style="width: 100%">
                 <div class="fragment fade-in" data-fragment-index="7">
                   <div style="width: 40%; margin: 0 auto">
@@ -266,18 +266,25 @@
                   <img src="img/AGS.png" width="100%" style="margin: 15px auto 1px auto">
                 </div>
               </div>
-              <!-- Homestake, 1968 (index 8) until SN1987A (index 9): two images stacked -->
+              <!-- Electroweak, 1967 (index 8) until Homestake (index 9): the Standard Model table (moved here 31 Oct from the cut "What is a neutrino?" slide) -->
               <div class="fragment fade-out" data-fragment-index="9" style="width: 100%">
                 <div class="fragment fade-in" data-fragment-index="8">
+                  <img src="../DarkMatter/img/Standard_Model_of_Elementary_Particles_dark.svg" width="85%" style="margin: 15px auto 1px auto">
+                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Cush / Wikimedia Commons]</font></div>
+                </div>
+              </div>
+              <!-- Homestake, 1968 (index 9) until SN1987A (index 10): two images stacked -->
+              <div class="fragment fade-out" data-fragment-index="10" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="9">
                   <img src="img/Homestake1.jpg" width="60%" style="margin: 15px auto 1px auto">
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Brookhaven Nat. Lab.]</font></div>
                   <img src="img/Homestake2.jpg" width="60%" style="margin: 15px auto 1px auto">
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[US Dept. Energy]</font></div>
                 </div>
               </div>
-              <!-- SN1987A: Hubble image above, Kamiokande-II + PRL plot below; 1987 (index 9) until Super-K (index 10) -->
-              <div class="fragment fade-out" data-fragment-index="10" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="9">
+              <!-- SN1987A: Hubble image above, Kamiokande-II + PRL plot below; 1987 (index 10) until Super-K (index 11) -->
+              <div class="fragment fade-out" data-fragment-index="11" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="10">
                   <img src="img/SN_1987A_Hubble.jpg" width="60%" style="margin: 15px auto 1px auto">
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hubble]</font></div>
                   <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
@@ -287,15 +294,15 @@
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hirata <i>et al.</i>, <a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.58.1490">Phys. Rev. Lett. <b>58</b>, 1490 (1987)</a>]</font></div>
                 </div>
               </div>
-              <!-- Super-Kamiokande: 1998 (index 10) until IceCube (index 11) -->
-              <div class="fragment fade-out" data-fragment-index="11" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="10">
+              <!-- Super-Kamiokande: 1998 (index 11) until IceCube (index 12) -->
+              <div class="fragment fade-out" data-fragment-index="12" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="11">
                   <img src="img/SuperKamiokande-1.webp" width="80%" style="margin: 15px auto 1px auto">
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Super-Kamiokande]</font></div>
                 </div>
               </div>
-              <!-- IceCube Lab under the aurora: from 2013 (index 11) to the end (ice-cube.jpeg removed 31 Oct) -->
-              <div class="fragment fade-in" data-fragment-index="11" style="width: 100%">
+              <!-- IceCube Lab under the aurora: from 2013 (index 12) to the end (ice-cube.jpeg removed 31 Oct) -->
+              <div class="fragment fade-in" data-fragment-index="12" style="width: 100%">
                 <img src="img/ICL-auroras.jpg" width="100%" style="margin: 15px auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ilya Bodo / IceCube/NSF]</font></div><br>
                 <!-- <img src="img/IceCubeDetector.jpg" width="50%" style="margin: 15px auto 1px auto">
@@ -338,20 +345,28 @@
                 <!-- $\nu_\tau$ at Fermilab (DONUT) in 2000 -->
               </div>
             </div>
+            <!-- 1967 electroweak (added 31 Oct). Say aloud: 1973, Gargamelle (CERN) sees the Z's neutral current in a ν beam [Phys. Lett. B 46, 138 (1973)]; W and Z found 1983; LEP 1989: the Z width allows exactly three light ν. Higgs mechanism: Higgs, PRL 13, 508 (1964); Englert & Brout, PRL 13, 321 (1964); Nobel 2013. No right-handed ν ⇒ no Yukawa mass term ⇒ m_ν = 0, the "first crack" of 1998 and slide 5 -->
             <div class="fragment" data-fragment-index="8" style="margin-bottom: 26px">
-              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1968, 1987</span> &ensp; <b>The Sun and a supernova</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h3>
-              <div class="fragment fade-out fold-away" data-fragment-index="10">
-                <h4 style="margin: 0 0 0px 0">&emsp;• Davis's Homestake tank ($\nu_e + {}^{37}{\rm Cl} \to {}^{37}{\rm Ar} + e^-$): finds $\tfrac13$ of the predicted $\nu_e$ $\implies$ solar neutrino problem</h4>
-                <h4 class="fragment" data-fragment-index="9" style="margin: 0 0 10px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
+              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1967</span> &ensp; <b>Electroweak theory</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1979</span></h3>
+              <div class="fragment fade-out fold-away" data-fragment-index="9">
+                <h4 style="margin: 0 0 0px 0">&emsp;• Glashow, Weinberg, Salam: weak and electromagnetic as one force, carried by $W^\pm$, $Z$ [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.19.1264">Phys. Rev. Lett. <b>19</b>, 1264 (1967)</a>]</h4>
+                <h4 style="margin: 0 0 10px 0">&emsp;• Mass from the Higgs (1964), but $\nu$ only left-handed: so $m_\nu = 0$</h4>
               </div>
             </div>
-            <div class="fragment" data-fragment-index="10" style="margin-bottom: 26px">
-              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1998–2002</span> &ensp; <b>Oscillating, so massive</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2015</span></h3>
+            <div class="fragment" data-fragment-index="9" style="margin-bottom: 26px">
+              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1968, 1987</span> &ensp; <b>The Sun and a supernova</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="11">
-                <h4 style="margin: 0 0 10px 0">&emsp;• Super-K (atmospheric) and SNO (solar): flavours change in flight</h4>
+                <h4 style="margin: 0 0 0px 0">&emsp;• Davis's Homestake tank ($\nu_e + {}^{37}{\rm Cl} \to {}^{37}{\rm Ar} + e^-$): finds $\tfrac13$ of the predicted $\nu_e$ $\implies$ solar neutrino problem</h4>
+                <h4 class="fragment" data-fragment-index="10" style="margin: 0 0 10px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="11" style="margin-bottom: 26px">
+              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1998–2002</span> &ensp; <b>Oscillating, so massive</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2015</span></h3>
+              <div class="fragment fade-out fold-away" data-fragment-index="12">
+                <h4 style="margin: 0 0 10px 0">&emsp;• Super-K (atmospheric) and SNO (solar): flavours change in flight</h4>
+              </div>
+            </div>
+            <div class="fragment" data-fragment-index="12" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">2013</span> &ensp; <b>From the cosmos</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2026</span></h3>
               <h4 style="margin: 0 0 10px 0">&emsp;• IceCube: TeV–PeV neutrinos from beyond the Galaxy</h4>
             </div>
@@ -514,10 +529,13 @@
         <!-- =============================================================== -->
         <!-- [7] Why ghosts make the best messengers | the detection problem turned inside out | Fig 1: Jarnestad drawing (neutrino straight, cosmic ray curls, photon zapped); Fig 2: gamma-ray horizon placeholder; text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--     Numbers: γγ → e⁺e⁻ on starlight (EBL): optical depth 1 at ~100 Mpc for ~10 TeV; on the CMB at ~PeV the absorption length is ~10 kpc (≈ distance to the Galactic centre). Larmor radius r = E/(ZeBc): 1 PeV proton in 3 μG ≈ 0.4 pc ≈ 1 ly; 10²⁰ eV ≈ 40 kpc. GZK horizon above 5e19 eV ~100 Mpc. E_ν ≈ E_p/20 (pion takes ~1/5, each ν ~1/4 of that) -->
+        <!--      Subtitle moved here 31 Oct from the cut "What is a neutrino?" slide. Numbers: σ ~ 1e-44 cm² per nucleon at ~MeV; lead 6.8e24 nucleons/cm³ ⇒ λ = 1/(nσ) ≈ 1.5e19 cm ≈ 15 ly. σ_CC ≈ 0.7e-38 cm² (E/GeV) (Formaggio & Zeller); 1 TeV in 1 km ice: nσL ≈ 4e-7 -->
         <!--      Dropped for size (say aloud): above ~10 TeV nothing past ~100 Mpc; none escapes dense sources; a PeV proton curls round in ~1 light-year; UHE cosmic rays also absorbed beyond ~100 Mpc; each ν carries ~5% of the proton's energy; electrons alone make γ but not ν -->
         <section data-markdown>
           <textarea data-template>
           # Why ghosts make the best messengers
+
+          ### _Ghosts: an MeV neutrino crosses light-years of lead_
 
           <div style="text-align: center; float: right; width: 42%">
             <br>
@@ -589,7 +607,7 @@
         </section>
 
         <!-- ######################################################################## -->
-        <!-- ACT 3 — Halzen's bet (slides 9–13, ~8 min) -->
+        <!-- ACT 3 — Halzen's bet (slides 9, 9a, 10–13, ~9.5 min) -->
         <!-- ######################################################################## -->
 
         <!-- =============================================================== -->
@@ -604,38 +622,76 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [9] A theorist bets on ice | Halzen enters the story: who he is, the 1988 bet, AMANDA | rebuilt 31 Oct from 10 (Markov → km³) plus the bio from 19 (Halzen); old version(s) in 2611-Neutrino_prev.html | Fig 1: Quarks and Leptons cover (placeholder); Fig 2: AMANDA deployment photo (placeholder) -->
-        <!--      Check: DUMAND 1993 string lost within hours to a leak (from memory); Baikal NT-36 first underwater ν 1996. Markov quote as usually given in Halzen's reviews. AMANDA-II: 677 OMs, 19 strings, 1.5–2 km. Bubbles/dust are on slide 12, not here -->
-        <!--      Dropped for size (say aloud): Markov: "install detectors deep in a lake or a sea and determine the direction of charged particles with the help of Cherenkov radiation"; look down, the Earth stops everything else; DUMAND 4.8 km deep, one string (1993) lost within hours; Baikal deployed from the frozen lake, first underwater ν 1996; Learned was a DUMAND physicist; Łódź 1988; AMANDA 19 strings, 677 sensors; drill from the surface; the Pole station already had planes, power and people -->
+        <!-- [9] From a lake to the ice | IceCube history, part 1 of 2 (31 Oct, Ben: "Russian idea → water → AMANDA → IceCube"): Markov's idea, the water detectors, Halzen's bet on ice. Replaces "A theorist bets on ice": its theorist and 1988 points are here, AMANDA moved to 9a | Fig 1: Baikal winter deployment (placeholder); Fig 2: Quarks and Leptons cover (placeholder) -->
+        <!--      Refs: Markov, Proc. 1960 Int. Conf. High Energy Physics (Rochester), p. 578; Halzen &amp; Learned, "High energy neutrino detection in deep polar ice", Proc. 5th Int. Symp. Very High Energy Cosmic Ray Interactions, Łódź (1988) -->
+        <!--      Check (from memory): DUMAND 1993 string lost within hours to a leak, project cancelled 1995; Baikal NT-36 (1993) first underwater ν 1996, NT-200 1998. Markov quote as usually given in Halzen's reviews -->
+        <!--      Dropped for size (say aloud): Markov: "install detectors deep in a lake or a sea and determine the direction of charged particles with the help of Cherenkov radiation"; Greisen and Reines proposed the same in 1960; look down, the Earth stops everything else; DUMAND 4.8 km deep off Hawaii; Baikal is deployed from the frozen lake: the ice as a platform, not yet the detector; Learned was a DUMAND physicist; drill from the surface; the Pole station already had planes, power and people -->
         <!--      From the Halzen slide: born Tienen 1944; PhD Louvain 1969; CERN; Wisconsin–Madison since 1972; QCD and collider physics; Quarks and Leptons with Alan Martin (1984) -->
         <section data-markdown>
           <textarea data-template>
-          # A theorist bets on ice
+          # From a lake to the ice
 
           <div style="text-align: center; float: right; width: 42%">
             <br>
             <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; Cover of <i>Quarks and Leptons</i> (Halzen &amp; Martin, Wiley 1984)</div>
+              <div>Image 1 &mdash; Lake Baikal in winter: detector strings lowered through holes in the frozen lake<br>[Baikal-GVD collaboration]</div>
             </div>
             <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 0px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; AMANDA: a string of optical modules going down a hole at the South Pole, 1990s<br>[IceCube/NSF gallery]</div>
+              <div>Image 2 &mdash; Cover of <i>Quarks and Leptons</i> (Halzen &amp; Martin, Wiley 1984)</div>
             </div>
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
             <br>
             <div style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Halzen</span> &ensp; <b>A collider theorist</b></h3>
-              <h4 style="margin: 0">&emsp;• Co-wrote <i>Quarks and Leptons</i> (1984)</h4>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1960</span> &ensp; <b>A Russian idea</b></h3>
+              <h4 style="margin: 0">&emsp;• Markov: Cherenkov light, deep in a lake or sea</h4>
             </div>
             <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1988</span> &ensp; <b>Use the Antarctic ice</b></h3>
-              <h4 style="margin: 0">&emsp;• With John Learned, after the ocean failed</h4>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1976&ndash;98</span> &ensp; <b>Water</b></h3>
+              <h4 style="margin: 0">&emsp;• DUMAND (Hawaii) fails; Baikal works</h4>
             </div>
             <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1993&ndash;2009</span> &ensp; <b>AMANDA</b></h3>
-              <h4 style="margin: 0">&emsp;• The first neutrinos caught in ice</h4>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1988</span> &ensp; <b>A theorist bets on ice</b></h3>
+              <h4 style="margin: 0">&emsp;• Halzen and Learned: use the Antarctic ice</h4>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [9a] From AMANDA to IceCube | IceCube history, part 2 of 2 (added 31 Oct): too shallow, then deep enough, then a cubic kilometre | Fig 1: AMANDA string going down a hole (placeholder); Fig 2: the last IceCube string, Dec 2010 (placeholder) -->
+        <!--      Check (from memory): AMANDA-A 1993–94, 4 strings at 800–1000 m; the bubbles made the light diffuse, no tracks (Askebjer et al., Science 267, 1147 (1995)?). AMANDA-B10 1996–97 at 1.5–2 km, 302 OMs; AMANDA-II 2000, 19 strings, 677 OMs; switched off 2009. First ν in ice: Andrés et al., Nature 410, 441 (2001), B10 data from 1997. IceCube: NSF funding 2004, first string Jan 2005, last 18 Dec 2010, ~$280M. Greenland ice test: Lowder et al., Nature 353, 331 (1991) -->
+        <!--      Overlaps: the bubbles come back on 11 (ice clear only below 1.4 km); 2005–10 construction is on 10 ("Seven summers") -->
+        <section data-markdown>
+          <textarea data-template>
+          # From AMANDA to IceCube
+
+          <div style="text-align: center; float: right; width: 42%">
+            <br>
+            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
+              <div>Image 1 &mdash; AMANDA: a string of optical modules going down a hole at the South Pole, 1990s<br>[IceCube/NSF gallery]</div>
+            </div>
+            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 0px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
+              <div>Image 2 &mdash; The last of the 86 IceCube strings going in, 18 Dec 2010<br>[IceCube/NSF]</div>
+            </div>
+          </div>
+
+          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1993&ndash;94</span> &ensp; <b>AMANDA: too shallow</b></h3>
+              <h4 style="margin: 0">&emsp;• 1 km down: air bubbles scatter the light</h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1996&ndash;2000</span> &ensp; <b>Deeper</b></h3>
+              <h4 style="margin: 0">&emsp;• 2 km down: the first neutrinos caught in ice</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1038/35068509">Nature <b>410</b>, 441 (2001)</a>]</div>
+            </div>
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2010</span> &ensp; <b>IceCube</b></h3>
+              <h4 style="margin: 0">&emsp;• The last of 86 strings: 18 Dec 2010</h4>
             </div>
           </div>
 
