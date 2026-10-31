@@ -83,7 +83,12 @@
               <font size="3" class="credit">[<a href="https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/">news.wisc.edu</a>]</font>
               <h4 style="margin: 6px 0 0 0">Francis Halzen</h4>
             </div>
-            <img src="img/nobel-medal.png" style="height: 240px; margin: 0; background: none; border: none">
+            <!-- Neutrino Nobels: 1988 (ν_μ), 1995 (Reines), 2002 (Davis, Koshiba), 2015 (Kajita, McDonald), 2026 → 5th; 6th if 1957 parity (Lee, Yang) counts, as the history slide's medals do. Solo: Charpak 1992 was the last unshared physics prize before 2026 (34 years) -->
+            <div style="text-align: center">
+              <img src="img/nobel-medal.png" style="height: 240px; margin: 0; background: none; border: none">
+              <h4 style="margin: 14px 0 0 0">5th Nobel for neutrinos</h4>
+              <h4 style="margin: 6px 0 0 0">First solo physics prize since 1992</h4>
+            </div>
             <div style="width: 22%; text-align: center; position: relative; top: 47px">  <!-- top: shifts Bert & Ernie down; tune to align names -->
               <img src="img/Bert_and_Ernie.jpeg" style="width: 100%; margin: 0 auto 1px auto"><br>
               <font size="3" class="credit">[Sesame Street]</font>
@@ -111,31 +116,35 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [1a] The Standard Model | the neutrino is one of the 17 particles, nothing more yet (properties on 3, abundance and sources on 2b) | Fig: SM table (Cush, Wikimedia Commons), reused from DarkMatter/img; neutrinos are its bottom row -->
-        <!--      Dropped for size (say aloud): "our best theory of matter and forces"; 12 matter particles; forces carried by the photon, gluons, W and Z -->
+        <!-- [1a] Overview (added 31 Oct) | the talk in two parts: (1) Halzen: who, what; (2) IceCube: what, how, why | Fig 1: img/Halzen_Nobel.jpeg (official Nobel portrait); Fig 2: img/IceCubeDetector.jpg (also on 10) -->
+        <!--      Say aloud: Halzen is a QCD/collider theorist at Wisconsin–Madison (since 1972); 1988 idea with John Learned to use the Antarctic ice; AMANDA, then PI of IceCube. IceCube: 1 km³ of ice, 1.45–2.45 km deep; a neutrino hitting the ice makes a muon or a shower, whose Cherenkov light the sensors see; neutrinos point straight back to their source -->
         <section data-markdown>
           <textarea data-template>
-          # The Standard Model
+          # A theorist and an ice cube
 
-          <div style="text-align: center; float: right; width: 48%">
-            <br>
-            <img src="../DarkMatter/img/Standard_Model_of_Elementary_Particles_dark.svg" width="95%" style="margin: 15px auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Cush / Wikimedia Commons]</font></div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 50%; font-size: 1.5em">
-            <br>
-            <div style="margin-bottom: 40px">
-              <h3 style="margin: 0 0 6px 0"><b>Matter and forces</b></h3>
-              <h4 style="margin: 0">&emsp;• 6 quarks and 6 leptons</h4>
-              <h4 style="margin: 0">&emsp;• Forces: $\gamma$, gluons, $W$, $Z$</h4>
-              <h4 style="margin: 0">&emsp;• Plus the Higgs</h4>
-              <h4 style="margin: 0">&emsp;• Tested to extraordinary precision</h4>
+          <div style="display: flex; justify-content: space-between; gap: 70px; text-align: left">
+            <div style="width: 46%">
+              <div style="text-align: center">
+                <h3 style="margin: 10px 0 12px 0; font-size: 1.8em"><b>Francis Halzen</b></h3>
+                <img src="img/Halzen_Nobel.jpeg" style="height: 481px; margin: 0 auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ill. Niklas Elmehed &copy; Nobel Prize Outreach]</font></div>
+              </div>
+              <div style="font-size: 1.5em; margin-top: 24px">
+                <h4 style="margin: 0 0 14px 0">&emsp;• A particle theorist</h4>
+                <h4 style="margin: 0">&emsp;• Bet on the ice, then led IceCube</h4>
+              </div>
             </div>
-            <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><b>The neutrino is one of them</b></h3>
-              <h4 style="margin: 0">&emsp;• Bottom row: $\nu_e$, $\nu_\mu$, $\nu_\tau$</h4>
-              <h4 style="margin: 0">&emsp;• One per charged lepton: $e$, $\mu$, $\tau$</h4>
+            <div class="fragment" style="width: 46%">
+              <div style="text-align: center">
+                <h3 style="margin: 10px 0 12px 0; font-size: 1.8em"><b>IceCube</b></h3>
+                <img src="img/IceCubeDetector.jpg" style="height: 481px; margin: 0 auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube/NSF]</font></div>
+              </div>
+              <div style="font-size: 1.5em; margin-top: 24px">
+                <h4 style="margin: 0 0 14px 0">&emsp;• A km$^3$ of Antarctic ice</h4>
+                <h4 style="margin: 0 0 14px 0">&emsp;• 5,160 sensors catch the light</h4>
+                <h4 style="margin: 0">&emsp;• Where do cosmic rays come from?</h4>
+              </div>
             </div>
           </div>
 
@@ -143,193 +152,43 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [2] Pauli's "desperate remedy" | history hook: invented, not found | Fig: Pauli letter scan + five-prize timeline strip -->
-        <!-- <section data-markdown>
+        <!-- [2] What is a neutrino? | merged 31 Oct from 1a (Standard Model), 3 (What is a neutrino?), 4 (Why "ghost"?); old version(s) in 2611-Neutrino_prev.html | Fig: SM table (Cush, Wikimedia Commons), neutrinos are its bottom row -->
+        <!--      Dropped for size (say aloud): "our best theory of matter and forces"; 12 matter particles; forces carried by the photon, gluons, W and Z -->
+        <!--      Dropped for size (say aloud): no light, no strong force; the SM has only left-handed ν, so no mass term (more on slide 6); W = charged current, Z = neutral current; after a Z the neutrino carries on -->
+        <!--     Numbers: σ_CC ≈ 0.7e-38 cm² (E/GeV) for ν (Formaggio & Zeller); G_F² m_N E/π ≈ 1.6e-38 cm² at 1 GeV. 1 TeV in 1 km ice: nσL ≈ 5.5e23 × 7e-36 × 1e5 ≈ 4e-7. Solar ν (~MeV) on electrons in lead: λ ~ tens of light-years -->
+        <!--      Dropped for size (say aloud): on the rare occasion it hits something; linear to ~10 TeV, then slower; by ~100 TeV even the Earth starts to stop them; a huge, cheap, transparent target, darkness and patience ⇒ a cubic kilometre of Antarctic ice -->
+        <!--      Dropped in the merge (say aloud): W/Z, charged vs neutral current; SM has only left-handed ν; σ ~ G_F² m_N E/π ≈ 1e-38 cm² (E/GeV), linear to ~10 TeV; at 1 TeV < 1 in 10⁶ stop in 1 km of ice; the recipe: huge, cheap, clear, dark target -->
+        <section data-markdown>
           <textarea data-template>
-          # Pauli's "desperate remedy"
+          # What is a neutrino?
 
-          <br>
+          <div style="text-align: center; float: right; width: 46%">
+            <br>
+            <img src="../DarkMatter/img/Standard_Model_of_Elementary_Particles_dark.svg" width="95%" style="margin: 15px auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Cush / Wikimedia Commons]</font></div>
+          </div>
 
-          <div style="text-align: left; float: left; width: 50%">
+          <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">
             <br>
-            <h2>Heading</h2>
-            <h3>&emsp;• Dot point one</h3>
-            <h3>&emsp;• Dot point two</h3>
-            <h3>&emsp;• Dot point three</h3>
-            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Matter</span> &ensp; <b>One of the 12 particles</b></h3>
+              <h4 style="margin: 0">&emsp;• The bottom row: $\nu_e$, $\nu_\mu$, $\nu_\tau$</h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Weak</span> &ensp; <b>Feels only the weak force</b></h3>
+              <h4 style="margin: 0">&emsp;• No charge, no colour, almost no mass</h4>
+            </div>
             <div class="fragment">
-              <h2>Second heading</h2>
-              <h3>&emsp;• Dot point one</h3>
-              <h3>&emsp;• Dot point two</h3>
-            </div>
-          </div>
-
-          <div style="text-align: center; float: right; width: 50%">
-            <br>
-            <img src="../DarkMatter/img/xe-photoel.png" width="90%"><br>
-            <font size="3">[Author <i>et al.</i>, Journal (Year)]</font>
-          </div>
-
-        </textarea>
-        </section> -->
-
-    <!-- =============================================================== -->
-        <!-- <section data-markdown>
-          <textarea data-template>
-          # History of neutrinos
-          ### _(our point of view)_
-
-          <div style="text-align: center; float: right; width: 42%; position: relative; top: -40px">  
-            <br>
-            <br>
-            <div class="r-stack">
-              <div class="fragment fade-out" data-fragment-index="4" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="1">
-                  <div style="position: relative; width: 85%; margin: 15px auto 1px auto">
-                    <img src="img/Beta_spectrum_of_RaE_inverted.png" style="width: 90%; margin: 0px">
-                    <img src="img/Beta-minus_Decay_wiki.png" style="position: absolute; top: 3%; right: 3%; width: 47%; margin: 0">
-                  </div>
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">&emsp;[F Klemm + Inductiveload/ Wikimedia Commons] </font></div>
-                </div>
-                <div class="fragment fade-in" data-fragment-index="3">
-                  <div style="display: flex; justify-content: center; gap: 40px">
-                    <div>
-                      <br>
-                      <img src="img/Enrico_Fermi_1943-49_DeptEnergy.jpg" style="height: 300px; margin: 0px auto 0px auto">
-                      <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[US Dept. of Energy]</font></div>
-                    </div>
-                    <div style="height: 320px; margin-top: 15px; display: flex; flex-direction: column; justify-content: space-between; align-items: center">
-                      <br>
-                      <div>\[\mathcal{L}_{\rm F} = -G_F\,(\bar\psi_p\gamma^\mu\psi_n)(\bar\psi_e\gamma_\mu\psi_\nu)\]</div>
-                      <img src="img/fermi-vs-W.svg" style="height: 220px; margin: 0">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fragment fade-out" data-fragment-index="6" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="4">
-                  <img src="img/CowenReines.jpg" width="40%" style="margin: 0px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">Cowen & Reines Scintillator [Los Alamos Nat. Lab.]</font></div>
-                  <div class="fragment fade-in" data-fragment-index="5">
-                    <img src="img/telegram.jpg" width="85%" style="margin: 15px auto 1px auto">
-                    <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Reines &amp; Cowan to Pauli, June 1956: CERN Pauli Archive]</font></div>
-                  </div>
-                </div>
-              </div>
-              <div class="fragment fade-out" data-fragment-index="7" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="6">
-                  <div style="display: flex; justify-content: center; gap: 20px">
-                    <div style="width: 30%">
-                      <img src="img/LeeYang.jpeg" style="width: 100%; margin: 0px auto 1px auto">
-                      <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[U. Chicago]</font></div>
-                    </div>
-                    <div style="width: 30%">
-                      <img src="img/Chien-shiung_Wu.jpg" style="width: 100%; margin: 0px auto 1px auto">
-                      <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[Columbia]</font></div>
-                    </div>
-                  </div><br>
-                  <img src="img/NISTWuExperimentConcept.jpg" width="35%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[Smithsonian]</font></div>
-                </div>
-              </div>
-              <div class="fragment fade-out" data-fragment-index="8" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="7">
-                  <div style="width: 40%; margin: 0 auto">
-                    <img src="img/MelvinSchwartz.webp" style="width: 100%; margin: 0px auto 1px auto">
-                    <div style="font-size: 16px; line-height: 1.15"><font size="3">Melvin Schwartz with the 10-ton spark chamber, showing a multiple exposure of cosmic-ray muon tracks.</font> <font size="1" class="credit">[Brookhaven Nat. Lab.]</font></div>
-                  </div>
-                  <img src="img/AGS.png" width="100%" style="margin: 15px auto 1px auto">
-                </div>
-              </div>
-              <div class="fragment fade-out" data-fragment-index="9" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="8">
-                  <img src="img/Homestake1.jpg" width="60%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Brookhaven Nat. Lab.]</font></div>
-                  <img src="img/Homestake2.jpg" width="60%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[US Dept. Energy]</font></div>
-                </div>
-              </div>
-              <div class="fragment fade-out" data-fragment-index="10" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="9">
-                  <img src="img/SN_1987A_Hubble.jpg" width="60%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hubble]</font></div>
-                  <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
-                    <img src="img/PhysRevLett.58.1490.png" width="60%" style="margin: 15px 0 1px 0; background: white">
-                  </div><br>
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Hirata <i>et al.</i>, <a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.58.1490">Phys. Rev. Lett. <b>58</b>, 1490 (1987)</a>]</font></div>
-                </div>
-              </div>
-              <div class="fragment fade-out" data-fragment-index="11" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="10">
-                  <img src="img/SuperKamiokande-1.webp" width="80%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Super-Kamiokande]</font></div>
-                </div>
-              </div>
-              <div class="fragment fade-out" data-fragment-index="12" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="11">
-                  <img src="img/ice-cube.jpeg" width="60%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[@icecube, Instagram]</font></div>
-                </div>
-              </div>
-              <div class="fragment fade-in" data-fragment-index="12" style="width: 100%">
-                <img src="img/ICL-auroras.jpg" width="100%" style="margin: 15px auto 1px auto">
-                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ilya Bodo / IceCube/NSF]</font></div><br>
-              </div>
-            </div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 56%; font-size: 0.75em">
-            <br>
-            <div class="fragment" data-fragment-index="1">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1930</span> &ensp; <b>Theorised</b> &ensp; <i>"Dear Radioactive Ladies and Gentlemen, ..."</i></h3>
-              <h4 style="margin: 0 0 0px 0">&emsp;• Pauli's "desperate remedy": undetectable neutral particle, explain energy conservation in Bi $\beta$ decay</h4>
-              <h4 class="fragment" data-fragment-index="2" style="margin: 0 0 10px 0"><i style="font-size: 0.9em">&emsp; "Unfortunately, I cannot appear in Tubingen personally since I am indispensable here in Zurich because of a ball"</i></h4>
-            </div>
-            <br>
-            <div class="fragment" data-fragment-index="3">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1933</span> &ensp; <b>Fermi theory</b></h3>
-              <h4 style="margin: 0 0 0px 0">&emsp;• Fermi's theory of $\beta$ decay [<a href="https://doi.org/10.1007/BF01351864">Z. Phys. <b>88</b>, 161 (1934)</a>] &ensp; <i style="font-size: 0.8em">(rejected by Nature)</i></h4>
-              <h4 style="margin: 0 0 10px 0">&emsp;• Bethe and Peierls: $\sigma \sim 10^{-44}$ cm$^2$, "no practically possible way of observing" [<a href="https://www.nature.com/articles/133532a0">Nature <b>133</b>, 532 (1934)</a>]</h4>
-            </div>
-            <br>
-            <div class="fragment" data-fragment-index="4">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1956</span> &ensp; <b>Detected</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1995</span></h3>
-              <h4 style="margin: 0 0 10px 0">&emsp;• Reines and Cowan [<a href="https://www.science.org/doi/10.1126/science.124.3212.103">Science (1956)</a>]: reactor $\bar\nu_e$ at Savannah River: $\bar\nu_e + p \to e^+ + n$</h4>
-            </div>
-            <br>
-            <div class="fragment" data-fragment-index="6">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1957</span> &ensp; <b>Parity violation</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1957</span></h3>
-              <h4 style="margin: 0 0 0px 0">&emsp;• Lee and Yang [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.104.254">Phys. Rev. <b>104</b>, 254 (1956)</a>], C. S. Wu: $^{60}$Co $\beta$ decay [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.105.1413">Phys. Rev. <b>105</b>, 1413 (1957)</a>]</h4>
-            </div>
-            <br>
-            <div class="fragment" data-fragment-index="7">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1962</span> &ensp; <b>Now in more flavours</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1988</span></h3>
-              <h4 style="margin: 0 0 10px 0">&emsp;• $\nu_\mu \neq \nu_e$ at Brookhaven [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.9.36">Phys. Rev. Lett. <b>9</b>, 36 (1962)</a>]; doublet structure of leptons</h4>
-            </div>
-            
-            <br>
-            <div class="fragment" data-fragment-index="8">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1968, 1987</span> &ensp; <b>From the Sun and a supernova</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h3>
-              <h4 style="margin: 0 0 0px 0">&emsp;• Davis's Homestake tank ($\nu_e + {}^{37}{\rm Cl} \to {}^{37}{\rm Ar} + e^-$): finds $\tfrac13$ of the predicted $\nu_e$ $\implies$ solar neutrino problem</h4>
-              <h4 class="fragment" data-fragment-index="9" style="margin: 0 0 10px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
-            </div>
-            <br>
-            <div class="fragment" data-fragment-index="10">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1998–2002</span> &ensp; <b>Oscillating, so massive</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2015</span></h3>
-              <h4 style="margin: 0 0 10px 0">&emsp;• Super-K (atmospheric) and SNO (solar): flavours change in flight</h4>
-            </div>
-            <br>
-            <div class="fragment" data-fragment-index="11">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2013</span> &ensp; <b>From the cosmos</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2026</span></h3>
-              <h4 style="margin: 0 0 10px 0">&emsp;• IceCube: TeV–PeV neutrinos from beyond the Galaxy</h4>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Ghost</span> &ensp; <b>Light-years of lead</b></h3>
+              <h4 style="margin: 0">&emsp;• You only ever see what it makes</h4>
             </div>
           </div>
 
         </textarea>
-        </section> -->
+        </section>
 
         <!-- =============================================================== -->
-        <!-- [2a-test] TEST COPY of 2a (31 Oct): text 1.5× (1.125em, was 0.75em); each year's details fold away (class "fragment fade-out fold-away", CSS in <head>) when the next year appears, so only the headings pile up. Delete whichever version loses. | theorised → named → detected → multiplied → astronomy; each year is a fragment, description as a dot point beneath -->
+        <!-- [3] History of neutrinos (our point of view) | fold version (31 Oct): text 1.125em, headings 1.33em, each year's details fold away (class "fragment fade-out fold-away", CSS in head); the 0.75em original is in 2611-Neutrino_prev.html | theorised → named → detected → multiplied → astronomy; each year is a fragment, description as a dot point beneath -->
         <!--      Nobel medal: img/nobel-medal.png (Wikimedia Commons, User:Gusme, CC BY-SA 3.0). 2002 appears twice (Davis + Koshiba shared it): six medals, five prizes -->
         <!--      Images (right, r-stack): one at a time, synced to the points via data-fragment-index 1–12. An image stays up until the next one appears. -->
         <!--      To add one for point n: add a fade-in wrapper at index n, and set the preceding image's fade-out index to n. -->
@@ -435,15 +294,8 @@
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Super-Kamiokande]</font></div>
                 </div>
               </div>
-              <!-- IceCube lab in the ice: 2013 (index 11), replaced by the aurora shot one click later (index 12) -->
-              <div class="fragment fade-out" data-fragment-index="12" style="width: 100%">
-                <div class="fragment fade-in" data-fragment-index="11">
-                  <img src="img/ice-cube.jpeg" width="60%" style="margin: 15px auto 1px auto">
-                  <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[@icecube, Instagram]</font></div>
-                </div>
-              </div>
-              <!-- IceCube Lab under the aurora, detector diagram below: from index 12 to the end -->
-              <div class="fragment fade-in" data-fragment-index="12" style="width: 100%">
+              <!-- IceCube Lab under the aurora: from 2013 (index 11) to the end (ice-cube.jpeg removed 31 Oct) -->
+              <div class="fragment fade-in" data-fragment-index="11" style="width: 100%">
                 <img src="img/ICL-auroras.jpg" width="100%" style="margin: 15px auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ilya Bodo / IceCube/NSF]</font></div><br>
                 <!-- <img src="img/IceCubeDetector.jpg" width="50%" style="margin: 15px auto 1px auto">
@@ -509,7 +361,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [2b] History of neutrinos (their point of view) | (31 Oct: text 1.5×, year headings larger, each epoch's details fold away when the next appears, as on 2a-test) equilibrium → freeze-out → photon reheating → BBN → stars → supernovae → CνB today; each epoch is a fragment, description as a dot point beneath -->
+        <!-- [4] History of neutrinos (their point of view) | (31 Oct: text 1.5×, year headings larger, each epoch's details fold away when the next appears, as on 2a-test) equilibrium → freeze-out → photon reheating → BBN → stars → supernovae → CνB today; each epoch is a fragment, description as a dot point beneath -->
         <!--      Fig 1: cosmic-history timeline with "ν decouple, t = 1 s" marked beside "CMB, 380 kyr" (ESA/Planck or NASA/WMAP). Fig 2: the Sun imaged in neutrinos (Super-Kamiokande; APOD 5 Jun 1998, R. Svoboda and K. Gordan) -->
         <!--      Alts: SN1987A remnant (HST); Bahcall solar-neutrino spectrum; Γ/H vs T sketch; T_ν vs T_γ through e+e- annihilation -->
         <section data-markdown>
@@ -582,129 +434,12 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [3] What is a neutrino? | the properties the rest of the talk needs (membership is on 1a; abundance and sources on 2b; mass in detail on 6) | Fig: charged-current (W) and neutral-current (Z) Feynman diagrams -->
-        <!--      Dropped for size (say aloud): no light, no strong force; the SM has only left-handed ν, so no mass term (more on slide 6); W = charged current, Z = neutral current; after a Z the neutrino carries on -->
-        <section data-markdown>
-          <textarea data-template>
-          # What is a neutrino?
-
-          <div style="text-align: center; float: right; width: 42%">
-            <br>
-            <br>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; Feynman diagram, charged current: $\nu_\ell + N \to \ell + X$ via $W$ (the outgoing lepton tags the flavour)</div>
-            </div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; Feynman diagram, neutral current: $\nu + N \to \nu + X$ via $Z$ (any flavour)<br>[could extend img/feynman/fermi-vs-W.tex]</div>
-            </div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Neutral</span> &ensp; <b>Blind to two of the forces</b></h3>
-              <h4 style="margin: 0">&emsp;• No charge, no colour</h4>
-              <h4 style="margin: 0">&emsp;• Feels only the weak force (and gravity)</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Light</span> &ensp; <b>Almost massless</b></h3>
-              <h4 style="margin: 0">&emsp;• $m_\nu \lesssim 1$ eV: a millionth of $m_e$</h4>
-              <h4 style="margin: 0">&emsp;• Standard Model says zero. Not quite!</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Weak</span> &ensp; <b>Two ways to interact</b></h3>
-              <h4 style="margin: 0">&emsp;• $W$: $\nu_\ell + N \to \ell + X$, tags the flavour</h4>
-              <h4 style="margin: 0">&emsp;• $Z$: $\nu + N \to \nu + X$, any flavour</h4>
-            </div>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [4] Why "ghost"? | the detection problem, turned into a design principle; eqn 1 of 2: σ ∝ E | Fig 1: neutrinos streaming through the Earth; Fig 2: ν–N cross-section vs energy (GeV/TeV/PeV marked) -->
-        <!--     Numbers: σ_CC ≈ 0.7e-38 cm² (E/GeV) for ν (Formaggio & Zeller); G_F² m_N E/π ≈ 1.6e-38 cm² at 1 GeV. 1 TeV in 1 km ice: nσL ≈ 5.5e23 × 7e-36 × 1e5 ≈ 4e-7. Solar ν (~MeV) on electrons in lead: λ ~ tens of light-years -->
-        <!--      Dropped for size (say aloud): on the rare occasion it hits something; linear to ~10 TeV, then slower; by ~100 TeV even the Earth starts to stop them; a huge, cheap, transparent target, darkness and patience ⇒ a cubic kilometre of Antarctic ice -->
-        <section data-markdown>
-          <textarea data-template>
-          # Why "ghost"?
-
-          <div style="text-align: center; float: right; width: 42%">
-            <br>
-            <br>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; Cartoon: neutrinos streaming straight through the Earth (and you), almost none stopping</div>
-            </div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; $\nu N$ cross-section vs energy, log&ndash;log, GeV to EeV: linear rise, softening above $\sim$10 TeV; mark GeV / TeV / PeV<br>[e.g. Formaggio &amp; Zeller, Rev. Mod. Phys. <b>84</b>, 1307 (2012); Connolly, Thorne &amp; Waters, Phys. Rev. D <b>83</b>, 113009 (2011)]</div>
-            </div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Weak</span> &ensp; <b>They almost never interact</b></h3>
-              <h4 style="margin: 0">&emsp;• Because $W$, $Z$ are heavy: $G_F \propto g^2/M_W^2$</h4>
-              <h4 style="margin: 0">&emsp;• A solar $\nu$ would cross light-years of lead</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Invisible</span> &ensp; <b>You never see the neutrino</b></h3>
-              <h4 style="margin: 0">&emsp;• Only what it makes: $\nu_\mu + N \to \mu + X$</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Energy</span> &ensp; <b>Bigger is easier</b></h3>
-              <div style="font-size: 0.85em">$$\sigma_{\nu N} \sim \frac{G_F^2\, m_N E_\nu}{\pi} \approx 10^{-38}\,{\rm cm}^2 \times \frac{E_\nu}{\rm GeV}$$</div>
-              <h4 style="margin: 0">&emsp;• At 1 TeV, $< 1$ in $10^6$ stop in 1 km of ice</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">So</span> &ensp; <b>The recipe</b></h3>
-              <h4 style="margin: 0">&emsp;• Huge, clear, dark, patient: a km$^3$ of ice</h4>
-            </div>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [5] The neutrino sky, 24 orders of magnitude in energy | one plot of every source; point to the high-energy end | Fig: Grand Unified Neutrino Spectrum, top panel (flux), fig01a.pdf from the arXiv source (1910.11878) of Vitagliano, Tamborra & Raffelt, RMP 92, 045006 (2020); the bottom panel (energy flux E×φ) is the alternative -->
-        <!--     Was "30 orders": the energy axis runs μeV to EeV, 24. ~1 per m² per year: IceCube HESE per-flavour Φ = 2.12e-18 GeV⁻¹cm⁻²s⁻¹sr⁻¹ at 100 TeV, γ = 2.87 → Φ(>100 TeV) ≈ 4e-12 cm⁻²s⁻¹ (all sky, 3 flavours) ≈ 1.3 m⁻² yr⁻¹. Homestake: 615 t of C₂Cl₄; 1 km³ of ice ≈ 0.92 Gt -->
-        <section data-markdown>
-          <textarea data-template>
-          ## The neutrino sky, 24 orders of magnitude in energy
-
-          <div style="text-align: center; width: 95%; margin: 0 auto">
-            <img src="img/GUNS_flux.png" width="55%" style="margin: 15px auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Vitagliano, Tamborra &amp; Raffelt, <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.92.045006">Rev. Mod. Phys. <b>92</b>, 045006 (2020)</a>]</font></div>
-          </div>
-
-          <br>
-
-          <div style="text-align: left; width: 75%; margin: 0 auto">
-            <h3 class="fragment" style="margin: 0 0 6px 0">&emsp;• Each source has its own energy: Big Bang (meV), Sun (MeV), supernovae (10 MeV), atmosphere (GeV&ndash;TeV), cosmos (TeV&ndash;PeV)</h3>
-            <h3 class="fragment" style="margin: 0 0 6px 0">&emsp;• IceCube works at the far right, where the flux is lowest: above 100 TeV, about one per m$^2$ per year</h3>
-            <h3 class="fragment" style="margin: 0 0 6px 0">&emsp;• So the detectors grow: from 600 tonnes of dry-cleaning fluid (Homestake) to a billion tonnes of ice</h3>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- ######################################################################## -->
-        <!-- ACT 2 — Why neutrinos matter; why ghosts are messengers (slides 6–9, ~8 min) -->
-        <!-- ######################################################################## -->
-
-        <!-- =============================================================== -->
-        <!-- Act 2 divider -->
-        <section data-markdown>
-          <textarea data-template>
-
-            <br><br><br><br><br><br><br><br>
-            # Why neutrinos matter
-
-          </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [6] The mass puzzle (Nobel 2015) | the one BSM fact everyone can hold | Fig 1: Super-K 1998 zenith-angle plot, multi-GeV μ-like panel only (cropped from zen.eps, arXiv hep-ex/9807003; hatched boxes = no oscillation, line = oscillation fit); Fig 2: SNO 2002 φ_μτ vs φ_e (fig3.eps, arXiv nucl-ex/0204008), appears with the SNO point -->
+        <!-- [5] The mass puzzle (Nobel 2015) | merged 31 Oct from 6 (mass puzzle) and 7 (open questions); old version(s) in 2611-Neutrino_prev.html | Fig: Super-K 1998 zenith plot (multi-GeV μ-like) and SNO 2002 flux plot, both static now -->
         <!--     Numbers: Super-K up-going multi-GeV μ-like ≈ 0.55 of expectation. SNO: φ_e = 1.76, φ_μτ = 3.41, φ_NC = 5.09 vs SSM 5.05 (10⁶ cm⁻²s⁻¹). First oscillation maximum at L/E ≈ 500 km/GeV for |Δm²₃₁|. DESI DR2 + CMB (2025): Σm_ν < 0.064 eV -->
         <!--      Dropped for size (say aloud): plot: up-going on the left, boxes = no oscillation, line = oscillation fit; all flavours together (neutral current) match the solar model: Davis's missing two-thirds; flavour states are mixtures of mass states that drift out of step in flight; Δm²₂₁ ≈ 7.5e-5 eV², |Δm²₃₁| ≈ 2.5e-3 eV²; KATRIN is tritium β decay; cosmology is DESI + CMB (2025); the SM says zero: the first lab evidence of physics beyond it -->
+        <!--     Numbers: Σm_ν minimum from oscillations ≈ 0.059 eV (normal), ≈ 0.10 eV (inverted). Seesaw: (100 GeV)² / 0.05 eV ≈ 2×10¹⁴ GeV -->
+        <!--      Dropped for size (say aloud): normal m₁<m₂<m₃, inverted m₃ lightest: the sign of Δm²₃₁; also Super-K and the IceCube Upgrade; cosmology (Σm_ν < 0.064 eV) already squeezes the inverted ordering (needs ≳ 0.1 eV); the only neutral fermion that could be Majorana; (A,Z) → (A,Z+2) + 2e⁻, no neutrinos out; KamLAND-Zen T½ > 1e26 yr (¹³⁶Xe); CUPID; m_D ~ 100 GeV, m_ν ~ 0.05 eV, near the GUT scale; a window onto physics far beyond any collider -->
+        <!--      Dropped in the merge (say aloud): up-going ν_μ ~half gone over 13,000 km; SNO NC total matches the solar model; Δm² values; cosmology Σm_ν < 0.064 eV; normal vs inverted; 0νββ (KamLAND-Zen, LEGEND, nEXO); T2K/NOvA hints, leptogenesis; seesaw M ~ 1e14 GeV. Qian & Vogel ordering figure: img/mass_ordering_QianVogel.png -->
         <section data-markdown>
           <textarea data-template>
           # The mass puzzle (Nobel 2015)
@@ -713,80 +448,71 @@
             <br>
             <img src="img/SuperK_1998_zenith_mu.png" style="height: 360px; margin: 15px auto 1px auto">
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Fukuda <i>et al.</i>, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.81.1562">Phys. Rev. Lett. <b>81</b>, 1562 (1998)</a>]</font></div>
-            <div class="fragment" data-fragment-index="1">
-              <img src="img/SNO_2002_flux.png" style="height: 360px; margin: 25px auto 1px auto">
-              <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ahmad <i>et al.</i>, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.89.011301">Phys. Rev. Lett. <b>89</b>, 011301 (2002)</a>]</font></div>
-            </div>
+            <img src="img/SNO_2002_flux.png" style="height: 360px; margin: 25px auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ahmad <i>et al.</i>, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.89.011301">Phys. Rev. Lett. <b>89</b>, 011301 (2002)</a>]</font></div>
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1998</span> &ensp; <b>Super-K: muon neutrinos go missing</b></h3>
-              <h4 style="margin: 0">&emsp;• From above (15 km): as expected</h4>
-              <h4 style="margin: 0">&emsp;• From below (13,000 km): half gone</h4>
-            </div>
-            <div class="fragment" data-fragment-index="1" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2002</span> &ensp; <b>SNO: the Sun's missing $\nu_e$ found</b></h3>
-              <h4 style="margin: 0">&emsp;• Only $\tfrac13$ arrive as $\nu_e$; the rest as $\nu_\mu$, $\nu_\tau$</h4>
-            </div>
-            <div class="fragment" data-fragment-index="2" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Oscillation</span> &ensp; <b>Needs mass</b></h3>
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1998&ndash;2002</span> &ensp; <b>Flavours change in flight</b></h3>
               <div style="font-size: 0.85em">$$P(\nu_\mu\to\nu_\mu) \simeq 1 - \sin^2 2\theta\,\sin^2\!\left(\frac{\Delta m^2 L}{4E}\right)$$</div>
-              <h4 style="margin: 0">&emsp;• $\Delta m^2 \neq 0$: at least two have mass</h4>
+              <h4 style="margin: 0">&emsp;• Super-K (atmosphere), SNO (Sun)</h4>
             </div>
-            <div class="fragment" data-fragment-index="3" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Tiny</span> &ensp; <b>The first crack in the Standard Model</b></h3>
-              <h4 style="margin: 0">&emsp;• KATRIN: $m_\nu < 0.45$ eV</h4>
-              <h4 style="margin: 0">&emsp;• Cosmology: $\sum m_\nu < 0.064$ eV</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://www.science.org/doi/10.1126/science.adq9592">Science <b>388</b>, 180 (2025)</a>]</div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Mass</span> &ensp; <b>The Standard Model says zero</b></h3>
+              <h4 style="margin: 0">&emsp;• $m_\nu < 0.45$ eV: the first crack</h4>
+              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[KATRIN, <a href="https://www.science.org/doi/10.1126/science.adq9592">Science <b>388</b>, 180 (2025)</a>]</div>
+            </div>
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Open</span> &ensp; <b>Ordering, Majorana, CP</b></h3>
+              <h4 style="margin: 0">&emsp;• JUNO, DUNE, Hyper-K, LEGEND</h4>
             </div>
           </div>
 
         </textarea>
         </section>
 
+        <!-- ######################################################################## -->
+        <!-- ACT 2 — Why a cubic kilometre (slides 6–8, ~5 min) -->
+        <!-- ######################################################################## -->
+
         <!-- =============================================================== -->
-        <!-- [7] The open questions | where the big unsolved problems live | Fig: normal vs inverted mass-ordering ladders with flavour content (figures/mh.pdf from the arXiv source of Qian & Vogel, 1505.01891; title cropped off) -->
-        <!--     Numbers: Σm_ν minimum from oscillations ≈ 0.059 eV (normal), ≈ 0.10 eV (inverted). Seesaw: (100 GeV)² / 0.05 eV ≈ 2×10¹⁴ GeV -->
-        <!--      Dropped for size (say aloud): normal m₁<m₂<m₃, inverted m₃ lightest: the sign of Δm²₃₁; also Super-K and the IceCube Upgrade; cosmology (Σm_ν < 0.064 eV) already squeezes the inverted ordering (needs ≳ 0.1 eV); the only neutral fermion that could be Majorana; (A,Z) → (A,Z+2) + 2e⁻, no neutrinos out; KamLAND-Zen T½ > 1e26 yr (¹³⁶Xe); CUPID; m_D ~ 100 GeV, m_ν ~ 0.05 eV, near the GUT scale; a window onto physics far beyond any collider -->
+        <!-- Act 2 divider -->
         <section data-markdown>
           <textarea data-template>
-          # The open questions
 
-          <div style="text-align: center; float: right; width: 42%">
-            <br>
-            <br>
-            <img src="img/mass_ordering_QianVogel.png" width="95%" style="margin: 15px auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Qian &amp; Vogel, <a href="https://doi.org/10.1016/j.ppnp.2015.05.002">Prog. Part. Nucl. Phys. <b>83</b>, 1 (2015)</a>]</font></div>
+            <br><br><br><br><br><br><br><br>
+            # Why a cubic kilometre
+
+          </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [6] The neutrino sky | one plot of every source; IceCube at the high-energy end; σ ∝ E is why it can work at all | Fig: Grand Unified Neutrino Spectrum, top panel (Vitagliano, Tamborra & Raffelt, RMP 92, 045006 (2020)); text cut to three points 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
+        <!--     Was "30 orders": the energy axis runs μeV to EeV, 24. ~1 per m² per year: IceCube HESE per-flavour Φ = 2.12e-18 GeV⁻¹cm⁻²s⁻¹sr⁻¹ at 100 TeV, γ = 2.87 → Φ(>100 TeV) ≈ 4e-12 cm⁻²s⁻¹ (all sky, 3 flavours) ≈ 1.3 m⁻² yr⁻¹. Homestake: 615 t of C₂Cl₄; 1 km³ of ice ≈ 0.92 Gt -->
+        <section data-markdown>
+          <textarea data-template>
+          # The neutrino sky
+
+          ### 24 orders of magnitude in energy
+
+          <div style="text-align: center; width: 95%; margin: 0 auto">
+            <img src="img/GUNS_flux.png" width="48%" style="margin: 10px auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Vitagliano, Tamborra &amp; Raffelt, <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.92.045006">Rev. Mod. Phys. <b>92</b>, 045006 (2020)</a>]</font></div>
           </div>
 
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Ordering</span> &ensp; <b>Which one is lightest?</b></h3>
-              <h4 style="margin: 0">&emsp;• Normal or inverted? JUNO (since 2025)</h4>
-              <h4 style="margin: 0">&emsp;• Also IceCube DeepCore, KM3NeT/ORCA</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Majorana?</span> &ensp; <b>Its own antiparticle?</b></h3>
-              <h4 style="margin: 0">&emsp;• Test: neutrinoless double $\beta$ decay</h4>
-              <h4 style="margin: 0">&emsp;• KamLAND-Zen, LEGEND, nEXO</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">CP</span> &ensp; <b>Do $\nu$ and $\bar\nu$ differ?</b></h3>
-              <h4 style="margin: 0">&emsp;• T2K, NOvA hints; DUNE, Hyper-K to decide</h4>
-              <h4 style="margin: 0">&emsp;• Leptogenesis: why there is matter at all</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Seesaw</span> &ensp; <b>Why so light?</b></h3>
-              <h4 style="margin: 0">&emsp;• $m_\nu \sim m_D^2/M \;\Rightarrow\; M \sim 10^{14}$ GeV</h4>
-            </div>
+          <div style="text-align: left; width: 70%; margin: 0 auto; font-size: 1.5em">
+            <h4 class="fragment" style="margin: 15px 0 0 0">&emsp;• meV to EeV: every source on one axis</h4>
+            <h4 class="fragment" style="margin: 0">&emsp;• IceCube at the far right: rarest, but $\sigma \propto E$</h4>
+            <h4 class="fragment" style="margin: 0">&emsp;• So detectors grow: 600 tonnes to a billion</h4>
           </div>
 
         </textarea>
         </section>
 
         <!-- =============================================================== -->
-        <!-- [8] Why ghosts make the best messengers | slide 4 turned inside out | Fig: Nobel "Messengers from space", or gamma-ray horizon vs energy -->
+        <!-- [7] Why ghosts make the best messengers | the detection problem turned inside out | Fig 1: Jarnestad drawing (neutrino straight, cosmic ray curls, photon zapped); Fig 2: gamma-ray horizon placeholder; text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--     Numbers: γγ → e⁺e⁻ on starlight (EBL): optical depth 1 at ~100 Mpc for ~10 TeV; on the CMB at ~PeV the absorption length is ~10 kpc (≈ distance to the Galactic centre). Larmor radius r = E/(ZeBc): 1 PeV proton in 3 μG ≈ 0.4 pc ≈ 1 ly; 10²⁰ eV ≈ 40 kpc. GZK horizon above 5e19 eV ~100 Mpc. E_ν ≈ E_p/20 (pion takes ~1/5, each ν ~1/4 of that) -->
         <!--      Dropped for size (say aloud): above ~10 TeV nothing past ~100 Mpc; none escapes dense sources; a PeV proton curls round in ~1 light-year; UHE cosmic rays also absorbed beyond ~100 Mpc; each ν carries ~5% of the proton's energy; electrons alone make γ but not ν -->
         <section data-markdown>
@@ -804,23 +530,18 @@
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
+            <br>
+            <div style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Light</span> &ensp; <b>Absorbed on the way</b></h3>
               <h4 style="margin: 0">&emsp;• $\gamma\gamma \to e^+e^-$ on starlight and the CMB</h4>
-              <h4 style="margin: 0">&emsp;• At PeV, we can't see past our Galaxy</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cosmic rays</span> &ensp; <b>Bent by magnetic fields</b></h3>
-              <h4 style="margin: 0">&emsp;• Directions scrambled on the way</h4>
+              <h4 style="margin: 0">&emsp;• They forget where they came from</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Neutrinos</span> &ensp; <b>Straight, never stopped</b></h3>
-              <h4 style="margin: 0">&emsp;• Escape dense sources, point straight back</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Smoking gun</span> &ensp; <b>Only protons make them</b></h3>
-              <h4 style="margin: 0">&emsp;• $p+p,\ p+\gamma \to \pi^\pm \to \nu$ &ensp;(and $\pi^0 \to \gamma\gamma$)</h4>
-              <h4 style="margin: 0">&emsp;• A neutrino marks a cosmic-ray accelerator</h4>
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Neutrinos</span> &ensp; <b>Straight, and only from protons</b></h3>
+              <h4 style="margin: 0">&emsp;• $p+p,\ p+\gamma \to \pi^\pm \to \nu$</h4>
             </div>
           </div>
 
@@ -828,7 +549,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [9] The 100-year cosmic-ray question | why IceCube was built; Waxman–Bahcall sets the size | Fig: all-particle CR spectrum (knee, ankle, LHC); optional Hillas plot -->
+        <!-- [8] The 100-year cosmic-ray question | why IceCube was built; Waxman–Bahcall sets the size | Fig: Hess balloon, cosmic-ray spectrum (placeholders); text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--     Numbers: flux above the knee (~3 PeV) ~1 m⁻² yr⁻¹; above the ankle (~5 EeV) ~1 km⁻² yr⁻¹. Highest: Fly's Eye 3.2e20 eV (1991); Telescope Array "Amaterasu" 2.4e20 eV (2023). LHC beam 6.8 TeV: 1e20/6.8e12 ≈ 1.5e7. -->
         <!--     WB 1999: E²Φ(ν_μ+ν̄_μ) < 1.5e-8 (no source evolution) to ~5e-8 (with) GeV cm⁻²s⁻¹sr⁻¹; IceCube measures ≈ 1e-8 per flavour at 100 TeV. Events: Φ(>100 TeV) ≈ 1.3 m⁻²yr⁻¹ (slide 5) × 1 km² × P_int(100 TeV, 1 km ice) ≈ 1e-5 → ~10 yr⁻¹ -->
         <!--      Dropped for size (say aloud): protons and nuclei; knee (PeV, probably supernova remnants) vs ankle (other galaxies: AGN, GRBs, ...); WB: the energy in the highest-energy cosmic rays caps the ν flux; anything much smaller than a km³ sees nothing -->
@@ -848,25 +569,19 @@
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1912</span> &ensp; <b>Radiation from space</b>&ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1936</span></h3>
-              <h4 style="margin: 0">&emsp;• Hess, by balloon: more radiation higher up</h4>
-              <h4 style="margin: 0">&emsp;• Up to $10^{20}$ eV: $10^7\times$ an LHC proton</h4>
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1912</span> &ensp; <b>Cosmic rays</b>&ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1936</span></h3>
+              <h4 style="margin: 0">&emsp;• Up to $10^{20}$ eV; sources still unknown</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Since</span> &ensp; <b>Where are the accelerators?</b></h3>
-              <h4 style="margin: 0">&emsp;• Charged, so we can't trace them back</h4>
-              <h4 style="margin: 0">&emsp;• Unknown for a century</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1999</span> &ensp; <b>Waxman&ndash;Bahcall</b></h3>
-              <h4 style="margin: 0">&emsp;• Cosmic rays must also make neutrinos</h4>
               <h4 style="margin: 0">&emsp;• $E^2\Phi_\nu \sim 10^{-8}$ GeV cm$^{-2}$ s$^{-1}$ sr$^{-1}$</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1103/PhysRevD.59.023002">Phys. Rev. D <b>59</b>, 023002 (1999)</a>]</div>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">So</span> &ensp; <b>A cubic kilometre</b></h3>
-              <h4 style="margin: 0">&emsp;• $\sim$10 a year above 100 TeV in 1 km$^3$</h4>
+              <h4 style="margin: 0">&emsp;• $\sim$10 a year above 100 TeV</h4>
             </div>
           </div>
 
@@ -874,7 +589,7 @@
         </section>
 
         <!-- ######################################################################## -->
-        <!-- ACT 3 — IceCube: what it is and how it works (slides 10–13, ~9 min, most technical) -->
+        <!-- ACT 3 — Halzen's bet (slides 9–13, ~8 min) -->
         <!-- ######################################################################## -->
 
         <!-- =============================================================== -->
@@ -883,51 +598,44 @@
           <textarea data-template>
 
             <br><br><br><br><br><br><br><br>
-            # IceCube: what it is and how it works
+            # Halzen's bet
 
           </textarea>
         </section>
 
         <!-- =============================================================== -->
-        <!-- [10] From Markov's idea to a cubic kilometre | lineage; the bet that ice beats water | Fig: timeline/map of neutrino telescopes (DUMAND, Baikal, AMANDA, ANTARES, IceCube, KM3NeT); AMANDA deployment photo -->
+        <!-- [9] A theorist bets on ice | Halzen enters the story: who he is, the 1988 bet, AMANDA | rebuilt 31 Oct from 10 (Markov → km³) plus the bio from 19 (Halzen); old version(s) in 2611-Neutrino_prev.html | Fig 1: Quarks and Leptons cover (placeholder); Fig 2: AMANDA deployment photo (placeholder) -->
         <!--      Check: DUMAND 1993 string lost within hours to a leak (from memory); Baikal NT-36 first underwater ν 1996. Markov quote as usually given in Halzen's reviews. AMANDA-II: 677 OMs, 19 strings, 1.5–2 km. Bubbles/dust are on slide 12, not here -->
         <!--      Dropped for size (say aloud): Markov: "install detectors deep in a lake or a sea and determine the direction of charged particles with the help of Cherenkov radiation"; look down, the Earth stops everything else; DUMAND 4.8 km deep, one string (1993) lost within hours; Baikal deployed from the frozen lake, first underwater ν 1996; Learned was a DUMAND physicist; Łódź 1988; AMANDA 19 strings, 677 sensors; drill from the surface; the Pole station already had planes, power and people -->
+        <!--      From the Halzen slide: born Tienen 1944; PhD Louvain 1969; CERN; Wisconsin–Madison since 1972; QCD and collider physics; Quarks and Leptons with Alan Martin (1984) -->
         <section data-markdown>
           <textarea data-template>
-          # From Markov's idea to a cubic kilometre
+          # A theorist bets on ice
 
           <div style="text-align: center; float: right; width: 42%">
             <br>
-            <br>
             <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; AMANDA: a string of optical modules going down a hole at the South Pole, 1990s<br>[IceCube/NSF gallery]</div>
+              <div>Image 1 &mdash; Cover of <i>Quarks and Leptons</i> (Halzen &amp; Martin, Wiley 1984)</div>
             </div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; World map of neutrino telescopes, past and present: DUMAND, Baikal, AMANDA/IceCube, ANTARES/KM3NeT<br>[Global Neutrino Network, or draw]</div>
+            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 0px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
+              <div>Image 2 &mdash; AMANDA: a string of optical modules going down a hole at the South Pole, 1990s<br>[IceCube/NSF gallery]</div>
             </div>
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1960</span> &ensp; <b>The idea</b></h3>
-              <h4 style="margin: 0">&emsp;• Markov: Cherenkov light, deep in a lake or sea</h4>
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Halzen</span> &ensp; <b>A collider theorist</b></h3>
+              <h4 style="margin: 0">&emsp;• Co-wrote <i>Quarks and Leptons</i> (1984)</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1976&ndash;95</span> &ensp; <b>The ocean</b></h3>
-              <h4 style="margin: 0">&emsp;• DUMAND (Hawaii) fails; Baikal works</h4>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1988</span> &ensp; <b>Use the Antarctic ice</b></h3>
+              <h4 style="margin: 0">&emsp;• With John Learned, after the ocean failed</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1988</span> &ensp; <b>The ice</b></h3>
-              <h4 style="margin: 0">&emsp;• Halzen &amp; Learned: try Antarctica</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1993&ndash;2009</span> &ensp; <b>AMANDA</b></h3>
-              <h4 style="margin: 0">&emsp;• First neutrinos caught in ice</h4>
+              <h4 style="margin: 0">&emsp;• The first neutrinos caught in ice</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1038/35068509">Nature <b>410</b>, 441 (2001)</a>]</div>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Why ice</span> &ensp; <b>Dark, sterile, still</b></h3>
-              <h4 style="margin: 0">&emsp;• No bioluminescence, no $^{40}$K, no currents</h4>
             </div>
           </div>
 
@@ -935,7 +643,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [11] IceCube by the numbers | the scale, in one schematic | Fig: IceCube schematic (img/IceCubeDetector.jpg, IceCube/NSF; has the DOM-in-hole inset already); Eiffel Tower version is the alternative -->
+        <!-- [10] IceCube by the numbers | the scale, in one schematic | Fig: img/IceCubeDetector.jpg [IceCube/NSF]; text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--      Numbers: ice 2.8 km thick at the Pole; 125 m string spacing, 17 m DOM spacing; 1 km³ ≈ 0.92 Gt. Enhanced Hot Water Drill, 5 MW, 60 cm holes. Trigger ~2.5–3 kHz ≈ 1e11 muons/yr (matches slide 13). Collaboration numbers from the outline (2025) -->
         <!--      Dropped for size (say aloud): strings 125 m apart; 5 MW drill; ~280 million US dollars; DeepCore down to ~10 GeV; IceTop 81 stations; filtered at the Pole, sent north by satellite; ~350 scientists, 58 institutions, 14 countries (Adelaide) -->
         <section data-markdown>
@@ -948,24 +656,16 @@
           </div>
 
           <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Where</span> &ensp; <b>The South Pole</b></h3>
-              <h4 style="margin: 0">&emsp;• Under the station, in 2.8 km of ice</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <br>
+            <div style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Size</span> &ensp; <b>A billion tonnes</b></h3>
-              <h4 style="margin: 0">&emsp;• 86 strings $\times$ 60 = 5,160 sensors</h4>
-              <h4 style="margin: 0">&emsp;• 1,450&ndash;2,450 m deep: one km$^3$</h4>
+              <h4 style="margin: 0">&emsp;• 5,160 sensors, 1,450&ndash;2,450 m deep</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2004&ndash;10</span> &ensp; <b>Seven summers</b></h3>
-              <h4 style="margin: 0">&emsp;• Hot-water drill: 2.5 km hole in 2 days</h4>
+              <h4 style="margin: 0">&emsp;• Hot-water drill: a 2.5 km hole in 2 days</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Extras</span> &ensp; <b>DeepCore and IceTop</b></h3>
-              <h4 style="margin: 0">&emsp;• Low-energy core; surface air-shower array</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Running</span> &ensp; <b>3,000 events a second</b></h3>
               <h4 style="margin: 0">&emsp;• Almost all muons from the atmosphere</h4>
             </div>
@@ -975,7 +675,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [12] How it sees: Cherenkov light in the clearest ice on Earth | the one piece of detector physics + glaciology surprise; eqn 2 of 2: cos θ = 1/(nβ) | Fig L: Cherenkov cone over DOM photo; Fig R: absorption/scattering length vs depth with dust layer -->
+        <!-- [11] How it sees | Cherenkov light, the DOM, and the ice surprise; eqn: cos θ = 1/(nβ) | Fig 1: DOM + cone (placeholder); Fig 2: ice optics vs depth (placeholder); text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--      Numbers: Frank–Tamm, 300–500 nm, sin²41° = 0.43: dN/dx = 2πα sin²θ (1/λ₁ − 1/λ₂) ≈ 260 photons/cm. DOM: 25 cm Hamamatsu PMT in a 33 cm glass sphere. Clean deep ice: absorption length ~100–200 m at 400 nm, effective scattering ~25 m. Bubbles → clathrates by ~1,400 m. Dust layer ~2,000–2,100 m, ~65–70 kyr old; DeepCore sits below it. -->
         <!--      Check: Halzen's ice-optics-textbook line is a paraphrase (outline, from the AIP piece); confirm wording before quoting. "~98% of DOMs still working": JINST 2017 had 98.4%; update -->
         <!--      Dropped for size (say aloud): blue is what the ice transmits best; DOM = 25 cm PMT + digitiser in a glass sphere, ns timing; frozen in, no repairs, ~98% working; scatters every few tens of m; AMANDA's first strings at 1 km hit the bubbles; pressure locks air into crystals; dust layer near 2,000 m, a 70,000-year ice-age record, DeepCore below it -->
@@ -994,24 +694,19 @@
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
+            <br>
+            <div style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cherenkov</span> &ensp; <b>A sonic boom of light</b></h3>
               <h4 style="margin: 0">&emsp;• Faster than light <i>in ice</i> &rArr; a cone:</h4>
-              <div>$$\cos\theta_c = \frac{1}{n\beta} \;\Rightarrow\; \theta_c \approx 41^\circ \quad (n \approx 1.32)$$</div>
-              <h4 style="margin: 0">&emsp;• $\sim$250 blue photons per cm</h4>
+              <div style="font-size: 0.85em">$$\cos\theta_c = \frac{1}{n\beta} \;\Rightarrow\; \theta_c \approx 41^\circ$$</div>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">DOM</span> &ensp; <b>A clock and a light meter</b></h3>
               <h4 style="margin: 0">&emsp;• Timing &rArr; direction; light &rArr; energy</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Ice</span> &ensp; <b>Clear, if you go deep</b></h3>
-              <h4 style="margin: 0">&emsp;• Above 1.4 km, bubbles scatter the light</h4>
-              <h4 style="margin: 0">&emsp;• Below, it travels 100&ndash;200 m</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Halzen</span> &ensp; <b>Lucky he skipped the textbook</b></h3>
-              <h4 style="margin: 0">&emsp;• On ice optics: he'd never have started</h4>
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Ice</span> &ensp; <b>Clear only below 1.4 km</b></h3>
+              <h4 style="margin: 0">&emsp;• Halzen: had he read the textbook, he'd never have started</h4>
             </div>
           </div>
 
@@ -1019,7 +714,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [12a] Cherenkov light in IceCube (video) | the event as the detector sees it | Video: IceCube, streamed from res.cloudinary.com (needs internet) -->
+        <!-- [12] Cherenkov light in IceCube (video) | the event as the detector sees it | Video: IceCube, streamed from res.cloudinary.com (needs internet) -->
         <section data-markdown>
           <textarea data-template>
           # Cherenkov light in IceCube
@@ -1053,100 +748,45 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [12b] Why muons? (added 31 Oct) | muons go km, electron showers a few m: bigger target, ~1° pointing, Earth as a filter; showers still give better energy | Fig: img/IceCube-Principal_AhlersHalzen_ProgPartNuclPhys102_2018.png (Ahlers & Halzen, PPNP 102, 73 (2018)): up-going vs down-going, atmospheric μ and ν, cosmic ν, Cherenkov cone in IceCube -->
+        <!-- [13] Tracks, cascades, and the background | merged 31 Oct from 12b (Why muons?) and 13 (Tracks, cascades); old version(s) in 2611-Neutrino_prev.html | Fig 1: Ahlers & Halzen principle figure (up-going vs down-going); Fig 2: track + cascade event displays (placeholder) -->
         <!--      Numbers: muon range in ice ≈ (1/b) ln(1 + bE/a), a ≈ 0.18 GeV/m, b ≈ 3.7e-4 /m: ~3 km at 1 TeV, ~15 km at 100 TeV. Ice radiation length 39 cm, so EM showers are ~5–10 m long. Overlaps slide 13's "Earth as a filter" line; trim one if it feels repeated -->
+        <!--      Dropped for size (say aloud): the muon travels km, so direction is good and energy rough (it escapes); cascades: ν_e, most ν_τ, neutral-current hits of any flavour, all the energy inside; double cascade: ν_τ at PeV, two bursts ~50 m apart, the last flavour seen; outer sensors flag muons coming in -->
+        <!--      Dropped in the merge (say aloud): double cascades = ν_τ at PeV, bursts ~50 m apart, 7 candidates (2024); cascades are ν_e, most ν_τ and neutral-current hits of any flavour; outer sensors flag incoming muons -->
         <section data-markdown>
           <textarea data-template>
-          # Why muons?
+          # Tracks, cascades, and the background
 
           ### Muons travel kilometres through ice; electrons shower out within metres
 
           <div style="text-align: center; float: right; width: 46%">
-            <br>
-            <img src="img/IceCube-Principal_AhlersHalzen_ProgPartNuclPhys102_2018.png" width="100%" style="margin: 15px auto 1px auto; background: white">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ahlers &amp; Halzen, <a href="https://doi.org/10.1016/j.ppnp.2018.05.001">Prog. Part. Nucl. Phys. <b>102</b>, 73 (2018)</a>]</font></div>
+            <img src="img/IceCube-Principal_AhlersHalzen_ProgPartNuclPhys102_2018.png" width="100%" style="margin: 10px auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2; margin-bottom: 20px"><font size="3" class="credit">[Ahlers &amp; Halzen, <a href="https://doi.org/10.1016/j.ppnp.2018.05.001">Prog. Part. Nucl. Phys. <b>102</b>, 73 (2018)</a>]</font></div>
+            <div style="border: 2px dashed #888; border-radius: 10px; height: 260px; width: 90%; margin: 0 auto 0px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
+              <div>Track and cascade event displays, side by side (e.g. IceCube-170922A and Ernie)<br>[IceCube]</div>
+            </div>
           </div>
 
           <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">
             <br>
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Target</span> &ensp; <b>Bigger than the detector</b></h3>
-              <h4 style="margin: 0">&emsp;• Hit km away, its muon still gets in</h4>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Tracks</span> &ensp; <b>Muons go kilometres</b></h3>
+              <h4 style="margin: 0">&emsp;• Bigger target, 1&deg; pointing</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Pointing</span> &ensp; <b>$\sim$1°, not $\sim$10°</b></h3>
-              <h4 style="margin: 0">&emsp;• A km-long track vs a few-metre shower</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Background</span> &ensp; <b>Up-going &rArr; neutrino</b></h3>
-              <h4 style="margin: 0">&emsp;• The Earth blocks everything else</h4>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cascades</span> &ensp; <b>Showers stop in metres</b></h3>
+              <h4 style="margin: 0">&emsp;• $\sim$10&deg; pointing, but better energy</h4>
             </div>
             <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Showers</span> &ensp; <b>Still useful</b></h3>
-              <h4 style="margin: 0">&emsp;• Better energy: it all stays inside</h4>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Background</span> &ensp; <b>$10^6$ muons per neutrino</b></h3>
+              <h4 style="margin: 0">&emsp;• Up-going, or starts inside &rArr; a neutrino</h4>
             </div>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [13] Tracks, cascades, and beating the background | what an event looks like; proving it is not atmospheric | Fig: three event displays (track, cascade, double-bang); cartoon of Earth-filter vs starting-event veto -->
-        <!--      Dropped for size (say aloud): the muon travels km, so direction is good and energy rough (it escapes); cascades: ν_e, most ν_τ, neutral-current hits of any flavour, all the energy inside; double cascade: ν_τ at PeV, two bursts ~50 m apart, the last flavour seen; outer sensors flag muons coming in -->
-        <section data-markdown>
-          <textarea data-template>
-          # Tracks, cascades, and beating the background
-
-          ### The shape of the light tells you (mostly) the flavour
-
-          <div>
-            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%; font-size: 1.5em">
-              <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.35em; padding: 0 24px; box-sizing: border-box">
-                <div>Track event display (e.g. IceCube-170922A, the TXS 0506+056 neutrino)<br>[IceCube]</div>
-              </div>
-              <h3 style="margin: 0 0 6px 0"><b>Track</b></h3>
-              <div style="text-align: left">
-                <h4 style="margin: 0 0 6px 0">• $\nu_\mu \to$ km-long muon</h4>
-                <h4 style="margin: 0 0 6px 0">• Points to $< 1^\circ$</h4>
-                <h4 style="margin: 0 0 6px 0">• Energy: rough</h4>
-              </div>
-            </div>
-
-            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%; margin-left: 2%; font-size: 1.5em">
-              <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.35em; padding: 0 24px; box-sizing: border-box">
-                <div>Cascade event display (e.g. Ernie, 1.1 PeV)<br>[IceCube]</div>
-              </div>
-              <h3 style="margin: 0 0 6px 0"><b>Cascade</b></h3>
-              <div style="text-align: left">
-                <h4 style="margin: 0 0 6px 0">• $\nu_e$, $\nu_\tau$, or any via $Z$</h4>
-                <h4 style="margin: 0 0 6px 0">• Points to $\sim 10^\circ$</h4>
-                <h4 style="margin: 0 0 6px 0">• Energy: good</h4>
-              </div>
-            </div>
-
-            <div class="fragment fade-in" style="text-align: center; float: right; width: 32%; font-size: 1.5em">
-              <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.35em; padding: 0 24px; box-sizing: border-box">
-                <div>Double-cascade event display (tau-neutrino candidate)<br>[IceCube]</div>
-              </div>
-              <h3 style="margin: 0 0 6px 0"><b>Double cascade</b></h3>
-              <div style="text-align: left">
-                <h4 style="margin: 0 0 6px 0">• $\nu_\tau$: two bursts</h4>
-                <h4 style="margin: 0 0 6px 0">• 7 seen (2024)</h4>
-              </div>
-            </div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 100%; font-size: 1.5em">
-            <h3 class="fragment" style="margin: 25px 0 6px 0"><b>Background:</b> atmospheric muons outnumber neutrinos $10^6$ to 1</h3>
-            <h4 class="fragment" style="margin: 0 0 6px 0">&emsp;• Earth as a filter: coming <i>up</i> &rArr; a neutrino</h4>
-            <h4 class="fragment" style="margin: 0 0 6px 0">&emsp;• Veto: starts inside &rArr; a neutrino (Bert and Ernie)</h4>
           </div>
 
         </textarea>
         </section>
 
         <!-- ######################################################################## -->
-        <!-- ACT 4 — What IceCube found, and why it matters (slides 14–17, ~9 min)   -->
+        <!-- ACT 4 — What IceCube found (slides 14–19, ~8 min) -->
         <!-- ######################################################################## -->
 
         <!-- =============================================================== -->
@@ -1161,7 +801,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [14] 2013: Bert, Ernie, and a new sky | the discovery the prize is for | Fig 1: Bert & Ernie event displays; Fig 2: 2013 HESE spectrum with atmospheric expectation shaded -->
+        <!-- [14] 2013: Bert, Ernie, and a new sky | the discovery the prize is for | Fig 1: Bert & Ernie event displays; Fig 2: HESE spectrum (placeholders); text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--      Numbers: Bert 1.04 ± 0.16 PeV, Ernie 1.14 ± 0.17 PeV (2.8σ alone). HESE 2013: 28 events, 662 days (May 2010–May 2012), 30 TeV–1.2 PeV, background 10.6 (+5.0/−3.6), 4.1σ. 2014: 37 events in 3 yr, 5.7σ; "Big Bird" ≈ 2 PeV (Dec 2012). 1 PeV / 6.8 TeV ≈ 150. Option: small img/Bert_and_Ernie.jpeg as a callback to the cover -->
         <!--      Dropped for size (say aloud): the search was for EeV (cosmogenic) ν; 1.04 and 1.14 PeV, contained; too energetic for the atmosphere; HESE 30 TeV–1 PeV; Physics World Breakthrough of the Year 2013 -->
         <section data-markdown>
@@ -1179,26 +819,20 @@
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
+            <br>
+            <div style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2012</span> &ensp; <b>Bert and Ernie</b></h3>
               <h4 style="margin: 0">&emsp;• Two $\sim$1 PeV showers, found by accident</h4>
-              <h4 style="margin: 0">&emsp;• 150$\times$ an LHC proton</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1103/PhysRevLett.111.021103">Phys. Rev. Lett. <b>111</b>, 021103 (2013)</a>]</div>
+              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1103/PhysRevLett.111.021103">PRL <b>111</b>, 021103 (2013)</a>]</div>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2013</span> &ensp; <b>Look again, with the veto</b></h3>
-              <h4 style="margin: 0">&emsp;• 28 events vs $\sim$11 expected: 4$\sigma$</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1126/science.1242856">Science <b>342</b>, 1242856 (2013)</a>]</div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2013&ndash;14</span> &ensp; <b>28 events, then 5.7$\sigma$</b></h3>
+              <h4 style="margin: 0">&emsp;• Far above the atmospheric background</h4>
+              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1126/science.1242856">Science <b>342</b>, 1242856 (2013)</a>; <a href="https://doi.org/10.1103/PhysRevLett.113.101101">PRL <b>113</b>, 101101 (2014)</a>]</div>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2014</span> &ensp; <b>Discovery</b></h3>
-              <h4 style="margin: 0">&emsp;• 37 events, 5.7$\sigma$; "Big Bird" at 2 PeV</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1103/PhysRevLett.113.101101">Phys. Rev. Lett. <b>113</b>, 101101 (2014)</a>]</div>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">The sky</span> &ensp; <b>What it looks like</b></h3>
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">The sky</span> &ensp; <b>Neutrino astronomy exists</b></h3>
               <h4 style="margin: 0">&emsp;• At the Waxman&ndash;Bahcall level</h4>
-              <h4 style="margin: 0">&emsp;• From all over the sky: extragalactic</h4>
             </div>
           </div>
 
@@ -1206,9 +840,10 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [15] 2017: the first named source | multimessenger astronomy in one event | Fig: Fermi sky with IceCube-170922A error circle on TXS 0506+056; artist's blazar jet -->
+        <!-- [15] 2017: the first named source | multimessenger astronomy in one event | Fig 1: Fermi map + IceCube contours; Fig 2: blazar artwork (placeholders); text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--      Numbers: 22 Sep 2017 20:54 UTC; most probable E_ν ≈ 290 TeV; dec +5.7° (just below the horizon at the Pole). Fermi ATel 28 Sep, MAGIC >100 GeV. z = 0.3365. Archival: 13 ± 5 excess events over ~110 days, Sep 2014–Mar 2015, 3.5σ, no gamma flare then. GW170817 was 17 Aug 2017. Blazar stacking: blazars are at most a minority of the diffuse flux -->
         <!--      Dropped for size (say aloud): MAGIC sees it above 100 GeV; z = 0.34; the 2014–15 burst had no gamma-ray flare; GW170817 = neutron-star merger in gravitational waves and light; blazars as a class make only a small part of the diffuse flux -->
+        <!--      Cut 31 Oct: archive block, a burst of ~13 ν from the same spot in 2014–15, no gamma-ray flare, 3.5σ [Science 361, 147 (2018)] -->
         <section data-markdown>
           <textarea data-template>
           # 2017: the first named source
@@ -1225,27 +860,18 @@
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">22 Sep 2017</span> &ensp; <b>The alert</b></h3>
-              <h4 style="margin: 0">&emsp;• 290 TeV track; alert out within a minute</h4>
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">22 Sep 2017</span> &ensp; <b>A 290 TeV alert</b></h3>
+              <h4 style="margin: 0">&emsp;• Out to telescopes within a minute</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Days later</span> &ensp; <b>The flare</b></h3>
-              <h4 style="margin: 0">&emsp;• Fermi: blazar TXS 0506+056 is flaring</h4>
-              <h4 style="margin: 0">&emsp;• Chance coincidence: 3$\sigma$</h4>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Days later</span> &ensp; <b>A flaring blazar</b></h3>
+              <h4 style="margin: 0">&emsp;• TXS 0506+056, 4 billion ly away: 3$\sigma$</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1126/science.aat1378">Science <b>361</b>, eaat1378 (2018)</a>]</div>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Blazar</span> &ensp; <b>A jet pointed at us</b></h3>
-              <h4 style="margin: 0">&emsp;• Black-hole jet, 4 billion light-years away</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Archive</span> &ensp; <b>It had happened before</b></h3>
-              <h4 style="margin: 0">&emsp;• $\sim$13 neutrinos in 2014&ndash;15: 3.5$\sigma$</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1126/science.aat2890">Science <b>361</b>, 147 (2018)</a>]</div>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2017</span> &ensp; <b>Astronomy goes multimessenger</b></h3>
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2017</span> &ensp; <b>The multimessenger year</b></h3>
               <h4 style="margin: 0">&emsp;• One month after GW170817</h4>
             </div>
           </div>
@@ -1254,7 +880,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [16] 2022: a steady source (was "Steady sources and the Milky Way in neutrinos"; the Milky Way now has its own slide, 16a) | from one lucky event to a steady source; honest caveat | Fig: NGC 1068 optical + IceCube sky map (Science 2022) -->
+        <!-- [16] 2022: a steady source | from one lucky event to a steady source; honest caveat | Fig: NGC 1068 optical + IceCube sky map (Science 2022) -->
         <!--      Numbers: NGC 1068 (M77), Seyfert 2, 14 Mpc ≈ 47 Mly; 79 (+22/−20) excess events, 2011–2020 tracks, 4.2σ; TeV gamma rays not seen (MAGIC limits) → γ-opaque corona. NGC 4151 and other Seyferts ~3σ -->
         <!--      Dropped for size (say aloud): Seyfert galaxy, Messier 77; neutrinos made in the gas-shrouded core (corona) near the black hole, where light can't get out; ~1° pointing at best, a few events per source per year -->
         <section data-markdown>
@@ -1280,15 +906,14 @@
           <div style="clear: both"></div>
 
           <div style="text-align: center; font-size: 1.5em">
-            <h4 class="fragment" style="margin: 30px 0 0 0">More like it: NGC 4151 and other Seyferts, $\sim$3$\sigma$</h4>
-            <h4 class="fragment" style="margin: 20px 0 0 0"><b>Caveat:</b> a handful of sources; most of the flux unexplained</h4>
+            <h4 class="fragment" style="margin: 30px 0 0 0"><b>Caveat:</b> still only a handful of sources</h4>
           </div>
 
         </textarea>
         </section>
 
         <!-- =============================================================== -->
-        <!-- [16a] 2023: our Galaxy in neutrinos | the first image of the Milky Way in anything but light | Fig: img/MilkyWay_neutrinos.jpg as full-slide background: "An artist's composition of the Milky Way seen through a neutrino lens (blue)", IceCube Collaboration/U.S. National Science Foundation (Lily Le & Shawn Johnson)/ESO (S. Brunier); 2400 px copy of the image in the IceCube press release, 29 Jun 2023 -->
+        <!-- [17] 2023: our Galaxy in neutrinos | the first image of the Milky Way in anything but light | Fig: img/MilkyWay_neutrinos.jpg as full-slide background: "An artist's composition of the Milky Way seen through a neutrino lens (blue)", IceCube Collaboration/U.S. National Science Foundation (Lily Le & Shawn Johnson)/ESO (S. Brunier); 2400 px copy of the image in the IceCube press release, 29 Jun 2023 -->
         <!--      Numbers: 10 yr of cascades (2011–2021), deep-learning (CNN) reconstruction, 4.5σ against background, tested against Fermi-π0 and KRA-gamma templates; >10× more events than the previous search, 3× the sensitivity. Quote: Halzen in the press release (icecube.wisc.edu/news/press-releases/2023/06/our-galaxy-seen-through-a-new-lens-neutrinos-detected-by-icecube/) -->
         <!--      Text block is pinned to the bottom of a fixed-height div, below the band; nudge with "bottom:" if needed -->
         <section data-markdown
@@ -1312,7 +937,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [16b] The Galaxy in neutrinos: the data (added 31 Oct) | the real map behind the 16a picture, panel by panel | Fig: img/MilkyWay-Science.10.1126.science.adc9818.png = Fig. 1 of IceCube, Science 380, 1338 (2023): (A) optical, (B) Fermi gamma rays, (C) predicted π⁰ emission, (D) the same as IceCube's cascades would see it, (E) observed significance. Transparent PNG, so explicit white background -->
+        <!-- [18] Our Galaxy in neutrinos: the data | the real map behind the picture | Fig: Science 380, 1338 (2023), Fig. 1 (A optical, B Fermi gamma, C predicted π⁰, D as IceCube sees it, E observed); A–E labels cut to three 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--      Abstract: ten years of cascades, machine learning, 4.5σ against background-only by comparing diffuse emission models; consistent with diffuse emission, "but could also arise from a population of unresolved point sources". Grey lines in C–E: northern/southern sky boundary -->
         <section data-markdown>
           <textarea data-template>
@@ -1326,26 +951,16 @@
 
           <div style="text-align: left; float: right; width: 36%; font-size: 1.5em">
             <br>
-            <div style="margin-bottom: 20px">
-              <h3 style="margin: 0"><span style="color: cyan">A</span> &ensp; <b>Visible light</b></h3>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">A, B</span> &ensp; <b>Light, gamma rays</b></h3>
             </div>
-            <div class="fragment" style="margin-bottom: 20px">
-              <h3 style="margin: 0"><span style="color: cyan">B</span> &ensp; <b>Gamma rays</b> (Fermi)</h3>
-            </div>
-            <div class="fragment" style="margin-bottom: 20px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">C</span> &ensp; <b>Cosmic rays on gas</b></h3>
-              <h4 style="margin: 0">&emsp;• Predicted $\pi^0$, so $\nu$ too</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 20px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">D</span> &ensp; <b>As IceCube sees it</b></h3>
-              <h4 style="margin: 0">&emsp;• Cascades: $\sim$10° blur</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 20px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">E</span> &ensp; <b>Observed: 4.5$\sigma$</b></h3>
-              <h4 style="margin: 0">&emsp;• Ten years of data</h4>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">C, D</span> &ensp; <b>Predicted $\nu$</b></h3>
+              <h4 style="margin: 0">&emsp;• Cosmic rays on gas</h4>
             </div>
             <div class="fragment">
-              <h4 style="margin: 10px 0 0 0"><i>Diffuse glow, or many unseen sources?</i></h4>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">E</span> &ensp; <b>Observed: 4.5$\sigma$</b></h3>
+              <h4 style="margin: 0">&emsp;• Glow, or unseen sources?</h4>
             </div>
           </div>
 
@@ -1353,9 +968,10 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [17] Particle physics with an ice cube | electroweak tests; dark matter is on 17a | Fig 1: ν–N cross-section with IceCube points + SM curve (Nature 2017, Fig. 3); Fig 2: Glashow event display -->
+        <!-- [19] Particle physics with an ice cube | merged 31 Oct from 17 (particle physics) and 17a (dark matter); dark matter split back out to 19a; old version(s) in 2611-Neutrino_prev.html | Fig 1: σ vs E with IceCube points (Nature 2017, Fig. 3); Fig 2: Glashow event display (placeholders) -->
         <!--      Numbers: σ/σ_SM = 1.30 (+0.21/−0.19 stat) (+0.39/−0.43 syst), 6–980 TeV, upgoing tracks. Glashow: E = M_W²/2m_e = (80.4 GeV)²/(1.022 MeV) ≈ 6.3 PeV; event 8 Dec 2016, 6.05 ± 0.72 PeV deposited, 2.3σ. Flavour 1:2:0 → ~1:1:1. Earth mass from IceCube data: Donini, Palomares-Ruiz & Salvado, Nature Phys. 15, 37 (2019). QG decoherence: Nature Phys. 20, 913 (2024) -->
         <!--      Dropped for size (say aloud): 6–980 TeV; above ~10 TeV the Earth absorbs; E = M_W²/2m_e; Glashow, Phys. Rev. 118, 316 (1960); 2.3σ; proves antineutrinos are in the flux; DeepCore atmospheric oscillations rival accelerators; Lorentz violation; SNEWS supernova watch; weighing the Earth -->
+        <!--      Dropped in the merge (say aloud): flavour 1:2:0 → 1:1:1, ν_τ seen; DeepCore oscillations; Lorentz violation, decoherence, sterile ν; weighing the Earth -->
         <section data-markdown>
           <textarea data-template>
           # Particle physics with an ice cube
@@ -1372,26 +988,20 @@
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
+            <br>
+            <div style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cross-section</span> &ensp; <b>The Earth as a target</b></h3>
-              <h4 style="margin: 0">&emsp;• Count how many get through the Earth</h4>
-              <h4 style="margin: 0">&emsp;• Agrees with the Standard Model</h4>
+              <h4 style="margin: 0">&emsp;• 1000$\times$ accelerator energies: SM holds</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1038/nature24459">Nature <b>551</b>, 596 (2017)</a>]</div>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Glashow</span> &ensp; <b>A 1960 prediction, seen</b></h3>
-              <h4 style="margin: 0">&emsp;• $\bar\nu_e + e^- \to W^-$ at 6.3 PeV: one event</h4>
+              <h4 style="margin: 0">&emsp;• $\bar\nu_e + e^- \to W^-$ at 6.3 PeV</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1038/s41586-021-03256-1">Nature <b>591</b>, 220 (2021)</a>]</div>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Flavour</span> &ensp; <b>Oscillation across the cosmos</b></h3>
-              <h4 style="margin: 0">&emsp;• $1:2:0$ at the source, $1:1:1$ here</h4>
-              <h4 style="margin: 0">&emsp;• Including $\nu_\tau$: 7 seen</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1103/PhysRevLett.132.151001">Phys. Rev. Lett. <b>132</b>, 151001 (2024)</a>]</div>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <div class="fragment">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Beyond</span> &ensp; <b>And more</b></h3>
-              <h4 style="margin: 0">&emsp;• Quantum gravity, sterile $\nu$, supernovae</h4>
+              <h4 style="margin: 0">&emsp;• Oscillations, supernova watch</h4>
             </div>
           </div>
 
@@ -1399,7 +1009,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [17a] Dark matter with an ice cube | indirect detection that measures a direct-detection quantity: capture in the Sun/Earth, Galactic halo, heavy decaying DM | Fig 1: Sun-capture cartoon; Fig 2: spin-dependent DM–proton limits (IceCube, Super-K, PICO) -->
+        <!-- [19a] Dark matter with an ice cube (restored 31 Oct from [17a] in 2611-Neutrino_prev.html) | indirect detection that measures a direct-detection quantity: capture in the Sun/Earth, Galactic halo, heavy decaying DM | Fig 1: Sun-capture cartoon; Fig 2: spin-dependent DM–proton limits (IceCube, Super-K, PICO) -->
         <!--      Dropped for size (say aloud): loses energy by scattering off nuclei; fusion neutrinos are MeV; an indirect search measures a direct-detection quantity; the Sun is mostly protons: spin-dependent DM–proton; alongside PICO and Super-K; the Earth's core (iron) probes spin-independent; annihilation or decay anywhere in the halo; heavy decaying DM was once suggested for the first PeV events -->
         <section data-markdown>
           <textarea data-template>
@@ -1441,8 +1051,44 @@
         </textarea>
         </section>
 
+
+        <!-- =============================================================== -->
+        <!-- [19b] Geophysics with an ice cube (added 31 Oct, very short) | the detector doubles as a probe of the ice and the Earth | Fig: img/IceCube-DustLogger_JGlaciol59_2013.png, dust-logger optical signal vs depth in 8 holes + hole map (IceCube Collaboration, J. Glaciol. 59, 1117 (2013); from the IceCube news item, 10 Dec 2013, 750 px original) -->
+        <!--      Numbers (news item, icecube.wisc.edu/news/research/2013/12/neutrino-telescope-shines-light-on-last-glaciation/): borehole laser "dust logger" to 2.5 km, built to map dust for the ice model; layers tilt by up to 10% across IceCube, following the bedrock; ~100,000 years of South Pole climate; ash layers ~74,000 years ago, near the age of the Toba super-eruption (largest in ~2 Myr), whose ash had never been found in polar ice; helped site the next US deep ice core (SPICEcore) at the Pole -->
+        <!--      Earth: Donini, Palomares-Ruiz & Salvado, Nature Phys. 15, 37 (2019), arXiv:1803.05901: one year of public IceCube through-going muons; TeV ν absorption gives the Earth's mass, moment of inertia, core mass, and a core denser than the mantle, from weak interactions only, independent of gravity -->
+        <section data-markdown>
+          <textarea data-template>
+          # Geophysics with an ice cube
+
+          <div style="text-align: center; float: right; width: 46%">
+            <br>
+            <br>
+            <img src="img/IceCube-DustLogger_JGlaciol59_2013.png" width="100%" style="margin: 15px auto 1px auto; background: white">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube, <a href="https://doi.org/10.3189/2013JoG13J068">J. Glaciol. <b>59</b>, 1117 (2013)</a>]</font></div>
+          </div>
+
+          <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Dust</span> &ensp; <b>A climate record for free</b></h3>
+              <h4 style="margin: 0">&emsp;• Lasers down the drill holes: 100,000 years</h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">74 kyr</span> &ensp; <b>Ash near the age of Toba</b></h3>
+              <h4 style="margin: 0">&emsp;• Biggest eruption in 2 million years</h4>
+            </div>
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Earth</span> &ensp; <b>Weighed with neutrinos</b></h3>
+              <h4 style="margin: 0">&emsp;• Core denser than mantle, no gravity used</h4>
+              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[Donini <i>et al.</i>, <a href="https://doi.org/10.1038/s41567-018-0319-1">Nature Phys. <b>15</b>, 37 (2019)</a>]</div>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
         <!-- ######################################################################## -->
-        <!-- ACT 5 — The future, the person, the take-home (slides 18–20, ~6 min)    -->
+        <!-- ACT 5 — What next, and the person (slides 20–23, ~6 min) -->
         <!-- ######################################################################## -->
 
         <!-- =============================================================== -->
@@ -1451,75 +1097,26 @@
           <textarea data-template>
 
             <br><br><br><br><br><br><br><br>
-            # The future, the person, the take-home
+            # What next, and the person
 
           </textarea>
         </section>
 
         <!-- =============================================================== -->
-        <!-- [18] What comes next | the global fleet; the KM3NeT 220 PeV anomaly; the lab (brief: the questions are on 7). IceCube's own future (Upgrade, Gen2) is on 18a | Fig: world map of neutrino telescopes; KM3NeT event display; JUNO -->
+        <!-- [20] What comes next | merged 31 Oct from 18 (fleet, 220 PeV, lab) and 18a (Gen2, penguin pun); old version(s) in 2611-Neutrino_prev.html | Fig: Gen2 visualisation (DESY, Science Communication Lab); gentoo penguin (Godot13, Wikimedia Commons, CC BY-SA 4.0) on click 1, right after "Gen2" -->
         <!--      Numbers: KM3-230213A, 13 Feb 2023, ARCA with 21 of 230 detection units; muon ~120 PeV, ν median ~220 PeV (90%: 72 PeV–2.6 EeV). IceCube's highest are ~6–10 PeV. Tension 2–3σ depending on assumptions; Brdar & Chattopadhyay, PRL 136, 081001 (2026) per outline. TRIDENT ~7.5 km³, HUNT ~30 km³ (proposed). Galactic centre is at dec −29°: above the horizon at the Pole -->
         <!--      Dropped for size (say aloud): KM3NeT (Mediterranean), Baikal-GVD, P-ONE (Pacific); TRIDENT, HUNT proposed; from the north the Galactic centre is seen through the Earth, IceCube sees it only from above; KM3NeT was a tenth built; IceCube's best ~10 PeV with far more exposure: 2–3σ tension, luck, a flare or new physics?; JUNO (ordering, since 2025), DUNE/Hyper-K (CP), KATRIN/Project 8 (mass), LEGEND/nEXO (Majorana) -->
+        <!--      Dropped for size (say aloud): the Upgrade sits in the centre of IceCube; 8× IceCube's volume; radio pulses from EeV neutrinos, too rare for the optical array; cosmogenic = from cosmic rays hitting the CMB; the quote is from prize day -->
+        <!--      Dropped in the merge (say aloud): IceCube Upgrade 2025–26, 7 strings, ~700 sensors; Gen2 ~120 strings, 8× volume, sources ~5× fainter; radio 500 km² for EeV cosmogenic ν; in NSF review; KM3NeT, Baikal-GVD, P-ONE, TRIDENT, HUNT; 2–3σ tension -->
         <section data-markdown>
           <textarea data-template>
           # What comes next
-
-          ### Neutrino astronomy goes global
-
-          <div>
-            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%; font-size: 1.5em">
-              <div style="border: 2px dashed #888; border-radius: 10px; height: 280px; width: 90%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.35em; padding: 0 24px; box-sizing: border-box">
-                <div>World map of neutrino telescopes: IceCube, KM3NeT, Baikal-GVD, P-ONE, TRIDENT, HUNT<br>[Global Neutrino Network]</div>
-              </div>
-              <h3 style="margin: 0 0 6px 0"><b>A fleet</b></h3>
-              <div style="text-align: left">
-                <h4 style="margin: 0 0 6px 0">• KM3NeT, Baikal, P-ONE</h4>
-                <h4 style="margin: 0 0 6px 0">• China: up to 30 km$^3$</h4>
-              </div>
-            </div>
-
-            <div class="fragment fade-in" style="text-align: center; float: left; width: 32%; margin-left: 2%; font-size: 1.5em">
-              <div style="border: 2px dashed #888; border-radius: 10px; height: 280px; width: 90%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.35em; padding: 0 24px; box-sizing: border-box">
-                <div>KM3-230213A event display: a near-horizontal muon lighting up most of ARCA<br>[KM3NeT, <a href="https://doi.org/10.1038/s41586-024-08543-1">Nature <b>638</b>, 376 (2025)</a>]</div>
-              </div>
-              <h3 style="margin: 0 0 6px 0"><b>The 220 PeV puzzle</b></h3>
-              <div style="text-align: left">
-                <h4 style="margin: 0 0 6px 0">• KM3NeT, 2023: 220 PeV</h4>
-                <h4 style="margin: 0 0 6px 0">• IceCube: none so far</h4>
-              </div>
-            </div>
-
-            <div class="fragment fade-in" style="text-align: center; float: right; width: 32%; font-size: 1.5em">
-              <div style="border: 2px dashed #888; border-radius: 10px; height: 280px; width: 90%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.35em; padding: 0 24px; box-sizing: border-box">
-                <div>JUNO: the 20 kt liquid-scintillator sphere and its photomultipliers<br>[JUNO / IHEP]</div>
-              </div>
-              <h3 style="margin: 0 0 6px 0"><b>In the lab</b></h3>
-              <div style="text-align: left">
-                <h4 style="margin: 0 0 6px 0">• JUNO, DUNE, Hyper-K</h4>
-                <h4 style="margin: 0 0 6px 0">• KATRIN, LEGEND, nEXO</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="fragment fade-in" style="text-align: left; float: left; width: 100%; font-size: 1.5em">
-            <h4 style="margin: 25px 0 0 0">&emsp;• From discovery to astronomy, and IceCube is growing&hellip;</h4>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [18a] IceCube-Gen2 ("Gen-two" = gentoo) | the Upgrade now, Gen2 optical + radio next; penguin pun on the last click | Fig: Gen2 expansion visualisation (DESY, Science Communication Lab, from icecube-gen2.wisc.edu/facility/detectors); gentoo penguin (Godot13, Wikimedia Commons, CC BY-SA 4.0) -->
-        <!--      Dropped for size (say aloud): the Upgrade sits in the centre of IceCube; 8× IceCube's volume; radio pulses from EeV neutrinos, too rare for the optical array; cosmogenic = from cosmic rays hitting the CMB; the quote is from prize day -->
-        <section data-markdown>
-          <textarea data-template>
-          # IceCube -- Gen2
 
           <div style="text-align: center; float: right; width: 42%">
             <br>
             <img src="img/IceCube-Gen2.png" width="100%" style="margin: 15px auto 1px auto">
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[DESY, Science Communication Lab]</font></div>
-            <div class="fragment" data-fragment-index="5">
+            <div class="fragment" data-fragment-index="1">
               <img src="img/Gentoo_penguin_BrownBluff.jpg" width="55%" style="margin: 25px auto 1px auto">
               <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Godot13 / Wikimedia Commons]</font></div>
               <h4 style="margin: 6px 0 0 0">Gentoo</h4>
@@ -1527,72 +1124,18 @@
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div class="fragment" data-fragment-index="1" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2025&ndash;26</span> &ensp; <b>IceCube Upgrade</b></h3>
-              <h4 style="margin: 0">&emsp;• 7 dense strings, $\sim$700 new sensors</h4>
-              <h4 style="margin: 0">&emsp;• Sharper oscillations, better ice model</h4>
-            </div>
-            <div class="fragment" data-fragment-index="2" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Optical</span> &ensp; <b>8 km$^3$ of ice</b></h3>
-              <h4 style="margin: 0">&emsp;• $\sim$120 new strings, spread wider</h4>
-              <h4 style="margin: 0">&emsp;• Sources $\sim$5$\times$ fainter</h4>
-            </div>
-            <div class="fragment" data-fragment-index="3" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Radio</span> &ensp; <b>500 km$^2$ near the surface</b></h3>
-              <h4 style="margin: 0">&emsp;• For rare EeV (cosmogenic) neutrinos</h4>
-            </div>
-            <div class="fragment" data-fragment-index="4" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Status</span> &ensp; <b>In NSF review</b></h3>
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Gen2</span> &ensp; <b>8 km$^3$, plus radio</b></h3>
               <h4 style="margin: 0">&emsp;• Halzen: <i>"I'm working on a proposal"</i></h4>
             </div>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [19] Francis Halzen | a theorist who built the biggest experiment on Earth and never saw it | Fig: Halzen portrait (UW–Madison / Nobel Outreach) + Quarks and Leptons cover; optional collaboration photo -->
-        <!--      Check: "never been to the Pole" and the theorist quote are from the outline (AIP piece / Nobel interview); confirm wording. PI "from the start": the outline says since 2001. -->
-        <!--      Sole laureates in physics: Charpak 1992 was the last before 2026 (de Gennes 1991 was the one before), so "first unshared since 1991" (outline, abstract notes) is wrong -->
-        <!--      Photo is the cover-slide one; swap for a different portrait if the repeat bothers you -->
-        <!--      Dropped for size (say aloud): born Tienen 1944; PhD Louvain 1969; CERN; QCD and collider physics; with Alan Martin; the ice idea with John Learned; PI of IceCube from the start; "I always thought it was a bad idea to have a theorist trying to lead an experiment" (check); Charpak's solo prize was also for detectors; 14 countries -->
-        <section data-markdown>
-          <textarea data-template>
-          # Francis Halzen
-
-          <div style="text-align: center; float: right; width: 42%">
-            <br>
-            <br>
-            <img src="img/Halzen.jpg" width="85%" style="margin: 15px auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[<a href="https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/">news.wisc.edu</a>]</font></div>
-            <br>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 280px; width: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Cover of <i>Quarks and Leptons</i> (Halzen &amp; Martin, Wiley 1984)</div>
+            <div class="fragment" data-fragment-index="2" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Fleet</span> &ensp; <b>And a puzzle</b></h3>
+              <h4 style="margin: 0">&emsp;• KM3NeT saw 220 PeV; IceCube, none</h4>
             </div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1944&ndash;</span> &ensp; <b>A theorist</b></h3>
-              <h4 style="margin: 0">&emsp;• Belgian; at Wisconsin since 1972</h4>
-              <h4 style="margin: 0">&emsp;• Co-wrote <i>Quarks and Leptons</i> (1984)</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1988&ndash;</span> &ensp; <b>The bet</b></h3>
-              <h4 style="margin: 0">&emsp;• The ice, then AMANDA, then IceCube</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Never</span> &ensp; <b>Been to the South Pole</b></h3>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1/1</span> &ensp; <b>A solo prize</b></h3>
-              <h4 style="margin: 0">&emsp;• First unshared since Charpak (1992)</h4>
-              <h4 style="margin: 0">&emsp;• But IceCube is $\sim$350 people</h4>
-            </div>
-            <!-- Halzen on Brian Keating's "Into the Impossible" podcast: recorded 2022 (full episode youtu.be/cun1zuEQTVU, chapter 00:00), clip reposted 8 Oct 2026. Wording is from the episode's own description/chapter title; check it against the 4-min clip before quoting -->
-            <div class="fragment">
-              <h4 style="margin: 0"><i>"Physics is a miserable career, unless you are obsessed by it"</i></h4>
-              <div class="credit" style="font-size: 0.45em">[<a href="https://www.youtube.com/watch?v=g78rsgI6bw8">Into the Impossible</a>, B. Keating, 2022]</div>
+            <div class="fragment" data-fragment-index="3">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Lab</span> &ensp; <b>The mass questions</b></h3>
+              <h4 style="margin: 0">&emsp;• JUNO, DUNE, Hyper-K, LEGEND</h4>
             </div>
           </div>
 
@@ -1600,7 +1143,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [19a] The neutrino fog (added 31 Oct) | dark matter detectors now see neutrinos; reading the keV signal needs atomic physics (bridge to our own work) | Fig 1: ../DarkMatter/img/WIMP-nucleon.png (O'Hare, GitHub/DirectDetectionPlots), Xe neutrino fog; Fig 2: ../DarkMatter/img/Weinberg.png (adapted from Maity & Bœhm), with the pp point -->
+        <!-- [21] The neutrino fog | dark matter detectors now see neutrinos; reading the keV signal needs atomic physics (our work) | Fig 1: O'Hare fog plot; Fig 2: Weinberg angle (Maity & Bœhm) with the pp block; cut to three blocks 31 Oct, moved before Halzen so the talk ends on him; old version(s) in 2611-Neutrino_prev.html -->
         <!--      Numbers: ⁸B CEvNS: PandaX-4T 2.64σ, PRL 133, 191001 (2024); XENONnT 2.73σ, PRL 133, 191002 (2024); LZ 4.5σ, 5.7 t·yr, PRL 137, 091806 (2026), doi 10.1103/jvqf-njpj; XENONnT 3.3σ, 6.77 t·yr, PRL 137, 091807 (2026), doi 10.1103/xvpn-w3q9. -->
         <!--      pp ν–e: XENONnT, arXiv:2608.29450 (Aug 2026, not yet published): 5.0σ, 2.46 t·yr, 1–140 keV electron recoils, ν down to 17 keV, "lowest energy threshold for any neutrino detection to date"; pp flux (10.2 ± 2.0)e10 cm⁻²s⁻¹, 1.9σ above Borexino. -->
         <!--      Atomic: Chen, Chi, Liu, Wu, PLB 774, 656 (2017): ab initio (MCRRPA) xenon, binding suppresses ν–e at low recoil; rate 100 eV–30 keV ~25% below the free-electron picture. Fog term: O'Hare, PRL 127, 251802 (2021). CEvNS first seen: COHERENT, Science 357, 1123 (2017). Our group: Caddell, Flambaum, BMR, PRD 108, 083030 (2023); Williams + BMR with Stadnik, Cheek (relativistic vector + axial, see DarkMatter/2609-TH-CERN.html) -->
@@ -1614,35 +1157,28 @@
           <div style="text-align: center; float: right; width: 42%">
             <img src="../DarkMatter/img/WIMP-nucleon.png" style="height: 400px; margin: 10px auto 1px auto">
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[O'Hare, GitHub/DirectDetectionPlots]</font></div>
-            <div class="fragment" data-fragment-index="2">
+            <div class="fragment" data-fragment-index="1">
               <img src="../DarkMatter/img/Weinberg.png" style="height: 300px; margin: 20px auto 1px auto">
               <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Adapted: Maity, Bœhm, <a href="https://arxiv.org/abs/2409.04385">Phys. Rev. D <b>112</b>, 053001 (2025)</a>]</font></div>
             </div>
           </div>
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div style="margin-bottom: 20px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Fog</span> &ensp; <b>Neutrinos hit xenon too</b></h3>
-              <h4 style="margin: 0">&emsp;• Solar $\nu$ bounce off whole Xe nuclei</h4>
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Fog</span> &ensp; <b>Solar $\nu$ in xenon</b></h3>
               <h4 style="margin: 0">&emsp;• Below the fog, a WIMP looks like a $\nu$</h4>
-            </div>
-            <div class="fragment" data-fragment-index="1" style="margin-bottom: 20px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2024&ndash;26</span> &ensp; <b>Seen: $^8$B solar neutrinos</b></h3>
-              <h4 style="margin: 0">&emsp;• XENONnT, PandaX-4T; LZ at 4.5$\sigma$</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1103/PhysRevLett.133.191002">PRL <b>133</b>, 191002</a>, <a href="https://doi.org/10.1103/PhysRevLett.133.191001">191001 (2024)</a>; <a href="https://doi.org/10.1103/jvqf-njpj">PRL <b>137</b>, 091806 (2026)</a>]</div>
             </div>
-            <div class="fragment" data-fragment-index="2" style="margin-bottom: 20px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2025&ndash;26</span> &ensp; <b>$pp$ neutrinos, on electrons</b></h3>
-              <h4 style="margin: 0">&emsp;• XENONnT, 5$\sigma$: lowest-energy $\nu$ ever seen</h4>
-              <h4 style="margin: 0">&emsp;• Weak mixing angle at record-low $Q$</h4>
+            <div class="fragment" data-fragment-index="1" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2026</span> &ensp; <b>$pp$ neutrinos at 5$\sigma$</b></h3>
+              <h4 style="margin: 0">&emsp;• The lowest-energy $\nu$ ever seen</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[XENONnT, <a href="https://arxiv.org/abs/2608.29450">arXiv:2608.29450</a>]</div>
             </div>
-            <div class="fragment" data-fragment-index="3">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Atoms</span> &ensp; <b>Needs atomic physics</b></h3>
-              <h4 style="margin: 0">&emsp;• keV: electrons are bound, not free</h4>
+            <div class="fragment" data-fragment-index="2">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Atoms</span> &ensp; <b>Needs atomic physics: us</b></h3>
               <h4 style="margin: 0">&emsp;• Binding cuts the rate by $\sim$25%</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[Chen <i>et al.</i>, <a href="https://doi.org/10.1016/j.physletb.2017.10.029">Phys. Lett. B <b>774</b>, 656 (2017)</a>]</div>
-              <h4 style="margin: 0">&emsp;• Our group: relativistic atomic theory</h4>
             </div>
           </div>
 
@@ -1650,7 +1186,47 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [20] Take-home | one slide to repeat at dinner | Fig: Milky Way in neutrinos or Nobel illustration (consider a full-bleed image slide before this one) -->
+        <!-- [22] Francis Halzen | the person, last; the bio moved to 9 so the audience knows who is betting | Fig: Halzen portrait (news.wisc.edu); cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
+        <!--      Check: "never been to the Pole" and the theorist quote are from the outline (AIP piece / Nobel interview); confirm wording. PI "from the start": the outline says since 2001. -->
+        <!--      Sole laureates in physics: Charpak 1992 was the last before 2026 (de Gennes 1991 was the one before), so "first unshared since 1991" (outline, abstract notes) is wrong -->
+        <!--      Photo is the cover-slide one; swap for a different portrait if the repeat bothers you -->
+        <!--      Dropped for size (say aloud): born Tienen 1944; PhD Louvain 1969; CERN; QCD and collider physics; with Alan Martin; the ice idea with John Learned; PI of IceCube from the start; "I always thought it was a bad idea to have a theorist trying to lead an experiment" (check); Charpak's solo prize was also for detectors; 14 countries -->
+        <section data-markdown>
+          <textarea data-template>
+          # Francis Halzen
+
+          <div style="text-align: center; float: right; width: 42%">
+            <br>
+            <br>
+            <img src="img/Halzen.jpg" width="100%" style="margin: 15px auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[<a href="https://news.wisc.edu/university-of-wisconsin-madison-professor-francis-halzen-named-2026-nobel-laureate-in-physics/">news.wisc.edu</a>]</font></div>
+          </div>
+
+          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Never</span> &ensp; <b>Been to the South Pole</b></h3>
+            </div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Theorist</span> &ensp; <b>Leading an experiment</b></h3>
+              <h4 style="margin: 0">&emsp;• <i>"... a bad idea to have a theorist trying to lead an experiment"</i></h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1/1</span> &ensp; <b>One name on the prize</b></h3>
+              <h4 style="margin: 0">&emsp;• IceCube: $\sim$350 people, 14 countries</h4>
+            </div>
+            <!-- Halzen on Brian Keating's "Into the Impossible" podcast: recorded 2022 (full episode youtu.be/cun1zuEQTVU, chapter 00:00), clip reposted 8 Oct 2026. Wording is from the episode's own description/chapter title; check it against the 4-min clip before quoting -->
+            <div class="fragment">
+              <h4 style="margin: 0"><i>"Physics is a miserable career, unless you are obsessed by it"</i></h4>
+              <div class="credit" style="font-size: 0.45em">[<a href="https://www.youtube.com/watch?v=g78rsgI6bw8">Into the Impossible</a>, B. Keating, 2022]</div>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [23] Take-home | one slide to repeat at dinner | Fig: Milky Way in neutrinos or Nobel illustration (consider a full-bleed image slide before this one) -->
         <section data-markdown>
           <textarea data-template>
           # Take-home
@@ -1659,13 +1235,10 @@
             <br>
             <div style="font-size: 1.5em">
               <h3 style="margin: 0 0 6px 0"><b>Ghosts are the best messengers</b></h3>
-              <h4 style="margin: 0">&emsp;• Fly straight, never absorbed</h4>
-              <h4 style="margin: 0">&emsp;• Made only by cosmic accelerators</h4>
-              <h4 style="margin: 0 0 30px 0">&emsp;• So hard to catch: a km$^3$ of ice</h4>
-              <h3 style="margin: 0 0 6px 0"><b>IceCube opened the window</b></h3>
-              <h4 style="margin: 0">&emsp;• 2013: cosmic neutrinos exist</h4>
-              <h4 style="margin: 0">&emsp;• 2017&ndash;23: first sources, our Galaxy</h4>
-              <h4 style="margin: 0">&emsp;• Next: Gen2, and the neutrino mass</h4>
+              <h4 style="margin: 0 0 30px 0">&emsp;• Straight, unabsorbed, only from accelerators</h4>
+              <h3 style="margin: 0 0 6px 0"><b>Halzen's bet: a cubic kilometre of ice</b></h3>
+              <h4 style="margin: 0 0 30px 0">&emsp;• 2013: cosmic neutrinos; 2023: our Galaxy</h4>
+              <h3 style="margin: 0"><b>Next: Gen2, and the neutrino mass</b></h3>
             </div>
             <br>
             <br>
