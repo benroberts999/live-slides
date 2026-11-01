@@ -2,6 +2,7 @@
 <html class="sl-root decks export offline loaded">
 
   <head>
+    <meta charset="utf-8">  <!-- 1 Nov: without it, local file:// loads sometimes guessed Windows-1252 and showed "•" as "â€¢" -->
     <title>Hunting Ghosts in the Ice</title>
     <script>const PRINT_MODE = false;</script>
 
@@ -542,20 +543,16 @@
           <textarea data-template>
           # The mass puzzle (Nobel 2015)
 
-          <!-- Right column, one picture per block: Super-K drawing + zenith plot (block 1), SNO drawing + flux plot (block 2, index 1), "torn between identities" cartoon (block 3, index 2). Drawings: Nobel 2015 popular information -->
+          <!-- Right column, one picture per block: Super-K drawing (block 1), SNO drawing (block 2, index 1), "torn between identities" cartoon (block 3, index 2). Drawings: Nobel 2015 popular information. The two data plots were cut 1 Nov (Ben): img/SuperK_1998_zenith_mu.png [Fukuda et al., PRL 81, 1562 (1998)], img/SNO_2002_flux.png [Ahmad et al., PRL 89, 011301 (2002)] -->
           <div style="text-align: center; float: right; width: 42%">
             <div class="r-stack">
               <div class="fragment fade-out" data-fragment-index="1" style="width: 100%">
-                <img src="img/Nobel2015_SuperK.jpg" width="88%" style="margin: 0 auto 1px auto">
+                <img src="img/Nobel2015_SuperK.jpg" width="100%" style="margin: 0 auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[&copy; Johan Jarnestad / The Royal Swedish Academy of Sciences]</font></div>
-                <img src="img/SuperK_1998_zenith_mu.png" style="height: 270px; margin: 15px auto 1px auto">
-                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Fukuda <i>et al.</i>, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.81.1562">Phys. Rev. Lett. <b>81</b>, 1562 (1998)</a>]</font></div>
               </div>
               <div class="fragment fade-in-then-out" data-fragment-index="1" style="width: 100%">
-                <img src="img/Nobel2015_SNO.jpg" width="80%" style="margin: 0 auto 1px auto">
+                <img src="img/Nobel2015_SNO.jpg" width="95%" style="margin: 0 auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[&copy; Johan Jarnestad / The Royal Swedish Academy of Sciences]</font></div>
-                <img src="img/SNO_2002_flux.png" style="height: 270px; margin: 15px auto 1px auto">
-                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Ahmad <i>et al.</i>, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.89.011301">Phys. Rev. Lett. <b>89</b>, 011301 (2002)</a>]</font></div>
               </div>
               <div class="fragment fade-in" data-fragment-index="2" style="width: 100%">
                 <img src="img/Nobel2015_flavours.jpg" width="95%" style="margin: 0 auto 1px auto">
@@ -566,17 +563,23 @@
 
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
             <br>
-            <div style="margin-bottom: 30px">
+            <!-- 1 Nov (Ben): small context lines under each block; 50px between blocks. Davis, Harmer & Hoffman, PRL 20, 1205 (1968): about a third of the predicted solar ν_e; SNO 2002 NC: total matches the solar model, so the "solar neutrino problem" was oscillation -->
+            <div style="margin-bottom: 50px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1998</span> &ensp; <b>Super-K: $\nu_\mu$ from below go missing</b></h3>
               <h4 style="margin: 0">&emsp;• Half lost over 13,000 km of Earth</h4>
+              <h4 style="margin: 4px 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; Cosmic rays make $\nu_\mu$ in the air, all around the Earth</h4>
+              <h4 style="margin: 0 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; As many should come up through the Earth as down</h4>
             </div>
-            <div class="fragment" data-fragment-index="1" style="margin-bottom: 30px">
+            <div class="fragment" data-fragment-index="1" style="margin-bottom: 50px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2002</span> &ensp; <b>SNO: the Sun's missing $\nu_e$</b></h3>
               <h4 style="margin: 0">&emsp;• Arrive as $\nu_\mu$, $\nu_\tau$: the total is right</h4>
+              <h4 style="margin: 4px 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; Solves the "solar neutrino problem", open since 1968</h4>
+              <h4 style="margin: 0 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; Davis had found only a third of the Sun's $\nu_e$</h4>
             </div>
             <div class="fragment" data-fragment-index="2">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">So</span> &ensp; <b>Neutrinos have mass</b></h3>
               <div style="font-size: 0.85em">$$P(\nu_\mu\to\nu_\mu) \simeq 1 - \sin^2 2\theta\,\sin^2\!\left(\frac{\Delta m^2 L}{4E}\right)$$</div>
+              <h4 style="margin: 0 0 8px 2.6em; font-size: 0.75em; color: #ccc">&ndash; They can only change flavour if they have mass</h4>
               <h4 style="margin: 0">&emsp;• The Standard Model said zero: the first crack</h4>
             </div>
           </div>
@@ -599,8 +602,92 @@
           </textarea>
         </section>
 
+
         <!-- =============================================================== -->
-        <!-- [6] The neutrino sky | reworked 31 Oct (Ben: "fix or remove, no one will understand this"): say what the axes are, then ring two places on the plot, the Sun and IceCube's cosmic neutrinos. Solar flux at Earth ≈ 6.5e10 cm⁻²s⁻¹. Dropped (say aloud): 24 orders of magnitude in energy; so detectors grow, 600 tonnes (Homestake) to a billion (IceCube) | one plot of every source; IceCube at the high-energy end; σ ∝ E is why it can work at all | Fig: Grand Unified Neutrino Spectrum, top panel (Vitagliano, Tamborra & Raffelt, RMP 92, 045006 (2020)); text cut to three points 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
+        <!-- [8] Where do cosmic rays come from? | 1 Nov (Ben): now shown BEFORE 7 (the question first, then why neutrinos answer it); its "1999 So: a cubic kilometre" block moved to the end of 7 | reworked 31 Oct (Ben: "doesn't say what the question is"; Waxman–Bahcall too technical): the question is the title; WB is now only the citation for "~10 a year per km³" (E²Φ ~ 1e-8 GeV cm⁻²s⁻¹sr⁻¹, say aloud if asked) | why IceCube was built; Waxman–Bahcall sets the size | Fig: Hess balloon, cosmic-ray spectrum (placeholders); text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
+        <!--     Numbers: flux above the knee (~3 PeV) ~1 m⁻² yr⁻¹; above the ankle (~5 EeV) ~1 km⁻² yr⁻¹. Highest: Fly's Eye 3.2e20 eV (1991); Telescope Array "Amaterasu" 2.4e20 eV (2023). LHC beam 6.8 TeV: 1e20/6.8e12 ≈ 1.5e7. -->
+        <!--     WB 1999: E²Φ(ν_μ+ν̄_μ) < 1.5e-8 (no source evolution) to ~5e-8 (with) GeV cm⁻²s⁻¹sr⁻¹; IceCube measures ≈ 1e-8 per flavour at 100 TeV. Events: Φ(>100 TeV) ≈ 1.3 m⁻²yr⁻¹ (slide 5) × 1 km² × P_int(100 TeV, 1 km ice) ≈ 1e-5 → ~10 yr⁻¹ -->
+        <!--      Dropped for size (say aloud): protons and nuclei; knee (PeV, probably supernova remnants) vs ankle (other galaxies: AGN, GRBs, ...); WB: the energy in the highest-energy cosmic rays caps the ν flux; anything much smaller than a km³ sees nothing -->
+        <section data-markdown>
+          <textarea data-template>
+          # Where do cosmic rays come from?
+          ### _A 100-year question_
+
+          <!-- Rewritten 1 Nov (Ben: kill the plot, non-technical, the slide must answer its question). Answer so far: Galactic cosmic rays most likely from supernova remnants (shock waves of exploding stars; pion-decay γ signature in IC 443 and W44, Fermi-LAT, Ackermann et al., Science 339, 807 (2013)); above ~8e18 eV from other galaxies (Pierre Auger dipole, Science 357, 1266 (2017)); which objects is still open: IceCube's job (TXS 0506+056, NGC 1068 later). The Swordy spectrum (img/CR_spectrum.png) was cut -->
+          <div style="text-align: center; float: right; width: 42%">
+            <br>
+            <img src="img/Hess_balloon.jpg" width="95%" style="margin: 0 auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">Victor Hess, 1912 [VF Hess Society]</font></div>
+          </div>
+
+          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
+            <div style="margin-bottom: 40px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1912</span> &ensp; <b>Cosmic rays</b>&ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1936</span></h3>
+              <h4 style="margin: 0">&emsp;• Particles from space rain down on the Earth</h4>
+              <h4 style="margin: 0 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; Some carry ten million times the energy of an LHC proton</h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 40px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">The question</span> &ensp; <b>What accelerates them?</b></h3>
+              <h4 style="margin: 0">&emsp;• They don't point back to where they came from</h4>
+              <h4 style="margin: 0 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; They are charged: magnetic fields in space bend their paths</h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 40px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">So far</span> &ensp; <b>Part of the answer</b></h3>
+              <h4 style="margin: 0">&emsp;• Our Galaxy: most likely exploding stars</h4>
+              <h4 style="margin: 0 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; Their blast waves act as natural accelerators</h4>
+              <h4 style="margin: 0">&emsp;• The most energetic: from other galaxies</h4>
+              <h4 style="margin: 0 0 0 2.6em; font-size: 0.75em; color: #ccc">&ndash; Which objects, we still don't know</h4>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [7] Why ghosts make the best cosmic messengers | 1 Nov (Ben): now shown after 8 and before 6; the cubic-km block went on to 6 | the detection problem turned inside out | Fig 1: Jarnestad drawing (neutrino straight, cosmic ray curls, photon zapped); Fig 2: gamma-ray horizon placeholder; text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
+        <!--     Numbers: γγ → e⁺e⁻ on starlight (EBL): optical depth 1 at ~100 Mpc for ~10 TeV; on the CMB at ~PeV the absorption length is ~10 kpc (≈ distance to the Galactic centre). Larmor radius r = E/(ZeBc): 1 PeV proton in 3 μG ≈ 0.4 pc ≈ 1 ly; 10²⁰ eV ≈ 40 kpc. GZK horizon above 5e19 eV ~100 Mpc. E_ν ≈ E_p/20 (pion takes ~1/5, each ν ~1/4 of that) -->
+        <!--      Subtitle moved here 31 Oct from the cut "What is a neutrino?" slide. Numbers: σ ~ 1e-44 cm² per nucleon at ~MeV; lead 6.8e24 nucleons/cm³ ⇒ λ = 1/(nσ) ≈ 1.5e19 cm ≈ 15 ly. σ_CC ≈ 0.7e-38 cm² (E/GeV) (Formaggio & Zeller); 1 TeV in 1 km ice: nσL ≈ 4e-7 -->
+        <!--      Dropped for size (say aloud): above ~10 TeV nothing past ~100 Mpc; none escapes dense sources; a PeV proton curls round in ~1 light-year; UHE cosmic rays also absorbed beyond ~100 Mpc; each ν carries ~5% of the proton's energy; electrons alone make γ but not ν -->
+        <!--     WB 1999: E²Φ(ν_μ+ν̄_μ) < 1.5e-8 (no source evolution) to ~5e-8 (with) GeV cm⁻²s⁻¹sr⁻¹; IceCube measures ≈ 1e-8 per flavour at 100 TeV. Events: Φ(>100 TeV) ≈ 1.3 m⁻²yr⁻¹ (slide 5) × 1 km² × P_int(100 TeV, 1 km ice) ≈ 1e-5 → ~10 yr⁻¹ -->
+        <section data-markdown>
+          <textarea data-template>
+          # Why ghosts make the best cosmic messengers
+
+          ### _Ghosts: an MeV neutrino crosses light-years of lead_
+
+          <div style="text-align: center; float: right; width: 42%">
+            <br>
+            <br>
+            <img src="img/nu-drawing-JohanJarnestadSwedishAcSciences.webp" width="90%" style="margin: 0 auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[&copy; Johan Jarnestad / The Royal Swedish Academy of Sciences]</font></div>
+            <!-- Stand-in for a gamma-ray-horizon plot cut 1 Nov (Ben) -->
+          </div>
+
+          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
+            <br>
+            <div style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Light</span> &ensp; <b>Absorbed on the way</b></h3>
+              <h4 style="margin: 0">&emsp;• $\gamma\gamma \to e^+e^-$ on starlight and the CMB</h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cosmic rays</span> &ensp; <b>Bent by magnetic fields</b></h3>
+              <h4 style="margin: 0">&emsp;• They forget where they came from</h4>
+            </div>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Neutrinos</span> &ensp; <b>Straight, and only from protons</b></h3>
+              <h4 style="margin: 0">&emsp;• $p+p,\ p+\gamma \to \pi^\pm \to \nu$</h4>
+            </div>
+            <!-- 1 Nov (Ben: "what do we actually learn?"): only accelerated protons (and nuclei) make high-energy ν; electrons alone make γ-rays but no ν. So a cosmic ν marks a proton accelerator, i.e. a cosmic-ray source (next slide) -->
+            <div class="fragment">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">We learn</span> &ensp; <b>Where nature accelerates protons</b></h3>
+              <h4 style="margin: 0">&emsp;• A neutrino points back to a cosmic accelerator</h4>
+            </div>
+          </div>
+
+        </textarea>
+        </section>
+        <!-- =============================================================== -->
+        <!-- [6] The neutrino sky | 1 Nov (Ben): now shown after 8 and 7 | reworked 31 Oct (Ben: "fix or remove, no one will understand this"): say what the axes are, then ring two places on the plot, the Sun and IceCube's cosmic neutrinos. Solar flux at Earth ≈ 6.5e10 cm⁻²s⁻¹. Dropped (say aloud): 24 orders of magnitude in energy; so detectors grow, 600 tonnes (Homestake) to a billion (IceCube) | one plot of every source; IceCube at the high-energy end; σ ∝ E is why it can work at all | Fig: Grand Unified Neutrino Spectrum, top panel (Vitagliano, Tamborra & Raffelt, RMP 92, 045006 (2020)); text cut to three points 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
         <!--     Was "30 orders": the energy axis runs μeV to EeV, 24. ~1 per m² per year: IceCube HESE per-flavour Φ = 2.12e-18 GeV⁻¹cm⁻²s⁻¹sr⁻¹ at 100 TeV, γ = 2.87 → Φ(>100 TeV) ≈ 4e-12 cm⁻²s⁻¹ (all sky, 3 flavours) ≈ 1.3 m⁻² yr⁻¹. Homestake: 615 t of C₂Cl₄; 1 km³ of ice ≈ 0.92 Gt -->
         <section data-markdown>
           <textarea data-template>
@@ -630,87 +717,13 @@
               <div class="fragment" data-fragment-index="2" style="margin-bottom: 24px">
                 <h4 style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• <span style="color: #ff5050">The cosmos</span>, above 100 TeV: one per m$^2$ a year</h4>
                 <h4 style="margin: 4px 0 0 1.3em; font-size: 0.75em; color: #ccc; padding-left: 0.7em; text-indent: -0.7em">&ndash; Seen by IceCube; now also KM3NeT, Baikal-GVD</h4>
-                <h4 style="margin: 0 0 0 1.3em; font-size: 0.75em; color: #ccc; padding-left: 0.7em; text-indent: -0.7em">&ndash; They point back to the cosmic accelerators</h4>
               </div>
-              <h4 class="fragment" data-fragment-index="3" style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• Rarer, but easier to catch: $\sigma \propto E$</h4>
-            </div>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [7] Why ghosts make the best messengers | the detection problem turned inside out | Fig 1: Jarnestad drawing (neutrino straight, cosmic ray curls, photon zapped); Fig 2: gamma-ray horizon placeholder; text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
-        <!--     Numbers: γγ → e⁺e⁻ on starlight (EBL): optical depth 1 at ~100 Mpc for ~10 TeV; on the CMB at ~PeV the absorption length is ~10 kpc (≈ distance to the Galactic centre). Larmor radius r = E/(ZeBc): 1 PeV proton in 3 μG ≈ 0.4 pc ≈ 1 ly; 10²⁰ eV ≈ 40 kpc. GZK horizon above 5e19 eV ~100 Mpc. E_ν ≈ E_p/20 (pion takes ~1/5, each ν ~1/4 of that) -->
-        <!--      Subtitle moved here 31 Oct from the cut "What is a neutrino?" slide. Numbers: σ ~ 1e-44 cm² per nucleon at ~MeV; lead 6.8e24 nucleons/cm³ ⇒ λ = 1/(nσ) ≈ 1.5e19 cm ≈ 15 ly. σ_CC ≈ 0.7e-38 cm² (E/GeV) (Formaggio & Zeller); 1 TeV in 1 km ice: nσL ≈ 4e-7 -->
-        <!--      Dropped for size (say aloud): above ~10 TeV nothing past ~100 Mpc; none escapes dense sources; a PeV proton curls round in ~1 light-year; UHE cosmic rays also absorbed beyond ~100 Mpc; each ν carries ~5% of the proton's energy; electrons alone make γ but not ν -->
-        <section data-markdown>
-          <textarea data-template>
-          # Why ghosts make the best messengers
-
-          ### _Ghosts: an MeV neutrino crosses light-years of lead_
-
-          <div style="text-align: center; float: right; width: 42%">
-            <br>
-            <br>
-            <img src="img/nu-drawing-JohanJarnestadSwedishAcSciences.webp" width="90%" style="margin: 0 auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2; margin-bottom: 20px"><font size="3" class="credit">[&copy; Johan Jarnestad / The Royal Swedish Academy of Sciences]</font></div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; Gamma-ray horizon vs energy: how far light travels before $\gamma\gamma \to e^+e^-$ on starlight (TeV) and the CMB (PeV); mark the Galactic centre and TXS 0506+056<br>[e.g. Ahlers &amp; Halzen, Prog. Part. Nucl. Phys. <b>102</b>, 73 (2018)]</div>
-            </div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <br>
-            <div style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Light</span> &ensp; <b>Absorbed on the way</b></h3>
-              <h4 style="margin: 0">&emsp;• $\gamma\gamma \to e^+e^-$ on starlight and the CMB</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cosmic rays</span> &ensp; <b>Bent by magnetic fields</b></h3>
-              <h4 style="margin: 0">&emsp;• They forget where they came from</h4>
-            </div>
-            <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Neutrinos</span> &ensp; <b>Straight, and only from protons</b></h3>
-              <h4 style="margin: 0">&emsp;• $p+p,\ p+\gamma \to \pi^\pm \to \nu$</h4>
-            </div>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [8] Where do cosmic rays come from? | reworked 31 Oct (Ben: "doesn't say what the question is"; Waxman–Bahcall too technical): the question is the title; WB is now only the citation for "~10 a year per km³" (E²Φ ~ 1e-8 GeV cm⁻²s⁻¹sr⁻¹, say aloud if asked) | why IceCube was built; Waxman–Bahcall sets the size | Fig: Hess balloon, cosmic-ray spectrum (placeholders); text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
-        <!--     Numbers: flux above the knee (~3 PeV) ~1 m⁻² yr⁻¹; above the ankle (~5 EeV) ~1 km⁻² yr⁻¹. Highest: Fly's Eye 3.2e20 eV (1991); Telescope Array "Amaterasu" 2.4e20 eV (2023). LHC beam 6.8 TeV: 1e20/6.8e12 ≈ 1.5e7. -->
-        <!--     WB 1999: E²Φ(ν_μ+ν̄_μ) < 1.5e-8 (no source evolution) to ~5e-8 (with) GeV cm⁻²s⁻¹sr⁻¹; IceCube measures ≈ 1e-8 per flavour at 100 TeV. Events: Φ(>100 TeV) ≈ 1.3 m⁻²yr⁻¹ (slide 5) × 1 km² × P_int(100 TeV, 1 km ice) ≈ 1e-5 → ~10 yr⁻¹ -->
-        <!--      Dropped for size (say aloud): protons and nuclei; knee (PeV, probably supernova remnants) vs ankle (other galaxies: AGN, GRBs, ...); WB: the energy in the highest-energy cosmic rays caps the ν flux; anything much smaller than a km³ sees nothing -->
-        <section data-markdown>
-          <textarea data-template>
-          # Where do cosmic rays come from?
-          ### _A 100-year question_
-
-          <div style="text-align: center; float: right; width: 42%">
-            <img src="img/Hess_balloon.jpg" style="height: 250px; margin: 0 auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">Victor Hess, 1912 [VF Hess Society]</font></div>
-            <!-- Swordy plot, re-rendered from his EPS (white background). LHC √s = 13.6 TeV ≈ 1e17 eV fixed-target: not marked; say aloud if needed -->
-            <img src="img/CR_spectrum.png" style="height: 540px; margin: 12px auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[S. Swordy, U. Chicago]</font></div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <br>
-            <div style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1912</span> &ensp; <b>Cosmic rays</b>&ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1936</span></h3>
-              <h4 style="margin: 0">&emsp;• Up to $10^{20}$ eV: ten million times an LHC proton</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">The question</span> &ensp; <b>What accelerates them?</b></h3>
-              <h4 style="margin: 0">&emsp;• 100 years on, still not known</h4>
-            </div>
-            <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1999</span> &ensp; <b>So: a cubic kilometre</b></h3>
-              <h4 style="margin: 0">&emsp;• The same sources make $\nu$: $\sim$10 a year per km$^3$</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[Waxman &amp; Bahcall, <a href="https://doi.org/10.1103/PhysRevD.59.023002">Phys. Rev. D <b>59</b>, 023002 (1999)</a>]</div>
+              <!-- 1 Nov (Ben): sky now shown after 8 and 7, so it ends with the cubic-km conclusion (Waxman & Bahcall block, from 7). Replaces "Rarer, but easier to catch: σ ∝ E" (read as net easier) and the cosmos sub-point "They point back to the cosmic accelerators" (repeated 7's "We learn") -->
+              <div class="fragment" data-fragment-index="3">
+                <h4 style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• Each is easier to catch ($\sigma \propto E$), but so rare you need a km$^3$</h4>
+                <h4 style="margin: 4px 0 0 1.3em; font-size: 0.75em; color: #ccc; padding-left: 0.7em; text-indent: -0.7em">&ndash; Expected: about 10 a year per km$^3$</h4>
+                <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[Waxman &amp; Bahcall, <a href="https://doi.org/10.1103/PhysRevD.59.023002">Phys. Rev. D <b>59</b>, 023002 (1999)</a>]</div>
+              </div>
             </div>
           </div>
 
@@ -741,7 +754,7 @@
         <!--      From the Halzen slide: born Tienen 1944; PhD Louvain 1969; CERN; Wisconsin–Madison since 1972; QCD and collider physics; Quarks and Leptons with Alan Martin (1984) -->
         <section data-markdown>
           <textarea data-template>
-          # From a lake to the ice
+          # The first neutrino telescopes
 
           <div style="text-align: center; float: right; width: 42%">
             <div style="display: flex; justify-content: center; align-items: flex-end; gap: 40px">
@@ -758,19 +771,23 @@
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">Baikal-GVD, deployed from the frozen lake [Bair Shaybonov / Wikimedia Commons, CC BY 4.0]</font></div>
           </div>
 
+          <!-- Rewritten 1 Nov (Ben: no "from A to B" or "bets on"; heading = clear statement, sub-points = explanations, two each, more space). Old title "From a lake to the ice"; old points: "1960 A Russian idea / Markov: Cherenkov light, deep in a lake or sea"; "1976–98 Water / DUMAND (Hawaii) fails; Baikal works"; "1988 A theorist bets on ice / Halzen and Learned: use the Antarctic ice" -->
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
             <br>
-            <div style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1960</span> &ensp; <b>A Russian idea</b></h3>
-              <h4 style="margin: 0">&emsp;• Markov: Cherenkov light, deep in a lake or sea</h4>
+            <div style="margin-bottom: 50px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1960</span> &ensp; <b>Markov: build it deep underwater</b></h3>
+              <h4 style="margin: 0">&emsp;• A neutrino hit makes a flash of light</h4>
+              <h4 style="margin: 0">&emsp;• Deep water: dark, clear, and shielded</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1976&ndash;98</span> &ensp; <b>Water</b></h3>
-              <h4 style="margin: 0">&emsp;• DUMAND (Hawaii) fails; Baikal works</h4>
+            <div class="fragment" style="margin-bottom: 50px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1976&ndash;98</span> &ensp; <b>Water: DUMAND fails, Baikal works</b></h3>
+              <h4 style="margin: 0">&emsp;• DUMAND, Hawaii: 1993 string failed in 10 h</h4>
+              <h4 style="margin: 0">&emsp;• Baikal: built from the frozen lake surface</h4>
             </div>
             <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1988</span> &ensp; <b>A theorist bets on ice</b></h3>
-              <h4 style="margin: 0">&emsp;• Halzen and Learned: use the Antarctic ice</h4>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1988</span> &ensp; <b>Halzen and Learned: use Antarctic ice</b></h3>
+              <h4 style="margin: 0">&emsp;• Ice holds still: drill holes, freeze sensors in</h4>
+              <h4 style="margin: 0">&emsp;• A theorist, and DUMAND's spokesman</h4>
             </div>
           </div>
 
@@ -784,7 +801,7 @@
         <!--      Overlaps: the bubbles come back on 11 (ice clear only below 1.4 km); 2005–10 construction is on 10 ("Seven summers") -->
         <section data-markdown>
           <textarea data-template>
-          # From AMANDA to IceCube
+          # Building IceCube
 
           <div style="text-align: center; float: right; width: 42%">
             <img src="img/AMANDA_drill_site.jpg" width="76%" style="margin: 0 auto 1px auto">
@@ -793,20 +810,25 @@
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">The last IceCube string, 18 Dec 2010 [Robert Schwarz, NSF]</font></div>
           </div>
 
+          <!-- Rewritten 1 Nov (Ben: as for 9). Old title "From AMANDA to IceCube"; old headings "Deeper", "IceCube". Bubbles turn to clathrate crystals by ~1,400 m (see 11). Cost: NSB approved April 2004, $279.5M ($242.1M NSF) -->
           <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
             <br>
-            <div style="margin-bottom: 30px">
+            <div style="margin-bottom: 50px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1993&ndash;94</span> &ensp; <b>AMANDA: too shallow</b></h3>
               <h4 style="margin: 0">&emsp;• 1 km down: air bubbles scatter the light</h4>
+              <h4 style="margin: 0">&emsp;• Light seen, but not where it came from</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1995&ndash;2000</span> &ensp; <b>Deeper</b></h3>
+            <div class="fragment" style="margin-bottom: 50px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">1995&ndash;2000</span> &ensp; <b>Deeper: AMANDA works</b></h3>
+              <h4 style="margin: 0">&emsp;• Below 1.4 km the bubbles are gone</h4>
               <h4 style="margin: 0">&emsp;• 2 km down: the first neutrinos caught in ice</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1038/35068509">Nature <b>410</b>, 441 (2001)</a>]</div>
             </div>
             <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2010</span> &ensp; <b>IceCube</b></h3>
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2010</span> &ensp; <b>IceCube complete</b></h3>
               <h4 style="margin: 0">&emsp;• The last of 86 strings: 18 Dec 2010</h4>
+              <h4 style="margin: 0">&emsp;• Approved 2004; cost $280 million (NSF)</h4>
+              <h4 style="margin: 0">&emsp;• Hot-water drill: a 2.5 km hole in 2 days</h4>
             </div>
           </div>
 
@@ -814,7 +836,10 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [10] IceCube by the numbers | the scale, in one schematic | Fig: img/IceCubeDetector.jpg [IceCube/NSF]; text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
+        <!-- [10] IceCube Neutrino Observatory (Ben's title) | merged 1 Nov with 11 "How it sees: Cherenkov light in the clearest ice on Earth": the scale, Cherenkov light, the sensors, the rate | Fig: img/IceCube-Architecture_AhlersHalzen_ProgPartNuclPhys102_2018.png (detector + DOM cutaway), air shower at the Running click. Dropped in the merge: "Built in seven summers" (drill line moved to 9a; "frozen in, no repairs" moved to the DOM block); "Ice: clear only below 1.4 km" (now on 9a) and Halzen's textbook line (unverified, below); the cos θ = 1/(nβ) formula; 11's two image placeholders (DOM photo + cone; ice optics vs depth, Ackermann et al., JGR 111, D13203 (2006)) -->
+        <!--      Numbers: Frank–Tamm, 300–500 nm, sin²41° = 0.43: dN/dx = 2πα sin²θ (1/λ₁ − 1/λ₂) ≈ 260 photons/cm. DOM: 25 cm Hamamatsu PMT in a 33 cm glass sphere. Clean deep ice: absorption length ~100–200 m at 400 nm, effective scattering ~25 m. Bubbles → clathrates by ~1,400 m. Dust layer ~2,000–2,100 m, ~65–70 kyr old; DeepCore sits below it. -->
+        <!--      Check: Halzen's ice-optics-textbook line is a paraphrase (outline, from the AIP piece); confirm wording before quoting. "~98% of DOMs still working": JINST 2017 had 98.4%; update -->
+        <!--      Dropped for size (say aloud): blue is what the ice transmits best; DOM = 25 cm PMT + digitiser in a glass sphere, ns timing; frozen in, no repairs, ~98% working; scatters every few tens of m; AMANDA's first strings at 1 km hit the bubbles; pressure locks air into crystals; dust layer near 2,000 m, a 70,000-year ice-age record, DeepCore below it -->
         <!--      Numbers: ice 2.8 km thick at the Pole; 125 m string spacing, 17 m DOM spacing; 1 km³ ≈ 0.92 Gt. Enhanced Hot Water Drill, 5 MW, 60 cm holes. Trigger ~2.5–3 kHz ≈ 1e11 muons/yr (matches slide 13). Collaboration numbers from the outline (2025) -->
         <!--      Dropped for size (say aloud): strings 125 m apart; 5 MW drill; ~280 million US dollars; DeepCore down to ~10 GeV; IceTop 81 stations; filtered at the Pole, sent north by satellite; ~350 scientists, 58 institutions, 14 countries (Adelaide) -->
         <section data-markdown>
@@ -822,68 +847,47 @@
           # IceCube Neutrino Observatory
           <br>
 
+          <!-- Right column: the detector, swapped at the Running click (index 3) for the air shower behind those 3,000 events a second: a cosmic ray (proton or nucleus, not a neutrino) hits the atmosphere; GeV muons stop near the surface, TeV muons reach the array. Moved here from 13 on 1 Nov (Ben: 13's figure already shows "from below"). IceCube_HadronicShower.png: Ben's dark version of IceCubeArray_v3 (source/credit to check) -->
           <div style="text-align: center; float: right; width: 60%">
-            <img src="img/IceCube-Architecture_AhlersHalzen_ProgPartNuclPhys102_2018.png" width="100%" style="margin: 125px auto 1px auto">
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube/NSF]</font></div>
+            <div class="r-stack">
+              <div class="fragment fade-out" data-fragment-index="3" style="width: 100%">
+                <img src="img/IceCube-Architecture_AhlersHalzen_ProgPartNuclPhys102_2018.png" width="100%" style="margin: 125px auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube/NSF]</font></div>
+              </div>
+              <div class="fragment fade-in" data-fragment-index="3" style="width: 100%">
+                <img src="img/IceCube_HadronicShower.png" style="height: 800px; margin: 0 auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube]</font></div>
+              </div>
+            </div>
           </div>
 
           <div style="text-align: left; float: left; width: calc(40% + 50px); margin-left: -50px; font-size: 1.5em">  <!-- margin-left: shifts the text into the slide margin; width grows by the same, so the right edge stays put -->
-            <br>
-            <div style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Size</span> &ensp; <b>A billion tonnes</b></h3>
-              <h4 style="margin: 0">&emsp;• 5,160 sensors, 1,450&ndash;2,450 m deep</h4>
+            <!-- Blocks: Size (static); Cherenkov (index 1); DOM (index 2); Running (index 3, with the air shower) -->
+            <div style="margin-bottom: 40px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Size</span> &ensp; <b>A billion tonnes of ice</b></h3>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• 5,160 sensors, 1,450&ndash;2,450 m deep</h4>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• 86 strings, 125 m apart</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">2004&ndash;10</span> &ensp; <b>Seven summers</b></h3>
-              <h4 style="margin: 0">&emsp;• Hot-water drill: a 2.5 km hole in 2 days</h4>
-            </div>
-            <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Running</span> &ensp; <b>3,000 events a second</b></h3>
-              <h4 style="margin: 0">&emsp;• Almost all muons from the atmosphere</h4>
-            </div>
-          </div>
-
-        </textarea>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- [11] How it sees | Cherenkov light, the DOM, and the ice surprise; eqn: cos θ = 1/(nβ) | Fig 1: DOM + cone (placeholder); Fig 2: ice optics vs depth (placeholder); text cut to three blocks 31 Oct, old version(s) in 2611-Neutrino_prev.html -->
-        <!--      Numbers: Frank–Tamm, 300–500 nm, sin²41° = 0.43: dN/dx = 2πα sin²θ (1/λ₁ − 1/λ₂) ≈ 260 photons/cm. DOM: 25 cm Hamamatsu PMT in a 33 cm glass sphere. Clean deep ice: absorption length ~100–200 m at 400 nm, effective scattering ~25 m. Bubbles → clathrates by ~1,400 m. Dust layer ~2,000–2,100 m, ~65–70 kyr old; DeepCore sits below it. -->
-        <!--      Check: Halzen's ice-optics-textbook line is a paraphrase (outline, from the AIP piece); confirm wording before quoting. "~98% of DOMs still working": JINST 2017 had 98.4%; update -->
-        <!--      Dropped for size (say aloud): blue is what the ice transmits best; DOM = 25 cm PMT + digitiser in a glass sphere, ns timing; frozen in, no repairs, ~98% working; scatters every few tens of m; AMANDA's first strings at 1 km hit the bubbles; pressure locks air into crystals; dust layer near 2,000 m, a 70,000-year ice-age record, DeepCore below it -->
-        <section data-markdown>
-          <textarea data-template>
-          # How it sees: Cherenkov light in the clearest ice on Earth
-
-          <div style="text-align: center; float: right; width: 42%">
-            <br>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; A DOM (photo), with a cartoon muon and its 41° Cherenkov cone sweeping past<br>[IceCube/NSF gallery]</div>
-            </div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; Absorption and scattering length vs depth: bubbles above $\sim$1,400 m, the dust layer near 2,000 m<br>[Ackermann <i>et al.</i>, J. Geophys. Res. <b>111</b>, D13203 (2006)]</div>
-            </div>
-          </div>
-
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <br>
-            <div style="margin-bottom: 30px">
+            <div class="fragment" data-fragment-index="1" style="margin-bottom: 40px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cherenkov</span> &ensp; <b>A sonic boom of light</b></h3>
-              <h4 style="margin: 0">&emsp;• Faster than light <i>in ice</i> &rArr; a cone:</h4>
-              <div style="font-size: 0.85em">$$\cos\theta_c = \frac{1}{n\beta} \;\Rightarrow\; \theta_c \approx 41^\circ$$</div>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Faster than light <i>in ice</i></h4>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• It leaves a cone of blue light, at 41&deg;</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">DOM</span> &ensp; <b>A clock and a light meter</b></h3>
-              <h4 style="margin: 0">&emsp;• Timing &rArr; direction; light &rArr; energy</h4>
+            <div class="fragment" data-fragment-index="2" style="margin-bottom: 40px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Sensors</span> &ensp; <b>A clock and a light meter</b></h3>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Timing &rArr; direction; light &rArr; energy</h4>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Frozen in for good: no repairs</h4>
             </div>
-            <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Ice</span> &ensp; <b>Clear only below 1.4 km</b></h3>
-              <h4 style="margin: 0">&emsp;• Halzen: had he read the textbook, he'd never have started</h4>
+            <div class="fragment" data-fragment-index="3">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Running</span> &ensp; <b>3,000 events a second</b></h3>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Mostly muons from the atmosphere</h4>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Sorted at the Pole, sent by satellite</h4>
             </div>
           </div>
 
         </textarea>
         </section>
+
 
         <!-- =============================================================== -->
         <!-- [12] Cherenkov light in IceCube (video) | the event as the detector sees it | Video: IceCube, streamed from res.cloudinary.com (needs internet) -->
@@ -920,7 +924,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [13] Tracks, cascades, and the background | merged 31 Oct from 12b (Why muons?) and 13 (Tracks, cascades); old version(s) in 2611-Neutrino_prev.html | Fig 1: Ahlers & Halzen principle figure (up-going vs down-going); Fig 2: track + cascade event displays (placeholder) -->
+        <!-- [13] Tracks, cascades, and the background | merged 31 Oct from 12b (Why muons?) and 13 (Tracks, cascades); old version(s) in 2611-Neutrino_prev.html | Fig 1: Ahlers & Halzen principle figure (up-going vs down-going); Fig 2: track + cascade event displays, IceCube-170922A and Ernie (1 Nov) -->
         <!--      Numbers: muon range in ice ≈ (1/b) ln(1 + bE/a), a ≈ 0.18 GeV/m, b ≈ 3.7e-4 /m: ~3 km at 1 TeV, ~15 km at 100 TeV. Ice radiation length 39 cm, so EM showers are ~5–10 m long. Overlaps slide 13's "Earth as a filter" line; trim one if it feels repeated -->
         <!--      Dropped for size (say aloud): the muon travels km, so direction is good and energy rough (it escapes); cascades: ν_e, most ν_τ, neutral-current hits of any flavour, all the energy inside; double cascade: ν_τ at PeV, two bursts ~50 m apart, the last flavour seen; outer sensors flag muons coming in -->
         <!--      Dropped in the merge (say aloud): double cascades = ν_τ at PeV, bursts ~50 m apart, 7 candidates (2024); cascades are ν_e, most ν_τ and neutral-current hits of any flavour; outer sensors flag incoming muons -->
@@ -928,29 +932,43 @@
           <textarea data-template>
           # Tracks, cascades, and the background
 
-          ### Muons travel kilometres through ice; electrons shower out within metres
+          ### _What a neutrino looks like in the ice_
 
           <div style="text-align: center; float: right; width: 46%">
             <img src="img/IceCube-Principal_AhlersHalzen_ProgPartNuclPhys102_2018.png" width="100%" style="margin: 10px auto 1px auto">
             <div style="font-size: 16px; line-height: 1.2; margin-bottom: 20px"><font size="3" class="credit">[Ahlers &amp; Halzen, <a href="https://doi.org/10.1016/j.ppnp.2018.05.001">Prog. Part. Nucl. Phys. <b>102</b>, 73 (2018)</a>]</font></div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 260px; width: 90%; margin: 0 auto 0px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Track and cascade event displays, side by side (e.g. IceCube-170922A and Ernie)<br>[IceCube]</div>
+            <!-- Event displays (1 Nov), each sphere a DOM, size = light, colour = time (red early): IceCube-170922A_event.png from the 2018 press release "IceCube neutrinos point to long-sought cosmic ray accelerator" (750 px original; IceCube logo in the corner blacked out, black margins trimmed); Ernie_event.png = right half of Bert-Ernie.png from icecube.wisc.edu (Ernie: Jan 2012, 1.14 PeV), trimmed. Ernie appears with the Cascades point -->
+            <div style="display: flex; justify-content: center; align-items: flex-end; gap: 30px">
+              <div>
+                <img src="img/IceCube-170922A_event.png" style="height: 250px; margin: 0">
+                <div style="font-size: 18px; line-height: 1.2">Track: IceCube-170922A (2017)</div>
+              </div>
+              <div class="fragment" data-fragment-index="1">
+                <img src="img/Ernie_event.png" style="height: 250px; margin: 0">
+                <div style="font-size: 18px; line-height: 1.2">Cascade: Ernie (2012)</div>
+              </div>
             </div>
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube Collaboration]</font></div>
           </div>
 
-          <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">
+          <!-- Rewritten 1 Nov (Ben: simplify, very non-technical; the points didn't make sense on their own; more space between blocks). Before: "Tracks: Muons go kilometres / Bigger target, 1° pointing"; "Cascades: Showers stop in metres / ~10° pointing, but better energy"; "Background: 10⁶ muons per neutrino / Up-going, or starts inside ⇒ a neutrino". Old subtitle: "Muons travel kilometres through ice; electrons shower out within metres" -->
+          <!-- Say aloud: a muon is a heavy cousin of the electron; tracks are ν_μ, cascades are ν_e, most ν_τ, and neutral-current hits; track direction ~1° (cascades ~10°); ~3,000 muons a second vs a few neutrinos an hour; atmospheric neutrinos also come up through the Earth, so the cosmic ones show up as an excess at high energy -->
+          <div style="text-align: left; float: left; width: calc(52% + 50px); margin-left: -50px; font-size: 1.5em">  <!-- margin-left: shifts the text into the slide margin; width grows by the same, so the right edge stays put -->
             <br>
-            <div style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Tracks</span> &ensp; <b>Muons go kilometres</b></h3>
-              <h4 style="margin: 0">&emsp;• Bigger target, 1&deg; pointing</h4>
+            <div style="margin-bottom: 60px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Tracks</span> &ensp; <b>A long streak of light</b></h3>
+              <h4 style="margin: 0">&emsp;• It makes a muon that flies for kilometres</h4>
+              <h4 style="margin: 0">&emsp;• A straight line: it points back to the source</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cascades</span> &ensp; <b>Showers stop in metres</b></h3>
-              <h4 style="margin: 0">&emsp;• $\sim$10&deg; pointing, but better energy</h4>
+            <div class="fragment" data-fragment-index="1" style="margin-bottom: 60px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Cascades</span> &ensp; <b>A ball of light</b></h3>
+              <h4 style="margin: 0">&emsp;• All the energy dumped in a few metres</h4>
+              <h4 style="margin: 0">&emsp;• Good for "how much?", poor for "from where?"</h4>
             </div>
-            <div class="fragment">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Background</span> &ensp; <b>$10^6$ muons per neutrino</b></h3>
-              <h4 style="margin: 0">&emsp;• Up-going, or starts inside &rArr; a neutrino</h4>
+            <div class="fragment" data-fragment-index="2">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Background</span> &ensp; <b>A million fakes per neutrino</b></h3>
+              <h4 style="margin: 0">&emsp;• Cosmic rays make muons that rain down</h4>
+              <h4 style="margin: 0">&emsp;• So look down: only neutrinos cross the Earth</h4>
             </div>
           </div>
 
@@ -1140,7 +1158,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [19] Particle physics with an ice cube | merged 31 Oct from 17 (particle physics) and 17a (dark matter); dark matter split back out to 19a; old version(s) in 2611-Neutrino_prev.html | Fig 1: σ vs E with IceCube points (Nature 2017, Fig. 3); Fig 2: Glashow event display (placeholders) -->
+        <!-- [19] Particle physics with an ice cube | merged 31 Oct from 17 (particle physics) and 17a (dark matter); dark matter split back out to 19a; old version(s) in 2611-Neutrino_prev.html | Fig 1: Earth absorption, transmission probability vs energy and zenith angle (Nature 2017, Fig. 2; Ben chose Fig. 2 over the σ plot, Fig. 3, on 1 Nov); Fig 2: Glashow Feynman diagram (img/glashow.svg from img/feynman/glashow.tex), with the Glashow point. The Glashow event gets its own slide next (19g) -->
         <!--      Numbers: σ/σ_SM = 1.30 (+0.21/−0.19 stat) (+0.39/−0.43 syst), 6–980 TeV, upgoing tracks. Glashow: E = M_W²/2m_e = (80.4 GeV)²/(1.022 MeV) ≈ 6.3 PeV; event 8 Dec 2016, 6.05 ± 0.72 PeV deposited, 2.3σ. Flavour 1:2:0 → ~1:1:1. Earth mass from IceCube data: Donini, Palomares-Ruiz & Salvado, Nature Phys. 15, 37 (2019). QG decoherence: Nature Phys. 20, 913 (2024) -->
         <!--      Dropped for size (say aloud): 6–980 TeV; above ~10 TeV the Earth absorbs; E = M_W²/2m_e; Glashow, Phys. Rev. 118, 316 (1960); 2.3σ; proves antineutrinos are in the flux; DeepCore atmospheric oscillations rival accelerators; Lorentz violation; SNEWS supernova watch; weighing the Earth -->
         <!--      Dropped in the merge (say aloud): flavour 1:2:0 → 1:1:1, ν_τ seen; DeepCore oscillations; Lorentz violation, decoherence, sterile ν; weighing the Earth -->
@@ -1151,11 +1169,10 @@
           <div style="text-align: center; float: right; width: 42%">
             <br>
             <br>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; $\nu N$ cross-section vs energy: the IceCube measurement (6&ndash;980 TeV) on the Standard Model curve, with accelerator data at low energy<br>[IceCube, <a href="https://doi.org/10.1038/nature24459">Nature <b>551</b>, 596 (2017)</a>, Fig. 3]</div>
-            </div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 300px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; The Glashow-resonance event display, 6 PeV (Dec 2016)<br>[IceCube/NSF]</div>
+            <img src="img/NeutrinoAbsorption_nature24459.png" width="100%" style="margin: 0 auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2; margin-bottom: 24px"><font size="3" class="credit">[IceCube, <a href="https://doi.org/10.1038/nature24459">Nature <b>551</b>, 596 (2017)</a>, Fig. 2]</font></div>
+            <div class="fragment" data-fragment-index="1">
+              <img src="img/glashow.svg" style="height: 300px; margin: 0">
             </div>
           </div>
 
@@ -1166,12 +1183,12 @@
               <h4 style="margin: 0">&emsp;• 1000$\times$ accelerator energies: SM holds</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1038/nature24459">Nature <b>551</b>, 596 (2017)</a>]</div>
             </div>
-            <div class="fragment" style="margin-bottom: 30px">
+            <div class="fragment" data-fragment-index="1" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Glashow</span> &ensp; <b>A 1960 prediction, seen</b></h3>
               <h4 style="margin: 0">&emsp;• $\bar\nu_e + e^- \to W^-$ at 6.3 PeV</h4>
               <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[<a href="https://doi.org/10.1038/s41586-021-03256-1">Nature <b>591</b>, 220 (2021)</a>]</div>
             </div>
-            <div class="fragment">
+            <div class="fragment" data-fragment-index="2">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Beyond</span> &ensp; <b>And more</b></h3>
               <h4 style="margin: 0">&emsp;• Oscillations, supernova watch</h4>
             </div>
@@ -1181,42 +1198,60 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [19a] Dark matter with an ice cube (restored 31 Oct from [17a] in 2611-Neutrino_prev.html) | indirect detection that measures a direct-detection quantity: capture in the Sun/Earth, Galactic halo, heavy decaying DM | Fig 1: Sun-capture cartoon; Fig 2: spin-dependent DM–proton limits (IceCube, Super-K, PICO) -->
+        <!-- [19g] The Glashow resonance (added 1 Nov; Ben: his full-width graphic with 1 or 2 points below) | a 1960 prediction seen 56 years later | Fig: img/Glashow-Diagram_Final.jpg, used as is (IceCube; photography Yuya Makino, IceCube/NSF; the graphic carries its own caption and credit) -->
+        <!--      Numbers: E = M_W²/2m_e = (80.4 GeV)²/(1.022 MeV) ≈ 6.3 PeV; Glashow, Phys. Rev. 118, 316 (1960); event 8 Dec 2016, 6.05 ± 0.72 PeV deposited, W → hadrons, 2.3σ; IceCube, Nature 591, 220 (2021). Feynman diagram on 19 -->
+        <section data-markdown>
+          <textarea data-template>
+          <img src="img/Glashow-Diagram_Final.jpg" style="width: 100%; margin: 0">
+          <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube/NSF; <a href="https://doi.org/10.1038/s41586-021-03256-1">Nature <b>591</b>, 220 (2021)</a>]</font></div>
+
+          <div style="text-align: left; width: 85%; margin: 24px auto 0 auto; font-size: 1.5em">
+            <h4 style="margin: 0 0 14px 0">&emsp;• 1960: Glashow predicts $\bar\nu_e\, e^- \to W^-$, if the antineutrino has 6.3 PeV</h4>
+            <h4 class="fragment" style="margin: 0">&emsp;• 2016: IceCube sees one, 56 years later</h4>
+          </div>
+
+        </textarea>
+        </section>
+
+        <!-- =============================================================== -->
+        <!-- [19a] Dark matter with an ice cube (restored 31 Oct from [17a] in 2611-Neutrino_prev.html) | indirect detection that measures a direct-detection quantity: capture in the Sun/Earth, Galactic halo, heavy decaying DM | Fig 1: img/sun_schematic.png, Sun-capture cartoon [IceCube]; Fig 2: img/limits_final_ic2021.jpg, spin-dependent DM–proton limits, IceCube 2021 (DeepCore, GeV-scale) vs PICO-60, Super-K, ANTARES [IceCube Collaboration, PRD 105, 062004 (2022)] (both Ben's, 1 Nov) -->
         <!--      Dropped for size (say aloud): loses energy by scattering off nuclei; fusion neutrinos are MeV; an indirect search measures a direct-detection quantity; the Sun is mostly protons: spin-dependent DM–proton; alongside PICO and Super-K; the Earth's core (iron) probes spin-independent; annihilation or decay anywhere in the halo; heavy decaying DM was once suggested for the first PeV events -->
         <section data-markdown>
           <textarea data-template>
-          # Dark matter with an ice cube
+          # Dark Matter Detection
 
-          ### Indirect detection, with a direct-detection payoff
+          ### Indirect direct detection
 
-          <div style="text-align: center; float: right; width: 42%">
-            <br>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; Cartoon: dark matter captured in the Sun, sinking to the core and annihilating; only the neutrinos escape to IceCube</div>
-            </div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; Spin-dependent DM&ndash;proton cross-section limits vs mass: IceCube (Sun), Super-K, PICO<br>[e.g. IceCube, Eur. Phys. J. C <b>77</b>, 146 (2017)]</div>
-            </div>
+          <!-- 1 Nov (Ben): plot big on the right, Sun cartoon under the text; simpler, clearer points. -->
+          <!-- Physics: capture rate C ∝ σ_χp (spin-dependent on hydrogen) × ρ_DM / m_χ; annihilation rate Γ_A = C/2 once capture and annihilation balance (equilibrium, reached for typical ⟨σv⟩ since the Sun is 4.6 Gyr old), so the ν flux measures σ_χp, not ⟨σv⟩; ⟨σv⟩ only matters if it is so small that equilibrium is not reached. The annihilation channel (b b̄, τ τ̄, ν ν̄) sets the ν spectrum, hence several IceCube lines on the plot. -->
+          <!-- Spin block is Ben's (restored 1 Nov). NB the ⟨σv⟩ limits come from the separate Galactic-halo search, not the Sun. Say aloud: the Sun is mostly hydrogen, so the target is the proton spin; capture ∝ the direct-detection σ; GeV–TeV ν escape the Sun, fusion ν are MeV -->
+          <div style="text-align: center; float: right; width: 50%">
+            <img src="img/DM_limits_IceCube.png" width="100%" style="margin: 60px auto 1px auto">
+            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube Collaboration, <a href="https://doi.org/10.1103/PhysRevD.105.062004">Phys. Rev. D <b>105</b>, 062004 (2022)</a>]</font></div>
           </div>
 
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.5em">
-            <div class="fragment" style="margin-bottom: 25px">
+          <div style="text-align: left; float: left; width: calc(48% + 50px); margin-left: -50px; font-size: 1.5em">  <!-- margin-left: shifts the text into the slide margin; width grows by the same, so the right edge stays put -->
+            <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">The Sun</span> &ensp; <b>A dark matter trap</b></h3>
-              <h4 style="margin: 0">&emsp;• Scatters, is captured, sinks to the core</h4>
-              <h4 style="margin: 0">&emsp;• Annihilates: only GeV&ndash;TeV $\nu$ escape</h4>
-              <h4 style="margin: 0">&emsp;• Capture $\propto$ the direct-detection $\sigma$</h4>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Dark matter hits protons and gets caught</h4>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• It piles up and annihilates: only $\nu$ escape</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Spin</span> &ensp; <b>Hydrogen is the target</b></h3>
-              <h4 style="margin: 0">&emsp;• Among the best spin-dependent limits</h4>
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Spin</span> &ensp; <b>Target: Hydrogen (protons)</b></h3>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Among the best spin-dependent limits for GeV-scale</h4>
+              <h4 style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• Limits on $\langle\sigma v\rangle$ from the halo</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            <!-- <div class="fragment" style="margin-bottom: 25px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">The Galaxy</span> &ensp; <b>Halo and centre</b></h3>
               <h4 style="margin: 0">&emsp;• Limits on $\langle\sigma v\rangle$ from the halo</h4>
-            </div>
-            <div class="fragment" style="margin-bottom: 25px">
+            </div> -->
+            <!-- <div class="fragment" style="margin-bottom: 25px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">PeV</span> &ensp; <b>Heavy, decaying dark matter</b></h3>
               <h4 style="margin: 0">&emsp;• $\tau \gtrsim 10^{27}$ s: $10^9\times$ the age of the Universe</h4>
+            </div> -->
+            <div style="text-align: center">
+              <img src="img/sun_schematic.png" style="height: 320px; margin: 0 auto 1px auto">
+              <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube]</font></div>
             </div>
           </div>
 
@@ -1248,6 +1283,12 @@
             <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">74 kyr</span> &ensp; <b>Ash near the age of Toba</b></h3>
               <h4 style="margin: 0">&emsp;• Biggest eruption in 2 million years</h4>
+            </div>
+            <!-- Glacier flow (1 Nov, Ben): the ice at the IceCube site moves 10.1 m/yr, mostly by sliding at the bed (IceCube, "Calibration of the IceCube Neutrino Observatory", arXiv:1911.02016); the 2023 ice model finds a tilt of the optical layers along the flow (Chirkin & Rongen, arXiv:2307.13951). Unchecked, don't put on the slide yet: light travels slightly further along the flow, put down to ice crystals aligned by the flow -->
+            <div class="fragment" style="margin-bottom: 30px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">10 m/yr</span> &ensp; <b>Riding the glacier</b></h3>
+              <h4 style="margin: 0">&emsp;• The whole detector drifts with the ice</h4>
+              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[IceCube, <a href="https://arxiv.org/abs/1911.02016">arXiv:1911.02016</a>]</div>
             </div>
             <div class="fragment">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Earth</span> &ensp; <b>Weighed with neutrinos</b></h3>

@@ -1,0 +1,45 @@
+% The Glashow resonance: an electron antineutrino hits an electron in the ice and makes a
+% real W- (s-channel), at E = M_W^2 / 2 m_e ~ 6.3 PeV. The W then decays; drawn here to quarks
+% (W- -> d ubar, ~2/3 of decays), as in IceCube's 2016 event (Nature 591, 220 (2021)).
+% The other ~1/3: W- -> e- nubar_e, mu- nubar_mu (a track), tau- nubar_tau.
+% Time runs upwards, as in nu-e-reactions.tex (same layout as its annihilation diagram, Z -> W).
+% Uses feynmp via feynmp-auto.
+% Build (in this directory):
+%   pdflatex -shell-escape glashow.tex && pdflatex -shell-escape glashow.tex
+%   pdftocairo -svg glashow.pdf ../glashow.svg
+\documentclass[border=6pt]{standalone}
+\usepackage{feynmp-auto}
+\usepackage{xcolor}
+
+\newif\ifdark \darktrue          % \darkfalse = black on white
+\newcommand{\figfont}{\LARGE}    % font size for labels and captions
+
+\ifdark \pagecolor{black} \fi
+\unitlength=1mm
+
+\begin{document}
+\ifdark \color{white} \fi
+\figfont
+\begin{fmffile}{glashowW}
+  \ifdark \fmfcmd{foreground := white; background := black;} \fi
+  \fmfset{thin}{0.8pt}
+  \fmfset{arrow_len}{3mm}
+  \fmfset{wiggly_len}{3mm}
+  \begin{tabular}{c}
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){% margins (left,top)(right,bottom) leave room for labels
+    \begin{fmfgraph*}(28,40)
+      \fmfbottom{nub,em}
+      \fmftop{d,ub}
+      \fmf{fermion}{em,v1,nub}
+      \fmf{boson,label=$W^-$,label.side=right}{v1,v2}
+      \fmf{fermion}{ub,v2,d}
+      \fmflabel{$\bar\nu_e$}{nub}
+      \fmflabel{$e^-$}{em}
+      \fmflabel{$d$}{d}
+      \fmflabel{$\bar u$}{ub}
+    \end{fmfgraph*}}}}$
+    \\[2mm]
+    $\bar\nu_e\, e^- \to W^- \to d\,\bar u$
+  \end{tabular}
+\end{fmffile}
+\end{document}
