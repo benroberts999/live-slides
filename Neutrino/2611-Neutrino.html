@@ -36,10 +36,12 @@
       /* citation / image-credit colour (all grey credits use class="credit") */
       .reveal .credit { color: #a0a0a0; }
       /* fragment fade time, also the cross-fade between stacked images (theme: 0.2s) */
-      .reveal .slides section .fragment { transition: all 0.7s ease; }
+      .reveal .slides section .fragment { transition: all 0.9s ease; }
+      /* slide change time: uncomment to override transitionSpeed in Reveal.initialize (reveal.js default 0.8s) */
+      /* .reveal .slides section { transition-duration: 0.8s; } */
       /* folding fragment: class="fragment fade-out fold-away" fades out AND shrinks to zero height at its index (reverses going back).
          max-height must exceed the tallest folded block; keep it close, or the fold starts late */
-      .reveal .slides section .fragment.fold-away { max-height: 320px; overflow: hidden; }  /* 1 Nov: 260 → 320, slide 4's three-point blocks were at the limit */
+      .reveal .slides section .fragment.fold-away { max-height: 420px; overflow: hidden; }  /* 1 Nov: 260 → 320, slide 4's three-point blocks were at the limit; → 420 for the history slide's 1962 block (six points + equation, est. ~390px) */
       .reveal .slides section .fragment.fold-away.visible { max-height: 0; }
     </style>
 
@@ -119,19 +121,22 @@
         <section data-markdown>
           <textarea data-template>
           # Francis Halzen
+          <br>
 
           <div style="display: flex; justify-content: space-between; align-items: center; gap: 60px; text-align: left">
-            <div style="width: 36%; text-align: center">
+            <div style="width: 42%; text-align: center">
               <img src="img/Halzen_Nobel.jpeg" style="width: 100%; margin: 0 auto 1px auto">
               <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Niklas Elmehed, Nobel Prize Outreach]</font></div>
             </div>
-            <div style="width: 62%; font-size: 1.5em">
+            <div style="width: 56%; font-size: 1.5em">
               <h4 style="margin: 0 0 18px 0">• Born 1944, Belgium; PhD Louvain, 1969</h4>
               <h4 style="margin: 0 0 18px 0">• CERN, then Wisconsin&ndash;Madison: 50+ years</h4>
               <h4 style="margin: 0 0 18px 0">• A particle theorist: quarks, gluons, colliders</h4>
-              <h4 style="margin: 0 0 18px 0">• Co-wrote the textbook <i>Quarks and Leptons</i> (1984)</h4>
-              <h4 style="margin: 0 0 18px 0">• 1988: bet on the Antarctic ice; leads IceCube since 2001</h4>
-              <h4 style="margin: 0">• 2026: 5th Nobel for neutrinos; first solo since 1992</h4>
+              <h4 style="margin: 0 0 18px 0">• Co-wrote textbook <i>Quarks and Leptons</i> (1984)</h4>
+              <h4 class="fragment" style="margin: 0 0 18px 0">• <span style="color: cyan">1988</span>: Idea: use Antarctic to search for neutrinos</h4>
+              <h4 class="fragment" style="margin: 0 0 18px 0">• <span style="color: cyan">2001</span>: Leads IceCube neutrino observatory</h4>
+              <h4 class="fragment" style="margin: 0">• <span style="color: cyan">2026</span>: 5th Nobel for neutrinos</h4>
+              <h4 class="fragment" style="margin: 0">&emsp;&emsp; • First solo since 1992</h4>
             </div>
           </div>
 
@@ -260,10 +265,10 @@
               <!-- Cowan & Reines photo (index 4), telegram below one click later (index 5); both until parity (index 6) -->
               <div class="fragment fade-out" data-fragment-index="6" style="width: 100%">
                 <div class="fragment fade-in" data-fragment-index="4">
-                  <img src="img/CowenReines.jpg" width="40%" style="margin: 0px auto 1px auto">
+                  <img src="img/CowenReines.jpg" width="50%" style="margin: 0px auto 1px auto">
                   <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">Cowen & Reines Scintillator [Los Alamos Nat. Lab.]</font></div>
                   <div class="fragment fade-in" data-fragment-index="5">
-                    <img src="img/telegram.jpg" width="85%" style="margin: 15px auto 1px auto">
+                    <img src="img/telegram.jpg" width="75%" style="margin: 15px auto 1px auto">
                     <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Reines &amp; Cowan to Pauli, June 1956: CERN Pauli Archive]</font></div>
                   </div>
                 </div>
@@ -272,11 +277,11 @@
               <div class="fragment fade-out" data-fragment-index="7" style="width: 100%">
                 <div class="fragment fade-in" data-fragment-index="6">
                   <div style="display: flex; justify-content: center; gap: 20px">
-                    <div style="width: 30%">
+                    <div style="width: 40%">
                       <img src="img/LeeYang.jpeg" style="width: 100%; margin: 0px auto 1px auto">
                       <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[U. Chicago]</font></div>
                     </div>
-                    <div style="width: 30%">
+                    <div style="width: 40%">
                       <img src="img/Chien-shiung_Wu.jpg" style="width: 100%; margin: 0px auto 1px auto">
                       <div style="font-size: 13px; line-height: 1.2"><font size="2" class="credit">[Columbia]</font></div>
                     </div>
@@ -288,9 +293,9 @@
               <!-- More flavours, 1962 (index 7) until electroweak (index 8): Schwartz + spark chamber above, AGS below -->
               <div class="fragment fade-out" data-fragment-index="8" style="width: 100%">
                 <div class="fragment fade-in" data-fragment-index="7">
-                  <div style="width: 40%; margin: 0 auto">
+                  <div style="width: 50%; margin: 0 auto">
                     <img src="img/MelvinSchwartz.webp" style="width: 100%; margin: 0px auto 1px auto">
-                    <div style="font-size: 16px; line-height: 1.15"><font size="3">Melvin Schwartz with the 10-ton spark chamber, showing a multiple exposure of cosmic-ray muon tracks.</font> <font size="1" class="credit">[Brookhaven Nat. Lab.]</font></div>
+                    <div style="font-size: 16px; line-height: 1.15"><font size="3" class="credit">Melvin Schwartz [Brookhaven Nat. Lab.]</font></div>
                   </div>
                   <img src="img/AGS.png" width="100%" style="margin: 15px auto 1px auto">
                 </div>
@@ -358,60 +363,80 @@
             <div class="fragment" data-fragment-index="1" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1930</span> &ensp; <b>Theorised</b> &ensp; <i style="font-size: 0.7em">"Dear Radioactive Ladies and Gentlemen, ..."</i></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="3">
-                <h4 style="margin: 0 0 0px 0">&emsp;• Pauli's "desperate remedy": undetectable neutral particle, explain energy conservation in Bi $\beta$ decay</h4>
-                <h4 class="fragment" data-fragment-index="2" style="margin: 0 0 10px 0"><i style="font-size: 0.9em">&emsp; "Unfortunately, I cannot appear in Tubingen personally since I am indispensable here in Zurich because of a ball"</i></h4>
+                <h4 style="margin: 0 0 10px 40px">• Pauli: "desperate remedy": undetectable neutral particle</h4>
+                <h4 style="margin: 0 0 10px 40px">• Explain energy conservation in RaE (Bi) $\beta$ decay</h4>
+                <h4 class="fragment" data-fragment-index="2" style="margin: 0 0 10px 80px"><i style="font-size: 0.9em">"Unfortunately, I cannot appear in Tubingen personally since I am indispensable here in Zurich because of a ball"</i></h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="3" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1933</span> &ensp; <b>Fermi theory</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="4">
-                <h4 style="margin: 0 0 0px 0">&emsp;• Fermi's theory of $\beta$ decay [<a href="https://doi.org/10.1007/BF01351864">Z. Phys. <b>88</b>, 161 (1934)</a>] &ensp; <i style="font-size: 0.8em">(rejected by Nature)</i></h4>
-                <h4 style="margin: 0 0 10px 0">&emsp;• Bethe and Peierls: $\sigma \sim 10^{-44}$ cm$^2$, "no practically possible way of observing" [<a href="https://www.nature.com/articles/133532a0">Nature <b>133</b>, 532 (1934)</a>]</h4>
+                <h4 style="margin: 0 0 0px 40px">• Fermi's theory of $\beta$ decay [<a href="https://doi.org/10.1007/BF01351864">Z. Phys. <b>88</b>, 161 (1934)</a>] &ensp; <i style="font-size: 0.8em"></i></h4>
+                <h5 style="margin: 0 0 0px 60px"> <i>(rejected by Nature)</i></h5>
+                <br>
+                <h4 style="margin: 0 0 0px 40px">• Bethe and Peierls: $\sigma \sim 10^{-44}$ cm$^2~~$ [<a href="https://www.nature.com/articles/133532a0">Nature <b>133</b>, 532 (1934)</a>]</h4>
+                <h4 style="margin: 0 0 0px 60px"> <i>"no practically possible way of observing"</i></h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="4" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1956</span> &ensp; <b>Detected</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1995</span></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="6">
-                <h4 style="margin: 0 0 10px 0">&emsp;• Reines and Cowan [<a href="https://www.science.org/doi/10.1126/science.124.3212.103">Science (1956)</a>]: reactor $\bar\nu_e$ at Savannah River: $\bar\nu_e + p \to e^+ + n$</h4>
+                <h4 style="margin: 0 0 10px 40px">• Reines and Cowan [<a href="https://www.science.org/doi/10.1126/science.124.3212.103">Science <b>124</b>, 3212 (1956)</a>]</h4>
+                <h4 style="margin: 0 0 10px 40px">• Reactor $\bar\nu_e$ at Savannah River: \[\large \bar\nu_e + p \to e^+ + n\]</h4>
+                <!-- appear with the telegram (index 5). Water + CdCl2 target between liquid-scintillator tanks; the signal is the delayed coincidence: prompt annihilation flash, then the Cd capture flash ~µs later -->
+                <div class="fragment" data-fragment-index="5">
+                  <h4 style="margin: 0 0 10px 40px">• $e^+$ annihilates: two 0.511 MeV $\gamma$ flash in the scintillator</h4>
+                  <h4 style="margin: 0 0 10px 40px">• $n$ captured on cadmium µs later: a second $\gamma$ flash</h4>
+                </div>
               </div>
             </div>
             <div class="fragment" data-fragment-index="6" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1957</span> &ensp; <b>Parity violation</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1957</span></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="7">
-                <h4 style="margin: 0 0 0px 0">&emsp;• Lee and Yang [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.104.254">Phys. Rev. <b>104</b>, 254 (1956)</a>], C. S. Wu: $^{60}$Co $\beta$ decay [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.105.1413">Phys. Rev. <b>105</b>, 1413 (1957)</a>]</h4>
+                <h4 style="margin: 0 0 10px 40px">• Lee and Yang [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.104.254">Phys. Rev. <b>104</b>, 254 (1956)</a>]</h4>
+                <h4 style="margin: 0 0 10px 40px">• C. S. Wu: $^{60}$Co $\beta$ decay [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.105.1413">Phys. Rev. <b>105</b>, 1413 (1957)</a>]</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="7" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1962</span> &ensp; <b>Now in more flavours</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1988</span></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="8">
-                <h4 style="margin: 0 0 10px 0">&emsp;• $\nu_\mu \neq \nu_e$ at Brookhaven [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.9.36">Phys. Rev. Lett. <b>9</b>, 36 (1962)</a>]; doublet structure of leptons</h4>
-                <!-- $\nu_\tau$ at Fermilab (DONUT) in 2000 -->
+                <h4 style="margin: 0 0 10px 40px">• $\nu_\mu \neq \nu_e$ at Brookhaven [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.9.36">Phys. Rev. Lett. <b>9</b>, 36 (1962)</a>]</h4>
+                <!-- Lederman, Schwartz, Steinberger: AGS protons on Be -> pions -> decay in flight to mu + nu; 13.5 m of steel (old battleship plate) stops all but the nu; 10-ton Al spark chamber; ~30 events, all muons, ~no electrons -->
+                <h4 style="margin: 0 0 10px 40px">• Pions decay to $\nu$</h4>
+                <h4 style="margin: 0 0 10px 40px">• 13 m of battleship steel stops everything else</h4>
+                <h4 style="margin: 0 0 10px 40px">• Spark chamber sees the $\nu$ make muons, never electrons \[\large \pi^+ \to \mu^+ + \nu_\mu, \qquad \nu_\mu + n \to \mu^- + p\]</h4>
+                <h4 style="margin: 0 0 10px 40px">• Doublet structure of leptons</h4>
+                <h4 style="margin: 0 0 10px 40px">• $\nu_\tau$ at Fermilab (DONUT), 2000 [<a href="https://doi.org/10.1016/S0370-2693(01)00307-0">Phys. Lett. B <b>504</b>, 218 (2001)</a>]</h4>  <!-- ref from memory, not checked -->
               </div>
             </div>
             <!-- 1967 electroweak (added 31 Oct). Say aloud: 1973, Gargamelle (CERN) sees the Z's neutral current in a ν beam [Phys. Lett. B 46, 138 (1973)]; W and Z found 1983; LEP 1989: the Z width allows exactly three light ν. Higgs mechanism: Higgs, PRL 13, 508 (1964); Englert & Brout, PRL 13, 321 (1964); Nobel 2013. No right-handed ν ⇒ no Yukawa mass term ⇒ m_ν = 0, the "first crack" of 1998 and slide 5 -->
             <div class="fragment" data-fragment-index="8" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1967</span> &ensp; <b>Electroweak theory</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">1979</span></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="9">
-                <h4 style="margin: 0 0 0px 0">&emsp;• Glashow, Salam, Weinberg: weak and electromagnetic as one force, carried by $W^\pm$, $Z$ [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.19.1264">Phys. Rev. Lett. <b>19</b>, 1264 (1967)</a>]</h4>
-                <h4 style="margin: 0 0 10px 0">&emsp;• Mass from the Higgs (1964), but $\nu$ only left-handed: so $m_\nu = 0$</h4>
+                <h4 style="margin: 0 0 0px 40px">• Glashow, Salam, Weinberg: electroweak unification</h4>
+                <h4 style="margin: 0 0 0px 40px">• Carried by $W^\pm$, $Z$ [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.19.1264">Phys. Rev. Lett. <b>19</b>, 1264 (1967)</a>]</h4>
+                <h4 style="margin: 0 0 0px 40px">• Mass from the Higgs (1964)</h4>
+                <h4 style="margin: 0 0 10px 40px">• But $\nu$ only left-handed: so $m_\nu = 0$</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="9" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1968, 1987</span> &ensp; <b>The Sun and a supernova</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2002</span></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="11">
-                <h4 style="margin: 0 0 0px 0">&emsp;• Davis's Homestake tank ($\nu_e + {}^{37}{\rm Cl} \to {}^{37}{\rm Ar} + e^-$): finds $\tfrac13$ of the predicted $\nu_e$ $\implies$ solar neutrino problem</h4>
-                <h4 class="fragment" data-fragment-index="10" style="margin: 0 0 10px 0">&emsp;• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): neutrino astronomy works</h4>
+                <h4 style="margin: 0 0 0px 40px">• Davis's Homestake tank: \[\large \nu_e + {}^{37}{\rm Cl} \to {}^{37}{\rm Ar} + e^-\]</h4>
+                <h4 style="margin: 0 0 0px 40px">• Finds $\tfrac13$ of the predicted $\nu_e$ $\implies$ solar neutrino problem</h4>
+                <h4 class="fragment" data-fragment-index="10" style="margin: 0 0 10px 40px">• SN1987A: $\sim$25 events in 13 s (Kamiokande-II, IMB, Baksan): <br> $~\implies$ neutrino astronomy works</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="11" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">1998–2002</span> &ensp; <b>Oscillating, so massive</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2015</span></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="12">
-                <h4 style="margin: 0 0 10px 0">&emsp;• Super-K (atmospheric) and SNO (solar): flavours change in flight</h4>
+                <h4 style="margin: 0 0 0px 40px">• Super-K (atmospheric) and SNO (solar)</h4>
+                <h4 style="margin: 0 0 10px 40px">• Flavours change in flight</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="12" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">2013</span> &ensp; <b>From the cosmos</b> &ensp; <img src="img/nobel-medal.png" style="display: inline; height: 1.4em; margin: 0 0.2em 0 0; vertical-align: middle; background: none; border: none"><span style="color: #ccc">2026</span></h3>
-              <h4 style="margin: 0 0 10px 0">&emsp;• IceCube: TeV–PeV neutrinos from beyond the Galaxy</h4>
+              <h4 style="margin: 0 0 10px 40px">• IceCube: TeV–PeV neutrinos from beyond the Galaxy</h4>
             </div>
           </div>
 
@@ -419,7 +444,7 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- [4] History of neutrinos (their point of view) | (31 Oct: text 1.5×, year headings larger, each epoch's details fold away when the next appears, as on 2a-test) equilibrium → freeze-out → photon reheating → BBN → stars → supernovae → CνB today; each epoch is a fragment, description as a dot point beneath -->
+        <!-- [4] History of neutrinos (their point of view) | (31 Oct: text 1.5×, year headings larger, each epoch's details fold away when the next appears, as on 2a-test) equilibrium → freeze-out → photon reheating → CνB (photon reheating merged in, 1 Nov) → BBN → stars → supernovae → everything else; each epoch is a fragment, description as a dot point beneath -->
         <!--      Fig 1: img/History-of-the-Universe_NASA.jpg [NASA] (1 Nov; could mark "ν decouple, t = 1 s" on it, between "1 microsecond" and "3 minutes"). Under it, for indices 1–4: img/nu-e-reactions.svg, the two equilibrium reactions by Z exchange (ν_e also has W diagrams). Fig 2: the Sun imaged in neutrinos (Super-Kamiokande; APOD 5 Jun 1998, R. Svoboda and K. Gordan) -->
         <!--      Alts: SN1987A remnant (HST); Bahcall solar-neutrino spectrum; Γ/H vs T sketch; T_ν vs T_γ through e+e- annihilation -->
         <section data-markdown>
@@ -431,22 +456,28 @@
             <div class="fragment" data-fragment-index="1" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t < 1$ s</span> &ensp; <b>In equilibrium</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="2">
-                <h4 style="margin: 0 0 10px 0">&emsp;• $T > 1$ MeV: weak reactions ($\nu\bar\nu \leftrightarrow e^+e^-$, $\nu e \leftrightarrow \nu e$) keep neutrinos thermal with everything else</h4>
+                <h4 style="margin: 0 0 10px 40px">• $T > 1$ MeV: weak reactions \[\large \nu\bar\nu \leftrightarrow e^+e^-, \qquad \nu e \leftrightarrow \nu e\]</h4>
+                <h4 style="margin: 0 0 10px 40px">• Keep neutrinos thermal with everything else</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="2" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t \approx 1$ s</span> &ensp; <b>Freeze-out</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="3">
-                <h4 style="margin: 0 0 10px 0">&emsp;• $\Gamma \sim G_F^2 T^5$ falls below $H \sim T^2/M_{\rm Pl}$: neutrinos decouple and free-stream ever after</h4>
+                <h4 style="margin: 0 0 10px 40px">• $\Gamma \sim G_F^2 T^5$ falls below $H \sim T^2/M_{\rm Pl}$</h4>
+                <h4 style="margin: 0 0 10px 40px">• Neutrinos decouple and free-stream ever after</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="3" style="margin-bottom: 26px">
-              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t \approx$ few s</span> &ensp; <b>Left out in the cold</b></h3>
+              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t \gtrsim$ few s</span> &ensp; <b>Cosmic $\nu$ background</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="4">
-                <h4 style="margin: 0 0 10px 0">&emsp;• $e^+e^-$ annihilation heats only the photons: <span style="white-space: nowrap">$T_\nu = (4/11)^{1/3}\, T_\gamma$</span></h4>
+                <!-- 1 Nov: "Photons reheat" (few s) and "Cosmic ν background" (was "Today", then "Ever since", after BBN) merged here; Ben: they repeated each other -->
+                <h4 style="margin: 0 0 10px 40px">• $e^+e^-$ annihilation heats only the photons: \[\large T_\nu = (4/11)^{1/3}\, T_\gamma\]</h4>
+                <h4 style="margin: 0 0 10px 40px">• Today: $T_\nu \approx 1.95$ K, $\sim$340 cm$^{-3}$</h4>
                 <!-- 41%: ρ_ν/ρ_γ = (7/8)(4/11)^{4/3} N_eff = 0.227 × 3.044 = 0.69, so ν are 0.69/1.69 = 41% of the radiation after e+e- annihilation (more before). Friedmann: H² = (8πG/3) ρ, so extra light species ⇒ faster expansion. N_eff = 3.044 in the SM (slightly above 3: ν still a little coupled during e+e- annihilation); Planck 2018: 2.99 ± 0.17 -->
-                <h4 style="margin: 0 0 10px 0">&emsp;• Never touched again, but felt by gravity: 41% of the radiation, so they speed up the expansion</h4>
-                <h4 style="margin: 0 0 10px 0">&emsp;• So the expansion rate counts the species: $N_{\rm eff}$</h4>
+                <h4 style="margin: 0 0 10px 40px">• $\nu$: never touched again, but felt by gravity</h4>
+                <h4 style="margin: 0 0 10px 40px">• 40% of the radiation, speed up the expansion</h4>
+                <h4 style="margin: 0 0 10px 40px">• Expansion rate counts species: $N_{\rm eff}$</h4>  <!-- N_eff ≈ 3.04 (SM), CMB: 2.99 ± 0.17; "≈ 3.04 (CMB)" made the line wrap -->
+                <!-- <h4 style="margin: 0 0 10px 40px">• Structure growth ($\sum m_\nu \lesssim 0.1$ eV)</h4> -->
               </div>
             </div>
             <div class="fragment" data-fragment-index="4" style="margin-bottom: 26px">
@@ -454,38 +485,38 @@
               <div class="fragment fade-out fold-away" data-fragment-index="5">
                 <!-- n/p: n ν_e ↔ p e⁻ and n e⁺ ↔ p ν̄_e freeze at T ≈ 0.8 MeV (t ≈ 1 s), n/p ≈ e^(−Q/T) ≈ 1/6; free neutron decay (τ_n ≈ 879 s) takes it to ≈ 1/7 when deuterium survives (t ≈ 3 min, T ≈ 0.07 MeV). Y_p ≈ 2(n/p)/(1 + n/p) = 0.25; measured 0.245 (PDG). Also D/H ≈ 2.5e-5, ³He, ⁷Li (the lithium problem). -->
                 <!-- Species: faster expansion ⇒ earlier freeze-out ⇒ more n ⇒ more He, ΔY_p ≈ 0.013 per extra species (from memory). Steigman, Schramm & Gunn, Phys. Lett. B 66, 202 (1977): helium limits the number of neutrino types; LEP/SLC (1989): 3 light ν from the Z width. A 1984 "N_ν ≤ 4" bound (Yang et al., ApJ 281, 493) is often quoted; not checked, so not on the slide -->
-                <h4 style="margin: 0 0 10px 0">&emsp;• $\nu_e$ swap $n \leftrightarrow p$ until 1 s; by 3 min, $n/p \approx 1/7$</h4>
-                <h4 style="margin: 0 0 10px 0">&emsp;• Nearly all neutrons $\to$ $^4$He: 25% by mass</h4>
-                <h4 style="margin: 0 0 10px 0">&emsp;• More species, faster expansion, more He: limited in 1977, before LEP found 3</h4>
+                <h4 style="margin: 0 0 10px 40px">• $\nu_e$ swap $n \leftrightarrow p$ until 1 s</h4>
+                <h4 style="margin: 0 0 10px 40px">• By 3 min, $n/p \approx 1/7$</h4>
+                <h4 style="margin: 0 0 10px 40px">• Nearly all neutrons $\to$ $^4$He: 25% by mass</h4>
+                <h4 style="margin: 0 0 10px 40px">• More species, faster expansion, more He</h4>
+                <h4 style="margin: 0 0 10px 40px">• Limited in 1977, before LEP found 3</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="5" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$\gtrsim 10^8$ yr</span> &ensp; <b>Stars</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="6">
-                <h4 style="margin: 0 0 10px 0">&emsp;• Two $\nu_e$ per $^4$He made; the Sun emits $2\times10^{38}$ $\nu$/s: 65 billion cross your thumbnail each second</h4>
+                <h4 style="margin: 0 0 10px 40px">• Two $\nu_e$ per $^4$He made</h4>
+                <h4 style="margin: 0 0 10px 40px">• The Sun emits $2\times10^{38}$ $\nu$/s</h4>
+                <h4 style="margin: 0 0 10px 40px">• 65 billion cross your thumbnail each second</h4>
                 <!-- ⁸B: SSM flux ≈ 5e6 cm⁻²s⁻¹ (SNO NC 5.25e6) vs pp ≈ 6.0e10, so ~1 in 10⁴; spectrum up to ~15 MeV, pp only up to 0.42 MeV; Super-K's threshold (~5 MeV) leaves essentially only ⁸B (plus a trace of hep). From pp-III, ~0.02% of ⁴He made -->
-                <h4 style="margin: 0 0 10px 0">&emsp;• Super-K sees only $^8$B: 1 in $10^4$</h4>
+                <h4 style="margin: 0 0 10px 40px">• Super-K sees only $^8$B: 1 in $10^4$</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="6" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">Core collapse</span> &ensp; <b>Supernovae</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="7">
-                <h4 style="margin: 0 0 10px 0">&emsp;• 99% of $3\times10^{53}$ erg leaves as $10^{58}$ neutrinos in $\sim$10 s, and they help drive the explosion</h4>
+                <h4 style="margin: 0 0 10px 40px">• 99% of energy leaves as $10^{58}$ neutrinos in $\sim$10 s</h4>  <!-- total ≈ 3e53 erg = 3e46 J (gravitational binding of the new neutron star); ~1% kinetic energy of the ejecta, ~0.01% light -->
               </div>
             </div>
             <div class="fragment" data-fragment-index="7" style="margin-bottom: 26px">
-              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">Today</span> &ensp; <b>Cosmic neutrino background</b></h3>
-              <div class="fragment fade-out fold-away" data-fragment-index="8">
-                <h4 style="margin: 0 0 10px 0">&emsp;• $T_\nu \approx 1.95$ K, $\sim$340 cm$^{-3}$; never directly detected, but felt via $N_{\rm eff} \approx 3.04$ (CMB) and structure growth ($\sum m_\nu \lesssim 0.1$ eV)</h4>
-              </div>
-            </div>
-            <div class="fragment" data-fragment-index="8" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">Also</span> &ensp; <b>Everything else</b></h3>
-              <div class="fragment fade-out fold-away" data-fragment-index="9">
-                <h4 style="margin: 0 0 10px 0">&emsp;• Earth's radioactivity, reactors, cosmic-ray showers, cosmic accelerators (TeV–PeV), and the still-unseen EeV cosmogenic (GZK) flux</h4>
+              <div class="fragment fade-out fold-away" data-fragment-index="8">
+                <h4 style="margin: 0 0 10px 40px">• Earth's radioactivity, reactors</h4>
+                <h4 style="margin: 0 0 10px 40px">• Cosmic-ray showers</h4>
+                <h4 style="margin: 0 0 10px 40px">• Cosmic accelerators (TeV–PeV)</h4>
+                <!-- <h4 style="margin: 0 0 10px 40px">• The still-unseen EeV cosmogenic (GZK) flux</h4> -->
               </div>
             </div>
-            <h4 class="fragment" data-fragment-index="9" style="margin: 12px 0 0 0">&emsp;<b>The most abundant matter particle, and the oldest relic: nothing has touched one since the first second</b></h4>
           </div>
 
           <!-- Right column: the NASA timeline stays up; below it an r-stack: the two equilibrium reactions (img/nu-e-reactions.svg, from img/feynman/nu-e-reactions.tex) for indices 1–3; n ν_e ↔ p e⁻, nucleons and quarks (img/n-p-weak.svg, from img/feynman/n-p-weak.tex) for BBN (index 4); p p → d e⁺ ν_e beside ⁸B → ⁸Be* e⁺ ν_e (img/pp-fusion.svg, from img/feynman/pp-fusion.tex) for "Stars" (index 5); nothing below from index 6 -->
@@ -547,15 +578,15 @@
           <div style="text-align: center; float: right; width: 42%">
             <div class="r-stack">
               <div class="fragment fade-out" data-fragment-index="1" style="width: 100%">
-                <img src="img/Nobel2015_SuperK.jpg" width="100%" style="margin: 0 auto 1px auto">
+                <img src="img/Nobel2015_SuperK.png" width="100%" style="margin: 0 auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[&copy; Johan Jarnestad / The Royal Swedish Academy of Sciences]</font></div>
               </div>
               <div class="fragment fade-in-then-out" data-fragment-index="1" style="width: 100%">
-                <img src="img/Nobel2015_SNO.jpg" width="95%" style="margin: 0 auto 1px auto">
+                <img src="img/Nobel2015_SNO.png" width="95%" style="margin: 0 auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[&copy; Johan Jarnestad / The Royal Swedish Academy of Sciences]</font></div>
               </div>
               <div class="fragment fade-in" data-fragment-index="2" style="width: 100%">
-                <img src="img/Nobel2015_flavours.jpg" width="95%" style="margin: 0 auto 1px auto">
+                <img src="img/Nobel2015_flavours.png" width="95%" style="margin: 0 auto 1px auto">
                 <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[&copy; Johan Jarnestad / The Royal Swedish Academy of Sciences]</font></div>
               </div>
             </div>
@@ -898,12 +929,12 @@
 
           <div style="position: relative; text-align: center">
             <!-- TEMP speaker notes beside the video (absolute, so they don't push the video) -->
-            <div style="position: absolute; top: 40px; right: 0; width: 520px; text-align: left; font-size: 0.9em">
-              <h3 style="margin: 0 0 10px 0">• Grey lines: 86 strings of light sensors</h3>
+            <div style="position: absolute; top: 40px; right: 0; width: 520px; text-align: left; font-size: 1.2em">
+              <h3 style="margin: 0 0 10px 0">• Grey lines: <br> 86 strings of light sensors</h3>
               <br>
               <h3 class="fragment" style="margin: 0 0 10px 0">• Red line: muon from a $\nu_\mu$ hit</h3>
               <br>
-              <h3 class="fragment" style="margin: 0 0 10px 0">• Blue glow: its Cherenkov light in the ice</h3>
+              <h3 class="fragment" style="margin: 0 0 10px 0">• Blue glow: <br> Cherenkov light in the ice</h3>
               <br>
               <h3 class="fragment" style="margin: 0 0 10px 0">• Sensors fire as light arrives: size = light, colour = time</h3>
               <br>
@@ -1030,7 +1061,7 @@
               </div>
               <div class="credit" style="font-size: 0.45em; text-align: center">[IceCube, <a href="https://doi.org/10.1103/PhysRevLett.113.101101">Phys. Rev. Lett. <b>113</b>, 101101 (2014)</a>]</div>
               <h4 style="margin: 16px 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• 37 events, far above the atmosphere: 5.7$\sigma$</h4>
-              <h4 class="fragment" data-fragment-index="3" style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• From all over the sky: neutrino astronomy exists</h4>
+              <h4 class="fragment" data-fragment-index="3" style="margin: 0 0 0 1em; padding-left: 0.8em; text-indent: -0.8em">• From all over the sky: <br><i>dawn of neutrino astronomy</i></h4>
             </div>
           </div>
 
@@ -1094,8 +1125,8 @@
         <!--      Dropped for size (say aloud): Seyfert galaxy, Messier 77; neutrinos made in the gas-shrouded core (corona) near the black hole, where light can't get out; ~1° pointing at best, a few events per source per year -->
         <section data-markdown>
           <textarea data-template>
-          # 2022: a steady source
-          ### _Not one lucky neutrino: a steady trickle from one galaxy_
+          # 2022: a steady source from one galax
+          <br>
 
           <!-- 1 Nov (Ben): his two images; clearer, little text. Hubble: NGC 1068 = M77 [ESA/Hubble & NASA, L. Ho, D. Thilker] (2025 image). IceCube: Science 378, 538 (2022), Fig. 4: left, local significance around NGC 1068 (★) with the best fit (+); right, events vs angular distance², the excess near 0 is the signal. 79 (+22/−20) events, May 2011–May 2020 (9 yr) of tracks, 4.2σ. Old text: "Active galaxy NGC 1068, 47 Mly: 4.2σ"; "No TeV gamma rays: a hidden core"; "Caveat: still only a handful of sources" (kept) -->
           <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; font-size: 1.5em">
@@ -1150,7 +1181,11 @@
           <textarea data-template>
           # Our Galaxy in neutrinos: the data
 
-          <div style="text-align: center; float: left; width: 62%">
+          <!-- 1 Nov: image column shifted 80px into the left margin and widened by the same (was 62%), so it is bigger; points added (Ben: "should hold up on its own") -->
+          <!-- Paper (checked 1 Nov, arXiv:2307.04427): Fig. 1 C = π⁰ template matched to Fermi-LAT diffuse γ; D = C with cascade sensitivity and a typical 7° event uncertainty; E = pre-trial significance of an all-sky scan.
+               4.71σ (π⁰), 4.37σ (KRAγ5), 3.96σ (KRAγ50) pre-trial; 4.48σ after a trial factor of 3. Normalisation left free, shape fixed.
+               Flux: π⁰ extrapolated from GeV predicts ~5× below the best fit (but consistent with Tibet ASγ 100 TeV γ); KRAγ best fits are 0.55× and 0.37× their predictions. So "bigger or smaller than predicted" depends on the model: the shape matches, the size doesn't pin down -->
+          <div style="text-align: center; float: left; width: calc(62% + 80px); margin-left: -80px">
             <br>
             <img src="img/MilkyWay-Science.10.1126.science.adc9818.png" width="100%" style="margin: 15px auto 1px auto; background: white">
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube, <a href="https://doi.org/10.1126/science.adc9818">Science <b>380</b>, 1338 (2023)</a>]</font></div>
@@ -1160,14 +1195,21 @@
             <br>
             <div style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">A, B</span> &ensp; <b>Light, gamma rays</b></h3>
+              <h4 style="margin: 0 0 8px 40px">• A: dust hides the centre</h4>
+              <h4 style="margin: 0 0 0px 40px">• B: Fermi, above 1 GeV</h4>
             </div>
             <div class="fragment" style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">C, D</span> &ensp; <b>Predicted $\nu$</b></h3>
-              <h4 style="margin: 0">&emsp;• Cosmic rays on gas</h4>
+              <h4 style="margin: 0 0 8px 40px">• Cosmic rays on gas</h4>
+              <h4 style="margin: 0 0 0px 40px">• D: as IceCube would see it</h4>
             </div>
             <div class="fragment">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">E</span> &ensp; <b>Observed: 4.5$\sigma$</b></h3>
-              <h4 style="margin: 0">&emsp;• Glow, or unseen sources?</h4>
+              <!-- 1 Nov: the prediction (D) is a map: where ν come from if cosmic rays on gas. The data match its shape, so the location matches. But any population in the disc (e.g. many faint unresolved sources) gives the same blurred band, so the cause is open (paper: "could also arise from a population of unresolved point sources"). Ten years of cascades -->
+              <h4 style="margin: 0 0 8px 40px">• <b>Where predicted: the plane</b></h4>
+              <h4 style="margin: 0 0 8px 40px">• Flux: right ballpark</h4>  <!-- 5× above the π⁰ template, 0.4–0.55× the KRAγ models -->
+              <h4 style="margin: 0 0 8px 40px">• Cause: gas, or faint sources?</h4>
+              <h4 style="margin: 0 0 0px 40px">• Too blurry to tell yet</h4>
             </div>
           </div>
 
@@ -1277,7 +1319,7 @@
 
 
         <!-- =============================================================== -->
-        <!-- [19b] Geophysics with an ice cube (added 31 Oct, very short) | the detector doubles as a probe of the ice and the Earth | Fig: img/IceCube-DustLogger_JGlaciol59_2013.png, dust-logger optical signal vs depth in 8 holes + hole map (IceCube Collaboration, J. Glaciol. 59, 1117 (2013); from the IceCube news item, 10 Dec 2013, 750 px original) -->
+        <!-- [19b] Geophysics with an ice cube (added 31 Oct, very short) | the detector doubles as a probe of the ice and the Earth | Figs: img/tomography_NatPhys.png below, from the Earth point (Donini et al., Nature Phys. 15, 37 (2019); added 1 Nov); img/IceCube-DustLogger_JGlaciol59_2013.png, dust-logger optical signal vs depth in 8 holes + hole map (IceCube Collaboration, J. Glaciol. 59, 1117 (2013); from the IceCube news item, 10 Dec 2013, 750 px original) -->
         <!--      Numbers (news item, icecube.wisc.edu/news/research/2013/12/neutrino-telescope-shines-light-on-last-glaciation/): borehole laser "dust logger" to 2.5 km, built to map dust for the ice model; layers tilt by up to 10% across IceCube, following the bedrock; ~100,000 years of South Pole climate; ash layers ~74,000 years ago, near the age of the Toba super-eruption (largest in ~2 Myr), whose ash had never been found in polar ice; helped site the next US deep ice core (SPICEcore) at the Pole -->
         <!--      Earth: Donini, Palomares-Ruiz & Salvado, Nature Phys. 15, 37 (2019), arXiv:1803.05901: one year of public IceCube through-going muons; TeV ν absorption gives the Earth's mass, moment of inertia, core mass, and a core denser than the mantle, from weak interactions only, independent of gravity -->
         <section data-markdown>
@@ -1285,32 +1327,41 @@
           # Geophysics with an ice cube
 
           <div style="text-align: center; float: right; width: 46%">
-            <br>
-            <br>
             <img src="img/IceCube-DustLogger_JGlaciol59_2013.png" width="100%" style="margin: 15px auto 1px auto; background: white">
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube, <a href="https://doi.org/10.3189/2013JoG13J068">J. Glaciol. <b>59</b>, 1117 (2013)</a>]</font></div>
+            <!-- Earth tomography, with the Earth point (index 3): a) neutrino paths through crust, mantle, outer and inner core to IceCube; b) events vs cos(zenith), fewer through the core. Ben's img/tomography_NatPhys.png -->
+            <div class="fragment" data-fragment-index="3">
+              <img src="img/tomography_NatPhys.png" width="100%" style="margin: 20px auto 1px auto">
+              <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Donini, Palomares-Ruiz &amp; Salvado, <a href="https://doi.org/10.1038/s41567-018-0319-1">Nature Phys. <b>15</b>, 37 (2019)</a>]</font></div>
+            </div>
           </div>
 
-          <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">
-            <br>
-            <div style="margin-bottom: 30px">
+          <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">  <!-- 1 Nov: <br> at top dropped and block gaps 30 → 22px, to fit the extra points; sub-points 0.8em (Ben: too much on the slide); Earth credit moved under the tomography image -->
+            <div style="margin-bottom: 34px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Dust</span> &ensp; <b>A climate record for free</b></h3>
-              <h4 style="margin: 0">&emsp;• Lasers down the drill holes: 100,000 years</h4>
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• Lasers down the drill holes: 100,000 years</h4>
             </div>
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">74 kyr</span> &ensp; <b>Ash near the age of Toba</b></h3>
-              <h4 style="margin: 0">&emsp;• Biggest eruption in 2 million years</h4>
+            <div class="fragment" data-fragment-index="1" style="margin-bottom: 34px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">74,000 yr</span> &ensp; <b>Supervolcano ash</b></h3>
+              <!-- "Toba?": dated to the same age as Toba (Sumatra), not chemically matched to it as far as the news item says. First Toba-age ash in polar ice -->
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• Ash from the Toba super-eruption?</h4>
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• Biggest eruption in 2 million years</h4>
             </div>
-            <!-- Glacier flow (1 Nov, Ben): the ice at the IceCube site moves 10.1 m/yr, mostly by sliding at the bed (IceCube, "Calibration of the IceCube Neutrino Observatory", arXiv:1911.02016); the 2023 ice model finds a tilt of the optical layers along the flow (Chirkin & Rongen, arXiv:2307.13951). Unchecked, don't put on the slide yet: light travels slightly further along the flow, put down to ice crystals aligned by the flow -->
-            <div class="fragment" style="margin-bottom: 30px">
-              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">10 m/yr</span> &ensp; <b>Riding the glacier</b></h3>
-              <h4 style="margin: 0">&emsp;• The whole detector drifts with the ice</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[IceCube, <a href="https://arxiv.org/abs/1911.02016">arXiv:1911.02016</a>]</div>
+            <!-- Glacier flow (1 Nov, Ben): the ice at the IceCube site moves 10.1 m/yr, mostly by sliding at the bed (IceCube, "Calibration of the IceCube Neutrino Observatory", arXiv:1911.02016); the 2023 ice model finds a tilt of the optical layers along the flow (Chirkin & Rongen, arXiv:2307.13951).
+                 Anisotropy (checked 1 Nov, abstract of arXiv:1908.07608): "an unexpected light propagation effect ... an anisotropic attenuation, which is aligned with the local flow of the ice. The exact cause is still under investigation"; birefringent ice crystals proposed. It has to be in the ice model, which every direction and energy reconstruction relies on.
+                 The drift itself does nothing to the physics: the strings move together. Was "Riding the glacier". Cause unknown: say aloud -->
+            <div class="fragment" data-fragment-index="2" style="margin-bottom: 34px">
+              <h3 style="margin: 0 0 6px 0"><span style="color: cyan">10 m/yr</span> &ensp; <b>The ice flows</b></h3>
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• The whole detector drifts with the ice</h4>
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• Light goes further along the flow</h4>
+              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[IceCube, <a href="https://arxiv.org/abs/1911.02016">arXiv:1911.02016</a>; Chirkin &amp; Rongen, <a href="https://arxiv.org/abs/1908.07608">arXiv:1908.07608</a>]</div>
             </div>
-            <div class="fragment">
+            <!-- Earth (checked 1 Nov, abstract of arXiv:1803.05901): one year of public IceCube through-going muons; absorption depends on path length and energy; gives the Earth's mass, moment of inertia, core mass, and core denser than mantle "using weak interactions only". Above ~10 TeV the Earth starts to absorb ν (slide 19). Also measured: the masses of the Earth and its core (say aloud) -->
+            <div class="fragment" data-fragment-index="3">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Earth</span> &ensp; <b>Weighed with neutrinos</b></h3>
-              <h4 style="margin: 0">&emsp;• Core denser than mantle, no gravity used</h4>
-              <div class="credit" style="font-size: 0.45em; margin-left: 2.2em">[Donini <i>et al.</i>, <a href="https://doi.org/10.1038/s41567-018-0319-1">Nature Phys. <b>15</b>, 37 (2019)</a>]</div>
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• Above ~10 TeV, the Earth absorbs $\nu$</h4>
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• Paths through the core lose the most</h4>
+              <h4 style="margin: 0 0 0 40px; font-size: 0.8em">• Core denser than mantle, no gravity used</h4>
             </div>
           </div>
 
@@ -1558,7 +1609,11 @@
       rtl: false,
       navigationMode: "default",
 
-      transition: "none",
+      // slide change: none / fade / slide / convex / concave / zoom (reveal.js default: slide)
+      transition: "fade",
+      // speed: default (0.8s) / fast (0.4s) / slow (1.2s); exact time: see the CSS at the top
+      transitionSpeed: "default",
+      // background change, same options (default: fade)
       backgroundTransition: "none",
 
       highlight: {
