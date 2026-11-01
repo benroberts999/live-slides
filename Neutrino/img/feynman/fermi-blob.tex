@@ -1,0 +1,39 @@
+% Beta-minus decay as Fermi's four-point contact interaction (the "blob"),
+% the left half of fermi-vs-W.tex on its own. Uses feynmp via feynmp-auto.
+% Build (in this directory):
+%   pdflatex -shell-escape fermi-blob.tex && pdflatex -shell-escape fermi-blob.tex
+%   pdftocairo -svg fermi-blob.pdf ../fermi-blob.svg
+\documentclass[border=6pt]{standalone}
+\usepackage{feynmp-auto}
+\usepackage{xcolor}
+
+\newif\ifdark \darktrue          % \darkfalse = black on white
+\newcommand{\blobsize}{4mm}      % size of the four-point blob
+\newcommand{\figfont}{\LARGE}    % font size for labels
+
+\ifdark \pagecolor{black} \fi
+\unitlength=1mm
+
+\begin{document}
+\ifdark \color{white} \fi
+\figfont
+\begin{fmffile}{fermiblob}
+  \ifdark \fmfcmd{foreground := white; background := black;} \fi
+  \fmfset{thin}{0.8pt}
+  \fmfset{arrow_len}{3mm}
+  \fmfframe(4,8)(4,8){% margins (left,top)(right,bottom) leave room for labels
+  \begin{fmfgraph*}(36,30)
+    \fmfleft{n,p}
+    \fmfright{nub,e}
+    \fmf{fermion}{n,v}
+    \fmf{fermion}{v,p}
+    \fmf{fermion}{v,e}
+    \fmf{fermion}{nub,v}
+    \fmfv{decor.shape=circle,decor.filled=full,decor.size=\blobsize}{v}
+    \fmflabel{$n$}{n}
+    \fmflabel{$p$}{p}
+    \fmflabel{$e^-$}{e}
+    \fmflabel{$\bar\nu_e$}{nub}
+  \end{fmfgraph*}}
+\end{fmffile}
+\end{document}
