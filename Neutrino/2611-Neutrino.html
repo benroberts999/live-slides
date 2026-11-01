@@ -38,7 +38,7 @@
       .reveal .slides section .fragment { transition: all 0.7s ease; }
       /* folding fragment: class="fragment fade-out fold-away" fades out AND shrinks to zero height at its index (reverses going back).
          max-height must exceed the tallest folded block; keep it close, or the fold starts late */
-      .reveal .slides section .fragment.fold-away { max-height: 260px; overflow: hidden; }
+      .reveal .slides section .fragment.fold-away { max-height: 320px; overflow: hidden; }  /* 1 Nov: 260 → 320, slide 4's three-point blocks were at the limit */
       .reveal .slides section .fragment.fold-away.visible { max-height: 0; }
     </style>
 
@@ -136,8 +136,10 @@
 
           <!-- Halzen quote, also on 22; checked 1 Nov against AIP: "I always thought it was a bad idea—I still think so—to have a theorist trying to lead an experiment" -->
           <div class="fragment" style="margin-top: 30px; text-align: center">
-            <h4 style="margin: 0"><i>"I always thought it was a bad idea &mdash; I still think so &mdash; to have a theorist trying to lead an experiment"</i></h4>
-            <div class="credit" style="font-size: 0.45em">[<a href="https://www.aip.org/history/halzen-solo-nobel">AIP, 2026</a>]</div>
+            <h4 style="margin: 0"><i>"I always thought it was a bad idea — I still think so — to have a theorist trying to lead an experiment.
+
+            But actually, in practice, it worked very well. At different stages, I tried to get rid of this job and it never worked."</i></h4>
+            <div class="credit" style="font-size: 0.45em">[Halzen for <a href="https://www.aip.org/history/halzen-solo-nobel">AIP, 2026</a>]</div>
           </div>
 
         </textarea>
@@ -152,22 +154,24 @@
           # IceCube
           ### _A neutrino telescope at the South Pole_
 
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 60px; text-align: left">
-            <div style="width: 42%; text-align: center">
-              <img src="img/IceCubeDetector.jpg" style="width: 100%; margin: 0 auto 1px auto">
+          <div style="height: 20px"></div>  <!-- spacer: smaller than a <br> -->
+
+          <div style="display: flex; align-items: flex-start; gap: 30px; text-align: left">
+            <div style="width: 60%; flex-shrink: 0; text-align: center">
+              <img src="img/IceCubeDetector.jpg" style="width: 100%; margin: 0 0 1px 0">
               <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube/NSF]</font></div>
             </div>
-            <div style="width: 56%; font-size: 1.5em">
-              <h4 style="margin: 0 0 18px 0">• A cubic kilometre of ice, 1.5&ndash;2.5 km down</h4>
-              <h4 style="margin: 0 0 18px 0">• 5,160 light sensors on 86 strings</h4>
-              <h4 style="margin: 0 0 18px 0">• Rarely, a neutrino hits the ice: a flash of blue light</h4>
-              <h4 style="margin: 0 0 18px 0">• The light points back to the neutrino's source</h4>
-              <h4 style="margin: 0">• The aim: where do cosmic rays come from?</h4>
-              <div class="fragment" style="margin-top: 36px">
+            <div style="font-size: 1.5em">  <!-- padding/text-indent: wrapped lines hang under the text, not the bullet -->
+              <h4 style="margin: 0 0 14px 0; padding-left: 0.8em; text-indent: -0.8em">• A km$^3$ of ice, 1.5&ndash;2.5 km down</h4>
+              <h4 style="margin: 0 0 14px 0; padding-left: 0.8em; text-indent: -0.8em">• 5,160 light sensors on 86 strings</h4>
+              <h4 style="margin: 0 0 14px 0; padding-left: 0.8em; text-indent: -0.8em">• Rarely, a neutrino hits the ice: a flash of blue light</h4>
+              <h4 style="margin: 0 0 14px 0; padding-left: 0.8em; text-indent: -0.8em">• The light points to the source</h4>
+              <h4 style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• The aim: where do cosmic rays come from?</h4>
+              <div class="fragment" style="margin-top: 30px">
                 <h4 style="margin: 0 0 10px 0; color: cyan">Also:</h4>
-                <h4 style="margin: 0 0 10px 0">&emsp;• Neutrino oscillations; dark matter</h4>
-                <h4 style="margin: 0 0 10px 0">&emsp;• An alarm for supernovae in our Galaxy</h4>
-                <h4 style="margin: 0">&emsp;• The Earth's core; the climate in the ice</h4>
+                <h4 style="margin: 0 0 10px 0; padding-left: 0.8em; text-indent: -0.8em">• $\nu$ oscillations; dark matter</h4>
+                <h4 style="margin: 0 0 10px 0; padding-left: 0.8em; text-indent: -0.8em">• A supernova alarm</h4>
+                <h4 style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• The Earth's core; past climate</h4>
               </div>
             </div>
           </div>
@@ -415,14 +419,14 @@
 
         <!-- =============================================================== -->
         <!-- [4] History of neutrinos (their point of view) | (31 Oct: text 1.5×, year headings larger, each epoch's details fold away when the next appears, as on 2a-test) equilibrium → freeze-out → photon reheating → BBN → stars → supernovae → CνB today; each epoch is a fragment, description as a dot point beneath -->
-        <!--      Fig 1: cosmic-history timeline with "ν decouple, t = 1 s" marked beside "CMB, 380 kyr" (ESA/Planck or NASA/WMAP). Fig 2: the Sun imaged in neutrinos (Super-Kamiokande; APOD 5 Jun 1998, R. Svoboda and K. Gordan) -->
+        <!--      Fig 1: img/History-of-the-Universe_NASA.jpg [NASA] (1 Nov; could mark "ν decouple, t = 1 s" on it, between "1 microsecond" and "3 minutes"). Under it, for indices 1–4: img/nu-e-reactions.svg, the two equilibrium reactions by Z exchange (ν_e also has W diagrams). Fig 2: the Sun imaged in neutrinos (Super-Kamiokande; APOD 5 Jun 1998, R. Svoboda and K. Gordan) -->
         <!--      Alts: SN1987A remnant (HST); Bahcall solar-neutrino spectrum; Γ/H vs T sketch; T_ν vs T_γ through e+e- annihilation -->
         <section data-markdown>
           <textarea data-template>
           # History of neutrinos
           ### _(their point of view)_
 
-          <div style="text-align: left; float: left; width: 56%; font-size: 1.125em">
+          <div style="text-align: left; float: left; width: calc(40% + 50px); margin-left: -50px; font-size: 1.125em">  <!-- margin-left: shifts the text into the slide margin; width grows by the same, so the right edge stays put -->
             <div class="fragment" data-fragment-index="1" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t < 1$ s</span> &ensp; <b>In equilibrium</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="2">
@@ -438,19 +442,28 @@
             <div class="fragment" data-fragment-index="3" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t \approx$ few s</span> &ensp; <b>Left out in the cold</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="4">
-                <h4 style="margin: 0 0 10px 0">&emsp;• $e^+e^-$ annihilation reheats the photons, not the neutrinos: $T_\nu = (4/11)^{1/3}\, T_\gamma$</h4>
+                <h4 style="margin: 0 0 10px 0">&emsp;• $e^+e^-$ annihilation heats only the photons: <span style="white-space: nowrap">$T_\nu = (4/11)^{1/3}\, T_\gamma$</span></h4>
+                <!-- 41%: ρ_ν/ρ_γ = (7/8)(4/11)^{4/3} N_eff = 0.227 × 3.044 = 0.69, so ν are 0.69/1.69 = 41% of the radiation after e+e- annihilation (more before). Friedmann: H² = (8πG/3) ρ, so extra light species ⇒ faster expansion. N_eff = 3.044 in the SM (slightly above 3: ν still a little coupled during e+e- annihilation); Planck 2018: 2.99 ± 0.17 -->
+                <h4 style="margin: 0 0 10px 0">&emsp;• Never touched again, but felt by gravity: 41% of the radiation, so they speed up the expansion</h4>
+                <h4 style="margin: 0 0 10px 0">&emsp;• So the expansion rate counts the species: $N_{\rm eff}$</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="4" style="margin-bottom: 26px">
-              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t \approx 3$ min</span> &ensp; <b>Set the helium</b></h3>
+              <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$t \approx 3$ min</span> &ensp; <b>Light elements (BBN)</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="5">
-                <h4 style="margin: 0 0 10px 0">&emsp;• The same weak reactions freeze $n/p \approx 1/7$ $\Rightarrow$ 25% $^4$He by mass (BBN)</h4>
+                <!-- n/p: n ν_e ↔ p e⁻ and n e⁺ ↔ p ν̄_e freeze at T ≈ 0.8 MeV (t ≈ 1 s), n/p ≈ e^(−Q/T) ≈ 1/6; free neutron decay (τ_n ≈ 879 s) takes it to ≈ 1/7 when deuterium survives (t ≈ 3 min, T ≈ 0.07 MeV). Y_p ≈ 2(n/p)/(1 + n/p) = 0.25; measured 0.245 (PDG). Also D/H ≈ 2.5e-5, ³He, ⁷Li (the lithium problem). -->
+                <!-- Species: faster expansion ⇒ earlier freeze-out ⇒ more n ⇒ more He, ΔY_p ≈ 0.013 per extra species (from memory). Steigman, Schramm & Gunn, Phys. Lett. B 66, 202 (1977): helium limits the number of neutrino types; LEP/SLC (1989): 3 light ν from the Z width. A 1984 "N_ν ≤ 4" bound (Yang et al., ApJ 281, 493) is often quoted; not checked, so not on the slide -->
+                <h4 style="margin: 0 0 10px 0">&emsp;• $\nu_e$ swap $n \leftrightarrow p$ until 1 s; by 3 min, $n/p \approx 1/7$</h4>
+                <h4 style="margin: 0 0 10px 0">&emsp;• Nearly all neutrons $\to$ $^4$He: 25% by mass</h4>
+                <h4 style="margin: 0 0 10px 0">&emsp;• More species, faster expansion, more He: limited in 1977, before LEP found 3</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="5" style="margin-bottom: 26px">
               <h3 style="margin: 0 0 6px 0; font-size: 1.33em"><span style="color: cyan">$\gtrsim 10^8$ yr</span> &ensp; <b>Stars</b></h3>
               <div class="fragment fade-out fold-away" data-fragment-index="6">
                 <h4 style="margin: 0 0 10px 0">&emsp;• Two $\nu_e$ per $^4$He made; the Sun emits $2\times10^{38}$ $\nu$/s: 65 billion cross your thumbnail each second</h4>
+                <!-- ⁸B: SSM flux ≈ 5e6 cm⁻²s⁻¹ (SNO NC 5.25e6) vs pp ≈ 6.0e10, so ~1 in 10⁴; spectrum up to ~15 MeV, pp only up to 0.42 MeV; Super-K's threshold (~5 MeV) leaves essentially only ⁸B (plus a trace of hep). From pp-III, ~0.02% of ⁴He made -->
+                <h4 style="margin: 0 0 10px 0">&emsp;• Super-K sees only $^8$B: 1 in $10^4$</h4>
               </div>
             </div>
             <div class="fragment" data-fragment-index="6" style="margin-bottom: 26px">
@@ -474,12 +487,43 @@
             <h4 class="fragment" data-fragment-index="9" style="margin: 12px 0 0 0">&emsp;<b>The most abundant matter particle, and the oldest relic: nothing has touched one since the first second</b></h4>
           </div>
 
-          <div style="text-align: center; float: right; width: 42%">
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto 28px auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 1 &mdash; Cosmic-history timeline, with "neutrinos decouple, $t = 1$ s" marked beside "CMB, $t = 380{,}000$ yr"<br>[ESA/Planck or NASA/WMAP "History of the Universe"]</div>
+          <!-- Right column: the NASA timeline stays up; below it an r-stack: the two equilibrium reactions (img/nu-e-reactions.svg, from img/feynman/nu-e-reactions.tex) for indices 1–3; n ν_e ↔ p e⁻, nucleons and quarks (img/n-p-weak.svg, from img/feynman/n-p-weak.tex) for BBN (index 4); p p → d e⁺ ν_e beside ⁸B → ⁸Be* e⁺ ν_e (img/pp-fusion.svg, from img/feynman/pp-fusion.tex) for "Stars" (index 5); nothing below from index 6 -->
+          <!-- Image ideas, not found: index 3, a radiation-energy pie (photons 59%, neutrinos 41%) or T_ν/T_γ through e+e- annihilation. Index 4 now has img/BBN_Pospelov.png (abundances vs t and T; Pospelov & Pradler 2010); alternatives: the PDG BBN plot (abundances vs baryon density, CMB band) or Y_p vs N_ν -->
+          <div style="text-align: center; float: right; width: 58%">
+            <!-- Top r-stack: NASA timeline, swapped for the Pospelov & Pradler BBN plot at index 4 and the Super-K neutrino Sun at index 5, then the Fermilab supernova illustration from index 6 to the end. BBN height 626px = the NASA image's height at this column width (58% of 1920, 16:9), so the diagrams below don't move -->
+            <div class="r-stack">
+              <div class="fragment fade-out" data-fragment-index="4" style="width: 100%">
+                <img src="img/History-of-the-Universe_NASA.jpg" width="100%" style="margin: 0 auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[NASA]</font></div>
+              </div>
+              <div class="fragment fade-in-then-out" data-fragment-index="4" style="width: 100%">
+                <img src="img/BBN_Pospelov.png" style="height: 626px; margin: 0 auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Pospelov &amp; Pradler, <a href="https://doi.org/10.1146/annurev.nucl.012809.104521">Annu. Rev. Nucl. Part. Sci. <b>60</b>, 539 (2010)</a>]</font></div>
+              </div>
+              <div class="fragment fade-in-then-out" data-fragment-index="5" style="width: 100%">
+                <img src="img/Sun_Neutrino_Svoboda_APOD.webp" style="height: 540px; margin: 0 auto 1px auto">  <!-- 461 px original, so don't go much bigger -->
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">The Sun in neutrinos: 500 days of Super-Kamiokande [R. Svoboda &amp; K. Gordan (LSU), <a href="https://apod.nasa.gov/apod/ap980605.html">APOD, 5 June 1998</a>]</font></div>
+              </div>
+              <!-- neutrino-supernova-Fermilab_dark.png: Ben's neutrino-supernova-Fermilab.jpg with the outer white made transparent (ImageMagick flood fill from the corners, fuzz 12%, then trimmed to the picture); the white star inside is kept -->
+              <div class="fragment fade-in" data-fragment-index="6" style="width: 100%">
+                <img src="img/neutrino-supernova-Fermilab_dark.png" style="height: 560px; margin: 0 auto 1px auto">
+                <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Fermilab]</font></div>
+              </div>
             </div>
-            <div style="border: 2px dashed #888; border-radius: 10px; height: 330px; width: 90%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 0.65em; padding: 0 24px; box-sizing: border-box">
-              <div>Image 2 &mdash; The Sun, imaged in neutrinos (500 days of Super-Kamiokande data)<br>[APOD 5 June 1998, R. Svoboda and K. Gordan (LSU)]</div>
+            <div class="r-stack" style="margin-top: 24px">
+              <div class="fragment fade-out" data-fragment-index="4" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="1">
+                  <img src="img/nu-e-reactions.svg" style="height: 300px; margin: 0">
+                </div>
+              </div>
+              <div class="fragment fade-out" data-fragment-index="5" style="width: 100%">
+                <div class="fragment fade-in" data-fragment-index="4">
+                  <img src="img/n-p-weak.svg" style="height: 300px; margin: 0">
+                </div>
+              </div>
+              <div class="fragment fade-in-then-out" data-fragment-index="5" style="width: 100%">
+                <img src="img/pp-fusion.svg" style="height: 300px; margin: 0">
+              </div>
             </div>
           </div>
 
@@ -564,21 +608,32 @@
 
           ### How many neutrinos, at each energy
 
-          <div style="text-align: center; width: 95%; margin: 0 auto">
-            <!-- Rings over the plot, positions in % of the image (1500 x 919): Sun = Solar (nuclear) bump, cosmos = "IceCube data (2017)" -->
-            <div style="position: relative; display: inline-block; width: 48%; margin: 10px auto 1px auto">
-              <img src="img/GUNS_flux.png" style="width: 100%; margin: 0; display: block">
-              <div class="fragment" data-fragment-index="1" style="position: absolute; left: 42%; top: 17%; width: 19%; height: 26%; border: 5px solid #ffcc00; border-radius: 50%; box-sizing: border-box"></div>
-              <div class="fragment" data-fragment-index="2" style="position: absolute; left: 79%; top: 61%; width: 14%; height: 19%; border: 5px solid #ff5050; border-radius: 50%; box-sizing: border-box"></div>
+          <!-- 1 Nov (Ben): text beside the plot, not below it -->
+          <div style="display: flex; align-items: center; gap: 30px; text-align: left">
+            <div style="width: 45%; flex-shrink: 0; text-align: center">
+              <!-- Rings over the plot, positions in % of the image (1500 x 919): Sun = Solar (nuclear) bump, cosmos = "IceCube data (2017)" -->
+              <div style="position: relative; display: inline-block; width: 100%; margin: 10px auto 1px auto">
+                <img src="img/GUNS_flux.png" style="width: 100%; margin: 0; display: block">
+                <div class="fragment" data-fragment-index="1" style="position: absolute; left: 42%; top: 17%; width: 19%; height: 26%; border: 5px solid #ffcc00; border-radius: 50%; box-sizing: border-box"></div>
+                <div class="fragment" data-fragment-index="2" style="position: absolute; left: 79%; top: 61%; width: 14%; height: 19%; border: 5px solid #ff5050; border-radius: 50%; box-sizing: border-box"></div>
+              </div>
+              <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Vitagliano, Tamborra &amp; Raffelt, <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.92.045006">Rev. Mod. Phys. <b>92</b>, 045006 (2020)</a>]</font></div>
             </div>
-            <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[Vitagliano, Tamborra &amp; Raffelt, <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.92.045006">Rev. Mod. Phys. <b>92</b>, 045006 (2020)</a>]</font></div>
-          </div>
 
-          <div style="text-align: left; width: 70%; margin: 0 auto; font-size: 1.5em">
-            <h4 style="margin: 15px 0 0 0">&emsp;• Across: energy. Up: how many</h4>
-            <h4 class="fragment" data-fragment-index="1" style="margin: 0">&emsp;• <span style="color: #ffcc00">The Sun</span>: 60 billion per cm$^2$ every second</h4>
-            <h4 class="fragment" data-fragment-index="2" style="margin: 0">&emsp;• <span style="color: #ff5050">The cosmos</span>, above 100 TeV: one per m$^2$ a year</h4>
-            <h4 class="fragment" data-fragment-index="3" style="margin: 0">&emsp;• Rarer, but easier to catch: $\sigma \propto E$</h4>
+            <div style="font-size: 1.5em">  <!-- padding/text-indent: wrapped lines hang under the text, not the bullet -->
+              <!-- 1 Nov (Ben): "Across: energy. Up: how many" cut; who sees each, and why it matters, as smaller sub-points. Sun: Davis (Homestake) 1968 confirmed fusion; the deficit (solar neutrino problem) → SNO 2002 → oscillations → mass (slide 5); Borexino: pp 2014, CNO 2020. Cosmos: IceCube 2013; Baikal-GVD diffuse flux (~3σ, 2022); KM3NeT 220 PeV event (2025) -->
+              <div class="fragment" data-fragment-index="1" style="margin-bottom: 24px">
+                <h4 style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• <span style="color: #ffcc00">The Sun</span>: 60 billion per cm$^2$ every second</h4>
+                <h4 style="margin: 4px 0 0 1.3em; font-size: 0.75em; color: #ccc; padding-left: 0.7em; text-indent: -0.7em">&ndash; Seen by Homestake, Super-K, SNO, Borexino</h4>
+                <h4 style="margin: 0 0 0 1.3em; font-size: 0.75em; color: #ccc; padding-left: 0.7em; text-indent: -0.7em">&ndash; Proof the Sun runs on fusion; the missing ones gave $\nu$ mass</h4>
+              </div>
+              <div class="fragment" data-fragment-index="2" style="margin-bottom: 24px">
+                <h4 style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• <span style="color: #ff5050">The cosmos</span>, above 100 TeV: one per m$^2$ a year</h4>
+                <h4 style="margin: 4px 0 0 1.3em; font-size: 0.75em; color: #ccc; padding-left: 0.7em; text-indent: -0.7em">&ndash; Seen by IceCube; now also KM3NeT, Baikal-GVD</h4>
+                <h4 style="margin: 0 0 0 1.3em; font-size: 0.75em; color: #ccc; padding-left: 0.7em; text-indent: -0.7em">&ndash; They point back to the cosmic accelerators</h4>
+              </div>
+              <h4 class="fragment" data-fragment-index="3" style="margin: 0; padding-left: 0.8em; text-indent: -0.8em">• Rarer, but easier to catch: $\sigma \propto E$</h4>
+            </div>
           </div>
 
         </textarea>
@@ -764,14 +819,15 @@
         <!--      Dropped for size (say aloud): strings 125 m apart; 5 MW drill; ~280 million US dollars; DeepCore down to ~10 GeV; IceTop 81 stations; filtered at the Pole, sent north by satellite; ~350 scientists, 58 institutions, 14 countries (Adelaide) -->
         <section data-markdown>
           <textarea data-template>
-          # IceCube by the numbers
+          # IceCube Neutrino Observatory
+          <br>
 
-          <div style="text-align: center; float: right; width: 46%">
-            <img src="img/IceCubeDetector.jpg" width="100%" style="margin: 15px auto 1px auto">
+          <div style="text-align: center; float: right; width: 60%">
+            <img src="img/IceCube-Architecture_AhlersHalzen_ProgPartNuclPhys102_2018.png" width="100%" style="margin: 125px auto 1px auto">
             <div style="font-size: 16px; line-height: 1.2"><font size="3" class="credit">[IceCube/NSF]</font></div>
           </div>
 
-          <div style="text-align: left; float: left; width: 52%; font-size: 1.5em">
+          <div style="text-align: left; float: left; width: calc(40% + 50px); margin-left: -50px; font-size: 1.5em">  <!-- margin-left: shifts the text into the slide margin; width grows by the same, so the right edge stays put -->
             <br>
             <div style="margin-bottom: 30px">
               <h3 style="margin: 0 0 6px 0"><span style="color: cyan">Size</span> &ensp; <b>A billion tonnes</b></h3>

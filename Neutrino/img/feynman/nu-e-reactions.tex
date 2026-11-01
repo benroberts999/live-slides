@@ -1,0 +1,59 @@
+% The two weak reactions that keep neutrinos in equilibrium before t ~ 1 s,
+% both by Z exchange (all flavours; nu_e also has W-exchange diagrams):
+% annihilation nu nubar <-> e+ e- and scattering nu e <-> nu e.
+% Time runs upwards, as in fermi-blob.tex and fermi-vs-W.tex. Uses feynmp via feynmp-auto.
+% Build (in this directory):
+%   pdflatex -shell-escape nu-e-reactions.tex && pdflatex -shell-escape nu-e-reactions.tex
+%   pdftocairo -svg nu-e-reactions.pdf ../nu-e-reactions.svg
+\documentclass[border=6pt]{standalone}
+\usepackage{feynmp-auto}
+\usepackage{xcolor}
+
+\newif\ifdark \darktrue          % \darkfalse = black on white
+\newcommand{\figfont}{\LARGE}    % font size for labels and captions
+\newcommand{\diagramgap}{\hspace{24mm}}  % space between the two diagrams
+
+\ifdark \pagecolor{black} \fi
+\unitlength=1mm
+
+\begin{document}
+\ifdark \color{white} \fi
+\figfont
+\begin{fmffile}{nuereac}
+  \ifdark \fmfcmd{foreground := white; background := black;} \fi
+  \fmfset{thin}{0.8pt}
+  \fmfset{arrow_len}{3mm}
+  \fmfset{wiggly_len}{3mm}
+  \begin{tabular}{c@{\diagramgap}c}
+    % --- annihilation: nu nubar -> Z -> e+ e- ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){% margins (left,top)(right,bottom) leave room for labels
+    \begin{fmfgraph*}(28,40)
+      \fmfbottom{nu,nub}
+      \fmftop{em,ep}
+      \fmf{fermion}{nu,v1,nub}
+      \fmf{boson,label=$Z$,label.side=right}{v1,v2}
+      \fmf{fermion}{ep,v2,em}
+      \fmflabel{$\nu$}{nu}
+      \fmflabel{$\bar\nu$}{nub}
+      \fmflabel{$e^-$}{em}
+      \fmflabel{$e^+$}{ep}
+    \end{fmfgraph*}}}}$
+    &
+    % --- scattering: nu e -> nu e by Z exchange ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){%
+    \begin{fmfgraph*}(40,40)
+      \fmfbottom{nui,ei}
+      \fmftop{nuo,eo}
+      \fmf{fermion}{nui,v1,nuo}
+      \fmf{fermion}{ei,v2,eo}
+      \fmf{boson,label=$Z$,label.side=left}{v1,v2}
+      \fmflabel{$\nu$}{nui}
+      \fmflabel{$\nu$}{nuo}
+      \fmflabel{$e^-$}{ei}
+      \fmflabel{$e^-$}{eo}
+    \end{fmfgraph*}}}}$
+    \\[2mm]
+    $\nu\bar\nu \leftrightarrow e^+e^-$ & $\nu e \leftrightarrow \nu e$
+  \end{tabular}
+\end{fmffile}
+\end{document}

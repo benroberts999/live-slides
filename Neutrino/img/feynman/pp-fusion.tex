@@ -1,0 +1,76 @@
+% The first step of the Sun's pp chain, p p -> d e+ nu_e: one proton turns into a
+% neutron (p -> n, W emission), the W makes e+ and nu_e; the n and the other p form d.
+% The same W as in n-p-weak.tex, run the other way. Two nu_e per 4He: 4p -> 4He + 2e+ + 2nu_e.
+% Beside it, 8B -> 8Be* e+ nu_e (pp-III, ~0.02% of 4He made): the high-energy (up to ~15 MeV)
+% neutrinos that Super-K sees, so the ones in the APOD image on slide 4.
+% Time runs upwards, as in nu-e-reactions.tex and n-p-weak.tex. Uses feynmp via feynmp-auto.
+% Build (in this directory):
+%   pdflatex -shell-escape pp-fusion.tex && pdflatex -shell-escape pp-fusion.tex
+%   pdftocairo -svg pp-fusion.pdf ../pp-fusion.svg
+\documentclass[border=6pt]{standalone}
+\usepackage{feynmp-auto}
+\usepackage{xcolor}
+
+\newif\ifdark \darktrue          % \darkfalse = black on white
+\newcommand{\figfont}{\LARGE}    % font size for labels and captions
+\newcommand{\diagramgap}{\hspace{24mm}}  % space between the two diagrams (as in n-p-weak.tex)
+
+\ifdark \pagecolor{black} \fi
+\unitlength=1mm
+
+\begin{document}
+\ifdark \color{white} \fi
+\figfont
+\begin{fmffile}{ppfusion}
+  \ifdark \fmfcmd{foreground := white; background := black;} \fi
+  \fmfset{thin}{0.8pt}
+  \fmfset{arrow_len}{3mm}
+  \fmfset{wiggly_len}{3mm}
+  \begin{tabular}{c@{\diagramgap}c}
+    % --- pp: p p -> d e+ nu_e ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){% margins (left,top)(right,bottom) leave room for labels
+    \begin{fmfgraph*}(46,40)
+      \fmfstraight
+      \fmfbottom{p2i,p1i,x}
+      \fmftop{p2o,n1o,nue,ep}
+      % spectator p on the left; the converting p bends at the W vertex v1, like the n -> p line in n-p-weak.tex
+      \fmfforce{(0,0)}{p2i}       \fmfforce{(0,h)}{p2o}
+      \fmfforce{(.16w,0)}{p1i}    \fmfforce{(.36w,.5h)}{v1}   \fmfforce{(.16w,h)}{n1o}
+      \fmfforce{(.8w,.5h)}{v2}
+      \fmfforce{(.62w,h)}{nue}    \fmfforce{(w,h)}{ep}
+      \fmfforce{(w,0)}{x}
+      \fmf{fermion}{p2i,p2o}
+      \fmf{fermion}{p1i,v1,n1o}
+      \fmf{boson,label=$W$,label.side=right}{v1,v2}
+      \fmf{fermion}{v2,nue}
+      \fmf{fermion}{ep,v2}
+      \fmflabel{$p$}{p2i} \fmflabel{$p$}{p1i}
+      \fmflabel{$p$}{p2o} \fmflabel{$n$}{n1o}
+      \fmflabel{$\nu_e$}{nue}
+      \fmflabel{$e^+$}{ep}
+    \end{fmfgraph*}}}}$
+    &
+    % --- 8B decay: one p -> n inside the nucleus, drawn at the nucleus level ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){%
+    \begin{fmfgraph*}(40,40)
+      \fmfstraight
+      \fmfbottom{b,x}
+      \fmftop{be,nue,ep}
+      \fmfforce{(0,0)}{b}        \fmfforce{(.24w,.5h)}{v1}   \fmfforce{(0,h)}{be}
+      \fmfforce{(.76w,.5h)}{v2}
+      \fmfforce{(.56w,h)}{nue}   \fmfforce{(w,h)}{ep}
+      \fmfforce{(w,0)}{x}
+      \fmf{fermion}{b,v1,be}
+      \fmf{boson,label=$W$,label.side=right}{v1,v2}
+      \fmf{fermion}{v2,nue}
+      \fmf{fermion}{ep,v2}
+      \fmflabel{${}^8\mathrm{B}$}{b}
+      \fmflabel{${}^8\mathrm{Be}^*$}{be}
+      \fmflabel{$\nu_e$}{nue}
+      \fmflabel{$e^+$}{ep}
+    \end{fmfgraph*}}}}$
+    \\[2mm]
+    $p\,p \to d\,e^+\nu_e$ & ${}^8\mathrm{B} \to {}^8\mathrm{Be}^*\,e^+\nu_e$
+  \end{tabular}
+\end{fmffile}
+\end{document}

@@ -1,0 +1,69 @@
+% The weak reaction that swaps neutrons and protons before BBN, n nu_e <-> p e-,
+% drawn twice: with the nucleons, then with their quarks (udd -> udu: one d -> u).
+% (The other one, n e+ <-> p nubar_e, is the same diagram with the lepton line crossed.)
+% Time runs upwards, as in nu-e-reactions.tex and fermi-blob.tex. Uses feynmp via feynmp-auto.
+% Build (in this directory):
+%   pdflatex -shell-escape n-p-weak.tex && pdflatex -shell-escape n-p-weak.tex
+%   pdftocairo -svg n-p-weak.pdf ../n-p-weak.svg
+\documentclass[border=6pt]{standalone}
+\usepackage{feynmp-auto}
+\usepackage{xcolor}
+
+\newif\ifdark \darktrue          % \darkfalse = black on white
+\newcommand{\figfont}{\LARGE}    % font size for labels and captions
+\newcommand{\diagramgap}{\hspace{24mm}}  % space between the two diagrams
+
+\ifdark \pagecolor{black} \fi
+\unitlength=1mm
+
+\begin{document}
+\ifdark \color{white} \fi
+\figfont
+\begin{fmffile}{npweak}
+  \ifdark \fmfcmd{foreground := white; background := black;} \fi
+  \fmfset{thin}{0.8pt}
+  \fmfset{arrow_len}{3mm}
+  \fmfset{wiggly_len}{3mm}
+  \begin{tabular}{c@{\diagramgap}c}
+    % --- nucleons: n nu_e -> p e- by W exchange ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){% margins (left,top)(right,bottom) leave room for labels
+    \begin{fmfgraph*}(40,40)
+      \fmfbottom{n,nue}
+      \fmftop{p,e}
+      \fmf{fermion}{n,v1,p}
+      \fmf{fermion}{nue,v2,e}
+      \fmf{boson,label=$W$,label.side=left}{v1,v2}
+      \fmflabel{$n$}{n}
+      \fmflabel{$p$}{p}
+      \fmflabel{$\nu_e$}{nue}
+      \fmflabel{$e^-$}{e}
+    \end{fmfgraph*}}}}$
+    &
+    % --- quarks: two spectators, one d -> u ---
+    $\vcenter{\hbox{\fmfframe(4,8)(4,8){%
+    \begin{fmfgraph*}(50,40)
+      \fmfstraight
+      \fmfbottom{u1i,d1i,d2i,nue}
+      \fmftop{u1o,d1o,u2o,e}
+      % three parallel quark lines, each bent like the n -> p line on the left;
+      % the outer one (d -> u) carries the W vertex, the inner two bend at plain vertices k1, k2
+      \fmfforce{(0,0)}{u1i}       \fmfforce{(.2w,.5h)}{k1}    \fmfforce{(0,h)}{u1o}
+      \fmfforce{(.13w,0)}{d1i}    \fmfforce{(.33w,.5h)}{k2}   \fmfforce{(.13w,h)}{d1o}
+      \fmfforce{(.26w,0)}{d2i}    \fmfforce{(.46w,.5h)}{v1}   \fmfforce{(.26w,h)}{u2o}
+      \fmfforce{(w,0)}{nue}       \fmfforce{(w,h)}{e}
+      \fmfforce{(.8w,.5h)}{v2}
+      \fmf{fermion}{u1i,k1,u1o}
+      \fmf{fermion}{d1i,k2,d1o}
+      \fmf{fermion}{d2i,v1,u2o}
+      \fmf{fermion}{nue,v2,e}
+      \fmf{boson,label=$W$,label.side=left}{v1,v2}
+      \fmflabel{$u\vphantom{d}$}{u1i} \fmflabel{$d$}{d1i} \fmflabel{$d$}{d2i}  % vphantom: same baseline for u and d
+      \fmflabel{$u\vphantom{d}$}{u1o} \fmflabel{$d$}{d1o} \fmflabel{$u\vphantom{d}$}{u2o}
+      \fmflabel{$\nu_e$}{nue}
+      \fmflabel{$e^-$}{e}
+    \end{fmfgraph*}}}}$
+    \\[2mm]
+    $n\,\nu_e \leftrightarrow p\,e^-$ & $udd \to udu$
+  \end{tabular}
+\end{fmffile}
+\end{document}
